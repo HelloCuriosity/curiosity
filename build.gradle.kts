@@ -39,11 +39,6 @@ allprojects {
         exclude("**/build/**")
     }
 
-//    extensions.configure<KoverProjectConfig> {
-//        isDisabled.set(false)
-//        engine.set(kotlinx.kover.api.JacocoEngine("0.8.8"))
-//    }
-
     koverMerged {
         xmlReport {
             onCheck.set(false)
