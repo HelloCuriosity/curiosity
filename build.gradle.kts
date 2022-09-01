@@ -12,15 +12,16 @@ plugins {
     id("com.android.library") version Dependencies.Versions.agp apply false
     id("org.jetbrains.kotlin.android") version Dependencies.Versions.kotlin apply false
 
+    id(Dependencies.Gradle.detekt) version Dependencies.Versions.detekt
     id(Dependencies.Gradle.kotlinter) version Dependencies.Versions.kotlinter
     id(Dependencies.Gradle.kover) version Dependencies.Versions.kover
-    id(Dependencies.Gradle.detekt) version Dependencies.Versions.detekt
     id(Dependencies.Gradle.versions) version Dependencies.Versions.gradleVersions
 }
 
 allprojects {
-    apply(plugin = "io.gitlab.arturbosch.detekt")
-    apply(plugin = "kover")
+    apply(plugin = Dependencies.Gradle.detekt)
+    apply(plugin = Dependencies.Gradle.kotlinter)
+    apply(plugin = Dependencies.Gradle.kover)
 
     detekt {
         buildUponDefaultConfig = false
@@ -48,6 +49,10 @@ allprojects {
             onCheck.set(false)
             reportDir.set(layout.buildDirectory.dir("$buildDir/reports/kover/html-result"))
         }
+    }
+
+    kotlinter {
+        disabledRules = arrayOf("trailing-comma")
     }
 }
 
