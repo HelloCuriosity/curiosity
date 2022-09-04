@@ -1,6 +1,7 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("org.jetbrains.kotlin.android")
+
     // Quality Gates
     id(Dependencies.Gradle.kotlinter)
     id(Dependencies.Gradle.detekt)
@@ -11,27 +12,16 @@ android {
     buildToolsVersion = Dependencies.Versions.buildToolsVersion
 
     defaultConfig {
-        applicationId = "com.hello.curiosity.curiosity"
         minSdk = Dependencies.Versions.minSdk
         targetSdk = Dependencies.Versions.targetSdk
 
-        versionCode = System.getenv("GITHUB_RUN_NUMBER")?.toInt() ?: 1
-        versionName = "0.1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
-        getByName("debug") {
-            isTestCoverageEnabled = true
-        }
-        getByName("release") {
-            isMinifyEnabled = true
-            isDebuggable = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        release {
+            isMinifyEnabled = false
         }
     }
 
@@ -52,9 +42,10 @@ android {
         kotlinCompilerExtensionVersion = Dependencies.Versions.composeCompiler
     }
 
-    packagingOptions {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
         }
     }
 }
@@ -69,12 +60,6 @@ dependencies {
     debugImplementation(Dependencies.Compose.tooling)
     implementation(Dependencies.Compose.toolingPreview)
     implementation(Dependencies.Compose.ui)
-
-    // Curiosity
-    implementation(project(":curiosity"))
-
-    // Leak
-    debugImplementation(Dependencies.leakCanary)
 
     // Testing
     debugImplementation(Dependencies.Test.Compose.uiTestManifest)
