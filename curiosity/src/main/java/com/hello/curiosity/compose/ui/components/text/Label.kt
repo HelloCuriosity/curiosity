@@ -10,7 +10,7 @@ fun Label(
     text: String,
 ) = Text(
     text = text,
-    style = MaterialTheme.typography.h3
+    style = MaterialTheme.typography.h6
 )
 
 @Preview
