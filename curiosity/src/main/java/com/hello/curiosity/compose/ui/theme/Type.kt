@@ -8,12 +8,6 @@ import androidx.compose.ui.unit.sp
 
 data class Type(
     val defaultFontFamily: FontFamily = FontFamily.Default,
-    val toolBarStyle: TextStyle = TextStyle(
-        fontFamily = defaultFontFamily,
-        fontSize = 20.sp,
-        lineHeight = 30.sp,
-        fontWeight = FontWeight.Medium
-    ),
     val headlineLarge: TextStyle = TextStyle(
         fontFamily = defaultFontFamily,
         fontSize = 28.sp,
