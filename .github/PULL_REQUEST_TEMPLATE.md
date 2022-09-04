@@ -11,5 +11,5 @@ Before you create a pull request make sure you've reviewed our
 
 - [ ] PR is split into meaningful commits for the ease of reviewing
 - [ ] Tests have been written
-- [ ] Screen shots added (where applicable)
+- [ ] Screenshots added (where applicable)
 - [ ] Appropriate labels have been applied

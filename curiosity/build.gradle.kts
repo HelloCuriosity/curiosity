@@ -57,6 +57,7 @@ dependencies {
     // Compose
     implementation(Dependencies.Compose.activity)
     implementation(Dependencies.Compose.material)
+    implementation(Dependencies.Compose.navigation)
     debugImplementation(Dependencies.Compose.tooling)
     implementation(Dependencies.Compose.toolingPreview)
     implementation(Dependencies.Compose.ui)
