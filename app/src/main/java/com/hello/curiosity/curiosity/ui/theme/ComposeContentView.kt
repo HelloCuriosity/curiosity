@@ -26,7 +26,7 @@ fun ComponentActivity.ComposeContentView(content: @Composable () -> Unit) =
 // Used for testing
 object AppTheme : Theme {
     override val typography: Type = Type(
-        headlineLarge = TextStyle(
+        h1 = TextStyle(
             fontFamily = FontFamily.Default,
             fontSize = 45.sp,
             lineHeight = 38.sp,
