@@ -35,7 +35,7 @@ data class Type(
     ),
     val h5: TextStyle = TextStyle(
         fontFamily = defaultFontFamily,
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.ExtraBold,
         fontSize = 24.sp,
         letterSpacing = 0.sp
     ),
