@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">curiosity</string>
     <string name="color_scene_title">Color</string>
+    <string name="components_scene_title">Components</string>
     <string name="typography_scene_title">Typography</string>
 </resources>

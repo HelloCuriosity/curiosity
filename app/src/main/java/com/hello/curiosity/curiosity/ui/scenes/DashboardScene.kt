@@ -14,8 +14,9 @@ fun DashboardScene() {
     val navController = rememberNavController()
 
     val scenes = listOf(
+        BottomNavScenes.Components,
         BottomNavScenes.Color,
-        BottomNavScenes.Typography
+        BottomNavScenes.Typography,
     )
 
     Scaffold(
