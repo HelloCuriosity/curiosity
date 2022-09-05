@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun Content(
+fun ContentMedium(
     text: String,
 ) = Text(
     text = text,
@@ -15,6 +15,6 @@ fun Content(
 
 @Preview
 @Composable
-fun ContentPreview() {
-    Content(text = "Content")
+fun ContentMediumPreview() {
+    ContentMedium(text = "Content")
 }

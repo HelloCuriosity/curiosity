@@ -6,7 +6,7 @@ import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 
 @RunWith(RobolectricTestRunner::class)
-class ContentTest : ComposeTextTest() {
+class ContentMediumTest : ComposeTextTest() {
     override val text: String = "Content Text"
-    override val content: @Composable () -> Unit = { Content(text = text) }
+    override val content: @Composable () -> Unit = { ContentMedium(text = text) }
 }

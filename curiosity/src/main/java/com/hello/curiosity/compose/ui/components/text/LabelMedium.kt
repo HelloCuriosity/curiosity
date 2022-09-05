@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun Label(
+fun LabelMedium(
     text: String,
 ) = Text(
     text = text,
@@ -15,6 +15,6 @@ fun Label(
 
 @Preview
 @Composable
-fun LabelPreview() {
-    Label(text = "Label")
+fun LabelMediumPreview() {
+    LabelMedium(text = "Label")
 }
