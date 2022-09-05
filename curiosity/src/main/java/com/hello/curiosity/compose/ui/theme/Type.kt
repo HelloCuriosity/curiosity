@@ -59,15 +59,15 @@ data class Type(
     ),
     val body1: TextStyle = TextStyle(
         fontFamily = defaultFontFamily,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 20.sp,
         letterSpacing = 0.5.sp
     ),
     val body2: TextStyle = TextStyle(
         fontFamily = defaultFontFamily,
         fontWeight = FontWeight.Normal,
-        fontSize = 14.sp,
-        letterSpacing = 0.25.sp
+        fontSize = 16.sp,
+        letterSpacing = 0.5.sp
     ),
     val button: TextStyle = TextStyle(
         fontFamily = defaultFontFamily,

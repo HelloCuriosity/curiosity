@@ -6,15 +6,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun ContentMedium(
+fun ContentLarge(
     text: String,
 ) = Text(
     text = text,
-    style = MaterialTheme.typography.body2
+    style = MaterialTheme.typography.body1
 )
 
 @Preview
 @Composable
-fun ContentMediumPreview() {
-    ContentMedium(text = "Content")
+fun ContentLargePreview() {
+    ContentLarge(text = "Large Content")
 }
