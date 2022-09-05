@@ -6,15 +6,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun LabelMedium(
+fun LabelSmall(
     text: String,
 ) = Text(
     text = text,
-    style = MaterialTheme.typography.h5
+    style = MaterialTheme.typography.h6
 )
 
 @Preview
 @Composable
-fun LabelMediumPreview() {
-    LabelMedium(text = "Medium Label")
+fun LabelSmallPreview() {
+    LabelSmall(text = "Small Label")
 }

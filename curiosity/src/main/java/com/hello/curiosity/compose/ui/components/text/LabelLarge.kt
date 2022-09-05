@@ -10,7 +10,7 @@ fun LabelLarge(
     text: String,
 ) = Text(
     text = text,
-    style = MaterialTheme.typography.h5
+    style = MaterialTheme.typography.h6
 )
 
 @Preview
