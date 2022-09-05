@@ -48,6 +48,12 @@ android {
             withJavadocJar()
         }
     }
+
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
@@ -62,9 +68,19 @@ dependencies {
     implementation(Dependencies.Compose.toolingPreview)
     implementation(Dependencies.Compose.ui)
 
+    // It is a known bug: https://issuetracker.google.com/issues/227767363
+    //
+    // Google is currently working on a fix but there is already a workaround:
+    // add these dependencies to every module where you use the Compose preview:
+    debugApi("androidx.customview:customview:1.2.0-alpha01")
+    debugApi("androidx.customview:customview-poolingcontainer:1.0.0")
+
     // Testing
-    debugImplementation(Dependencies.Test.Compose.uiTestManifest)
     testImplementation(Dependencies.Test.junit)
+
+    debugImplementation(Dependencies.Test.Compose.uiTestManifest)
+    testImplementation(Dependencies.Test.Compose.uiTestJunit)
+    testImplementation(Dependencies.Test.robolectric)
 
     // Android Testing
     androidTestImplementation(Dependencies.Test.Androidx.espresso)
