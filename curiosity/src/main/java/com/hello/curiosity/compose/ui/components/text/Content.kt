@@ -16,5 +16,5 @@ fun Content(
 @Preview
 @Composable
 fun ContentPreview() {
-    Content(text = "Label")
+    Content(text = "Content")
 }
