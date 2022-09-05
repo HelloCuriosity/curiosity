@@ -15,6 +15,6 @@ fun ContentLarge(
 
 @Preview
 @Composable
-fun ContentLargePreview() {
+internal fun ContentLargePreview() {
     ContentLarge(text = "Large Content")
 }

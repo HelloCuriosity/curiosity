@@ -15,6 +15,6 @@ fun LabelSmall(
 
 @Preview
 @Composable
-fun LabelSmallPreview() {
+internal fun LabelSmallPreview() {
     LabelSmall(text = "Small Label")
 }

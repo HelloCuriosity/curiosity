@@ -15,6 +15,6 @@ fun LabelMedium(
 
 @Preview
 @Composable
-fun LabelMediumPreview() {
+internal fun LabelMediumPreview() {
     LabelMedium(text = "Medium Label")
 }

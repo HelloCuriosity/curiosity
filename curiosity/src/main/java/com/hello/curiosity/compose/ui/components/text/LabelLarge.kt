@@ -15,6 +15,6 @@ fun LabelLarge(
 
 @Preview
 @Composable
-fun LabelLargePreview() {
+internal fun LabelLargePreview() {
     LabelLarge(text = " Large Label")
 }

@@ -15,6 +15,6 @@ fun ContentMedium(
 
 @Preview
 @Composable
-fun ContentMediumPreview() {
+internal fun ContentMediumPreview() {
     ContentMedium(text = "Content")
 }
