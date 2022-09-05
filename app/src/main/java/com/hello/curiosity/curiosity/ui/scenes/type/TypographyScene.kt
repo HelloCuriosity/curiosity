@@ -12,6 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
+@Suppress("LongMethod")
 fun TypographyScene() {
     val types = listOf(
         TypographyPresentation(
@@ -39,16 +40,28 @@ fun TypographyScene() {
             style = MaterialTheme.typography.h6
         ),
         TypographyPresentation(
-            title = "Caption",
-            style = MaterialTheme.typography.caption
+            title = "Subtitle1",
+            style = MaterialTheme.typography.subtitle1
         ),
         TypographyPresentation(
-            title = "Body",
+            title = "Subtitle2",
+            style = MaterialTheme.typography.subtitle2
+        ),
+        TypographyPresentation(
+            title = "Body1",
             style = MaterialTheme.typography.body1
         ),
         TypographyPresentation(
             title = "Body2",
             style = MaterialTheme.typography.body2
+        ),
+        TypographyPresentation(
+            title = "Button",
+            style = MaterialTheme.typography.button
+        ),
+        TypographyPresentation(
+            title = "Caption",
+            style = MaterialTheme.typography.caption
         ),
         TypographyPresentation(
             title = "Overline",
