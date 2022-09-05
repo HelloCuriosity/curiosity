@@ -1,3 +1,5 @@
+import kotlinx.kover.api.KoverTaskExtension
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -48,6 +50,20 @@ android {
             withJavadocJar()
         }
     }
+
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+            isReturnDefaultValues = true
+            all {
+                if (it.name == "testReleaseUnitTest") {
+                    it.extensions.configure(KoverTaskExtension::class) {
+                        isDisabled.set(true)
+                    }
+                }
+            }
+        }
+    }
 }
 
 dependencies {
@@ -62,9 +78,36 @@ dependencies {
     implementation(Dependencies.Compose.toolingPreview)
     implementation(Dependencies.Compose.ui)
 
+    // It is a known bug: https://issuetracker.google.com/issues/227767363
+    //
+    // Google is currently working on a fix but there is already a workaround:
+    // add these dependencies to every module where you use the Compose preview:
+    debugApi("androidx.customview:customview:1.2.0-alpha01")
+    debugApi("androidx.customview:customview-poolingcontainer:1.0.0")
+
     // Testing
-    debugImplementation(Dependencies.Test.Compose.uiTestManifest)
     testImplementation(Dependencies.Test.junit)
+
+    debugImplementation(Dependencies.Test.Compose.uiTestManifest)
+    testImplementation(Dependencies.Test.Compose.uiTestJunit)
+    testImplementation(Dependencies.Test.robolectric) {
+        exclude(module = "classworlds")
+        exclude(module = "commons-logging")
+        exclude(module = "httpclient")
+        exclude(module = "maven-artifact")
+        exclude(module = "maven-artifact-manager")
+        exclude(module = "maven-error-diagnostics")
+        exclude(module = "maven-model")
+        exclude(module = "maven-project")
+        exclude(module = "maven-settings")
+        exclude(module = "plexus-container-default")
+        exclude(module = "plexus-interpolation")
+        exclude(module = "plexus-utils")
+        exclude(module = "wagon-file")
+        exclude(module = "wagon-http-lightweight")
+        exclude(module = "wagon-provider-api")
+        exclude(module = "auto-service")
+    }
 
     // Android Testing
     androidTestImplementation(Dependencies.Test.Androidx.espresso)

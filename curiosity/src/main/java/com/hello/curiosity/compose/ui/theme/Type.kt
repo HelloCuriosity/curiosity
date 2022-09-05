@@ -29,20 +29,20 @@ data class Type(
     ),
     val h4: TextStyle = TextStyle(
         fontFamily = defaultFontFamily,
-        fontWeight = FontWeight.Normal,
-        fontSize = 34.sp,
-        letterSpacing = 0.25.sp
-    ),
-    val h5: TextStyle = TextStyle(
-        fontFamily = defaultFontFamily,
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.ExtraBold,
         fontSize = 24.sp,
         letterSpacing = 0.sp
     ),
-    val h6: TextStyle = TextStyle(
+    val h5: TextStyle = TextStyle(
         fontFamily = defaultFontFamily,
         fontWeight = FontWeight.ExtraBold,
         fontSize = 20.sp,
+        letterSpacing = 0.15.sp
+    ),
+    val h6: TextStyle = TextStyle(
+        fontFamily = defaultFontFamily,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 14.sp,
         letterSpacing = 0.15.sp
     ),
     val subtitle1: TextStyle = TextStyle(
@@ -59,15 +59,15 @@ data class Type(
     ),
     val body1: TextStyle = TextStyle(
         fontFamily = defaultFontFamily,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 20.sp,
         letterSpacing = 0.5.sp
     ),
     val body2: TextStyle = TextStyle(
         fontFamily = defaultFontFamily,
         fontWeight = FontWeight.Normal,
-        fontSize = 14.sp,
-        letterSpacing = 0.25.sp
+        fontSize = 16.sp,
+        letterSpacing = 0.5.sp
     ),
     val button: TextStyle = TextStyle(
         fontFamily = defaultFontFamily,
