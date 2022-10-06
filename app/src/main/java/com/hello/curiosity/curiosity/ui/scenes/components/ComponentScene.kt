@@ -25,8 +25,9 @@ import com.hello.curiosity.curiosity.ui.scenes.type.TypographyScene
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun ComponentScene() {
-    val navController = rememberNavController()
+fun ComponentScene(
+    navController: NavHostController
+) {
 
     val components = listOf(
         ComponentScenes.Text,
@@ -58,5 +59,7 @@ fun ComponentScene() {
 @Preview
 @Composable
 fun ComponentScenePreview() {
-    ComponentScene()
+    ComponentScene(
+        navController = rememberNavController()
+    )
 }
