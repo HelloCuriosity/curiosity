@@ -1,4 +1,4 @@
-package com.hello.curiosity.curiosity.ui
+package com.hello.curiosity.curiosity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
