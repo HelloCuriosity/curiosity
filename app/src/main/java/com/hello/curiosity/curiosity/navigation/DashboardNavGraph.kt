@@ -23,8 +23,6 @@ fun DashboardNavGraph(
         composable(BottomNavScenes.Typography.route) {
             TypographyScene()
         }
-        detailNavGraph(
-//            navController
-        )
+        detailNavGraph()
     }
 }

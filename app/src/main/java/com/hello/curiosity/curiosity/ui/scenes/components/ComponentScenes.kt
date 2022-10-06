@@ -13,7 +13,7 @@ sealed class ComponentScenes(
 
     object Text : ComponentScenes(
         title = R.string.text_scene_title,
-        icon = R.drawable.ic_components, // TODO
+        icon = R.drawable.ic_components,
         route = "TEXT"
     )
 }
