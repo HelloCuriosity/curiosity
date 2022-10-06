@@ -40,6 +40,11 @@ allprojects {
         exclude("**/build/**")
     }
 
+    extensions.configure<KoverProjectConfig> {
+        isDisabled.set(false)
+        engine.set(kotlinx.kover.api.IntellijEngine("1.0.683"))
+    }
+
     koverMerged {
         xmlReport {
             onCheck.set(false)
