@@ -5,13 +5,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavHostController
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.hello.curiosity.compose.ui.components.BottomNavigation
-import com.hello.curiosity.curiosity.ui.scenes.color.ColorScene
-import com.hello.curiosity.curiosity.ui.scenes.type.TypographyScene
+import com.hello.curiosity.curiosity.navigation.DashboardNavigationConfiguration
 
 @Composable
 fun DashboardScene() {
@@ -31,20 +27,6 @@ fun DashboardScene() {
             DashboardNavigationConfiguration(
                 navController = navController
             )
-        }
-    }
-}
-
-@Composable
-private fun DashboardNavigationConfiguration(
-    navController: NavHostController
-) {
-    NavHost(navController, startDestination = BottomNavScenes.Color.route) {
-        composable(BottomNavScenes.Color.route) {
-            ColorScene()
-        }
-        composable(BottomNavScenes.Typography.route) {
-            TypographyScene()
         }
     }
 }

@@ -20,7 +20,7 @@ jobs:
         if: ${{ contains(github.event.pull_request.title, 'CI/CD') }}
         run: gh pr edit $PR_NUMBER --add-label 'CI/CD :cd:' -R $REPO
       - name: Component
-        if: ${{ contains(github.event.pull_request.title, 'Component' || github.event.pull_request.title, 'Components') }}
+        if: ${{ contains(github.event.pull_request.title, 'Component') || contains(github.event.pull_request.title, 'Components') }}
         run: gh pr edit $PR_NUMBER --add-label 'component :hugs:' -R $REPO
       - name: Dependencies
         if: ${{ contains(github.event.pull_request.title, 'Dependency') || contains(github.event.pull_request.title, 'Dependencies') }}
