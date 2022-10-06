@@ -14,21 +14,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.hello.curiosity.compose.ui.components.text.LabelMedium
-import com.hello.curiosity.curiosity.ui.scenes.BottomNavScenes
-import com.hello.curiosity.curiosity.ui.scenes.TextScene
-import com.hello.curiosity.curiosity.ui.scenes.color.ColorScene
-import com.hello.curiosity.curiosity.ui.scenes.type.TypographyScene
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun ComponentScene(
     navController: NavHostController
 ) {
-
     val components = listOf(
         ComponentScenes.Text,
     )
