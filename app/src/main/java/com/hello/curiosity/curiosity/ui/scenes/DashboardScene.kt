@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import com.hello.curiosity.compose.ui.components.BottomNavigation
-import com.hello.curiosity.curiosity.navigation.DashboardNavigationConfiguration
+import com.hello.curiosity.curiosity.navigation.DashboardNavGraph
 
 @Composable
 fun DashboardScene() {
@@ -25,7 +25,7 @@ fun DashboardScene() {
         }
     ) { padding ->
         Box(modifier = Modifier.padding(padding)) {
-            DashboardNavigationConfiguration(
+            DashboardNavGraph(
                 navController = navController
             )
         }

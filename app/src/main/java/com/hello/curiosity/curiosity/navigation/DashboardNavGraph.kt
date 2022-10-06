@@ -9,7 +9,7 @@ import com.hello.curiosity.curiosity.ui.scenes.color.ColorScene
 import com.hello.curiosity.curiosity.ui.scenes.type.TypographyScene
 
 @Composable
-fun DashboardNavigationConfiguration(
+fun DashboardNavGraph(
     navController: NavHostController
 ) {
     NavHost(navController, startDestination = BottomNavScenes.Color.route) {
