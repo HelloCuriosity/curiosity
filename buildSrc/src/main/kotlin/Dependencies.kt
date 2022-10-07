@@ -55,7 +55,7 @@ object Dependencies {
         }
 
         const val junit = "junit:junit:4.13.2"
-        const val robolectric = "org.robolectric:robolectric:4.8.2"
+        const val robolectric = "org.robolectric:robolectric: 4.9"
     }
 }
 
