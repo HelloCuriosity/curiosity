@@ -57,6 +57,20 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+            isReturnDefaultValues = true
+            all {
+                if (it.name == "testReleaseUnitTest") {
+                    it.extensions.configure(kotlinx.kover.api.KoverTaskExtension::class) {
+                        isDisabled.set(true)
+                    }
+                }
+            }
+        }
+    }
 }
 
 dependencies {
@@ -78,8 +92,28 @@ dependencies {
     debugImplementation(Dependencies.leakCanary)
 
     // Testing
+    testImplementation("androidx.test.ext:junit-ktx:1.1.3")
     debugImplementation(Dependencies.Test.Compose.uiTestManifest)
     testImplementation(Dependencies.Test.junit)
+
+    testImplementation(Dependencies.Test.robolectric) {
+        exclude(module = "classworlds")
+        exclude(module = "commons-logging")
+        exclude(module = "httpclient")
+        exclude(module = "maven-artifact")
+        exclude(module = "maven-artifact-manager")
+        exclude(module = "maven-error-diagnostics")
+        exclude(module = "maven-model")
+        exclude(module = "maven-project")
+        exclude(module = "maven-settings")
+        exclude(module = "plexus-container-default")
+        exclude(module = "plexus-interpolation")
+        exclude(module = "plexus-utils")
+        exclude(module = "wagon-file")
+        exclude(module = "wagon-http-lightweight")
+        exclude(module = "wagon-provider-api")
+        exclude(module = "auto-service")
+    }
 
     // Android Testing
     androidTestImplementation(Dependencies.Test.Androidx.espresso)
