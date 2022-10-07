@@ -57,8 +57,16 @@ allprojects {
     }
 
     kotlinter {
-        disabledRules = arrayOf("trailing-comma")
+        disabledRules = arrayOf(
+            "trailing-comma",
+            "trailing-comma-on-call-site",
+            "trailing-comma-on-declaration-site"
+        )
     }
+
+
+//   arrayOf("trailing-comma-on-call-site", "trailing-comma-on-declaration-site")
+
 }
 
 tasks.register<Delete>("clean") {
