@@ -46,6 +46,13 @@ allprojects {
     }
 
     koverMerged {
+        filters {
+            classes {
+                excludes += listOf(
+                    "*BuildConfig",
+                )
+            }
+        }
         xmlReport {
             onCheck.set(false)
             reportFile.set(layout.buildDirectory.file("$buildDir/reports/kover/result.xml"))
