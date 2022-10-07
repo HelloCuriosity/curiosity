@@ -2,7 +2,7 @@ import java.util.Locale
 
 object Dependencies {
     object Versions {
-        const val agp = "7.2.2"
+        const val agp = "7.3.0"
         const val compose = "1.2.1"
         const val composeCompiler = "1.3.2"
         const val jvmTarget = "11"
@@ -18,11 +18,11 @@ object Dependencies {
         const val detekt = "1.21.0"
         const val gradleVersions = "0.42.0"
         const val kotlinter = "3.12.0"
-        const val kover = "0.6.0"
+        const val kover = "0.6.1"
     }
 
     object Androidx {
-        const val core = "androidx.core:core-ktx:1.8.0"
+        const val core = "androidx.core:core-ktx:1.9.0"
     }
 
     object Compose {
