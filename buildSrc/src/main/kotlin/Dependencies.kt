@@ -18,7 +18,7 @@ object Dependencies {
         const val detekt = "1.21.0"
         const val gradleVersions = "0.42.0"
         const val kotlinter = "3.11.1"
-        const val kover = "0.6.0"
+        const val kover = "0.6.1"
     }
 
     object Androidx {
