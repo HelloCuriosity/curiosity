@@ -4,9 +4,9 @@ object Dependencies {
     object Versions {
         const val agp = "7.2.2"
         const val compose = "1.2.1"
-        const val composeCompiler = "1.3.0"
+        const val composeCompiler = "1.3.2"
         const val jvmTarget = "11"
-        const val kotlin = "1.7.10"
+        const val kotlin = "1.7.20"
 
         // App
         const val compileSdk = 33
@@ -26,9 +26,9 @@ object Dependencies {
     }
 
     object Compose {
-        const val activity = "androidx.activity:activity-compose:1.5.1"
+        const val activity = "androidx.activity:activity-compose:1.6.0"
         const val material = "androidx.compose.material:material:${Versions.compose}"
-        const val navigation = "androidx.navigation:navigation-compose:2.5.1"
+        const val navigation = "androidx.navigation:navigation-compose:2.5.2"
         const val tooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
         const val toolingPreview = "androidx.compose.ui:ui-tooling-preview:${Versions.compose}"
         const val ui = "androidx.compose.ui:ui:${Versions.compose}"
