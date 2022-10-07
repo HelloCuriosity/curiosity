@@ -63,10 +63,6 @@ allprojects {
             "trailing-comma-on-declaration-site"
         )
     }
-
-
-//   arrayOf("trailing-comma-on-call-site", "trailing-comma-on-declaration-site")
-
 }
 
 tasks.register<Delete>("clean") {
