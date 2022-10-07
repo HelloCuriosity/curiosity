@@ -22,7 +22,7 @@ object Dependencies {
     }
 
     object Androidx {
-        const val core = "androidx.core:core-ktx:1.8.0"
+        const val core = "androidx.core:core-ktx:1.9.0"
     }
 
     object Compose {
