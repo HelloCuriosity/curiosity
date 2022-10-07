@@ -6,7 +6,7 @@ object Dependencies {
         const val compose = "1.2.1"
         const val composeCompiler = "1.3.0"
         const val jvmTarget = "11"
-        const val kotlin = "1.7.10"
+        const val kotlin = "1.7.20"
 
         // App
         const val compileSdk = 33
