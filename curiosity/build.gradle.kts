@@ -82,7 +82,7 @@ dependencies {
     //
     // Google is currently working on a fix but there is already a workaround:
     // add these dependencies to every module where you use the Compose preview:
-    debugApi("androidx.customview:customview:1.2.0-alpha01")
+    debugApi("androidx.customview:customview:1.2.0-alpha02")
     debugApi("androidx.customview:customview-poolingcontainer:1.0.0")
 
     // Testing
