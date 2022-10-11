@@ -88,6 +88,9 @@ dependencies {
     // Testing
     testImplementation(Dependencies.Test.junit)
 
+    // Curiosity testing utils
+    testImplementation(project(":test-compose-utils"))
+
     debugImplementation(Dependencies.Test.Compose.uiTestManifest)
     testImplementation(Dependencies.Test.Compose.uiTestJunit)
     testImplementation(Dependencies.Test.robolectric) {

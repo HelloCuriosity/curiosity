@@ -5,8 +5,8 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onNodeWithText
 import androidx.navigation.compose.rememberNavController
 import androidx.test.core.app.ApplicationProvider
-import com.hello.curiosity.compose.ui.ComposeTest
 import com.hello.curiosity.compose.ui.Scene
+import com.hello.curiosity.test.compose.ComposeTest
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
