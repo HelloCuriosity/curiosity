@@ -64,6 +64,7 @@ android {
             }
         }
     }
+    namespace = "com.hello.curiosity.compose"
 }
 
 dependencies {

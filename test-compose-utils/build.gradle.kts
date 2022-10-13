@@ -40,6 +40,7 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = Dependencies.Versions.composeCompiler
     }
+    namespace = "com.hello.curiosity.test.compose"
 }
 
 dependencies {
