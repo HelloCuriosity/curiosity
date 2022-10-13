@@ -92,10 +92,14 @@ dependencies {
     debugImplementation(Dependencies.leakCanary)
 
     // Testing
-    testImplementation("androidx.test.ext:junit-ktx:1.1.3")
-    debugImplementation(Dependencies.Test.Compose.uiTestManifest)
     testImplementation(Dependencies.Test.junit)
+    testImplementation("androidx.test.ext:junit-ktx:1.1.3")
 
+    // Curiosity testing utils
+    testImplementation(project(":test-compose-utils"))
+
+    debugImplementation(Dependencies.Test.Compose.uiTestManifest)
+    testImplementation(Dependencies.Test.Compose.uiTestJunit)
     testImplementation(Dependencies.Test.robolectric) {
         exclude(module = "classworlds")
         exclude(module = "commons-logging")
