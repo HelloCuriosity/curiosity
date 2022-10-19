@@ -9,6 +9,7 @@ import androidx.compose.material.Card
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -28,6 +29,7 @@ fun ComponentScene(
 
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
+        modifier = Modifier.testTag("lazy-components-tag")
     ) {
         items(components) { component ->
             Card(
