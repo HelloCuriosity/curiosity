@@ -8,7 +8,7 @@ import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 
 @RunWith(RobolectricTestRunner::class)
-class TypographySceneKtTest : ComposeTest() {
+class TypographySceneTest : ComposeTest() {
     @Test
     fun testColorScene() {
         composeTestRule.setContent {
