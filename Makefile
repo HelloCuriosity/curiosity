@@ -31,5 +31,8 @@ local:
 publish:
 	./scripts/publish.sh ${BUILD_TYPE}
 
+release:
+	./scripts/release.sh ${BUMP}
+
 test:
 	./gradlew test${BUILD_TYPE}UnitTest ${GRADLE_ARGS}
