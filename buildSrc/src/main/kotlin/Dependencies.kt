@@ -11,7 +11,7 @@ object Dependencies {
         // App
         const val compileSdk = 33
         const val buildToolsVersion = "31.0.0"
-        const val minSdk = 26
+        const val minSdk = 23
         const val targetSdk = 32
 
         // Quality Gates

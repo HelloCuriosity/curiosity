@@ -7,6 +7,9 @@ plugins {
     // Quality Gates
     id(Dependencies.Gradle.kotlinter)
     id(Dependencies.Gradle.detekt)
+
+    // Publishing
+    id("maven-publish")
 }
 
 android {
@@ -117,4 +120,44 @@ dependencies {
     androidTestImplementation(Dependencies.Test.Androidx.espresso)
     androidTestImplementation(Dependencies.Test.Androidx.junit)
     androidTestImplementation(Dependencies.Test.Compose.uiTestJunit)
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.hello.curiosity.compose"
+                artifactId = "curiosity"
+                version = System.getenv("VERSION") ?: "0.1.0"
+
+                pom {
+                    name.set("Curiosity")
+                    description.set("Curiosity is a simple design system just for fun.")
+                    url.set("https://github.com/hopeman15/curiosity")
+                    licenses {
+                        license {
+                            name.set("MIT Licence")
+                            url.set("https://github.com/hopeman15/curiosity/blob/main/LICENSE")
+                        }
+                    }
+                    scm {
+                        connection.set("scm:git:https://github.com/hopeman15/curiosity.git")
+                        developerConnection.set("scm:git:https://github.com/hopeman15/curiosity.git")
+                        url.set("https://github.com/hopeman15/curiosity")
+                    }
+                }
+            }
+        }
+        repositories {
+            maven {
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/hopeman15/curiosity")
+                credentials {
+                    username = System.getenv("GPR_USER")
+                    password = System.getenv("GPR_TOKEN")
+                }
+            }
+        }
+    }
 }
