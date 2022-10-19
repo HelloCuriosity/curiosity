@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 set -o pipefail
 
 RELEASE_TYPE=${1}
