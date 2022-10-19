@@ -1,9 +1,6 @@
 name: Publishing
 
 on:
-  pull_request: #TODO: test in PR but remove before merge
-    branches:
-      - main
   push:
     branches:
       -main
