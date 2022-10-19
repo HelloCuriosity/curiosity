@@ -29,7 +29,7 @@ local:
 	./gradlew publishToMavenLocal ${GRADLE_ARGS}
 
 publish:
-	./gradlew publish
+	./scripts/publish.sh ${BUILD_TYPE}
 
 test:
 	./gradlew test${BUILD_TYPE}UnitTest ${GRADLE_ARGS}
