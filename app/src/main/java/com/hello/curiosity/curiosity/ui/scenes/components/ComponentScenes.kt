@@ -16,4 +16,10 @@ sealed class ComponentScenes(
         icon = R.drawable.ic_components,
         route = "TEXT"
     )
+
+    object Buttons : ComponentScenes(
+        title = R.string.button_scene_title,
+        icon = R.drawable.ic_button,
+        route = "BUTTONS"
+    )
 }
