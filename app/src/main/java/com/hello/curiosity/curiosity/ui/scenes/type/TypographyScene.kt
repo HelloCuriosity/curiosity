@@ -8,6 +8,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
@@ -69,7 +70,9 @@ fun TypographyScene() {
         )
     )
 
-    LazyColumn {
+    LazyColumn(
+        modifier = Modifier.testTag("lazy-types-tag")
+    ) {
         items(types) { type ->
             Text(
                 modifier = Modifier.padding(8.dp),
