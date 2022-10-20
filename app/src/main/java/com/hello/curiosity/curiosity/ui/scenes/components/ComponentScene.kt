@@ -25,11 +25,12 @@ fun ComponentScene(
 ) {
     val components = listOf(
         ComponentScenes.Text,
+        ComponentScenes.Buttons,
     )
 
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
-        modifier = Modifier.testTag("lazy-components-tag")
+        modifier = Modifier.testTag("component-scene-test-tag")
     ) {
         items(components) { component ->
             Card(
