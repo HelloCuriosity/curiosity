@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.navigation.compose.rememberNavController
 import com.hello.curiosity.compose.ui.components.BottomNavigation
 import com.hello.curiosity.curiosity.navigation.DashboardNavGraph
@@ -20,6 +21,7 @@ fun DashboardScene() {
     )
 
     Scaffold(
+        modifier = Modifier.testTag("dashboard-scaffold-tag"),
         bottomBar = {
             BottomNavigation(navController = navController, scenes = scenes)
         }

@@ -1,21 +1,27 @@
 package com.hello.curiosity.curiosity
 
-import androidx.lifecycle.Lifecycle
-import androidx.test.ext.junit.rules.ActivityScenarioRule
-import org.junit.Rule
+import android.content.Intent
+import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.onNodeWithTag
+import androidx.test.core.app.ActivityScenario
+import androidx.test.core.app.ApplicationProvider
+import com.hello.curiosity.test.compose.ComponentActivityTest
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 
 @RunWith(RobolectricTestRunner::class)
-class MainActivityTest {
-
-    @get:Rule
-    val activityScenarioRule = ActivityScenarioRule(MainActivity::class.java)
+class MainActivityTest : ComponentActivityTest<MainActivity>() {
 
     @Test
     fun testActivityExists() {
-        val activity = activityScenarioRule.scenario
-        activity.moveToState(Lifecycle.State.CREATED)
+        ActivityScenario.launch<MainActivity>(
+            Intent(ApplicationProvider.getApplicationContext(), MainActivity::class.java)
+        ).use { scenario ->
+            activityScenario = scenario
+            rule.onNodeWithTag("dashboard-scaffold-tag")
+                .assertExists()
+                .assertIsDisplayed()
+        }
     }
 }
