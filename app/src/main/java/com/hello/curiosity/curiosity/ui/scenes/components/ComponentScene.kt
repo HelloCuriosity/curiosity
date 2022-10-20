@@ -30,7 +30,7 @@ fun ComponentScene(
 
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
-        modifier = Modifier.testTag("lazy-components-tag")
+        modifier = Modifier.testTag("component-scene-test-tag")
     ) {
         items(components) { component ->
             Card(
