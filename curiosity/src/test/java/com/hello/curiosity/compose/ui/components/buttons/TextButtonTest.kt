@@ -1,11 +1,14 @@
 package com.hello.curiosity.compose.ui.components.buttons
 
-import androidx.compose.material.ButtonDefaults
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.assertIsEnabled
+import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.performClick
 import com.hello.curiosity.compose.ui.theme.ThemeImpl
 import com.hello.curiosity.test.compose.ComposeTest
 import org.junit.Test
@@ -29,6 +32,9 @@ class TextButtonTest : ComposeTest() {
         composeTestRule
             .onNodeWithText(text = text)
             .assertIsDisplayed()
+            .performClick()
+            .assertHasClickAction()
+            .assertIsEnabled() // validate button is enable
     }
 
     @Test
@@ -54,5 +60,8 @@ class TextButtonTest : ComposeTest() {
         composeTestRule
             .onNodeWithText(text = text)
             .assertIsDisplayed()
+            .performClick()
+            .assertHasClickAction()
+            .assertIsNotEnabled() // validate button is disable
     }
 }
