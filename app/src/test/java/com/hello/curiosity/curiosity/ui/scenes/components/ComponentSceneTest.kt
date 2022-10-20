@@ -12,7 +12,7 @@ import org.robolectric.RobolectricTestRunner
 class ComponentSceneTest : ComposeTest() {
 
     @Test
-    fun testColorScene() {
+    fun testComponentScene() {
         composeTestRule.setContent {
             ComponentScene(navController = rememberNavController())
         }
