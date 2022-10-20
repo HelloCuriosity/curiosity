@@ -2,6 +2,8 @@ package com.hello.curiosity.curiosity.ui.scenes.components
 
 import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.assertIsEnabled
+import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.onChildAt
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
@@ -25,12 +27,22 @@ class ButtonSceneTest : ComposeTest() {
             .assertExists()
             .assertIsDisplayed()
 
-        // validate text button exists and is clickable
+        // validate enabled text button exists and is enabled
         composeTestRule
             .onNodeWithTag(testTag = "button-scene-test-tag")
             .onChildAt(0)
             .assertIsDisplayed()
             .performClick()
             .assertHasClickAction()
+            .assertIsEnabled()
+
+        // validate disabled text button exists and is disabled
+        composeTestRule
+            .onNodeWithTag(testTag = "button-scene-test-tag")
+            .onChildAt(1)
+            .assertIsDisplayed()
+            .performClick()
+            .assertHasClickAction()
+            .assertIsNotEnabled()
     }
 }

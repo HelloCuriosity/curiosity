@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.hello.curiosity.compose.ui.theme.ThemeImpl
 
 @Composable
@@ -20,7 +21,9 @@ fun TextButton(
     onClick: action,
     enabled: Boolean = true,
     shape: Shape = CircleShape,
-    style: TextStyle = ThemeImpl.typography.h5,
+    style: TextStyle = ThemeImpl.typography.h5.copy(
+        fontSize = 18.sp,
+    ),
     buttonColors: ButtonColors = ButtonDefaults.buttonColors(),
     childModifier: Modifier = Modifier
 ) = Button(
@@ -35,7 +38,7 @@ fun TextButton(
         modifier = childModifier
             .padding(
                 vertical = 16.dp,
-                horizontal = 52.dp
+                horizontal = 28.dp,
             ),
         style = style,
     )
