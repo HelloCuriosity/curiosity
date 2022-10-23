@@ -129,7 +129,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.hello.curiosity.compose"
                 artifactId = "curiosity"
-                version = System.getenv("VERSION") ?: "0.1.0"
+                version = System.getenv("VERSION") ?: "local"
 
                 pom {
                     name.set("Curiosity")

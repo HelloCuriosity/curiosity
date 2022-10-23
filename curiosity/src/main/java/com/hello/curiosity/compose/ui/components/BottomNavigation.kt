@@ -1,13 +1,19 @@
 package com.hello.curiosity.compose.ui.components
 
 import androidx.compose.material.BottomNavigation
+import androidx.compose.material.BottomNavigationDefaults
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.material.contentColorFor
+import androidx.compose.material.primarySurface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.Dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.hello.curiosity.compose.ui.Scene
@@ -16,8 +22,16 @@ import com.hello.curiosity.compose.ui.Scene
 fun BottomNavigation(
     navController: NavHostController,
     scenes: List<Scene>,
-    alwaysShowLabel: Boolean = true
-) = BottomNavigation {
+    alwaysShowLabel: Boolean = true,
+    shouldBeSelected: Boolean = true,
+    backgroundColor: Color = MaterialTheme.colors.primarySurface,
+    contentColor: Color = contentColorFor(backgroundColor),
+    elevation: Dp = BottomNavigationDefaults.Elevation,
+) = BottomNavigation(
+    backgroundColor = backgroundColor,
+    contentColor = contentColor,
+    elevation = elevation,
+) {
     val currentRoute = currentRoute(navController)
     scenes.forEach { scene ->
         val title = stringResource(id = scene.title)
@@ -29,7 +43,7 @@ fun BottomNavigation(
                 )
             },
             label = { Text(title) },
-            selected = currentRoute == scene.route,
+            selected = if (shouldBeSelected) currentRoute == scene.route else false,
             alwaysShowLabel = alwaysShowLabel,
             onClick = {
                 if (currentRoute != scene.route) {

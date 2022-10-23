@@ -1,8 +1,8 @@
 BUILD_TYPE ?= Debug
 
-.PHONY: all assemble bundle clean coverage dependencies format lint local publish test
+.PHONY: all assemble bundle clean dependencies format lint local publish release report test
 
-all: clean format lint test coverage assemble
+all: clean format lint test report assemble
 
 assemble:
 	./gradlew assemble${BUILD_TYPE} ${GRADLE_ARGS}
@@ -12,9 +12,6 @@ bundle:
 
 clean:
 	./gradlew clean ${GRADLE_ARGS}
-
-coverage:
-	./gradlew koverMergedReport
 
 dependencies:
 	./gradlew dependencyUpdates ${GRADLE_ARGS}
@@ -33,6 +30,9 @@ publish:
 
 release:
 	./scripts/release.sh ${BUMP}
+
+report:
+	./gradlew koverMergedReport
 
 test:
 	./gradlew test${BUILD_TYPE}UnitTest ${GRADLE_ARGS}
