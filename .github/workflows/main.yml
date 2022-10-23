@@ -61,7 +61,7 @@ jobs:
       - name: Lint
         run: make lint
       - name: Test
-        run: make coverage
+        run: make report
       - name: Report
         uses: codecov/codecov-action@v3.1.1
         with:
