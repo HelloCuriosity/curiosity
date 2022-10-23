@@ -46,7 +46,9 @@ fun ButtonScene() {
             TextIconButton(
                 text = R.string.btn_enabled,
                 enabled = true,
-                onClick = { /* no action available */ },
+                onClick = {
+                    Toast.makeText(ctx, "Text Icon Button", Toast.LENGTH_SHORT).show()
+                },
                 contentDescription = R.string.btn_enabled,
                 icon = R.drawable.ic_button,
                 tint = Color.White,
