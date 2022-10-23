@@ -2,7 +2,7 @@ import java.util.Locale
 
 object Dependencies {
     object Versions {
-        const val agp = "7.3.0"
+        const val agp = "7.3.1"
         const val compose = "1.2.1"
         const val composeCompiler = "1.3.2"
         const val jvmTarget = "11"
@@ -12,7 +12,7 @@ object Dependencies {
         const val compileSdk = 33
         const val buildToolsVersion = "31.0.0"
         const val minSdk = 23
-        const val targetSdk = 32
+        const val targetSdk = 33
 
         // Quality Gates
         const val detekt = "1.21.0"
@@ -55,7 +55,7 @@ object Dependencies {
         }
 
         const val junit = "junit:junit:4.13.2"
-        const val robolectric = "org.robolectric:robolectric:4.8.2"
+        const val robolectric = "org.robolectric:robolectric:4.9"
     }
 }
 
