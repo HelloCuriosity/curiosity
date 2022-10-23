@@ -1,5 +1,6 @@
 package com.hello.curiosity.compose.ui.components.buttons
 
+import android.content.Context
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
@@ -9,6 +10,7 @@ import androidx.compose.ui.test.assertIsEnabled
 import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import androidx.test.core.app.ApplicationProvider
 import com.hello.curiosity.compose.ui.theme.ThemeImpl
 import com.hello.curiosity.test.compose.ComposeTest
 import org.junit.Test
@@ -18,13 +20,15 @@ import org.robolectric.RobolectricTestRunner
 @RunWith(RobolectricTestRunner::class)
 class TextButtonTest : ComposeTest() {
 
-    private val text = "Text button"
+    private val context: Context = ApplicationProvider.getApplicationContext()
+    private val res = android.R.string.ok
+    private val text = context.getString(res)
 
     @Test
     fun testDefaultTextButton() {
         composeTestRule.setContent {
             TextButton(
-                text = text,
+                text = res,
                 onClick = { },
             )
         }
@@ -41,7 +45,7 @@ class TextButtonTest : ComposeTest() {
     fun testCustomTextButton() {
         composeTestRule.setContent {
             TextButton(
-                text = text,
+                text = res,
                 modifier = Modifier,
                 onClick = { },
                 enabled = false,
@@ -53,7 +57,7 @@ class TextButtonTest : ComposeTest() {
                     disabledBackgroundColor = Color.Magenta,
                     disabledContentColor = Color.Yellow,
                 ),
-                childModifier = Modifier,
+                textModifier = Modifier,
             )
         }
 

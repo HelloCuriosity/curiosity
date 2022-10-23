@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.hello.curiosity.compose.ui.components.buttons.TextButton
 import com.hello.curiosity.compose.ui.components.buttons.buttonColors
+import com.hello.curiosity.curiosity.R
 
 @Composable
 fun ButtonScene() {
@@ -35,7 +36,7 @@ fun ButtonScene() {
     ) {
         item {
             TextButton(
-                text = "Enabled Button",
+                text = R.string.btn_enabled,
                 onClick = {
                     Toast.makeText(ctx, "Text Button", Toast.LENGTH_SHORT).show()
                 },
@@ -44,7 +45,7 @@ fun ButtonScene() {
         }
         item {
             TextButton(
-                text = "Disabled Button",
+                text = R.string.btn_enabled,
                 enabled = false,
                 onClick = { /* no action available */ },
                 buttonColors = buttonColors,

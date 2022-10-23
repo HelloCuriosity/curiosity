@@ -7,4 +7,8 @@
     <string name="components_scene_title">Components</string>
     <string name="text_scene_title">Text</string>
     <string name="typography_scene_title">Typography</string>
+
+    <!--  Buttons  -->
+    <string name="btn_enabled">Enabled Button</string>
+    <string name="btn_disabled">Disabled Button</string>
 </resources>
