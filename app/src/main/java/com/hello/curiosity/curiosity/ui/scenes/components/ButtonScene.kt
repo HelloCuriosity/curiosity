@@ -13,20 +13,13 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.hello.curiosity.compose.ui.components.buttons.TextButton
-import com.hello.curiosity.compose.ui.components.buttons.buttonColors
+import com.hello.curiosity.compose.ui.components.buttons.TextIconButton
 import com.hello.curiosity.curiosity.R
 
 @Composable
 fun ButtonScene() {
     val ctx = LocalContext.current
 
-    @Suppress("MagicNumber")
-    val buttonColors = buttonColors(
-        backgroundColor = Color(0xFF2099F3),
-        contentColor = Color.White,
-        disabledBackgroundColor = Color(0xFF90CCF9),
-        disabledContentColor = Color.White,
-    )
     LazyColumn(
         modifier = Modifier
             .fillMaxWidth()
@@ -40,7 +33,6 @@ fun ButtonScene() {
                 onClick = {
                     Toast.makeText(ctx, "Text Button", Toast.LENGTH_SHORT).show()
                 },
-                buttonColors = buttonColors,
             )
         }
         item {
@@ -48,7 +40,26 @@ fun ButtonScene() {
                 text = R.string.btn_enabled,
                 enabled = false,
                 onClick = { /* no action available */ },
-                buttonColors = buttonColors,
+            )
+        }
+        item {
+            TextIconButton(
+                text = R.string.btn_enabled,
+                enabled = true,
+                onClick = { /* no action available */ },
+                contentDescription = R.string.btn_enabled,
+                icon = R.drawable.ic_button,
+                tint = Color.White,
+            )
+        }
+        item {
+            TextIconButton(
+                text = R.string.btn_disabled,
+                enabled = false,
+                onClick = { /* no action available */ },
+                contentDescription = R.string.btn_disabled,
+                icon = R.drawable.ic_button,
+                tint = Color.White,
             )
         }
     }
