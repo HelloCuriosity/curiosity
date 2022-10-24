@@ -7,11 +7,12 @@ plugins {
 }
 
 android {
+    namespace = "com.hello.curiosity"
     compileSdk = Dependencies.Versions.compileSdk
     buildToolsVersion = Dependencies.Versions.buildToolsVersion
 
     defaultConfig {
-        applicationId = "com.hello.curiosity.curiosity"
+        applicationId = "com.hello.curiosity"
         minSdk = Dependencies.Versions.minSdk
         targetSdk = Dependencies.Versions.targetSdk
 
@@ -26,7 +27,7 @@ android {
 
     buildTypes {
         getByName("debug") {
-            isTestCoverageEnabled = true
+            enableUnitTestCoverage = true
         }
         getByName("release") {
             isMinifyEnabled = true
@@ -71,7 +72,6 @@ android {
             }
         }
     }
-    namespace = "com.hello.curiosity.curiosity"
 }
 
 dependencies {
