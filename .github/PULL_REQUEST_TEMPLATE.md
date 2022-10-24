@@ -7,6 +7,10 @@ Before you create a pull request make sure you've reviewed our
 
 <!-- Add a short description of the change. -->
 
+## UI
+
+<!-- Add screen shots where applicable. -->
+
 ## Review checklist
 
 - [ ] PR is split into meaningful commits for the ease of reviewing
