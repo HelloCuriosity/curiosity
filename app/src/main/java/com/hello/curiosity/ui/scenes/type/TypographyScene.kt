@@ -71,7 +71,7 @@ fun TypographyScene() {
     )
 
     LazyColumn(
-        modifier = Modifier.testTag("lazy-types-tag")
+        modifier = Modifier.testTag("type-scene-test-tag")
     ) {
         items(types) { type ->
             Text(

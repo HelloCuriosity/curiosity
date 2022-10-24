@@ -16,7 +16,7 @@ class TypographySceneTest : ComposeTest() {
         }
 
         composeTestRule
-            .onNodeWithTag("lazy-types-tag")
+            .onNodeWithTag("type-scene-test-tag")
             .assertIsDisplayed()
     }
 }

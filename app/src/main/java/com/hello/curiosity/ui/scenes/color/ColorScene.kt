@@ -65,7 +65,7 @@ internal fun ColorScene() {
 
     LazyVerticalGrid(
         columns = GridCells.Fixed(3),
-        modifier = Modifier.testTag("lazy-colors-tag")
+        modifier = Modifier.testTag("color-scene-test-tag")
     ) {
         items(colors) { color ->
             ColorView(presentation = color)

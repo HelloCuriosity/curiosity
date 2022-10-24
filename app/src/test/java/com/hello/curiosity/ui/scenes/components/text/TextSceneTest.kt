@@ -16,7 +16,7 @@ class TextSceneTest : ComposeTest() {
         }
 
         composeTestRule
-            .onNodeWithTag("lazy-text-tag")
+            .onNodeWithTag("text-scene-test-tag")
             .assertIsDisplayed()
     }
 }

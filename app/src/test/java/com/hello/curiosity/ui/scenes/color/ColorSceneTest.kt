@@ -17,7 +17,7 @@ class ColorSceneTest : ComposeTest() {
         }
 
         composeTestRule
-            .onNodeWithTag("lazy-colors-tag")
+            .onNodeWithTag("color-scene-test-tag")
             .assertIsDisplayed()
     }
 }

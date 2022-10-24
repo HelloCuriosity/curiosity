@@ -33,6 +33,13 @@ sealed class Scenes(
         route = "COMPONENTS"
     )
 
+    object Input : Scenes(
+        title = R.string.input_scene_title,
+        icon = R.drawable.ic_input,
+        contentDescription = R.string.input_scene_title,
+        route = "INPUT"
+    )
+
     object Text : Scenes(
         title = R.string.text_scene_title,
         icon = R.drawable.ic_typography,

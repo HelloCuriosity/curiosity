@@ -27,6 +27,7 @@ fun ComponentScene(
     val components = listOf(
         Scenes.Text,
         Scenes.Buttons,
+        Scenes.Input,
     )
 
     LazyVerticalGrid(

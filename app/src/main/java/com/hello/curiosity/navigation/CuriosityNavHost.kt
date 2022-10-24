@@ -8,6 +8,7 @@ import com.hello.curiosity.ui.scenes.Scenes
 import com.hello.curiosity.ui.scenes.color.ColorScene
 import com.hello.curiosity.ui.scenes.components.ButtonScene
 import com.hello.curiosity.ui.scenes.components.ComponentScene
+import com.hello.curiosity.ui.scenes.components.InputScene
 import com.hello.curiosity.ui.scenes.components.text.TextScene
 import com.hello.curiosity.ui.scenes.type.TypographyScene
 
@@ -24,6 +25,9 @@ fun CuriosityNavHost(
         }
         composable(Scenes.Components.route) {
             ComponentScene(navController = navController)
+        }
+        composable(route = Scenes.Input.route) {
+            InputScene()
         }
         composable(route = Scenes.Text.route) {
             TextScene()
