@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">curiosity</string>
+    <string name="app_name">Curiosity</string>
 
     <!--  Content Description  -->
     <string name="content_description_back">Back icon</string>
