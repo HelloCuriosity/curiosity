@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.hello.curiosity.curiosity.ui.scenes.BottomNavScenes
+import com.hello.curiosity.curiosity.ui.scenes.Scenes
 import com.hello.curiosity.curiosity.ui.scenes.color.ColorScene
 import com.hello.curiosity.curiosity.ui.scenes.components.ComponentScene
 import com.hello.curiosity.curiosity.ui.scenes.type.TypographyScene
@@ -13,14 +13,14 @@ import com.hello.curiosity.curiosity.ui.scenes.type.TypographyScene
 fun DashboardNavGraph(
     navController: NavHostController
 ) {
-    NavHost(navController, startDestination = BottomNavScenes.Components.route) {
-        composable(BottomNavScenes.Components.route) {
+    NavHost(navController, startDestination = Scenes.Components.route) {
+        composable(Scenes.Components.route) {
             ComponentScene(navController = navController)
         }
-        composable(BottomNavScenes.Color.route) {
+        composable(Scenes.Color.route) {
             ColorScene()
         }
-        composable(BottomNavScenes.Typography.route) {
+        composable(Scenes.Typography.route) {
             TypographyScene()
         }
         detailNavGraph()
