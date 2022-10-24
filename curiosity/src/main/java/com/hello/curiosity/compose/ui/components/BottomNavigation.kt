@@ -55,7 +55,7 @@ fun BottomNavigation(
 }
 
 @Composable
-private fun currentRoute(navController: NavHostController): String? {
+fun currentRoute(navController: NavHostController): String? {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     return navBackStackEntry?.destination?.route
 }
