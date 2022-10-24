@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.hello.curiosity.compose.ui.components.text.LabelMedium
+import com.hello.curiosity.curiosity.ui.scenes.Scenes
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
@@ -24,8 +25,8 @@ fun ComponentScene(
     navController: NavHostController
 ) {
     val components = listOf(
-        ComponentScenes.Text,
-        ComponentScenes.Buttons,
+        Scenes.Text,
+        Scenes.Buttons,
     )
 
     LazyVerticalGrid(
