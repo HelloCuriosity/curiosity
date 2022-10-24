@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">curiosity</string>
 
+    <!--  Content Description  -->
+    <string name="content_description_back">Back icon</string>
+
     <!--  Scenes  -->
     <string name="button_scene_title">Buttons</string>
     <string name="color_scene_title">Color</string>

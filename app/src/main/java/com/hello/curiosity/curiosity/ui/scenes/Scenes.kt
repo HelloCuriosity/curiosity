@@ -47,3 +47,17 @@ sealed class Scenes(
         route = "TYPOGRAPHY"
     )
 }
+
+fun String?.showBottomNavigation(): Boolean = when (this) {
+    Scenes.Color.route -> true
+    Scenes.Components.route -> true
+    Scenes.Typography.route -> true
+    else -> false
+}
+
+fun String?.showTopAppBar(): Boolean = when (this) {
+    Scenes.Color.route -> false
+    Scenes.Components.route -> false
+    Scenes.Typography.route -> false
+    else -> true
+}

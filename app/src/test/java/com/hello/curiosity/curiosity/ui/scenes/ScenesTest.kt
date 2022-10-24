@@ -2,6 +2,8 @@ package com.hello.curiosity.curiosity.ui.scenes
 
 import com.hello.curiosity.curiosity.R
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class ScenesTest {
@@ -13,6 +15,8 @@ class ScenesTest {
         assertEquals(R.drawable.ic_button, scene.icon)
         assertEquals(R.string.button_scene_title, scene.contentDescription)
         assertEquals("BUTTONS", scene.route)
+        assertTrue(scene.route.showTopAppBar())
+        assertFalse(scene.route.showBottomNavigation())
     }
 
     @Test
@@ -22,6 +26,8 @@ class ScenesTest {
         assertEquals(R.drawable.ic_color_palette, scene.icon)
         assertEquals(R.string.color_scene_title, scene.contentDescription)
         assertEquals("COLOR", scene.route)
+        assertFalse(scene.route.showTopAppBar())
+        assertTrue(scene.route.showBottomNavigation())
     }
 
     @Test
@@ -31,6 +37,8 @@ class ScenesTest {
         assertEquals(R.drawable.ic_components, scene.icon)
         assertEquals(R.string.components_scene_title, scene.contentDescription)
         assertEquals("COMPONENTS", scene.route)
+        assertFalse(scene.route.showTopAppBar())
+        assertTrue(scene.route.showBottomNavigation())
     }
 
     @Test
@@ -40,6 +48,8 @@ class ScenesTest {
         assertEquals(R.drawable.ic_typography, scene.icon)
         assertEquals(R.string.text_scene_title, scene.contentDescription)
         assertEquals("TEXT", scene.route)
+        assertTrue(scene.route.showTopAppBar())
+        assertFalse(scene.route.showBottomNavigation())
     }
 
     @Test
@@ -49,5 +59,7 @@ class ScenesTest {
         assertEquals(R.drawable.ic_typography, scene.icon)
         assertEquals(R.string.typography_scene_title, scene.contentDescription)
         assertEquals("TYPOGRAPHY", scene.route)
+        assertFalse(scene.route.showTopAppBar())
+        assertTrue(scene.route.showBottomNavigation())
     }
 }
