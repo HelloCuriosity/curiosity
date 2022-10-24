@@ -12,9 +12,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.hello.curiosity.R
 import com.hello.curiosity.compose.ui.components.buttons.TextButton
 import com.hello.curiosity.compose.ui.components.buttons.TextIconButton
-import com.hello.curiosity.curiosity.R
 
 @Composable
 fun ButtonScene() {

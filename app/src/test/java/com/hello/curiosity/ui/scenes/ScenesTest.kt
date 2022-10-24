@@ -1,6 +1,6 @@
 package com.hello.curiosity.ui.scenes
 
-import com.hello.curiosity.curiosity.R
+import com.hello.curiosity.R
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue

@@ -14,9 +14,9 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
+import com.hello.curiosity.R
 import com.hello.curiosity.compose.ui.components.BottomNavigation
 import com.hello.curiosity.compose.ui.components.currentRoute
-import com.hello.curiosity.curiosity.R
 import com.hello.curiosity.navigation.CuriosityNavHost
 
 @Composable
