@@ -34,15 +34,14 @@ fun BottomNavigation(
 ) {
     val currentRoute = currentRoute(navController)
     scenes.forEach { scene ->
-        val title = stringResource(id = scene.title)
         BottomNavigationItem(
             icon = {
                 Icon(
                     painter = painterResource(id = scene.icon),
-                    contentDescription = title
+                    contentDescription = stringResource(id = scene.contentDescription)
                 )
             },
-            label = { Text(title) },
+            label = { Text(stringResource(id = scene.title)) },
             selected = if (shouldBeSelected) currentRoute == scene.route else false,
             alwaysShowLabel = alwaysShowLabel,
             onClick = {

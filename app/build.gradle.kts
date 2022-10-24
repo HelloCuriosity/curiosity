@@ -99,8 +99,12 @@ dependencies {
     // Curiosity testing utils
     testImplementation(project(":test-compose-utils"))
 
+    // Compose
     debugImplementation(Dependencies.Test.Compose.uiTestManifest)
     testImplementation(Dependencies.Test.Compose.uiTestJunit)
+    testImplementation(Dependencies.Test.Compose.navigationTest)
+
+    // Robolectric
     testImplementation(Dependencies.Test.robolectric) {
         exclude(module = "classworlds")
         exclude(module = "commons-logging")

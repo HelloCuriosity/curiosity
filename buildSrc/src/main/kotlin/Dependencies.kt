@@ -7,6 +7,7 @@ object Dependencies {
         const val composeCompiler = "1.3.2"
         const val jvmTarget = "11"
         const val kotlin = "1.7.20"
+        const val navigation = "2.5.3"
 
         // App
         const val compileSdk = 33
@@ -28,7 +29,7 @@ object Dependencies {
     object Compose {
         const val activity = "androidx.activity:activity-compose:1.6.0"
         const val material = "androidx.compose.material:material:${Versions.compose}"
-        const val navigation = "androidx.navigation:navigation-compose:2.5.2"
+        const val navigation = "androidx.navigation:navigation-compose:${Versions.navigation}"
         const val tooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
         const val toolingPreview = "androidx.compose.ui:ui-tooling-preview:${Versions.compose}"
         const val ui = "androidx.compose.ui:ui:${Versions.compose}"
@@ -52,6 +53,7 @@ object Dependencies {
         object Compose {
             const val uiTestJunit = "androidx.compose.ui:ui-test-junit4:${Versions.compose}"
             const val uiTestManifest = "androidx.compose.ui:ui-test-manifest:${Versions.compose}"
+            const val navigationTest = "androidx.navigation:navigation-testing:${Versions.navigation}"
         }
 
         const val junit = "junit:junit:4.13.2"
