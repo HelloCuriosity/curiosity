@@ -88,6 +88,7 @@ dependencies {
 
     // Curiosity
     implementation(project(":curiosity"))
+    implementation(project(":navigation"))
 
     // Leak
     debugImplementation(Dependencies.leakCanary)

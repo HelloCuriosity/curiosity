@@ -1,4 +1,4 @@
-package com.hello.curiosity.compose.ui.components
+package com.hello.curiosity.compose.navigation
 
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationDefaults
@@ -16,7 +16,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.hello.curiosity.compose.ui.Scene
 
 @Composable
 fun BottomNavigation(

@@ -13,7 +13,7 @@ plugins {
 }
 
 android {
-    namespace = "com.hello.curiosity.compose"
+    namespace = "com.hello.curiosity.compose.navigation"
     compileSdk = Dependencies.Versions.compileSdk
     buildToolsVersion = Dependencies.Versions.buildToolsVersion
 

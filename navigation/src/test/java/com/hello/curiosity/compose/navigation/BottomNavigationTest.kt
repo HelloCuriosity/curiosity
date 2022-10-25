@@ -1,4 +1,4 @@
-package com.hello.curiosity.compose.ui.components
+package com.hello.curiosity.compose.navigation
 
 import android.content.Context
 import androidx.compose.ui.graphics.Color
@@ -7,7 +7,6 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
 import androidx.test.core.app.ApplicationProvider
-import com.hello.curiosity.compose.ui.Scene
 import com.hello.curiosity.test.compose.ComposeTest
 import org.junit.Test
 import org.junit.runner.RunWith
