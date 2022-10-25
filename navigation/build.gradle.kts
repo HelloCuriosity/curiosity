@@ -1,38 +1,32 @@
+import kotlinx.kover.api.KoverTaskExtension
+
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("org.jetbrains.kotlin.android")
+
     // Quality Gates
     id(Dependencies.Gradle.kotlinter)
     id(Dependencies.Gradle.detekt)
+
+    // Publishing
+    id("maven-publish")
 }
 
 android {
-    namespace = "com.hello.curiosity"
+    namespace = "com.hello.curiosity.compose.navigation"
     compileSdk = Dependencies.Versions.compileSdk
     buildToolsVersion = Dependencies.Versions.buildToolsVersion
 
     defaultConfig {
-        applicationId = "com.hello.curiosity"
         minSdk = Dependencies.Versions.minSdk
         targetSdk = Dependencies.Versions.targetSdk
 
-        versionCode = System.getenv("GITHUB_RUN_NUMBER")?.toInt() ?: 1
-        versionName = "0.1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
     }
 
     buildTypes {
-        getByName("debug") {
-            enableUnitTestCoverage = true
-        }
-        getByName("release") {
-            isMinifyEnabled = true
-            isDebuggable = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        release {
+            isMinifyEnabled = false
         }
     }
 
@@ -53,9 +47,10 @@ android {
         kotlinCompilerExtensionVersion = Dependencies.Versions.composeCompiler
     }
 
-    packagingOptions {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
         }
     }
 
@@ -65,7 +60,7 @@ android {
             isReturnDefaultValues = true
             all {
                 if (it.name == "testReleaseUnitTest") {
-                    it.extensions.configure(kotlinx.kover.api.KoverTaskExtension::class) {
+                    it.extensions.configure(KoverTaskExtension::class) {
                         isDisabled.set(true)
                     }
                 }
@@ -86,26 +81,21 @@ dependencies {
     implementation(Dependencies.Compose.toolingPreview)
     implementation(Dependencies.Compose.ui)
 
-    // Curiosity
-    implementation(project(":curiosity"))
-    implementation(project(":navigation"))
-
-    // Leak
-    debugImplementation(Dependencies.leakCanary)
+    // It is a known bug: https://issuetracker.google.com/issues/227767363
+    //
+    // Google is currently working on a fix but there is already a workaround:
+    // add these dependencies to every module where you use the Compose preview:
+    debugApi("androidx.customview:customview:1.2.0-alpha02")
+    debugApi("androidx.customview:customview-poolingcontainer:1.0.0")
 
     // Testing
     testImplementation(Dependencies.Test.junit)
-    testImplementation("androidx.test.ext:junit-ktx:1.1.3")
 
     // Curiosity testing utils
     testImplementation(project(":test-compose-utils"))
 
-    // Compose
     debugImplementation(Dependencies.Test.Compose.uiTestManifest)
     testImplementation(Dependencies.Test.Compose.uiTestJunit)
-    testImplementation(Dependencies.Test.Compose.navigationTest)
-
-    // Robolectric
     testImplementation(Dependencies.Test.robolectric) {
         exclude(module = "classworlds")
         exclude(module = "commons-logging")
@@ -129,4 +119,44 @@ dependencies {
     androidTestImplementation(Dependencies.Test.Androidx.espresso)
     androidTestImplementation(Dependencies.Test.Androidx.junit)
     androidTestImplementation(Dependencies.Test.Compose.uiTestJunit)
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.hello.curiosity.compose"
+                artifactId = "navigation"
+                version = System.getenv("VERSION") ?: "local"
+
+                pom {
+                    name.set("Curiosity")
+                    description.set("Curiosity is a simple design system just for fun.")
+                    url.set("https://github.com/hopeman15/curiosity")
+                    licenses {
+                        license {
+                            name.set("MIT Licence")
+                            url.set("https://github.com/hopeman15/curiosity/blob/main/LICENSE")
+                        }
+                    }
+                    scm {
+                        connection.set("scm:git:https://github.com/hopeman15/curiosity.git")
+                        developerConnection.set("scm:git:https://github.com/hopeman15/curiosity.git")
+                        url.set("https://github.com/hopeman15/curiosity")
+                    }
+                }
+            }
+        }
+        repositories {
+            maven {
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/hopeman15/curiosity")
+                credentials {
+                    username = System.getenv("GPR_USER")
+                    password = System.getenv("GPR_TOKEN")
+                }
+            }
+        }
+    }
 }

@@ -15,4 +15,5 @@ dependencyResolutionManagement {
 rootProject.name = "Curiosity"
 include(":app")
 include(":curiosity")
+include(":navigation")
 include(":test-compose-utils")
