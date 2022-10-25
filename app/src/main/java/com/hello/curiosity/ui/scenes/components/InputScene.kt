@@ -21,7 +21,9 @@ fun InputScene() {
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         item {
-            InputTextField(label = "Label")
+            InputTextField(
+                label = "Label"
+            )
         }
     }
 }
