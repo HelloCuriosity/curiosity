@@ -1,4 +1,4 @@
-package com.hello.curiosity.ui.scenes.components.text
+package com.hello.curiosity.ui.scenes.components
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onNodeWithTag

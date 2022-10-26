@@ -9,7 +9,7 @@ import com.hello.curiosity.ui.scenes.color.ColorScene
 import com.hello.curiosity.ui.scenes.components.ButtonScene
 import com.hello.curiosity.ui.scenes.components.ComponentScene
 import com.hello.curiosity.ui.scenes.components.InputScene
-import com.hello.curiosity.ui.scenes.components.text.TextScene
+import com.hello.curiosity.ui.scenes.components.TextScene
 import com.hello.curiosity.ui.scenes.type.TypographyScene
 
 @Composable
