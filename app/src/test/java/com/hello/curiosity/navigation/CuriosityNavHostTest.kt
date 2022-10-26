@@ -10,10 +10,7 @@ import com.hello.curiosity.ui.scenes.Scenes
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
-import org.junit.runner.RunWith
-import org.robolectric.RobolectricTestRunner
 
-@RunWith(RobolectricTestRunner::class)
 class CuriosityNavHostTest : ComposeTest() {
 
     private lateinit var navController: TestNavHostController
@@ -25,52 +22,56 @@ class CuriosityNavHostTest : ComposeTest() {
             navController.navigatorProvider.addNavigator(ComposeNavigator())
             CuriosityNavHost(navController = navController)
         }
+
+        composeTestRule
+            .onNodeWithTag("component-scene-test-tag")
+            .assertIsDisplayed()
     }
 
     @Test
     fun `verify start destination is ComponentScene`() {
-        composeTestRule
-            .onNodeWithTag("component-scene-test-tag")
-            .assertIsDisplayed()
-
         val route = navController.currentBackStackEntry?.destination?.route
         assertEquals(route, Scenes.Components.route)
     }
 
     @Test
     fun `verify route to ButtonScene works`() {
-        composeTestRule
-            .onNodeWithTag("component-scene-test-tag")
-            .assertIsDisplayed()
-
         assertNavigateToDestination(Scenes.Buttons.route)
+        composeTestRule
+            .onNodeWithTag("button-scene-test-tag")
+            .assertIsDisplayed()
     }
 
     @Test
     fun `verify route to ColorScene works`() {
-        composeTestRule
-            .onNodeWithTag("component-scene-test-tag")
-            .assertIsDisplayed()
-
         assertNavigateToDestination(Scenes.Color.route)
+        composeTestRule
+            .onNodeWithTag("color-scene-test-tag")
+            .assertIsDisplayed()
+    }
+
+    @Test
+    fun `verify route to InputScene works`() {
+        assertNavigateToDestination(Scenes.Input.route)
+        composeTestRule
+            .onNodeWithTag("input-scene-test-tag")
+            .assertIsDisplayed()
     }
 
     @Test
     fun `verify route to TextScene works`() {
-        composeTestRule
-            .onNodeWithTag("component-scene-test-tag")
-            .assertIsDisplayed()
-
         assertNavigateToDestination(Scenes.Text.route)
+        composeTestRule
+            .onNodeWithTag("text-scene-test-tag")
+            .assertIsDisplayed()
     }
 
     @Test
     fun `verify route to TypographyScene works`() {
-        composeTestRule
-            .onNodeWithTag("component-scene-test-tag")
-            .assertIsDisplayed()
-
         assertNavigateToDestination(Scenes.Typography.route)
+        composeTestRule
+            .onNodeWithTag("type-scene-test-tag")
+            .assertIsDisplayed()
     }
 
     private fun assertNavigateToDestination(scene: String) {

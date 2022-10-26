@@ -8,6 +8,7 @@
     <string name="button_scene_title">Buttons</string>
     <string name="color_scene_title">Color</string>
     <string name="components_scene_title">Components</string>
+    <string name="input_scene_title">Input</string>
     <string name="text_scene_title">Text</string>
     <string name="typography_scene_title">Typography</string>
 

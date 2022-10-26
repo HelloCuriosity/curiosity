@@ -18,7 +18,7 @@ import com.hello.curiosity.compose.ui.components.text.LabelSmall
 @Composable
 fun TextScene() {
     LazyColumn(
-        modifier = Modifier.testTag("lazy-text-tag"),
+        modifier = Modifier.testTag("text-scene-test-tag"),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         item {

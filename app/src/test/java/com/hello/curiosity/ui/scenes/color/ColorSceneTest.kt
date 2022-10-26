@@ -4,10 +4,7 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onNodeWithTag
 import com.hello.curiosity.test.compose.ComposeTest
 import org.junit.Test
-import org.junit.runner.RunWith
-import org.robolectric.RobolectricTestRunner
 
-@RunWith(RobolectricTestRunner::class)
 class ColorSceneTest : ComposeTest() {
 
     @Test
@@ -17,7 +14,7 @@ class ColorSceneTest : ComposeTest() {
         }
 
         composeTestRule
-            .onNodeWithTag("lazy-colors-tag")
+            .onNodeWithTag("color-scene-test-tag")
             .assertIsDisplayed()
     }
 }

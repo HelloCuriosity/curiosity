@@ -9,10 +9,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.test.core.app.ApplicationProvider
 import com.hello.curiosity.test.compose.ComposeTest
 import org.junit.Test
-import org.junit.runner.RunWith
-import org.robolectric.RobolectricTestRunner
 
-@RunWith(RobolectricTestRunner::class)
 class BottomNavigationTest : ComposeTest() {
     private val context: Context = ApplicationProvider.getApplicationContext()
 
