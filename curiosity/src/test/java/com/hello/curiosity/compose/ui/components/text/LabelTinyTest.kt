@@ -6,9 +6,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.hello.curiosity.compose.ui.ComposeTextTest
 
-class ContentMediumTest : ComposeTextTest() {
+class LabelTinyTest : ComposeTextTest() {
     override val contentString: @Composable () -> Unit = {
-        ContentMedium(
+        LabelTiny(
             text = text,
             modifier = Modifier,
             color = Color.White,
@@ -18,7 +18,7 @@ class ContentMediumTest : ComposeTextTest() {
     }
 
     override val contentResource: @Composable () -> Unit = {
-        ContentMedium(
+        LabelTiny(
             text = res,
             modifier = Modifier,
             color = Color.White,
