@@ -5,10 +5,7 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onNodeWithText
 import com.hello.curiosity.test.compose.ComposeTest
 import org.junit.Test
-import org.junit.runner.RunWith
-import org.robolectric.RobolectricTestRunner
 
-@RunWith(RobolectricTestRunner::class)
 class ColorViewTest : ComposeTest() {
 
     private val presentation = ColorPresentation(

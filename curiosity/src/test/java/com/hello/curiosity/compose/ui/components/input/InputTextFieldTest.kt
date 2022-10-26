@@ -14,10 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.hello.curiosity.compose.ui.theme.ThemeImpl
 import com.hello.curiosity.test.compose.ComposeTest
 import org.junit.Test
-import org.junit.runner.RunWith
-import org.robolectric.RobolectricTestRunner
 
-@RunWith(RobolectricTestRunner::class)
 class InputTextFieldTest : ComposeTest() {
 
     private val text = "test"
