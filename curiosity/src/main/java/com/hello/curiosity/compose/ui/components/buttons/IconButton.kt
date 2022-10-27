@@ -2,8 +2,10 @@ package com.hello.curiosity.compose.ui.components.buttons
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.ContentAlpha
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
@@ -14,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -28,10 +31,14 @@ fun IconButton(
     enabled: Boolean = true,
     @DrawableRes icon: Int,
     @StringRes contentDescription: Int = R.string.checkbox,
-    size: Dp = 48.dp,
+    size: Dp = 50.dp,
     shape: Shape = CircleShape,
     color: Color = MaterialTheme.colors.primarySurface,
+    disabledColor: Color = MaterialTheme.colors.onSurface.copy(alpha = 0.12f)
+        .compositeOver(MaterialTheme.colors.surface),
     tint: Color = contentColorFor(color),
+    disabledTint: Color = MaterialTheme.colors.onSurface
+        .copy(alpha = ContentAlpha.disabled),
     onClick: () -> Unit,
 ) = Surface(
     modifier = modifier
@@ -39,14 +46,15 @@ fun IconButton(
         .testTag("icon-button-container-test-tag"),
     enabled = enabled,
     shape = shape,
-    color = color,
+    color = if (enabled) color else disabledColor,
     onClick = onClick,
 ) {
     Icon(
         modifier = Modifier
+            .padding(8.dp)
             .testTag("icon-button-test-tag"),
         painter = painterResource(id = icon),
         contentDescription = stringResource(id = contentDescription),
-        tint = tint,
+        tint = if (enabled) tint else disabledTint,
     )
 }

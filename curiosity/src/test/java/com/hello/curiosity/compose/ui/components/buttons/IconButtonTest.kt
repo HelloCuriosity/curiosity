@@ -44,10 +44,12 @@ class IconButtonTest : ComposeTest() {
                 enabled = true,
                 icon = android.R.drawable.ic_delete,
                 contentDescription = android.R.string.copy,
-                size = 50.dp,
+                size = 55.dp,
                 shape = RectangleShape,
                 color = Color.Blue,
+                disabledColor = Color.Black,
                 tint = Color.White,
+                disabledTint = Color.Yellow
             ) {
                 // no action
             }
