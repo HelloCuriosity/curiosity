@@ -25,7 +25,7 @@ fun BottomNavigation(
     shouldBeSelected: Boolean = true,
     backgroundColor: Color = MaterialTheme.colors.primarySurface,
     contentColor: Color = contentColorFor(backgroundColor),
-    selectedContentColor: Color = Color.Black,
+    selectedContentColor: Color = MaterialTheme.colors.onPrimary,
     elevation: Dp = BottomNavigationDefaults.Elevation,
 ) = BottomNavigation(
     backgroundColor = backgroundColor,
