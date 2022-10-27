@@ -55,6 +55,17 @@ sealed class Scenes(
     )
 }
 
+@StringRes
+fun String?.title(): Int? = when (this) {
+    Scenes.Buttons.route -> Scenes.Buttons.title
+    Scenes.Color.route -> Scenes.Color.title
+    Scenes.Components.route -> Scenes.Components.title
+    Scenes.Input.route -> Scenes.Input.title
+    Scenes.Text.route -> Scenes.Text.title
+    Scenes.Typography.route -> Scenes.Typography.title
+    else -> null
+}
+
 fun String?.showBottomNavigation(): Boolean = when (this) {
     Scenes.Color.route -> true
     Scenes.Components.route -> true
