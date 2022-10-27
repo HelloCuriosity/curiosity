@@ -14,6 +14,7 @@ import com.hello.curiosity.compose.ui.components.text.ContentMedium
 import com.hello.curiosity.compose.ui.components.text.LabelLarge
 import com.hello.curiosity.compose.ui.components.text.LabelMedium
 import com.hello.curiosity.compose.ui.components.text.LabelSmall
+import com.hello.curiosity.compose.ui.components.text.LabelTiny
 
 @Composable
 fun TextScene() {
@@ -38,6 +39,13 @@ fun TextScene() {
         item {
             LabelSmall(
                 text = "Label Small",
+                modifier = Modifier.padding(8.dp)
+            )
+            Divider()
+        }
+        item {
+            LabelTiny(
+                text = "Label Tiny",
                 modifier = Modifier.padding(8.dp)
             )
             Divider()
