@@ -76,7 +76,7 @@ class ScenesTest {
         assertEquals(R.string.toggle_scene_title, scene.contentDescription)
         assertEquals("TOGGLE", scene.route)
         assertEquals(R.string.toggle_scene_title, scene.route.title())
-        assertFalse(scene.route.showTopAppBar())
+        assertTrue(scene.route.showTopAppBar())
         assertFalse(scene.route.showBottomNavigation())
     }
 

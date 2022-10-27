@@ -84,7 +84,6 @@ fun String?.showBottomNavigation(): Boolean = when (this) {
 fun String?.showTopAppBar(): Boolean = when (this) {
     Scenes.Color.route -> false
     Scenes.Components.route -> false
-    Scenes.Toggle.route -> false
     Scenes.Typography.route -> false
     else -> true
 }
