@@ -50,7 +50,7 @@ class ButtonTest : ComposeTest() {
                 enabled = false,
                 shape = RectangleShape,
                 style = ThemeImpl.typography.h1,
-                buttonColors = buttonColors(
+                buttonColors = ButtonDefaults.buttonColors(
                     backgroundColor = Color.Blue,
                     contentColor = Color.Cyan,
                     disabledBackgroundColor = Color.Magenta,
@@ -99,7 +99,7 @@ class ButtonTest : ComposeTest() {
                 enabled = false,
                 shape = RectangleShape,
                 style = ThemeImpl.typography.h1,
-                buttonColors = buttonColors(
+                buttonColors = ButtonDefaults.buttonColors(
                     backgroundColor = Color.Blue,
                     contentColor = Color.Cyan,
                     disabledBackgroundColor = Color.Magenta,

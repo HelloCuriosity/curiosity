@@ -13,12 +13,14 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.hello.curiosity.R
+import com.hello.curiosity.compose.ui.components.buttons.IconButton
 import com.hello.curiosity.compose.ui.components.buttons.TextButton
 import com.hello.curiosity.compose.ui.components.buttons.TextIconButton
 
 private val verticalPadding = 16.dp
 
 @Composable
+@Suppress("LongMethod")
 fun ButtonScene() {
     val ctx = LocalContext.current
 
@@ -63,6 +65,23 @@ fun ButtonScene() {
                 onClick = { /* no action available */ },
                 contentDescription = R.string.btn_disabled,
                 icon = R.drawable.ic_button,
+            )
+        }
+        item {
+            IconButton(
+                onClick = {
+                    Toast.makeText(ctx, "Icon Button", Toast.LENGTH_SHORT).show()
+                },
+                contentDescription = R.string.btn_enabled,
+                icon = android.R.drawable.ic_delete
+            )
+        }
+        item {
+            IconButton(
+                enabled = false,
+                onClick = { /* no action available */ },
+                contentDescription = R.string.btn_disabled,
+                icon = android.R.drawable.ic_delete
             )
         }
     }
