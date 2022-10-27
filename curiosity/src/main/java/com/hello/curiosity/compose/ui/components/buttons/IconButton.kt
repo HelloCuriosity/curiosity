@@ -1,5 +1,6 @@
 package com.hello.curiosity.compose.ui.components.buttons
 
+import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -8,15 +9,13 @@ import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.contentColorFor
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.primarySurface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -27,7 +26,7 @@ import com.hello.curiosity.compose.R
 fun IconButton(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
-    vectorImage: ImageVector = Icons.Filled.ArrowDropDown,
+    @DrawableRes icon: Int,
     @StringRes contentDescription: Int = R.string.checkbox,
     size: Dp = 48.dp,
     shape: Shape = CircleShape,
@@ -46,7 +45,7 @@ fun IconButton(
     Icon(
         modifier = Modifier
             .testTag("icon-button-test-tag"),
-        imageVector = vectorImage,
+        painter = painterResource(id = icon),
         contentDescription = stringResource(id = contentDescription),
         tint = tint,
     )

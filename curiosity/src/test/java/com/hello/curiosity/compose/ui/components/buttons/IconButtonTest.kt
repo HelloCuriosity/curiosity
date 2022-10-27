@@ -1,7 +1,5 @@
 package com.hello.curiosity.compose.ui.components.buttons
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
@@ -17,7 +15,9 @@ class IconButtonTest : ComposeTest() {
     @Test
     fun `validate IconButton defaults`() {
         composeTestRule.setContent {
-            IconButton {
+            IconButton(
+                icon = android.R.drawable.ic_delete,
+            ) {
                 // no action
             }
         }
@@ -42,7 +42,7 @@ class IconButtonTest : ComposeTest() {
             IconButton(
                 modifier = Modifier,
                 enabled = true,
-                vectorImage = Icons.Filled.ThumbUp,
+                icon = android.R.drawable.ic_delete,
                 contentDescription = android.R.string.copy,
                 size = 50.dp,
                 shape = RectangleShape,
