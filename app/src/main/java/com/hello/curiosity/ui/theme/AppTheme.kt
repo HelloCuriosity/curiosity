@@ -1,5 +1,6 @@
 package com.hello.curiosity.ui.theme
 
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.Font
@@ -7,9 +8,13 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import com.hello.curiosity.R
 import com.hello.curiosity.compose.ui.components.input.inputTextFieldColors
+import com.hello.curiosity.compose.ui.components.toggle.CheckBoxDefaults
 import com.hello.curiosity.compose.ui.theme.ColorScheme
 import com.hello.curiosity.compose.ui.theme.Theme
 import com.hello.curiosity.compose.ui.theme.Type
+import com.hello.curiosity.ui.theme.AppTheme.lightCyan
+import com.hello.curiosity.ui.theme.AppTheme.metallicSeaweed
+import com.hello.curiosity.ui.theme.AppTheme.redCrayola
 
 object AppTheme : Theme {
     override val typography: Type = Type(
@@ -21,18 +26,24 @@ object AppTheme : Theme {
             Font(R.font.rubik_extra_bold, FontWeight.ExtraBold),
         )
     )
-    override val colors: ColorScheme = ColorScheme(
-        background = Color(0xFFD0F4EA),
-        primary = Color(0xFF087E8B),
-        surface = Color(0xFF087E8B),
-        onSurface = Color(0xFFD0F4EA),
-        primaryVariant = Color(0xFFFF5A5F),
 
-        backgroundDark = Color(0xFF3C3C3C),
-        primaryDark = Color(0xFFD0F4EA),
-        surfaceDark = Color(0xFFD0F4EA),
-        onSurfaceDark = Color(0xFF087E8B),
-        primaryVariantDark = Color(0xFFFF5A5F),
+    val lightCyan = Color(0xFFD0F4EA)
+    val metallicSeaweed = Color(0xFF087E8B)
+    val onyx = Color(0xFF3C3C3C)
+    val redCrayola = Color(0xFFFF5A5F)
+
+    override val colors: ColorScheme = ColorScheme(
+        primary = metallicSeaweed,
+        surface = metallicSeaweed,
+        onSurface = lightCyan,
+        primaryVariant = redCrayola,
+        background = lightCyan,
+
+        primaryDark = lightCyan,
+        surfaceDark = lightCyan,
+        onSurfaceDark = metallicSeaweed,
+        primaryVariantDark = redCrayola,
+        backgroundDark = onyx,
     )
 }
 
@@ -40,4 +51,12 @@ object AppTheme : Theme {
 fun inputColors() = inputTextFieldColors(
     textColor = Color.Black,
     cursorColor = Color.Black,
+)
+
+@Composable
+fun checkColors() = CheckBoxDefaults.colors(
+    checkedColor = if (isSystemInDarkTheme()) lightCyan else metallicSeaweed,
+    uncheckedColor = if (isSystemInDarkTheme()) metallicSeaweed else lightCyan,
+    checkmarkColor = if (isSystemInDarkTheme()) metallicSeaweed else lightCyan,
+    boarderColor = if (isSystemInDarkTheme()) lightCyan else metallicSeaweed,
 )

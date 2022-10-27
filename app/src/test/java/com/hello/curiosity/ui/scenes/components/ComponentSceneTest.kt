@@ -17,21 +17,35 @@ class ComponentSceneTest : ComposeTest() {
 
         // validate list exists
         composeTestRule
-            .onNodeWithTag("component-scene-test-tag")
-            .assertExists()
-            .assertIsDisplayed()
-
-        // validate text item exists
-        composeTestRule
             .onNodeWithTag(testTag = "component-scene-test-tag")
-            .onChildAt(0)
             .assertExists()
             .assertIsDisplayed()
 
         // validate buttons item exists
         composeTestRule
             .onNodeWithTag(testTag = "component-scene-test-tag")
+            .onChildAt(0)
+            .assertExists()
+            .assertIsDisplayed()
+
+        // validate input item exists
+        composeTestRule
+            .onNodeWithTag(testTag = "component-scene-test-tag")
             .onChildAt(1)
+            .assertExists()
+            .assertIsDisplayed()
+
+        // validate text item exists
+        composeTestRule
+            .onNodeWithTag(testTag = "component-scene-test-tag")
+            .onChildAt(2)
+            .assertExists()
+            .assertIsDisplayed()
+
+        // validate toggle item exists
+        composeTestRule
+            .onNodeWithTag(testTag = "component-scene-test-tag")
+            .onChildAt(3)
             .assertExists()
             .assertIsDisplayed()
     }

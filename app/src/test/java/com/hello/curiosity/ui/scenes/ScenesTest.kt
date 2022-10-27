@@ -69,6 +69,18 @@ class ScenesTest {
     }
 
     @Test
+    fun testToggle() {
+        val scene = Scenes.Toggle
+        assertEquals(R.string.toggle_scene_title, scene.title)
+        assertEquals(R.drawable.ic_toggle, scene.icon)
+        assertEquals(R.string.toggle_scene_title, scene.contentDescription)
+        assertEquals("TOGGLE", scene.route)
+        assertEquals(R.string.toggle_scene_title, scene.route.title())
+        assertTrue(scene.route.showTopAppBar())
+        assertFalse(scene.route.showBottomNavigation())
+    }
+
+    @Test
     fun testTypography() {
         val scene = Scenes.Typography
         assertEquals(R.string.typography_scene_title, scene.title)
