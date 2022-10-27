@@ -11,7 +11,10 @@ object AppTheme : Theme {
     override val typography: Type = Type()
     override val colors: ColorScheme = ColorScheme(
         background = Color(0xFFD0F4EA),
-        primary = Color(0xFFF9E20A),
+        primary = Color(0xFF087E8B),
+        surface = Color(0xFF087E8B),
+        onSurface = Color(0xFFD0F4EA),
+        primaryVariant = Color(0xFFFF5A5F),
 
         backgroundDark = Color(0xFF3C3C3C),
         primaryDark = Color(0xFFD0F4EA),
@@ -19,8 +22,6 @@ object AppTheme : Theme {
         onSurfaceDark = Color(0xFF087E8B),
         primaryVariantDark = Color(0xFFFF5A5F),
     )
-
-    val topAppBar: Color = Color.Black
 }
 
 @Composable

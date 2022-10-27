@@ -1,6 +1,7 @@
 package com.hello.curiosity.compose.ui.components.input
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -15,6 +16,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.TextField
 import androidx.compose.material.TextFieldColors
 import androidx.compose.material.TextFieldDefaults
+import androidx.compose.material.primarySurface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -48,6 +50,14 @@ fun inputTextFieldColors(
     )
 
 @Composable
+fun placeholderColor() =
+    if (isSystemInDarkTheme()) {
+        MaterialTheme.colors.onSurface.copy(ContentAlpha.medium)
+    } else {
+        MaterialTheme.colors.primarySurface.copy(ContentAlpha.medium)
+    }
+
+@Composable
 fun InputTextField(
     modifier: Modifier = Modifier,
     value: (String) -> Unit,
@@ -55,7 +65,7 @@ fun InputTextField(
     readOnly: Boolean = false,
     textStyle: TextStyle = txtStyle,
     placeholder: String = "",
-    placeholderColor: Color = MaterialTheme.colors.onSurface.copy(ContentAlpha.medium),
+    placeholderColor: Color = placeholderColor(),
     placeholderStyle: TextStyle = txtStyle,
     backgroundColor: Color = Color.Unspecified,
     colors: TextFieldColors = inputTextFieldColors(),
