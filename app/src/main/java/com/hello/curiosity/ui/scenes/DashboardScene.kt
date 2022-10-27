@@ -19,7 +19,6 @@ import com.hello.curiosity.compose.navigation.BottomNavigation
 import com.hello.curiosity.compose.navigation.currentRoute
 import com.hello.curiosity.compose.ui.components.text.LabelMedium
 import com.hello.curiosity.navigation.CuriosityNavHost
-import com.hello.curiosity.ui.theme.AppTheme.topAppBar
 
 @Composable
 fun DashboardScene() {
@@ -39,7 +38,6 @@ fun DashboardScene() {
                     currentRoute(navController).title()?.let { res ->
                         LabelMedium(
                             text = stringResource(id = res),
-                            color = topAppBar,
                         )
                     }
                 },
@@ -51,7 +49,6 @@ fun DashboardScene() {
                             Icon(
                                 imageVector = Icons.Filled.ArrowBack,
                                 contentDescription = stringResource(id = R.string.content_description_back),
-                                tint = topAppBar,
                             )
                         }
                     }
