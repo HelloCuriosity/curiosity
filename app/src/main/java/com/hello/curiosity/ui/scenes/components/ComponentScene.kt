@@ -7,7 +7,6 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -15,7 +14,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.hello.curiosity.compose.ui.components.buttons.TextIconButton
 import com.hello.curiosity.ui.scenes.Scenes
-import com.hello.curiosity.ui.theme.btnColors
 
 @Composable
 fun ComponentScene(
@@ -46,8 +44,6 @@ fun ComponentScene(
                 },
                 contentDescription = component.contentDescription,
                 icon = component.icon,
-                tint = Color.Black,
-                buttonColors = btnColors()
             )
         }
     }
