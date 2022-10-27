@@ -47,6 +47,13 @@ sealed class Scenes(
         route = "TEXT"
     )
 
+    object Toggle : Scenes(
+        title = R.string.toggle_scene_title,
+        icon = R.drawable.ic_toggle,
+        contentDescription = R.string.toggle_scene_title,
+        route = "TOGGLE"
+    )
+
     object Typography : Scenes(
         title = R.string.typography_scene_title,
         icon = R.drawable.ic_typography,
@@ -62,6 +69,7 @@ fun String?.title(): Int? = when (this) {
     Scenes.Components.route -> Scenes.Components.title
     Scenes.Input.route -> Scenes.Input.title
     Scenes.Text.route -> Scenes.Text.title
+    Scenes.Toggle.route -> Scenes.Toggle.title
     Scenes.Typography.route -> Scenes.Typography.title
     else -> null
 }
@@ -76,6 +84,7 @@ fun String?.showBottomNavigation(): Boolean = when (this) {
 fun String?.showTopAppBar(): Boolean = when (this) {
     Scenes.Color.route -> false
     Scenes.Components.route -> false
+    Scenes.Toggle.route -> false
     Scenes.Typography.route -> false
     else -> true
 }
