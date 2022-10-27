@@ -9,15 +9,18 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonColors
 import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.ContentAlpha
 import androidx.compose.material.Icon
-import androidx.compose.material.LocalContentAlpha
-import androidx.compose.material.LocalContentColor
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.material.contentColorFor
+import androidx.compose.material.primarySurface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
@@ -34,10 +37,12 @@ private val verticalPadding = 16.dp
 
 @Composable
 fun buttonColors(
-    backgroundColor: Color,
-    contentColor: Color,
-    disabledBackgroundColor: Color,
-    disabledContentColor: Color,
+    backgroundColor: Color = MaterialTheme.colors.primarySurface,
+    contentColor: Color = contentColorFor(backgroundColor),
+    disabledBackgroundColor: Color = MaterialTheme.colors.onSurface.copy(alpha = 0.12f)
+        .compositeOver(MaterialTheme.colors.surface),
+    disabledContentColor: Color = MaterialTheme.colors.onSurface
+        .copy(alpha = ContentAlpha.disabled)
 ): ButtonColors = ButtonDefaults.buttonColors(
     backgroundColor = backgroundColor,
     contentColor = contentColor,
@@ -52,7 +57,7 @@ fun TextButton(
     onClick: action,
     enabled: Boolean = true,
     shape: Shape = btnShape,
-    buttonColors: ButtonColors = ButtonDefaults.buttonColors(),
+    buttonColors: ButtonColors = buttonColors(),
     style: TextStyle = btnStyle,
     textModifier: Modifier = Modifier.padding(
         vertical = verticalPadding,
@@ -81,9 +86,9 @@ fun TextIconButton(
     onClick: action,
     enabled: Boolean = true,
     shape: Shape = btnShape,
-    buttonColors: ButtonColors = ButtonDefaults.buttonColors(),
+    buttonColors: ButtonColors = buttonColors(),
     style: TextStyle = btnStyle,
-    tint: Color = LocalContentColor.current.copy(alpha = LocalContentAlpha.current),
+    tint: Color = buttonColors().tintColor(enabled = enabled),
     textModifier: Modifier = Modifier.padding(
         top = verticalPadding,
         bottom = verticalPadding,
@@ -113,6 +118,13 @@ fun TextIconButton(
             style = style,
         )
     }
+}
+
+@Composable
+private fun ButtonColors.tintColor(enabled: Boolean) = if (enabled) {
+    contentColor(enabled = true).value
+} else {
+    MaterialTheme.colors.onSurface.copy(alpha = ContentAlpha.disabled)
 }
 
 @Composable
