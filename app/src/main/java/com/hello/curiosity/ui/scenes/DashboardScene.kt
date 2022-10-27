@@ -17,7 +17,9 @@ import androidx.navigation.compose.rememberNavController
 import com.hello.curiosity.R
 import com.hello.curiosity.compose.navigation.BottomNavigation
 import com.hello.curiosity.compose.navigation.currentRoute
+import com.hello.curiosity.compose.ui.components.text.LabelMedium
 import com.hello.curiosity.navigation.CuriosityNavHost
+import com.hello.curiosity.ui.theme.AppTheme.topAppBar
 
 @Composable
 fun DashboardScene() {
@@ -32,22 +34,30 @@ fun DashboardScene() {
     Scaffold(
         modifier = Modifier.testTag("scaffold-test-tag"),
         topBar = {
-            if (currentRoute(navController).showTopAppBar()) {
-                TopAppBar(
-                    title = { /* No title needed */ },
-                    navigationIcon = {
+            TopAppBar(
+                title = {
+                    currentRoute(navController).title()?.let { res ->
+                        LabelMedium(
+                            text = stringResource(id = res),
+                            color = topAppBar,
+                        )
+                    }
+                },
+                navigationIcon = {
+                    if (currentRoute(navController).showTopAppBar()) {
                         IconButton(
-                            onClick = { navController.popBackStack() }
+                            onClick = { navController.popBackStack() },
                         ) {
                             Icon(
-                                Icons.Filled.ArrowBack,
-                                stringResource(id = R.string.content_description_back)
+                                imageVector = Icons.Filled.ArrowBack,
+                                contentDescription = stringResource(id = R.string.content_description_back),
+                                tint = topAppBar,
                             )
                         }
-                    },
-                    elevation = 0.dp
-                )
-            }
+                    }
+                },
+                elevation = 0.dp
+            )
         },
         bottomBar = {
             if (currentRoute(navController).showBottomNavigation()) {
