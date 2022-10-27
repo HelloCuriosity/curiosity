@@ -2,12 +2,13 @@ package com.hello.curiosity.ui.scenes.components
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
@@ -16,6 +17,8 @@ import com.hello.curiosity.R
 import com.hello.curiosity.compose.ui.components.buttons.TextButton
 import com.hello.curiosity.compose.ui.components.buttons.TextIconButton
 
+private val verticalPadding = 16.dp
+
 @Composable
 fun ButtonScene() {
     val ctx = LocalContext.current
@@ -23,12 +26,14 @@ fun ButtonScene() {
     LazyColumn(
         modifier = Modifier
             .fillMaxWidth()
+            .fillMaxHeight()
             .testTag("button-scene-test-tag"),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+        verticalArrangement = Arrangement.spacedBy(verticalPadding)
     ) {
         item {
             TextButton(
+                modifier = Modifier.padding(top = verticalPadding),
                 text = R.string.btn_enabled,
                 onClick = {
                     Toast.makeText(ctx, "Text Button", Toast.LENGTH_SHORT).show()
@@ -51,7 +56,6 @@ fun ButtonScene() {
                 },
                 contentDescription = R.string.btn_enabled,
                 icon = R.drawable.ic_button,
-                tint = Color.White,
             )
         }
         item {
@@ -61,7 +65,6 @@ fun ButtonScene() {
                 onClick = { /* no action available */ },
                 contentDescription = R.string.btn_disabled,
                 icon = R.drawable.ic_button,
-                tint = Color.White,
             )
         }
     }

@@ -9,7 +9,7 @@ Before you create a pull request make sure you've reviewed our
 
 ## UI
 
-<!-- Add screen shots where applicable. -->
+<!-- Add screenshots where applicable. -->
 
 ## Review checklist
 

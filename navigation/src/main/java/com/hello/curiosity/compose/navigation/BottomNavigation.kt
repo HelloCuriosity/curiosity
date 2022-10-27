@@ -25,6 +25,7 @@ fun BottomNavigation(
     shouldBeSelected: Boolean = true,
     backgroundColor: Color = MaterialTheme.colors.primarySurface,
     contentColor: Color = contentColorFor(backgroundColor),
+    selectedContentColor: Color = MaterialTheme.colors.onPrimary,
     elevation: Dp = BottomNavigationDefaults.Elevation,
 ) = BottomNavigation(
     backgroundColor = backgroundColor,
@@ -41,6 +42,7 @@ fun BottomNavigation(
                 )
             },
             label = { Text(stringResource(id = scene.title)) },
+            selectedContentColor = selectedContentColor,
             selected = if (shouldBeSelected) currentRoute == scene.route else false,
             alwaysShowLabel = alwaysShowLabel,
             onClick = {

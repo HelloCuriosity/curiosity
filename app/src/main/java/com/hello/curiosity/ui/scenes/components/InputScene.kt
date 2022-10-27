@@ -46,7 +46,6 @@ fun InputScene() {
                         top = 16.dp,
                     ),
                 placeholder = "With Placeholder",
-                placeholderColor = Color.Gray,
                 backgroundColor = Color.White,
                 colors = inputColors(),
                 value = { }
@@ -61,7 +60,6 @@ fun InputScene() {
                         top = 16.dp,
                     ),
                 placeholder = "With Counter",
-                placeholderColor = Color.Gray,
                 maxLength = 30,
                 hasCounter = true,
                 backgroundColor = Color.White,
