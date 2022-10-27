@@ -20,9 +20,10 @@ fun ComponentScene(
     navController: NavHostController
 ) {
     val components = listOf(
-        Scenes.Text,
         Scenes.Buttons,
         Scenes.Input,
+        Scenes.Text,
+        Scenes.Toggle,
     )
 
     LazyVerticalGrid(
