@@ -10,6 +10,7 @@
     <string name="components_scene_title">Components</string>
     <string name="input_scene_title">Input</string>
     <string name="text_scene_title">Text</string>
+    <string name="toggle_scene_title">Toggle</string>
     <string name="typography_scene_title">Typography</string>
 
     <!--  Buttons  -->
