@@ -1,25 +1,22 @@
 package com.hello.curiosity.ui.scenes.components
 
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Card
-import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.hello.curiosity.compose.ui.components.text.LabelMedium
+import com.hello.curiosity.compose.ui.components.buttons.TextIconButton
 import com.hello.curiosity.ui.scenes.Scenes
+import com.hello.curiosity.ui.theme.btnColors
 
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun ComponentScene(
     navController: NavHostController
@@ -32,24 +29,26 @@ fun ComponentScene(
 
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
-        modifier = Modifier.testTag("component-scene-test-tag")
+        modifier = Modifier
+            .fillMaxHeight()
+            .padding(vertical = 8.dp, horizontal = 4.dp)
+            .testTag("component-scene-test-tag")
     ) {
         items(components) { component ->
-            Card(
+            TextIconButton(
                 modifier = Modifier
-                    .padding(4.dp),
-                shape = RoundedCornerShape(2.dp),
+                    .padding(top = 8.dp)
+                    .padding(horizontal = 4.dp),
+                text = component.title,
+                enabled = true,
                 onClick = {
                     navController.navigate(component.route)
                 },
-            ) {
-                LabelMedium(
-                    modifier = Modifier
-                        .padding(6.dp),
-                    textAlign = TextAlign.Center,
-                    text = stringResource(id = component.title)
-                )
-            }
+                contentDescription = component.contentDescription,
+                icon = component.icon,
+                tint = Color.Black,
+                buttonColors = btnColors()
+            )
         }
     }
 }
