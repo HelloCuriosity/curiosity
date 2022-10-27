@@ -78,6 +78,7 @@ fun InputTextField(
 
     TextField(
         modifier = Modifier
+            .fillMaxWidth()
             .testTag("input-text-field-test-tag"),
         value = text,
         onValueChange = {
