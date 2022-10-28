@@ -1,5 +1,11 @@
+CI ?= false
 BUILD_TYPE ?= Debug
 GRADLE_ARGS ?= --build-cache
+
+ifeq ($(CI), true)
+  GRADLE_ARGS += --console 'plain'
+  BUILD_TYPE = Release
+endif
 
 .PHONY: all assemble bundle clean dependencies format lint local publish \
 release report signing test
