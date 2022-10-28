@@ -41,4 +41,4 @@ jobs:
           java-version: '11'
           cache: 'gradle'
       - name: Publish
-        run: make assemble clean publish
+        run: make clean bundle publish
