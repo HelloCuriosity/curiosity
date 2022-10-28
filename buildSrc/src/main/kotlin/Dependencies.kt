@@ -8,6 +8,7 @@ object Dependencies {
         const val jvmTarget = "11"
         const val kotlin = "1.7.20"
         const val navigation = "2.5.3"
+        const val playPublisher = "3.7.0"
 
         // App
         const val compileSdk = 33
@@ -40,6 +41,7 @@ object Dependencies {
         const val kotlinter = "org.jmailen.kotlinter"
         const val kover = "org.jetbrains.kotlinx.kover"
         const val versions = "com.github.ben-manes.versions"
+        const val playPublisher = "com.github.triplet.play"
     }
 
     const val leakCanary = "com.squareup.leakcanary:leakcanary-android:2.9.1"

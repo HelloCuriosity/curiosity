@@ -1,6 +1,8 @@
 BUILD_TYPE ?= Debug
+GRADLE_ARGS ?= --build-cache
 
-.PHONY: all assemble bundle clean dependencies format lint local publish release report test
+.PHONY: all assemble bundle clean dependencies format lint local publish \
+release report signing test
 
 all: clean format lint test report assemble
 
@@ -26,13 +28,16 @@ local:
 	./gradlew publishToMavenLocal ${GRADLE_ARGS}
 
 publish:
-	./scripts/publish.sh ${BUILD_TYPE}
+	./scripts/publish.sh ${BUILD_TYPE} ${PLAY_PUBLISH_PASSWORD}
 
 release:
 	./scripts/release.sh ${BUMP}
 
 report:
 	./gradlew koverMergedReport
+
+signing:
+	./scripts/signing.sh
 
 test:
 	./gradlew test${BUILD_TYPE}UnitTest ${GRADLE_ARGS}

@@ -9,4 +9,4 @@ PASSWORD=$3
 # Start decrypting
 echo "Decrypting ${IN} to ${OUT} ${PASSWORD}"
 
-gpg --batch --yes --passphrase ${PASSWORD} -o ${OUT} -d ${IN}
+gpg --batch --yes --passphrase "${PASSWORD}" -o "${OUT}" -d "${IN}"

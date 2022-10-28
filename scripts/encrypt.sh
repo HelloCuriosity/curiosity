@@ -8,4 +8,4 @@ OUT=$2
 # Start encrypting
 echo "Encrypting ${IN} to ${OUT}"
 
-gpg -o ${OUT} --symmetric --cipher-algo AES256 ${IN}
+gpg -o "${OUT}" --symmetric --cipher-algo AES256 "${IN}"
