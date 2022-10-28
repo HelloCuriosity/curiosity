@@ -25,6 +25,15 @@ android {
         }
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = rootProject.file("keystore/curiosity.keystore")
+            storePassword = System.getenv("KEYSTORE_PASSWORD")
+            keyAlias = "curiosity"
+            keyPassword = System.getenv("KEY_PASSWORD")
+        }
+    }
+
     buildTypes {
         getByName("debug") {
             enableUnitTestCoverage = true

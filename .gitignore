@@ -42,3 +42,6 @@ captures/
 
 # Jacoco
 jacoco.exec
+
+# Keystore
+keystore/curiosity.keystore
