@@ -11,7 +11,9 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.hello.curiosity.compose.ui.components.toggle.CheckBox
+import com.hello.curiosity.compose.ui.components.toggle.Toggle
 import com.hello.curiosity.ui.theme.checkColors
+import com.hello.curiosity.ui.theme.toggleColors
 
 private val verticalPadding = 16.dp
 
@@ -25,8 +27,14 @@ fun ToggleScene() {
         verticalArrangement = Arrangement.spacedBy(verticalPadding)
     ) {
         item {
-            CheckBox(
+            Toggle(
                 modifier = Modifier.padding(top = verticalPadding),
+                colors = toggleColors(),
+                onToggleChange = {}
+            )
+        }
+        item {
+            CheckBox(
                 colors = checkColors(),
                 onCheckedChange = {}
             )

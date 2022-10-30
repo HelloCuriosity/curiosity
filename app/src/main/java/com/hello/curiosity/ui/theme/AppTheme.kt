@@ -9,6 +9,7 @@ import androidx.compose.ui.text.font.FontWeight
 import com.hello.curiosity.R
 import com.hello.curiosity.compose.ui.components.input.inputTextFieldColors
 import com.hello.curiosity.compose.ui.components.toggle.CheckBoxDefaults
+import com.hello.curiosity.compose.ui.components.toggle.ToggleDefaults
 import com.hello.curiosity.compose.ui.theme.ColorScheme
 import com.hello.curiosity.compose.ui.theme.Theme
 import com.hello.curiosity.compose.ui.theme.Type
@@ -58,5 +59,12 @@ fun checkColors() = CheckBoxDefaults.colors(
     checkedColor = if (isSystemInDarkTheme()) lightCyan else metallicSeaweed,
     uncheckedColor = if (isSystemInDarkTheme()) metallicSeaweed else lightCyan,
     checkmarkColor = if (isSystemInDarkTheme()) metallicSeaweed else lightCyan,
+    boarderColor = if (isSystemInDarkTheme()) lightCyan else metallicSeaweed,
+)
+
+@Composable
+fun toggleColors() = ToggleDefaults.colors(
+    checkedColor = if (isSystemInDarkTheme()) lightCyan else metallicSeaweed,
+    uncheckedColor = if (isSystemInDarkTheme()) metallicSeaweed else lightCyan,
     boarderColor = if (isSystemInDarkTheme()) lightCyan else metallicSeaweed,
 )
