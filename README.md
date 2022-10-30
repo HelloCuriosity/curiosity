@@ -25,3 +25,31 @@ Navigation holds navigation components. BottomNavigation and scenes that make it
 ## Screenshots
 
 ![overview](screenshots/dashboard_scenes.png "overview")
+
+## Getting Started
+
+Curiosity is currently published to github packages. You will need to generate a PAT.
+
+Add repository to project:
+
+```kotlin
+repositories {
+    maven {
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/hopeman15/curiosity")
+        credentials {
+            username = System.getenv("GPR_USER") // GitHub user
+            password = System.getenv("GPR_TOKEN") // Gernarate PAT
+        }
+    }
+}
+```
+
+Add dependency:
+
+```kotlin
+dependencies {
+    implementation("com.hello.curiosity.compose:curiosity:0.6.1") // component library
+    implementation("com.hello.curiosity.compose:navigation:0.6.1") // navigation library
+}
+```
