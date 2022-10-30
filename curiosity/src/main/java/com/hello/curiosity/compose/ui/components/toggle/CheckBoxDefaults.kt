@@ -5,14 +5,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
-data class CheckBoxColors(
-    val checkedColor: Color,
-    val uncheckedColor: Color,
-    val boarderColor: Color,
-    val checkmarkColor: Color,
-    val disabledColor: Color,
-)
-
 object CheckBoxDefaults {
     @Composable
     fun colors(
@@ -29,3 +21,11 @@ object CheckBoxDefaults {
         boarderColor = boarderColor,
     )
 }
+
+data class CheckBoxColors(
+    val checkedColor: Color,
+    val uncheckedColor: Color,
+    val boarderColor: Color,
+    val checkmarkColor: Color,
+    val disabledColor: Color,
+)

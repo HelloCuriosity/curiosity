@@ -7,7 +7,7 @@ import com.hello.curiosity.test.compose.ComposeTest
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
-class CheckBoxExtTest : ComposeTest() {
+class CheckBoxDefaultsTest : ComposeTest() {
 
     @Test
     fun `validate CheckBoxDefaults colors() returns default values`() {
