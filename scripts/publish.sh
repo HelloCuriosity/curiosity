@@ -13,10 +13,6 @@ TAG=$(git tag --sort=committerdate | tail -1)
 
 export VERSION="$TAG"
 
-echo "Creating Keystore"
-./scripts/decrypt.sh keystore/curiosity.keystore.aes-256-cbc-enc.b64 \
-    keystore/curiosity.keystore "${KEYSTORE_ENC_PW}"
-
 echo "Publishing Release: $VERSION"
 # Publish Libraries
 "${REPO_DIR}"/gradlew assemble"${BUILD_TYPE}" publish
