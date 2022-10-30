@@ -40,5 +40,8 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
           cache: 'gradle'
+      - name: "Create Keystore"
+        run: |
+          ./scripts/decrypt.sh keystore/curiosity.keystore.aes-256-cbc-enc.b64 keystore/curiosity.keystore ${KEYSTORE_ENC_PW}
       - name: Publish
         run: make clean bundle publish
