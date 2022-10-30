@@ -5,27 +5,27 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
-data class CheckBoxColors(
-    val checkedColor: Color,
-    val uncheckedColor: Color,
-    val boarderColor: Color,
-    val checkmarkColor: Color,
-    val disabledColor: Color,
-)
-
-object CheckBoxDefaults {
+object ToggleDefaults {
     @Composable
     fun colors(
         checkedColor: Color = MaterialTheme.colors.secondary,
         uncheckedColor: Color = MaterialTheme.colors.onSurface.copy(alpha = 0.1f),
-        checkmarkColor: Color = MaterialTheme.colors.surface,
+        toggleColor: Color = Color.White,
         disabledColor: Color = MaterialTheme.colors.onSurface.copy(alpha = ContentAlpha.disabled),
         boarderColor: Color = MaterialTheme.colors.onSurface.copy(alpha = 0.2f),
-    ): CheckBoxColors = CheckBoxColors(
+    ): ToggleColors = ToggleColors(
         checkedColor = checkedColor,
         uncheckedColor = uncheckedColor,
-        checkmarkColor = checkmarkColor,
+        toggleColor = toggleColor,
         disabledColor = disabledColor,
         boarderColor = boarderColor,
     )
 }
+
+data class ToggleColors(
+    val checkedColor: Color,
+    val uncheckedColor: Color,
+    val boarderColor: Color,
+    val toggleColor: Color,
+    val disabledColor: Color,
+)
