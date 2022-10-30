@@ -59,7 +59,7 @@ android {
         defaultToAppBundles.set(true)
 
         enabled.set(true)
-        track.set("production")
+        track.set("alpha")
         artifactDir.set(file("build/outputs/bundle/release"))
     }
 
