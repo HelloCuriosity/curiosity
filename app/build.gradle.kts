@@ -1,9 +1,14 @@
+import com.github.triplet.gradle.androidpublisher.ReleaseStatus
+import com.github.triplet.gradle.androidpublisher.ResolutionStrategy
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     // Quality Gates
     id(Dependencies.Gradle.kotlinter)
     id(Dependencies.Gradle.detekt)
+
+    id(Dependencies.Gradle.playPublisher) version Dependencies.Versions.playPublisher
 }
 
 android {
@@ -12,16 +17,25 @@ android {
     buildToolsVersion = Dependencies.Versions.buildToolsVersion
 
     defaultConfig {
-        applicationId = "com.hello.curiosity"
+        applicationId = "com.hello.curiosity.design"
         minSdk = Dependencies.Versions.minSdk
         targetSdk = Dependencies.Versions.targetSdk
 
         versionCode = System.getenv("GITHUB_RUN_NUMBER")?.toInt() ?: 1
-        versionName = "0.1.0"
+        versionName = System.getenv("VERSION") ?: "local"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
+        }
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = rootProject.file("keystore/curiosity.keystore")
+            storePassword = System.getenv("KEYSTORE_PASSWORD")
+            keyAlias = "curiosity"
+            keyPassword = System.getenv("KEY_PASSWORD")
         }
     }
 
@@ -32,8 +46,21 @@ android {
         getByName("release") {
             isMinifyEnabled = true
             isDebuggable = false
+            isShrinkResources = true
+            signingConfig = signingConfigs.getByName("release")
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
+    }
+
+    play {
+        serviceAccountCredentials.set(rootProject.file("pc-api-6516078326128720260-777-76bc229fe079.json"))
+        releaseStatus.set(ReleaseStatus.COMPLETED)
+        resolutionStrategy.set(ResolutionStrategy.IGNORE)
+        defaultToAppBundles.set(true)
+
+        enabled.set(true)
+        track.set("alpha")
+        artifactDir.set(file("build/outputs/bundle/release"))
     }
 
     compileOptions {

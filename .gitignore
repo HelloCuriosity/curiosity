@@ -42,3 +42,7 @@ captures/
 
 # Jacoco
 jacoco.exec
+
+# Secret files
+keystore/curiosity.keystore
+pc-api-6516078326128720260-777-76bc229fe079.json
