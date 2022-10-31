@@ -13,6 +13,7 @@ plugins {
 }
 
 android {
+    namespace = "com.hello.curiosity.compose"
     compileSdk = Dependencies.Versions.compileSdk
     buildToolsVersion = Dependencies.Versions.buildToolsVersion
 
@@ -67,7 +68,6 @@ android {
             }
         }
     }
-    namespace = "com.hello.curiosity.compose"
 }
 
 dependencies {
