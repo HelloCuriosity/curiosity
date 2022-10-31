@@ -7,13 +7,7 @@ PLAY_PUBLISH_PASSWORD=$2
 
 REPO_DIR="$(cd "$(dirname "$0")/../" && pwd)"
 
-# Create Version
-git fetch --force --tags
-TAG=$(git tag --sort=committerdate | tail -1)
-
-export VERSION="$TAG"
-
-echo "Publishing Release: $VERSION"
+echo "Publishing Library Version: $VERSION"
 # Publish Libraries
 "${REPO_DIR}"/gradlew assemble"${BUILD_TYPE}" publish
 
@@ -28,5 +22,6 @@ echo "Creating Google Play Publish json"
 ./scripts/decrypt.sh pc-api-6516078326128720260-777-76bc229fe079.json.aes-256-cbc.enc.b64 \
     pc-api-6516078326128720260-777-76bc229fe079.json "${PLAY_PUBLISH_PASSWORD}"
 
+echo "Publishing Bundle Version: $VERSION"
 # Publish App
 "${REPO_DIR}"/gradlew -p "$REPO_DIR" publish"${BUILD_TYPE}"Bundle --info
