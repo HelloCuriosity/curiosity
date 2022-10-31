@@ -3,7 +3,7 @@
 set -o pipefail
 
 BUILD_TYPE="${1-Release}"
-PLAY_PUBLISH_PASSWORD=$3
+PLAY_PUBLISH_PASSWORD=$2
 
 REPO_DIR="$(cd "$(dirname "$0")/../" && pwd)"
 
