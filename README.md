@@ -22,6 +22,10 @@ Curiosity holds the UI components, which are split into different categories:
 
 Navigation holds navigation components. BottomNavigation and scenes that make it easier to create uniformed scenes.
 
+## Settings
+
+Settings is a collection of setting specific UI components to speed up building settings screens.
+
 ## Screenshots
 
 ![overview](screenshots/dashboard_scenes.png "overview")
@@ -39,7 +43,7 @@ repositories {
         url = uri("https://maven.pkg.github.com/hopeman15/curiosity")
         credentials {
             username = System.getenv("GPR_USER") // GitHub user
-            password = System.getenv("GPR_TOKEN") // Gernarate PAT
+            password = System.getenv("GPR_TOKEN") // Generated PAT
         }
     }
 }
@@ -49,7 +53,8 @@ Add dependency:
 
 ```kotlin
 dependencies {
-    implementation("com.hello.curiosity.compose:curiosity:0.7.0") // component library
-    implementation("com.hello.curiosity.compose:navigation:0.7.0") // navigation library
+    implementation("com.hello.curiosity.compose:curiosity:0.8.0") // component library
+    implementation("com.hello.curiosity.compose:navigation:0.8.0") // navigation library
+    implementation("com.hello.curiosity.compose:settings:0.8.0") // settings library
 }
 ```

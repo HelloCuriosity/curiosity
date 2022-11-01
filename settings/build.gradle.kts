@@ -1,5 +1,3 @@
-import kotlinx.kover.api.KoverTaskExtension
-
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -13,7 +11,7 @@ plugins {
 }
 
 android {
-    namespace = "com.hello.curiosity.compose"
+    namespace = "com.hello.curiosity.compose.settings"
     compileSdk = Dependencies.Versions.compileSdk
     buildToolsVersion = Dependencies.Versions.buildToolsVersion
 
@@ -61,7 +59,7 @@ android {
             isReturnDefaultValues = true
             all {
                 if (it.name == "testReleaseUnitTest") {
-                    it.extensions.configure(KoverTaskExtension::class) {
+                    it.extensions.configure(kotlinx.kover.api.KoverTaskExtension::class) {
                         isDisabled.set(true)
                     }
                 }
@@ -81,6 +79,9 @@ dependencies {
     debugImplementation(Dependencies.Compose.tooling)
     implementation(Dependencies.Compose.toolingPreview)
     implementation(Dependencies.Compose.ui)
+
+    // Curiosity
+    implementation(project(":curiosity"))
 
     // It is a known bug: https://issuetracker.google.com/issues/227767363
     //
@@ -128,7 +129,7 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 from(components["release"])
                 groupId = "com.hello.curiosity.compose"
-                artifactId = "curiosity"
+                artifactId = "settings"
                 version = System.getenv("VERSION") ?: "local"
 
                 pom {

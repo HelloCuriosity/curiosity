@@ -8,6 +8,7 @@ plugins {
 }
 
 android {
+    namespace = "com.hello.curiosity.test.compose"
     compileSdk = Dependencies.Versions.compileSdk
     buildToolsVersion = Dependencies.Versions.buildToolsVersion
 
@@ -40,7 +41,6 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = Dependencies.Versions.composeCompiler
     }
-    namespace = "com.hello.curiosity.test.compose"
 }
 
 dependencies {

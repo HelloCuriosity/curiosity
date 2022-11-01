@@ -59,6 +59,14 @@ class CuriosityNavHostTest : ComposeTest() {
     }
 
     @Test
+    fun `verify route to SettingsScene works`() {
+        assertNavigateToDestination(Scenes.Settings.route)
+        composeTestRule
+            .onNodeWithTag("settings-scene-test-tag")
+            .assertIsDisplayed()
+    }
+
+    @Test
     fun `verify route to TextScene works`() {
         assertNavigateToDestination(Scenes.Text.route)
         composeTestRule
