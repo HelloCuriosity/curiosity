@@ -52,6 +52,9 @@ allprojects {
                     "*BuildConfig",
                 )
             }
+            annotations {
+                excludes += listOf("*Preview", "*Exclude")
+            }
         }
         xmlReport {
             onCheck.set(false)
