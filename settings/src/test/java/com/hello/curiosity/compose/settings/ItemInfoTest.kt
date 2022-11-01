@@ -1,10 +1,13 @@
 package com.hello.curiosity.compose.settings
 
 import android.content.Context
+import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.unit.dp
 import androidx.test.core.app.ApplicationProvider
 import com.hello.curiosity.test.compose.ComposeTest
 import org.junit.Test
@@ -49,6 +52,7 @@ class ItemInfoTest : ComposeTest() {
     fun `validate item info customization`() {
         composeTestRule.setContent {
             ItemInfo(
+                modifier = Modifier.padding(15.dp),
                 title = titleRes,
                 content = contentRes,
                 titleColor = Color.Blue,

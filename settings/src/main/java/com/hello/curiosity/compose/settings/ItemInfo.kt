@@ -18,12 +18,13 @@ import com.hello.curiosity.compose.ui.components.text.LabelMedium
 
 @Composable
 fun ItemInfo(
+    modifier: Modifier = Modifier,
     @StringRes title: Int,
     @StringRes content: Int,
     titleColor: Color = Color.Unspecified,
     contentColor: Color = Color.Unspecified,
 ) = Row(
-    modifier = Modifier
+    modifier = modifier
         .fillMaxWidth()
         .padding(24.dp)
         .testTag("item-info-test-tag"),
