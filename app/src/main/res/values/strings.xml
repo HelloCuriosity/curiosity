@@ -28,4 +28,7 @@
     </string>
     <string name="settings_privacy_policy">Privacy Policy</string>
     <string name="settings_github">GitHub Repository</string>
+    <string name="settings_demo">Demo</string>
+    <string name="settings_toggle_title">Toggle Item</string>
+    <string name="settings_toggle_content">This toggle has no functionality. It is for demonstration purposes only.</string>
 </resources>

@@ -21,7 +21,7 @@ class SettingsSceneTest : ComposeTest() {
             .assertExists()
             .assertIsDisplayed()
 
-        // validate section exists
+        // validate about section exists
         composeTestRule
             .onNodeWithTag(testTag = "settings-scene-test-tag")
             .onChildAt(0)
@@ -71,5 +71,20 @@ class SettingsSceneTest : ComposeTest() {
             .onChildAt(6)
             .assertExists()
             .assertIsDisplayed()
+
+        // validate demo section exists
+        composeTestRule
+            .onNodeWithTag(testTag = "settings-scene-test-tag")
+            .onChildAt(7)
+            .assertExists()
+            .assertIsDisplayed()
+
+        // validate toggle exists
+        composeTestRule
+            .onNodeWithTag(testTag = "settings-scene-test-tag")
+            .onChildAt(8)
+            .assertExists()
+            .assertIsDisplayed()
+            .performClick()
     }
 }

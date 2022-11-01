@@ -1,6 +1,7 @@
 package com.hello.curiosity.ui.scenes
 
 import android.content.Context
+import android.widget.Toast
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
@@ -15,12 +16,15 @@ import com.hello.curiosity.compose.settings.ItemAction
 import com.hello.curiosity.compose.settings.ItemDivider
 import com.hello.curiosity.compose.settings.ItemInfo
 import com.hello.curiosity.compose.settings.ItemSection
+import com.hello.curiosity.compose.settings.ItemToggle
 import com.hello.curiosity.ui.theme.AppTheme.lightCyan
 import com.hello.curiosity.ui.theme.AppTheme.metallicSeaweed
+import com.hello.curiosity.ui.theme.toggleColors
 import com.hello.curiosity.utils.ExternalIntentUtils.createGitHubIntent
 import com.hello.curiosity.utils.ExternalIntentUtils.createPrivacyPolicyIntent
 
 @Composable
+@Suppress("LongMethod")
 fun SettingsScene() {
     val ctx: Context = LocalContext.current
     val tint = if (isSystemInDarkTheme()) Color.White else Color.Black
@@ -67,6 +71,19 @@ fun SettingsScene() {
         }
         item {
             ItemDivider(color = divider)
+        }
+        item {
+            ItemSection(text = R.string.settings_demo)
+        }
+        item {
+            ItemToggle(
+                title = R.string.settings_toggle_title,
+                content = R.string.settings_toggle_content,
+                toggleColors = toggleColors(),
+                onToggleChange = {
+                    Toast.makeText(ctx, "Toggled", Toast.LENGTH_SHORT).show()
+                }
+            )
         }
     }
 }
