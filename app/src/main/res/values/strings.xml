@@ -3,12 +3,14 @@
 
     <!--  Content Description  -->
     <string name="content_description_back">Back icon</string>
+    <string name="content_description_arrow_forward">Arrow forward</string>
 
     <!--  Scenes  -->
     <string name="button_scene_title">Button</string>
     <string name="color_scene_title">Color</string>
-    <string name="components_scene_title">Components</string>
+    <string name="components_scene_title">Component</string>
     <string name="input_scene_title">Input</string>
+    <string name="settings_scene_title">Settings</string>
     <string name="text_scene_title">Text</string>
     <string name="toggle_scene_title">Toggle</string>
     <string name="typography_scene_title">Typography</string>
@@ -16,4 +18,14 @@
     <!--  Buttons  -->
     <string name="btn_enabled">Enabled Button</string>
     <string name="btn_disabled">Disabled Button</string>
+
+    <!-- Settings -->
+    <string name="settings_about">About</string>
+    <string name="settings_info_title">Curiosity Design System</string>
+    <string name="settings_info_content">
+        Curiosity is a design system library just for fun, my rendition of building a compose-able design system.
+        More information can be found at GitHub.
+    </string>
+    <string name="settings_privacy_policy">Privacy Policy</string>
+    <string name="settings_github">GitHub Repository</string>
 </resources>

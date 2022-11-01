@@ -57,6 +57,18 @@ class ScenesTest {
     }
 
     @Test
+    fun testSettings() {
+        val scene = Scenes.Settings
+        assertEquals(R.string.settings_scene_title, scene.title)
+        assertEquals(R.drawable.ic_settings, scene.icon)
+        assertEquals(R.string.settings_scene_title, scene.contentDescription)
+        assertEquals("SETTINGS", scene.route)
+        assertEquals(R.string.settings_scene_title, scene.route.title())
+        assertFalse(scene.route.showTopAppBar())
+        assertTrue(scene.route.showBottomNavigation())
+    }
+
+    @Test
     fun testText() {
         val scene = Scenes.Text
         assertEquals(R.string.text_scene_title, scene.title)

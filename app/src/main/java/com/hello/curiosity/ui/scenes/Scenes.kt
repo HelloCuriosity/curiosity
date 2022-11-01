@@ -40,6 +40,13 @@ sealed class Scenes(
         route = "INPUT"
     )
 
+    object Settings : Scenes(
+        title = R.string.settings_scene_title,
+        icon = R.drawable.ic_settings,
+        contentDescription = R.string.settings_scene_title,
+        route = "SETTINGS"
+    )
+
     object Text : Scenes(
         title = R.string.text_scene_title,
         icon = R.drawable.ic_typography,
@@ -68,6 +75,7 @@ fun String?.title(): Int? = when (this) {
     Scenes.Color.route -> Scenes.Color.title
     Scenes.Components.route -> Scenes.Components.title
     Scenes.Input.route -> Scenes.Input.title
+    Scenes.Settings.route -> Scenes.Settings.title
     Scenes.Text.route -> Scenes.Text.title
     Scenes.Toggle.route -> Scenes.Toggle.title
     Scenes.Typography.route -> Scenes.Typography.title
@@ -78,6 +86,7 @@ fun String?.showBottomNavigation(): Boolean = when (this) {
     Scenes.Color.route -> true
     Scenes.Components.route -> true
     Scenes.Typography.route -> true
+    Scenes.Settings.route -> true
     else -> false
 }
 
@@ -85,5 +94,6 @@ fun String?.showTopAppBar(): Boolean = when (this) {
     Scenes.Color.route -> false
     Scenes.Components.route -> false
     Scenes.Typography.route -> false
+    Scenes.Settings.route -> false
     else -> true
 }

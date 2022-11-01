@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.hello.curiosity.ui.scenes.Scenes
+import com.hello.curiosity.ui.scenes.SettingsScene
 import com.hello.curiosity.ui.scenes.color.ColorScene
 import com.hello.curiosity.ui.scenes.components.ButtonScene
 import com.hello.curiosity.ui.scenes.components.ComponentScene
@@ -29,6 +30,9 @@ fun CuriosityNavHost(
         }
         composable(route = Scenes.Input.route) {
             InputScene()
+        }
+        composable(route = Scenes.Settings.route) {
+            SettingsScene()
         }
         composable(route = Scenes.Text.route) {
             TextScene()

@@ -28,6 +28,7 @@ fun DashboardScene() {
         Scenes.Components,
         Scenes.Color,
         Scenes.Typography,
+        Scenes.Settings,
     )
 
     Scaffold(
