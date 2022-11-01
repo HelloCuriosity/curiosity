@@ -90,6 +90,6 @@ fun SettingsScene() {
 
 @Preview
 @Composable
-fun SettingsScenePreview() {
+internal fun SettingsScenePreview() {
     SettingsScene()
 }

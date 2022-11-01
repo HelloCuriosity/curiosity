@@ -52,7 +52,7 @@ fun ItemAction(
 
 @Composable
 @Preview
-fun ItemActionPreview() {
+internal fun ItemActionPreview() {
     ItemAction(
         title = android.R.string.copy,
         icon = android.R.drawable.ic_delete,

@@ -52,7 +52,7 @@ fun ItemToggle(
 
 @Preview
 @Composable
-fun ItemTogglePreview() {
+internal fun ItemTogglePreview() {
     ItemToggle(
         title = android.R.string.copy,
         content = android.R.string.fingerprint_icon_content_description,
