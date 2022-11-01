@@ -10,6 +10,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import com.hello.curiosity.compose.ui.Exclude
 
 @Composable
 fun ContentMedium(
@@ -41,6 +42,7 @@ fun ContentMedium(
     style = style
 )
 
+@Exclude
 @Preview
 @Composable
 internal fun ContentMediumPreview() {

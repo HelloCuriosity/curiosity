@@ -11,6 +11,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.hello.curiosity.compose.ui.Exclude
 import com.hello.curiosity.compose.ui.components.input.InputTextField
 import com.hello.curiosity.ui.theme.inputColors
 
@@ -70,6 +71,7 @@ fun InputScene() {
     }
 }
 
+@Exclude
 @Preview
 @Composable
 fun InputScenePreview() {

@@ -23,6 +23,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.hello.curiosity.compose.R
+import com.hello.curiosity.compose.ui.Exclude
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
@@ -63,6 +64,7 @@ fun CheckBox(
     }
 }
 
+@Exclude
 @Preview
 @Composable
 fun CheckboxPreview() {
