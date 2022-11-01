@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.hello.curiosity.compose.ui.Exclude
 import com.hello.curiosity.compose.ui.components.toggle.CheckBox
 import com.hello.curiosity.compose.ui.components.toggle.Toggle
 import com.hello.curiosity.ui.theme.checkColors
@@ -42,6 +43,7 @@ fun ToggleScene() {
     }
 }
 
+@Exclude
 @Preview
 @Composable
 fun ToggleScenePreview() {

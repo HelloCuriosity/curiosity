@@ -50,8 +50,9 @@ fun ItemAction(
     )
 }
 
-@Composable
+@Exclude
 @Preview
+@Composable
 internal fun ItemActionPreview() {
     ItemAction(
         title = android.R.string.copy,

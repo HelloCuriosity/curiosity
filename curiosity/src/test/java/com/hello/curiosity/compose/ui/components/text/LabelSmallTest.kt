@@ -18,7 +18,7 @@ class LabelSmallTest : ComposeTextTest() {
     }
 
     override val contentResource: @Composable () -> Unit = {
-        LabelMedium(
+        LabelSmall(
             text = res,
             modifier = Modifier,
             color = Color.White,

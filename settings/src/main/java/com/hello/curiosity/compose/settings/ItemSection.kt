@@ -28,6 +28,7 @@ fun ItemSection(
     style = style,
 )
 
+@Exclude
 @Preview
 @Composable
 internal fun ItemSectionPreview() {

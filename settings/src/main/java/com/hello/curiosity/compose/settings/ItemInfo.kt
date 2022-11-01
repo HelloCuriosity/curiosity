@@ -44,8 +44,9 @@ fun ItemInfo(
     }
 }
 
-@Composable
+@Exclude
 @Preview
+@Composable
 internal fun ItemInfoPreview() {
     ItemInfo(
         title = android.R.string.copy,

@@ -17,6 +17,7 @@ import com.hello.curiosity.compose.settings.ItemDivider
 import com.hello.curiosity.compose.settings.ItemInfo
 import com.hello.curiosity.compose.settings.ItemSection
 import com.hello.curiosity.compose.settings.ItemToggle
+import com.hello.curiosity.compose.ui.Exclude
 import com.hello.curiosity.ui.theme.AppTheme.lightCyan
 import com.hello.curiosity.ui.theme.AppTheme.metallicSeaweed
 import com.hello.curiosity.ui.theme.toggleColors
@@ -88,6 +89,7 @@ fun SettingsScene() {
     }
 }
 
+@Exclude
 @Preview
 @Composable
 internal fun SettingsScenePreview() {

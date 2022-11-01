@@ -13,6 +13,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.hello.curiosity.R
+import com.hello.curiosity.compose.ui.Exclude
 import com.hello.curiosity.compose.ui.components.buttons.IconButton
 import com.hello.curiosity.compose.ui.components.buttons.TextButton
 import com.hello.curiosity.compose.ui.components.buttons.TextIconButton
@@ -87,6 +88,7 @@ fun ButtonScene() {
     }
 }
 
+@Exclude
 @Preview
 @Composable
 fun ButtonScenePreview() {
