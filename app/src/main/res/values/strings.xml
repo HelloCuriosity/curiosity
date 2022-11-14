@@ -4,6 +4,7 @@
     <!--  Content Description  -->
     <string name="content_description_back">Back icon</string>
     <string name="content_description_arrow_forward">Arrow forward</string>
+    <string name="content_description_drop_down">Drop down menu</string>
 
     <!--  Scenes  -->
     <string name="button_scene_title">Button</string>

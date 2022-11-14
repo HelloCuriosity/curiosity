@@ -10,7 +10,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.hello.curiosity.R
 import com.hello.curiosity.compose.ui.Exclude
+import com.hello.curiosity.compose.ui.components.selector.DropDownMenu
 import com.hello.curiosity.compose.ui.components.toggle.CheckBox
 import com.hello.curiosity.compose.ui.components.toggle.Toggle
 import com.hello.curiosity.ui.theme.checkColors
@@ -38,6 +40,18 @@ fun ToggleScene() {
             CheckBox(
                 colors = checkColors(),
                 onCheckedChange = {}
+            )
+        }
+        item {
+            DropDownMenu(
+                modifier = Modifier.padding(16.dp),
+                items = listOf(
+                    R.string.toggle_scene_title,
+                    R.string.settings_scene_title
+                ),
+                onItemSelected = {
+                },
+                contentDescription = R.string.content_description_drop_down
             )
         }
     }
