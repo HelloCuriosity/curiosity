@@ -5,6 +5,9 @@ plugins {
     // Quality Gates
     id(Dependencies.Gradle.kotlinter)
     id(Dependencies.Gradle.detekt)
+
+    // Publishing
+    id("maven-publish")
 }
 
 android {
@@ -41,6 +44,13 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = Dependencies.Versions.composeCompiler
     }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
 
 dependencies {
@@ -71,5 +81,45 @@ dependencies {
         exclude(module = "wagon-http-lightweight")
         exclude(module = "wagon-provider-api")
         exclude(module = "auto-service")
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.hello.curiosity.compose"
+                artifactId = "test-utils"
+                version = System.getenv("VERSION") ?: "local"
+
+                pom {
+                    name.set("Curiosity")
+                    description.set("Curiosity is a simple design system just for fun.")
+                    url.set("https://github.com/hopeman15/curiosity")
+                    licenses {
+                        license {
+                            name.set("MIT Licence")
+                            url.set("https://github.com/hopeman15/curiosity/blob/main/LICENSE")
+                        }
+                    }
+                    scm {
+                        connection.set("scm:git:https://github.com/hopeman15/curiosity.git")
+                        developerConnection.set("scm:git:https://github.com/hopeman15/curiosity.git")
+                        url.set("https://github.com/hopeman15/curiosity")
+                    }
+                }
+            }
+        }
+        repositories {
+            maven {
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/hopeman15/curiosity")
+                credentials {
+                    username = System.getenv("GPR_USER")
+                    password = System.getenv("GPR_TOKEN")
+                }
+            }
+        }
     }
 }
