@@ -58,6 +58,8 @@ dependencies {
     implementation(Dependencies.Androidx.core)
 
     // Compose
+    implementation(Dependencies.Compose.navigation)
+    implementation(Dependencies.Test.Compose.navigationTest)
     implementation(Dependencies.Test.Compose.uiTestJunit)
 
     // jUnit
