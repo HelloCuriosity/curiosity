@@ -4,6 +4,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextOverflow
 import com.hello.curiosity.compose.ui.ComposeTextTest
 
 class LabelLargeTest : ComposeTextTest() {
@@ -14,6 +15,8 @@ class LabelLargeTest : ComposeTextTest() {
             color = Color.White,
             textAlign = null,
             style = MaterialTheme.typography.h1,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis,
         )
     }
 
@@ -24,6 +27,8 @@ class LabelLargeTest : ComposeTextTest() {
             color = Color.White,
             textAlign = null,
             style = MaterialTheme.typography.h1,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis,
         )
     }
 }
