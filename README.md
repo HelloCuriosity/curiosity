@@ -53,8 +53,8 @@ Add dependency:
 
 ```kotlin
 dependencies {
-    implementation("com.hello.curiosity.compose:curiosity:0.8.0") // component library
-    implementation("com.hello.curiosity.compose:navigation:0.8.0") // navigation library
-    implementation("com.hello.curiosity.compose:settings:0.8.0") // settings library
+    implementation("com.hello.curiosity.compose:curiosity:0.9.2") // component library
+    implementation("com.hello.curiosity.compose:navigation:0.9.2") // navigation library
+    implementation("com.hello.curiosity.compose:settings:0.9.2") // settings library
 }
 ```
