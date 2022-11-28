@@ -49,7 +49,7 @@ fun DropDownMenu(
             .testTag("drop-down-menu-test-tag"),
         enabled = enabled,
         shape = RoundedCornerShape(8.dp),
-        color = colors.boarderColor,
+        color = colors.backgroundColor,
         border = BorderStroke(1.dp, color = colors.boarderColor),
         onClick = {
             expanded = !expanded
