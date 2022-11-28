@@ -15,18 +15,19 @@ class DashboardSceneTest : ComposeTest() {
 
         // validate scaffold exists
         composeTestRule
-            .onNodeWithTag("scaffold-test-tag")
+            .onNodeWithTag(DASHBOARD_SCENE_VIEW_TEST_TAG)
             .assertExists()
             .assertIsDisplayed()
 
-        // validate app bar
+        // validate app bar exists
         composeTestRule
-            .onNodeWithTag("top-app-bar-test-tag")
-            .assertDoesNotExist()
+            .onNodeWithTag(DASHBOARD_SCENE_TOP_APP_BAR_TEST_TAG)
+            .assertExists()
+            .assertIsDisplayed()
 
         // validate navigation exists
         composeTestRule
-            .onNodeWithTag("navigation-test-tag")
+            .onNodeWithTag(DASHBOARD_SCENE_NAVIGATION_TEST_TAG)
             .assertExists()
             .assertIsDisplayed()
     }
