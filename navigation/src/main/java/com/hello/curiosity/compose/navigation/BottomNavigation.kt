@@ -14,6 +14,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 
@@ -47,7 +48,10 @@ fun BottomNavigation(
             alwaysShowLabel = alwaysShowLabel,
             onClick = {
                 if (currentRoute != scene.route) {
-                    navController.navigate(scene.route)
+                    navController.navigate(scene.route) {
+                        popUpTo(navController.graph.findStartDestination().id)
+                        launchSingleTop = true
+                    }
                 }
             }
         )
