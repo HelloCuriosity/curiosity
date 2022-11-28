@@ -46,8 +46,8 @@ fun ToggleScene() {
             DropDownMenu(
                 modifier = Modifier.padding(16.dp),
                 items = listOf(
-                    R.string.toggle_scene_title,
-                    R.string.settings_scene_title
+                    R.string.drop_down_item_one,
+                    R.string.drop_down_item_two
                 ),
                 onItemSelected = {
                 },
