@@ -3,10 +3,8 @@ package com.hello.curiosity.compose.settings
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -40,7 +38,6 @@ fun ItemToggle(
         titleColor = titleColor,
         contentColor = contentColor,
     )
-    Spacer(modifier = Modifier.size(21.dp))
     Toggle(
         modifier = Modifier.padding(24.dp),
         colors = toggleColors,
