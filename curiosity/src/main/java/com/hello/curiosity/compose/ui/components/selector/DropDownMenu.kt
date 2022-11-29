@@ -35,25 +35,23 @@ import com.hello.curiosity.compose.ui.components.text.LabelSmall
 fun DropDownMenu(
     modifier: Modifier = Modifier,
     @StringRes items: List<Int> = emptyList(),
+    selected: Int = 0,
     onItemSelected: (Int) -> Unit,
     @StringRes contentDescription: Int,
     enabled: Boolean = true,
     colors: DropDownMenuColors = DropDownMenuDefaults.colors(),
 ) {
     var expanded by remember { mutableStateOf(false) }
-    var selected by remember { mutableStateOf(items[0]) }
 
     Surface(
         modifier = modifier
             .fillMaxWidth()
-            .testTag("drop-down-menu-test-tag"),
+            .testTag(DROP_DOWN_MENU_CONTAINER_TEST_TAG),
         enabled = enabled,
         shape = RoundedCornerShape(8.dp),
         color = colors.backgroundColor,
         border = BorderStroke(1.dp, color = colors.boarderColor),
-        onClick = {
-            expanded = !expanded
-        }
+        onClick = { expanded = !expanded }
     ) {
         Row(
             modifier = Modifier.padding(
@@ -63,17 +61,20 @@ fun DropDownMenu(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            LabelSmall(text = selected)
+            LabelSmall(text = items[selected])
             Icon(
                 modifier = Modifier
                     .rotate(
                         if (expanded) DropDownMenuDefaults.ONE_EIGHTY_DEGREES else DropDownMenuDefaults.ZERO_DEGREES
-                    ),
+                    )
+                    .testTag(DROP_DOWN_MENU_ICN_TEST_TAG),
                 imageVector = Icons.Filled.ArrowDropDown,
                 contentDescription = stringResource(id = contentDescription),
             )
         }
         DropdownMenu(
+            modifier = Modifier
+                .testTag(DROP_DOWN_MENU_LIST_TEST_TAG),
             expanded = expanded,
             onDismissRequest = { expanded = false },
         ) {
@@ -81,10 +82,10 @@ fun DropDownMenu(
                 val item = items[idx]
                 DropdownMenuItem(
                     onClick = {
-                        selected = item
                         onItemSelected(idx)
                         expanded = !expanded
-                    }
+                    },
+                    enabled = enabled,
                 ) {
                     LabelSmall(text = item)
                 }
@@ -92,6 +93,10 @@ fun DropDownMenu(
         }
     }
 }
+
+const val DROP_DOWN_MENU_CONTAINER_TEST_TAG = "DROP_DOWN_MENU_CONTAINER_TEST_TAG"
+const val DROP_DOWN_MENU_ICN_TEST_TAG = "DROP_DOWN_MENU_ICN_TEST_TAG"
+const val DROP_DOWN_MENU_LIST_TEST_TAG = "DROP_DOWN_MENU_LIST_TEST_TAG"
 
 @Exclude
 @Preview

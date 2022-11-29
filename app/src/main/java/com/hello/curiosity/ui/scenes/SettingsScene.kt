@@ -36,18 +36,14 @@ fun SettingsScene() {
             .fillMaxSize()
             .testTag("settings-scene-test-tag")
     ) {
-        item {
-            ItemSection(text = R.string.settings_about)
-        }
+        item { ItemSection(text = R.string.settings_about) }
         item {
             ItemInfo(
                 title = R.string.settings_info_title,
                 content = R.string.settings_info_content,
             )
         }
-        item {
-            ItemDivider(color = divider)
-        }
+        item { ItemDivider(color = divider) }
         item {
             ItemAction(
                 title = R.string.settings_privacy_policy,
@@ -58,9 +54,7 @@ fun SettingsScene() {
                 ctx.startActivity(createPrivacyPolicyIntent())
             }
         }
-        item {
-            ItemDivider(color = divider)
-        }
+        item { ItemDivider(color = divider) }
         item {
             ItemAction(
                 title = R.string.settings_github,
@@ -71,12 +65,8 @@ fun SettingsScene() {
                 ctx.startActivity(createGitHubIntent())
             }
         }
-        item {
-            ItemDivider(color = divider)
-        }
-        item {
-            ItemSection(text = R.string.settings_demo)
-        }
+        item { ItemDivider(color = divider) }
+        item { ItemSection(text = R.string.settings_demo) }
         item {
             ItemToggle(
                 title = R.string.settings_toggle_title,
@@ -87,9 +77,7 @@ fun SettingsScene() {
                 }
             )
         }
-        item {
-            ItemSection(text = R.string.settings_demo)
-        }
+        item { ItemDivider(color = divider) }
         item {
             ItemDropDown(
                 title = R.string.settings_drop_down_menu_title,

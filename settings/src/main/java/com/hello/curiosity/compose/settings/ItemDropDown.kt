@@ -20,18 +20,20 @@ import com.hello.curiosity.compose.ui.components.text.LabelMedium
 
 @Composable
 fun ItemDropDown(
+    modifier: Modifier = Modifier,
     @StringRes title: Int,
     titleColor: Color = Color.Unspecified,
     @StringRes items: List<Int> = emptyList(),
+    selected: Int = 0,
     onItemSelected: (Int) -> Unit,
     @StringRes contentDescription: Int,
     enabled: Boolean = true,
     colors: DropDownMenuColors = DropDownMenuDefaults.colors(),
 ) = Column(
-    modifier = Modifier
+    modifier = modifier
         .fillMaxWidth()
         .padding(24.dp)
-        .testTag(ITEM_DROP_DOWN_VIEW_TEST_TAG),
+        .testTag(ITEM_DROP_DOWN_CONTAINER_TEST_TAG),
 ) {
     LabelMedium(
         text = title,
@@ -40,6 +42,7 @@ fun ItemDropDown(
     Spacer(modifier = Modifier.size(6.dp))
     DropDownMenu(
         items = items,
+        selected = selected,
         onItemSelected = onItemSelected,
         contentDescription = contentDescription,
         enabled = enabled,
@@ -47,7 +50,7 @@ fun ItemDropDown(
     )
 }
 
-const val ITEM_DROP_DOWN_VIEW_TEST_TAG = "ITEM_DROP_DOWN_VIEW_TEST_TAG"
+const val ITEM_DROP_DOWN_CONTAINER_TEST_TAG = "ITEM_DROP_DOWN_CONTAINER_TEST_TAG"
 
 @Exclude
 @Preview

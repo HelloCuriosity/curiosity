@@ -6,10 +6,13 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
 import com.hello.curiosity.test.compose.ComposeTest
 import org.junit.Test
+import org.robolectric.annotation.Config
 
+@Config(qualifiers = "h1024dp")
 class SettingsSceneTest : ComposeTest() {
 
     @Test
+    @Suppress("LongMethod")
     fun testSettingsScene() {
         composeTestRule.setContent {
             SettingsScene()
@@ -83,6 +86,21 @@ class SettingsSceneTest : ComposeTest() {
         composeTestRule
             .onNodeWithTag(testTag = "settings-scene-test-tag")
             .onChildAt(8)
+            .assertExists()
+            .assertIsDisplayed()
+            .performClick()
+
+        // validate divider exists
+        composeTestRule
+            .onNodeWithTag(testTag = "settings-scene-test-tag")
+            .onChildAt(9)
+            .assertExists()
+            .assertIsDisplayed()
+
+        // validate drop down item exists
+        composeTestRule
+            .onNodeWithTag(testTag = "settings-scene-test-tag")
+            .onChildAt(10)
             .assertExists()
             .assertIsDisplayed()
             .performClick()
