@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.hello.curiosity.R
 import com.hello.curiosity.compose.settings.ItemAction
 import com.hello.curiosity.compose.settings.ItemDivider
+import com.hello.curiosity.compose.settings.ItemDropDown
 import com.hello.curiosity.compose.settings.ItemInfo
 import com.hello.curiosity.compose.settings.ItemSection
 import com.hello.curiosity.compose.settings.ItemToggle
@@ -84,6 +85,17 @@ fun SettingsScene() {
                 onToggleChange = {
                     Toast.makeText(ctx, "Toggled", Toast.LENGTH_SHORT).show()
                 }
+            )
+        }
+        item {
+            ItemSection(text = R.string.settings_demo)
+        }
+        item {
+            ItemDropDown(
+                title = R.string.settings_drop_down_menu_title,
+                contentDescription = R.string.settings_drop_down_menu_title,
+                items = listOf(R.string.drop_down_item_one, R.string.drop_down_item_two),
+                onItemSelected = { },
             )
         }
     }
