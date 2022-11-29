@@ -28,7 +28,7 @@ fun ItemToggle(
 ) = Row(
     modifier = Modifier
         .fillMaxWidth()
-        .testTag("toggle-item-test-tag"),
+        .testTag(ITEM_TOGGLE_TEST_TAG),
     horizontalArrangement = Arrangement.SpaceBetween,
 ) {
     ItemInfo(
@@ -46,6 +46,8 @@ fun ItemToggle(
         onToggleChange = onToggleChange,
     )
 }
+
+const val ITEM_TOGGLE_TEST_TAG = "ITEM_TOGGLE_TEST_TAG"
 
 @Exclude
 @Preview

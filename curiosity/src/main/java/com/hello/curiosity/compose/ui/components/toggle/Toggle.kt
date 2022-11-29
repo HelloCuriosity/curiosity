@@ -13,10 +13,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -34,28 +30,24 @@ fun Toggle(
     colors: ToggleColors = ToggleDefaults.colors(),
     onToggleChange: ((Boolean) -> Unit),
 ) {
-    var isChecked by remember { mutableStateOf(checked) }
     Surface(
         modifier = modifier
             .size(width = 63.dp, height = 36.dp)
-            .testTag("toggle-surface-test-tag"),
+            .testTag(TOGGLE_CONTAINER_TEST_TAG),
         enabled = enabled,
         shape = RoundedCornerShape(24.dp),
-        color = if (isChecked) colors.checkedColor else colors.uncheckedColor,
-        border = if (isChecked) null else BorderStroke(1.dp, color = colors.boarderColor),
-        onClick = {
-            isChecked = !isChecked
-            onToggleChange(isChecked)
-        }
+        color = if (checked) colors.checkedColor else colors.uncheckedColor,
+        border = if (checked) null else BorderStroke(1.dp, color = colors.boarderColor),
+        onClick = { onToggleChange(!checked) }
     ) {
         Column(
             modifier =
             Modifier
                 .fillMaxWidth()
                 .wrapContentSize(
-                    if (isChecked) Alignment.CenterEnd else Alignment.CenterStart
+                    if (checked) Alignment.CenterEnd else Alignment.CenterStart
                 )
-                .testTag("toggle-btn-test-tag"),
+                .testTag(TOGGLE_BTN_TEST_TAG),
         ) {
             Box(
                 modifier = Modifier
@@ -67,6 +59,9 @@ fun Toggle(
         }
     }
 }
+
+const val TOGGLE_CONTAINER_TEST_TAG = "TOGGLE_CONTAINER_TEST_TAG"
+const val TOGGLE_BTN_TEST_TAG = "TOGGLE_BTN_TEST_TAG"
 
 @Exclude
 @Preview

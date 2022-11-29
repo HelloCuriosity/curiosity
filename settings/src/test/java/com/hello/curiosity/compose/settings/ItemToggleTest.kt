@@ -7,6 +7,7 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.test.core.app.ApplicationProvider
+import com.hello.curiosity.compose.ui.components.toggle.TOGGLE_CONTAINER_TEST_TAG
 import com.hello.curiosity.compose.ui.components.toggle.ToggleDefaults
 import com.hello.curiosity.test.compose.ComposeTest
 import org.junit.Test
@@ -31,7 +32,7 @@ class ItemToggleTest : ComposeTest() {
 
         // validate container
         composeTestRule
-            .onNodeWithTag(testTag = "toggle-item-test-tag")
+            .onNodeWithTag(testTag = ITEM_TOGGLE_TEST_TAG)
             .assertExists()
             .assertIsDisplayed()
 
@@ -49,7 +50,7 @@ class ItemToggleTest : ComposeTest() {
 
         // validate toggle
         composeTestRule
-            .onNodeWithTag(testTag = "toggle-surface-test-tag", useUnmergedTree = true)
+            .onNodeWithTag(testTag = TOGGLE_CONTAINER_TEST_TAG, useUnmergedTree = true)
             .assertExists()
             .assertIsDisplayed()
             .performClick()
@@ -74,7 +75,7 @@ class ItemToggleTest : ComposeTest() {
 
         // validate container
         composeTestRule
-            .onNodeWithTag(testTag = "toggle-item-test-tag")
+            .onNodeWithTag(testTag = ITEM_TOGGLE_TEST_TAG)
             .assertExists()
             .assertIsDisplayed()
 
@@ -92,7 +93,7 @@ class ItemToggleTest : ComposeTest() {
 
         // validate toggle
         composeTestRule
-            .onNodeWithTag(testTag = "toggle-surface-test-tag", useUnmergedTree = true)
+            .onNodeWithTag(testTag = TOGGLE_CONTAINER_TEST_TAG, useUnmergedTree = true)
             .assertExists()
             .assertIsDisplayed()
             .performClick()
