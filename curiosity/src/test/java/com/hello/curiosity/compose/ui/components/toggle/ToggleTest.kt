@@ -17,13 +17,13 @@ class ToggleTest : ComposeTest() {
 
         // validate toggle exists
         composeTestRule
-            .onNodeWithTag("toggle-surface-test-tag")
+            .onNodeWithTag(TOGGLE_CONTAINER_TEST_TAG)
             .assertExists()
             .assertIsDisplayed()
             .performClick()
 
         composeTestRule
-            .onNodeWithTag("toggle-btn-test-tag", useUnmergedTree = true)
+            .onNodeWithTag(TOGGLE_BTN_TEST_TAG, useUnmergedTree = true)
             .assertExists()
             .assertIsDisplayed()
     }
@@ -44,13 +44,13 @@ class ToggleTest : ComposeTest() {
 
         // validate toggle exists
         composeTestRule
-            .onNodeWithTag("toggle-surface-test-tag")
+            .onNodeWithTag(TOGGLE_CONTAINER_TEST_TAG)
             .assertExists()
             .assertIsDisplayed()
             .performClick()
 
         composeTestRule
-            .onNodeWithTag("toggle-btn-test-tag", useUnmergedTree = true)
+            .onNodeWithTag(TOGGLE_BTN_TEST_TAG, useUnmergedTree = true)
             .assertExists()
             .assertIsDisplayed()
     }
