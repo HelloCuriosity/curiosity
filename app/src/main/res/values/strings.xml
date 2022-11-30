@@ -4,6 +4,7 @@
     <!--  Content Description  -->
     <string name="content_description_back">Back icon</string>
     <string name="content_description_arrow_forward">Arrow forward</string>
+    <string name="content_description_drop_down">Drop down menu</string>
 
     <!--  Scenes  -->
     <string name="button_scene_title">Button</string>
@@ -19,6 +20,10 @@
     <string name="btn_enabled">Enabled Button</string>
     <string name="btn_disabled">Disabled Button</string>
 
+    <!-- Drop Down Items -->
+    <string name="drop_down_item_one">Selection One</string>
+    <string name="drop_down_item_two">Selection Two</string>
+
     <!-- Settings -->
     <string name="settings_about">About</string>
     <string name="settings_info_title">Curiosity Design System</string>
@@ -29,6 +34,7 @@
     <string name="settings_privacy_policy">Privacy Policy</string>
     <string name="settings_github">GitHub Repository</string>
     <string name="settings_demo">Demo</string>
+    <string name="settings_drop_down_menu_title">Drop Down Item</string>
     <string name="settings_toggle_title">Toggle Item</string>
     <string name="settings_toggle_content">This toggle has no functionality. It is for demonstration purposes only.</string>
 </resources>
