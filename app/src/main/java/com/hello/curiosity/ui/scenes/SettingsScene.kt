@@ -1,7 +1,6 @@
 package com.hello.curiosity.ui.scenes
 
 import android.content.Context
-import android.widget.Toast
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
