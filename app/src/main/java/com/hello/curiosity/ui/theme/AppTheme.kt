@@ -56,22 +56,22 @@ fun inputColors() = inputTextFieldColors(
 )
 
 @Composable
-fun dropDownMenuColors() = DropDownMenuDefaults.colors(
-    backgroundColor = if (isSystemInDarkTheme()) metallicSeaweed else lightCyan,
-    boarderColor = if (isSystemInDarkTheme()) lightCyan else metallicSeaweed,
+fun dropDownMenuColors(isDarkMode: Boolean = isSystemInDarkTheme()) = DropDownMenuDefaults.colors(
+    backgroundColor = if (isDarkMode) metallicSeaweed else lightCyan,
+    boarderColor = if (isDarkMode) lightCyan else metallicSeaweed,
 )
 
 @Composable
-fun checkColors() = CheckBoxDefaults.colors(
-    checkedColor = if (isSystemInDarkTheme()) lightCyan else metallicSeaweed,
-    uncheckedColor = if (isSystemInDarkTheme()) metallicSeaweed else lightCyan,
-    checkmarkColor = if (isSystemInDarkTheme()) metallicSeaweed else lightCyan,
-    boarderColor = if (isSystemInDarkTheme()) lightCyan else metallicSeaweed,
+fun checkColors(isDarkMode: Boolean = isSystemInDarkTheme()) = CheckBoxDefaults.colors(
+    checkedColor = if (isDarkMode) lightCyan else metallicSeaweed,
+    uncheckedColor = if (isDarkMode) metallicSeaweed else lightCyan,
+    checkmarkColor = if (isDarkMode) metallicSeaweed else lightCyan,
+    boarderColor = if (isDarkMode) lightCyan else metallicSeaweed,
 )
 
 @Composable
-fun toggleColors() = ToggleDefaults.colors(
-    checkedColor = if (isSystemInDarkTheme()) lightCyan else metallicSeaweed,
-    uncheckedColor = if (isSystemInDarkTheme()) metallicSeaweed else lightCyan,
-    boarderColor = if (isSystemInDarkTheme()) lightCyan else metallicSeaweed,
+fun toggleColors(isDarkMode: Boolean = isSystemInDarkTheme()) = ToggleDefaults.colors(
+    checkedColor = if (isDarkMode) lightCyan else metallicSeaweed,
+    uncheckedColor = if (isDarkMode) metallicSeaweed else lightCyan,
+    boarderColor = if (isDarkMode) lightCyan else metallicSeaweed,
 )
