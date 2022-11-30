@@ -5,6 +5,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
@@ -16,12 +20,14 @@ import com.hello.curiosity.compose.ui.components.selector.DropDownMenu
 import com.hello.curiosity.compose.ui.components.toggle.CheckBox
 import com.hello.curiosity.compose.ui.components.toggle.Toggle
 import com.hello.curiosity.ui.theme.checkColors
+import com.hello.curiosity.ui.theme.dropDownMenuColors
 import com.hello.curiosity.ui.theme.toggleColors
 
 private val verticalPadding = 16.dp
 
 @Composable
 fun ToggleScene() {
+    var isToggleChecked by remember { mutableStateOf(false) }
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -32,8 +38,9 @@ fun ToggleScene() {
         item {
             Toggle(
                 modifier = Modifier.padding(top = verticalPadding),
+                checked = isToggleChecked,
                 colors = toggleColors(),
-                onToggleChange = {}
+                onToggleChange = { isToggleChecked = !isToggleChecked }
             )
         }
         item {
@@ -51,7 +58,8 @@ fun ToggleScene() {
                 ),
                 onItemSelected = {
                 },
-                contentDescription = R.string.content_description_drop_down
+                contentDescription = R.string.content_description_drop_down,
+                colors = dropDownMenuColors(),
             )
         }
     }

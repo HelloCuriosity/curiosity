@@ -8,6 +8,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import com.hello.curiosity.R
 import com.hello.curiosity.compose.ui.components.input.inputTextFieldColors
+import com.hello.curiosity.compose.ui.components.selector.DropDownMenuDefaults
 import com.hello.curiosity.compose.ui.components.toggle.CheckBoxDefaults
 import com.hello.curiosity.compose.ui.components.toggle.ToggleDefaults
 import com.hello.curiosity.compose.ui.theme.ColorScheme
@@ -52,6 +53,12 @@ object AppTheme : Theme {
 fun inputColors() = inputTextFieldColors(
     textColor = Color.Black,
     cursorColor = Color.Black,
+)
+
+@Composable
+fun dropDownMenuColors() = DropDownMenuDefaults.colors(
+    backgroundColor = if (isSystemInDarkTheme()) metallicSeaweed else lightCyan,
+    boarderColor = if (isSystemInDarkTheme()) lightCyan else metallicSeaweed,
 )
 
 @Composable

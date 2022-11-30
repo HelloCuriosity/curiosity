@@ -6,6 +6,10 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
@@ -21,6 +25,7 @@ import com.hello.curiosity.compose.settings.ItemToggle
 import com.hello.curiosity.compose.ui.Exclude
 import com.hello.curiosity.ui.theme.AppTheme.lightCyan
 import com.hello.curiosity.ui.theme.AppTheme.metallicSeaweed
+import com.hello.curiosity.ui.theme.dropDownMenuColors
 import com.hello.curiosity.ui.theme.toggleColors
 import com.hello.curiosity.utils.ExternalIntentUtils.createGitHubIntent
 import com.hello.curiosity.utils.ExternalIntentUtils.createPrivacyPolicyIntent
@@ -31,6 +36,7 @@ fun SettingsScene() {
     val ctx: Context = LocalContext.current
     val tint = if (isSystemInDarkTheme()) Color.White else Color.Black
     val divider = if (isSystemInDarkTheme()) lightCyan else metallicSeaweed
+    var isToggleChecked by remember { mutableStateOf(false) }
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -71,10 +77,9 @@ fun SettingsScene() {
             ItemToggle(
                 title = R.string.settings_toggle_title,
                 content = R.string.settings_toggle_content,
+                checked = isToggleChecked,
                 toggleColors = toggleColors(),
-                onToggleChange = {
-                    Toast.makeText(ctx, "Toggled", Toast.LENGTH_SHORT).show()
-                }
+                onToggleChange = { isToggleChecked = !isToggleChecked }
             )
         }
         item { ItemDivider(color = divider) }
@@ -84,6 +89,7 @@ fun SettingsScene() {
                 contentDescription = R.string.settings_drop_down_menu_title,
                 items = listOf(R.string.drop_down_item_one, R.string.drop_down_item_two),
                 onItemSelected = { },
+                colors = dropDownMenuColors(),
             )
         }
     }
