@@ -19,8 +19,6 @@ class ItemDropDownTest : ComposeTest() {
 
     private val titleRes = android.R.string.ok
     private val title = ctx.getString(titleRes)
-//    private val contentRes = android.R.string.fingerprint_icon_content_description
-//    private val contentStr = ctx.getString(contentRes)
 
     private val items: List<Int> = listOf(android.R.string.copy, android.R.string.paste)
     private val contentDescriptionRes: Int = android.R.string.cut
