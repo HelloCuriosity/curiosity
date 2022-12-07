@@ -32,9 +32,10 @@ fun DashboardScene() {
     )
 
     Scaffold(
-        modifier = Modifier.testTag("scaffold-test-tag"),
+        modifier = Modifier.testTag(DASHBOARD_SCENE_VIEW_TEST_TAG),
         topBar = {
             TopAppBar(
+                modifier = Modifier.testTag(DASHBOARD_SCENE_TOP_APP_BAR_TEST_TAG),
                 title = {
                     currentRoute(navController).title()?.let { res ->
                         LabelMedium(
@@ -66,7 +67,7 @@ fun DashboardScene() {
         Box(
             modifier = Modifier
                 .padding(padding)
-                .testTag("navigation-test-tag")
+                .testTag(DASHBOARD_SCENE_NAVIGATION_TEST_TAG)
         ) {
             CuriosityNavHost(
                 navController = navController
@@ -74,3 +75,7 @@ fun DashboardScene() {
         }
     }
 }
+
+const val DASHBOARD_SCENE_NAVIGATION_TEST_TAG = "DASHBOARD_SCENE_NAVIGATION_TEST_TAG"
+const val DASHBOARD_SCENE_TOP_APP_BAR_TEST_TAG = "DASHBOARD_SCENE_TOP_APP_BAR_TEST_TAG"
+const val DASHBOARD_SCENE_VIEW_TEST_TAG = "DASHBOARD_SCENE_VIEW_TEST_TAG"
