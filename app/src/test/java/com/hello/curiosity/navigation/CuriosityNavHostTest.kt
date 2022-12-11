@@ -5,6 +5,7 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onNodeWithTag
 import com.hello.curiosity.test.compose.NavigationTest
 import com.hello.curiosity.ui.scenes.Scenes
+import com.hello.curiosity.ui.scenes.components.INPUT_SCENE_VIEW_TEST_TAG
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
@@ -44,7 +45,7 @@ class CuriosityNavHostTest : NavigationTest() {
     fun `verify route to InputScene works`() {
         assertNavigateToDestination(Scenes.Input.route)
         composeTestRule
-            .onNodeWithTag("input-scene-test-tag")
+            .onNodeWithTag(testTag = INPUT_SCENE_VIEW_TEST_TAG)
             .assertIsDisplayed()
     }
 
