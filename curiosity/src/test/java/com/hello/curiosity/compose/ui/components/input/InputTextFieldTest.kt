@@ -1,5 +1,6 @@
 package com.hello.curiosity.compose.ui.components.input
 
+import android.content.Context
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -11,13 +12,16 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performTextInput
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.unit.dp
+import androidx.test.core.app.ApplicationProvider
 import com.hello.curiosity.compose.ui.theme.ThemeImpl
 import com.hello.curiosity.test.compose.ComposeTest
 import org.junit.Test
 
 class InputTextFieldTest : ComposeTest() {
-
-    private val text = "test"
+    private val ctx: Context = ApplicationProvider.getApplicationContext()
+    private val res: Int = android.R.string.copy
+    private val placeholderText = ctx.getString(res)
+    private val text = "text"
 
     @Test
     fun `validate InputTextField defaults`() {
@@ -30,13 +34,13 @@ class InputTextFieldTest : ComposeTest() {
 
         // validate box container exists
         composeTestRule
-            .onNodeWithTag("container-test-tag")
+            .onNodeWithTag(testTag = INPUT_TEXT_FIELD_CONTAINER_TEST_TAG)
             .assertExists()
             .assertIsDisplayed()
 
         // validate text field exists and input works
         composeTestRule
-            .onNodeWithTag("input-text-field-test-tag")
+            .onNodeWithTag(testTag = INPUT_TEXT_FIELD_VALUE_TEST_TAG)
             .assertExists()
             .assertIsDisplayed()
             .performTextInput(text)
@@ -49,13 +53,12 @@ class InputTextFieldTest : ComposeTest() {
 
         // validate counter does not exist
         composeTestRule
-            .onNodeWithTag("counter-test-tag")
+            .onNodeWithTag(testTag = INPUT_TEXT_FIELD_COUNTER_TEST_TAG)
             .assertDoesNotExist()
     }
 
     @Test
     fun `validate InputTextField customization`() {
-        val placeholder = "Placeholder"
         composeTestRule.setContent {
             InputTextField(
                 modifier = Modifier.padding(4.dp),
@@ -63,38 +66,48 @@ class InputTextFieldTest : ComposeTest() {
                 enabled = true,
                 readOnly = false,
                 textStyle = ThemeImpl.typography.h5,
-                placeholder = placeholder,
+                placeholder = res,
                 placeholderStyle = ThemeImpl.typography.h5,
-                backgroundColor = Color.White,
-                colors = inputTextFieldColors(),
                 keyboardOptions = KeyboardOptions.Default.copy(capitalization = KeyboardCapitalization.Sentences),
                 keyboardActions = KeyboardActions(onDone = {}),
                 singleLine = false,
+                maxLines = 5,
+                maxLength = 10,
                 hasCounter = false,
+                boarderWidth = 10.dp,
+                colors = InputTextFieldDefaults.colors(
+                    textColor = Color.Blue,
+                    placeholderColor = Color.Black,
+                    cursorColor = Color.Red,
+                    unfocusedIndicatorColor = Color.Green,
+                    focusedIndicatorColor = Color.Yellow,
+                    backgroundColor = Color.Magenta,
+                    boarderColor = Color.Cyan,
+                )
             )
         }
 
         // validate box container exists
         composeTestRule
-            .onNodeWithTag("container-test-tag")
+            .onNodeWithTag(testTag = INPUT_TEXT_FIELD_CONTAINER_TEST_TAG)
             .assertExists()
             .assertIsDisplayed()
 
         // validate text field exists and input works
         composeTestRule
-            .onNodeWithTag("input-text-field-test-tag")
+            .onNodeWithTag(testTag = INPUT_TEXT_FIELD_VALUE_TEST_TAG)
             .assertExists()
             .assertIsDisplayed()
 
         // validate placeholder text exists
         composeTestRule
-            .onNodeWithText(placeholder)
+            .onNodeWithText(placeholderText)
             .assertExists()
             .assertIsDisplayed()
 
         // validate text field exists and input works
         composeTestRule
-            .onNodeWithTag("input-text-field-test-tag")
+            .onNodeWithTag(testTag = INPUT_TEXT_FIELD_VALUE_TEST_TAG)
             .assertExists()
             .assertIsDisplayed()
             .performTextInput(text)
@@ -107,7 +120,7 @@ class InputTextFieldTest : ComposeTest() {
 
         // validate counter does not exist
         composeTestRule
-            .onNodeWithTag("counter-test-tag")
+            .onNodeWithTag(testTag = INPUT_TEXT_FIELD_COUNTER_TEST_TAG)
             .assertDoesNotExist()
     }
 
@@ -124,25 +137,25 @@ class InputTextFieldTest : ComposeTest() {
 
         // validate box container exists
         composeTestRule
-            .onNodeWithTag("container-test-tag")
+            .onNodeWithTag(testTag = INPUT_TEXT_FIELD_CONTAINER_TEST_TAG)
             .assertExists()
             .assertIsDisplayed()
 
         // validate text field exists and input works
         composeTestRule
-            .onNodeWithTag("input-text-field-test-tag")
+            .onNodeWithTag(testTag = INPUT_TEXT_FIELD_VALUE_TEST_TAG)
             .assertExists()
             .assertIsDisplayed()
 
         // validate counter does exist
         composeTestRule
-            .onNodeWithTag("counter-test-tag")
+            .onNodeWithTag(testTag = INPUT_TEXT_FIELD_COUNTER_TEST_TAG)
             .assertExists()
             .assertIsDisplayed()
 
         // validate text field exists and input works
         composeTestRule
-            .onNodeWithTag("input-text-field-test-tag")
+            .onNodeWithTag(testTag = INPUT_TEXT_FIELD_VALUE_TEST_TAG)
             .assertExists()
             .assertIsDisplayed()
             .performTextInput(text)
@@ -155,7 +168,7 @@ class InputTextFieldTest : ComposeTest() {
 
         // validate text field exists and input works
         composeTestRule
-            .onNodeWithTag("input-text-field-test-tag")
+            .onNodeWithTag(testTag = INPUT_TEXT_FIELD_VALUE_TEST_TAG)
             .assertExists()
             .assertIsDisplayed()
             .performTextInput(text)

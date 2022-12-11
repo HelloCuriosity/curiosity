@@ -1,10 +1,21 @@
 <resources>
     <string name="app_name">Curiosity</string>
 
+    <!--  Buttons  -->
+    <string name="btn_enabled">Enabled Button</string>
+    <string name="btn_disabled">Disabled Button</string>
+
     <!--  Content Description  -->
     <string name="content_description_back">Back icon</string>
     <string name="content_description_arrow_forward">Arrow forward</string>
     <string name="content_description_drop_down">Drop down menu</string>
+
+    <!-- Drop Down Items -->
+    <string name="drop_down_item_one">Selection One</string>
+    <string name="drop_down_item_two">Selection Two</string>
+
+    <!-- Input -->
+    <string name="input_text_field_placeholder">With Placeholder</string>
 
     <!--  Scenes  -->
     <string name="button_scene_title">Button</string>
@@ -15,14 +26,6 @@
     <string name="text_scene_title">Text</string>
     <string name="toggle_scene_title">Toggle</string>
     <string name="typography_scene_title">Typography</string>
-
-    <!--  Buttons  -->
-    <string name="btn_enabled">Enabled Button</string>
-    <string name="btn_disabled">Disabled Button</string>
-
-    <!-- Drop Down Items -->
-    <string name="drop_down_item_one">Selection One</string>
-    <string name="drop_down_item_two">Selection Two</string>
 
     <!-- Settings -->
     <string name="settings_about">About</string>

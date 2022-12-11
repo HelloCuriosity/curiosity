@@ -7,20 +7,20 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.hello.curiosity.R
 import com.hello.curiosity.compose.ui.Exclude
 import com.hello.curiosity.compose.ui.components.input.InputTextField
-import com.hello.curiosity.ui.theme.inputColors
+import com.hello.curiosity.ui.theme.inputTextFieldColors
 
 @Composable
 fun InputScene() {
     LazyColumn(
         modifier = Modifier
             .fillMaxWidth()
-            .testTag("input-scene-test-tag"),
+            .testTag(INPUT_SCENE_VIEW_TEST_TAG),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
@@ -32,9 +32,7 @@ fun InputScene() {
                         end = 16.dp,
                         top = 16.dp,
                     ),
-                placeholder = "",
-                backgroundColor = Color.White,
-                colors = inputColors(),
+                colors = inputTextFieldColors(),
                 value = { }
             )
         }
@@ -46,9 +44,8 @@ fun InputScene() {
                         end = 16.dp,
                         top = 16.dp,
                     ),
-                placeholder = "With Placeholder",
-                backgroundColor = Color.White,
-                colors = inputColors(),
+                placeholder = R.string.input_text_field_placeholder,
+                colors = inputTextFieldColors(),
                 value = { }
             )
         }
@@ -60,16 +57,17 @@ fun InputScene() {
                         end = 16.dp,
                         top = 16.dp,
                     ),
-                placeholder = "With Counter",
+                placeholder = R.string.input_text_field_placeholder,
                 maxLength = 30,
                 hasCounter = true,
-                backgroundColor = Color.White,
-                colors = inputColors(),
+                colors = inputTextFieldColors(),
                 value = { }
             )
         }
     }
 }
+
+const val INPUT_SCENE_VIEW_TEST_TAG = "INPUT_SCENE_VIEW_TEST_TAG"
 
 @Exclude
 @Preview
