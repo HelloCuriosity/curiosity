@@ -9,7 +9,7 @@ Curiosity is a design system library _just for fun_, my rendition of building a 
 check out the demo app [Curiosity](https://play.google.com/store/apps/details?id=com.hello.curiosity.design) on Google
 Play or build it from source here 🧑‍💻 This project is split into multiple libraries:
 
-## Curiosity
+### Curiosity
 
 Curiosity holds the UI components, which are split into different categories:
 
@@ -18,13 +18,17 @@ Curiosity holds the UI components, which are split into different categories:
 * Text
 * Toggles
 
-## Navigation
+### Navigation
 
 Navigation holds navigation components. BottomNavigation and scenes that make it easier to create uniformed scenes.
 
-## Settings
+### Settings
 
 Settings is a collection of setting specific UI components to speed up building settings screens.
+
+### Test-Utils
+
+Test-Utils is a collection of test utilities to help test compose UIs.
 
 ## Screenshots
 
