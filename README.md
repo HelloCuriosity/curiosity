@@ -59,3 +59,12 @@ dependencies {
     testImplementation("com.hello.curiosity.compose:test-utils:0.10.1") // testing library
 }
 ```
+
+## Apps Using Curiosity
+
+In addition to [Curiosity](https://play.google.com/store/apps/details?id=com.hello.curiosity.design) you can find a list
+of apps using the curiosity design system.
+
+| App                                                                                         | Description                                                 | Uses |
+|---------------------------------------------------------------------------------------------|-------------------------------------------------------------|------|
+| [Signore Sorriso](https://play.google.com/store/apps/details?id=com.hello.curiosity.jokes)  | Signore Sorriso is full of fun jokes for the whole family. | &bull; Curiosity<br/>&bull; Navigation<br/>&bull; Settings<br/>&bull; Test-Utils                                            |
