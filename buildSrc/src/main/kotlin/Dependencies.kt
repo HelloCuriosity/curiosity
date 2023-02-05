@@ -8,7 +8,7 @@ object Dependencies {
         const val jvmTarget = "11"
         const val kotlin = "1.7.20"
         const val navigation = "2.5.3"
-        const val playPublisher = "3.7.0"
+        const val playPublisher = "3.8.1"
 
         // App
         const val compileSdk = 33
