@@ -2,7 +2,7 @@ import java.util.Locale
 
 object Dependencies {
     object Versions {
-        const val agp = "7.4.0"
+        const val agp = "7.4.1"
         const val compose = "1.2.1"
         const val composeCompiler = "1.3.2"
         const val jvmTarget = "11"
