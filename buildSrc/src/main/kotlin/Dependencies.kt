@@ -48,7 +48,7 @@ object Dependencies {
 
     object Test {
         object Androidx {
-            const val espresso = "androidx.test.espresso:espresso-core:3.4.0"
+            const val espresso = "androidx.test.espresso:espresso-core:3.5.1"
             const val junit = "androidx.test.ext:junit:1.1.5"
         }
 
