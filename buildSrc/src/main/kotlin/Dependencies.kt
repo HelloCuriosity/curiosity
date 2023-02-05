@@ -17,7 +17,7 @@ object Dependencies {
         const val targetSdk = 33
 
         // Quality Gates
-        const val detekt = "1.21.0"
+        const val detekt = "1.22.0"
         const val gradleVersions = "0.42.0"
         const val kotlinter = "3.12.0"
         const val kover = "0.6.1"
