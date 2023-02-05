@@ -3,10 +3,10 @@ import java.util.Locale
 object Dependencies {
     object Versions {
         const val agp = "7.4.1"
-        const val compose = "1.2.1"
-        const val composeCompiler = "1.3.2"
+        const val compose = "1.3.3"
+        const val composeCompiler = "1.4.0"
         const val jvmTarget = "11"
-        const val kotlin = "1.7.20"
+        const val kotlin = "1.8.0"
         const val navigation = "2.5.3"
         const val playPublisher = "3.8.1"
 
@@ -28,8 +28,8 @@ object Dependencies {
     }
 
     object Compose {
-        const val activity = "androidx.activity:activity-compose:1.6.0"
-        const val material = "androidx.compose.material:material:${Versions.compose}"
+        const val activity = "androidx.activity:activity-compose:1.6.1"
+        const val material = "androidx.compose.material:material:1.3.1"
         const val navigation = "androidx.navigation:navigation-compose:${Versions.navigation}"
         const val tooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
         const val toolingPreview = "androidx.compose.ui:ui-tooling-preview:${Versions.compose}"
