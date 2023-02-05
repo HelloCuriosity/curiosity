@@ -57,10 +57,10 @@ Add dependency:
 
 ```kotlin
 dependencies {
-    implementation("com.hello.curiosity.compose:curiosity:0.10.1") // component library
-    implementation("com.hello.curiosity.compose:navigation:0.10.1") // navigation library
-    implementation("com.hello.curiosity.compose:settings:0.10.1") // settings library
-    testImplementation("com.hello.curiosity.compose:test-utils:0.10.1") // testing library
+    implementation("com.hello.curiosity.compose:curiosity:0.11.0") // component library
+    implementation("com.hello.curiosity.compose:navigation:0.11.0") // navigation library
+    implementation("com.hello.curiosity.compose:settings:0.11.0") // settings library
+    testImplementation("com.hello.curiosity.compose:test-utils:0.11.0") // testing library
 }
 ```
 
