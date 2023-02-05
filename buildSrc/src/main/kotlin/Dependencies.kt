@@ -44,7 +44,7 @@ object Dependencies {
         const val playPublisher = "com.github.triplet.play"
     }
 
-    const val leakCanary = "com.squareup.leakcanary:leakcanary-android:2.9.1"
+    const val leakCanary = "com.squareup.leakcanary:leakcanary-android:2.10"
 
     object Test {
         object Androidx {
