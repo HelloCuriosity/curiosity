@@ -3,7 +3,7 @@ package com.hello.curiosity.ui.scenes
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import com.hello.curiosity.R
-import com.hello.curiosity.compose.navigation.Scene
+import io.github.hellocuriosity.navigation.Scene
 
 sealed class Scenes(
     @StringRes override val title: Int,

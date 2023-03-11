@@ -1,4 +1,4 @@
-package com.hello.curiosity.compose.navigation
+package io.github.hellocuriosity.navigation
 
 interface Scene {
     val title: Int
