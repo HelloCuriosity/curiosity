@@ -3,9 +3,9 @@ package com.hello.curiosity.navigation
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onNodeWithTag
-import com.hello.curiosity.test.compose.NavigationTest
 import com.hello.curiosity.ui.scenes.Scenes
 import com.hello.curiosity.ui.scenes.components.INPUT_SCENE_VIEW_TEST_TAG
+import io.github.hellocuriosity.compose.test.NavigationTest
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

@@ -4,7 +4,7 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onChildAt
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.navigation.compose.rememberNavController
-import com.hello.curiosity.test.compose.ComposeTest
+import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Test
 
 class ComponentSceneTest : ComposeTest() {

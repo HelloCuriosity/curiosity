@@ -4,7 +4,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.unit.dp
-import com.hello.curiosity.test.compose.ComposeTest
+import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Test
 
 class ItemDividerTest : ComposeTest() {

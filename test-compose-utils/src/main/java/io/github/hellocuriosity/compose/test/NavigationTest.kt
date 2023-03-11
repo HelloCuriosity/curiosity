@@ -1,4 +1,4 @@
-package com.hello.curiosity.test.compose
+package io.github.hellocuriosity.compose.test
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext

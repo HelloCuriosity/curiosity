@@ -1,4 +1,4 @@
-package com.hello.curiosity.test.compose
+package io.github.hellocuriosity.compose.test
 
 import androidx.compose.ui.test.junit4.ComposeContentTestRule
 import androidx.compose.ui.test.junit4.createComposeRule
