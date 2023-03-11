@@ -7,9 +7,9 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.test.core.app.ApplicationProvider
-import com.hello.curiosity.compose.ui.components.toggle.TOGGLE_CONTAINER_TEST_TAG
-import com.hello.curiosity.compose.ui.components.toggle.ToggleDefaults
 import com.hello.curiosity.test.compose.ComposeTest
+import io.github.hellocuriosity.compose.ui.components.toggle.TOGGLE_CONTAINER_TEST_TAG
+import io.github.hellocuriosity.compose.ui.components.toggle.ToggleDefaults
 import org.junit.Test
 
 class ItemToggleTest : ComposeTest() {

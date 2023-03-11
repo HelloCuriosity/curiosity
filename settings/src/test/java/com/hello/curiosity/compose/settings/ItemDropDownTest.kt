@@ -10,8 +10,8 @@ import androidx.compose.ui.test.onChildAt
 import androidx.compose.ui.test.onChildren
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.test.core.app.ApplicationProvider
-import com.hello.curiosity.compose.ui.components.selector.DropDownMenuDefaults
 import com.hello.curiosity.test.compose.ComposeTest
+import io.github.hellocuriosity.compose.ui.components.selector.DropDownMenuDefaults
 import org.junit.Test
 
 class ItemDropDownTest : ComposeTest() {

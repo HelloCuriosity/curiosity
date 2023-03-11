@@ -12,11 +12,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.hello.curiosity.compose.R
-import com.hello.curiosity.compose.ui.components.selector.DropDownMenu
-import com.hello.curiosity.compose.ui.components.selector.DropDownMenuColors
-import com.hello.curiosity.compose.ui.components.selector.DropDownMenuDefaults
-import com.hello.curiosity.compose.ui.components.text.LabelMedium
+import io.github.hellocuriosity.compose.ui.components.selector.DropDownMenu
+import io.github.hellocuriosity.compose.ui.components.selector.DropDownMenuColors
+import io.github.hellocuriosity.compose.ui.components.selector.DropDownMenuDefaults
+import io.github.hellocuriosity.compose.ui.components.text.LabelMedium
 
 @Composable
 fun ItemDropDown(
@@ -58,7 +57,7 @@ const val ITEM_DROP_DOWN_CONTAINER_TEST_TAG = "ITEM_DROP_DOWN_CONTAINER_TEST_TAG
 internal fun ItemDropDownPreview() {
     ItemDropDown(
         title = android.R.string.copy,
-        items = listOf(R.string.checkbox, android.R.string.copy),
+        items = listOf(android.R.string.copy),
         onItemSelected = { },
         contentDescription = android.R.string.copy,
     )
