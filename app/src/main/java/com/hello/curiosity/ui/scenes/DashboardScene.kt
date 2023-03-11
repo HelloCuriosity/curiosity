@@ -17,8 +17,8 @@ import androidx.navigation.compose.rememberNavController
 import com.hello.curiosity.R
 import com.hello.curiosity.compose.navigation.BottomNavigation
 import com.hello.curiosity.compose.navigation.currentRoute
-import com.hello.curiosity.compose.ui.components.text.LabelMedium
 import com.hello.curiosity.navigation.CuriosityNavHost
+import io.github.hellocuriosity.ui.components.text.LabelMedium
 
 @Composable
 fun DashboardScene() {

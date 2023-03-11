@@ -11,9 +11,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.hello.curiosity.compose.ui.components.toggle.Toggle
-import com.hello.curiosity.compose.ui.components.toggle.ToggleColors
-import com.hello.curiosity.compose.ui.components.toggle.ToggleDefaults
+import io.github.hellocuriosity.ui.components.toggle.Toggle
+import io.github.hellocuriosity.ui.components.toggle.ToggleColors
+import io.github.hellocuriosity.ui.components.toggle.ToggleDefaults
 
 @Composable
 fun ItemToggle(

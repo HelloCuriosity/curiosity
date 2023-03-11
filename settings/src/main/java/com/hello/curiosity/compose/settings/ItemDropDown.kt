@@ -12,11 +12,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.hello.curiosity.compose.R
-import com.hello.curiosity.compose.ui.components.selector.DropDownMenu
-import com.hello.curiosity.compose.ui.components.selector.DropDownMenuColors
-import com.hello.curiosity.compose.ui.components.selector.DropDownMenuDefaults
-import com.hello.curiosity.compose.ui.components.text.LabelMedium
+import io.github.hellocuriosity.R
+import io.github.hellocuriosity.ui.components.selector.DropDownMenu
+import io.github.hellocuriosity.ui.components.selector.DropDownMenuColors
+import io.github.hellocuriosity.ui.components.selector.DropDownMenuDefaults
+import io.github.hellocuriosity.ui.components.text.LabelMedium
 
 @Composable
 fun ItemDropDown(

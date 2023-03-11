@@ -7,15 +7,15 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import com.hello.curiosity.R
-import com.hello.curiosity.compose.ui.components.input.InputTextFieldDefaults
-import com.hello.curiosity.compose.ui.components.selector.DropDownMenuDefaults
-import com.hello.curiosity.compose.ui.components.toggle.CheckBoxDefaults
-import com.hello.curiosity.compose.ui.components.toggle.ToggleDefaults
-import com.hello.curiosity.compose.ui.theme.ColorScheme
-import com.hello.curiosity.compose.ui.theme.Theme
-import com.hello.curiosity.compose.ui.theme.Type
 import com.hello.curiosity.ui.theme.AppTheme.lightCyan
 import com.hello.curiosity.ui.theme.AppTheme.metallicSeaweed
+import io.github.hellocuriosity.ui.components.input.InputTextFieldDefaults
+import io.github.hellocuriosity.ui.components.selector.DropDownMenuDefaults
+import io.github.hellocuriosity.ui.components.toggle.CheckBoxDefaults
+import io.github.hellocuriosity.ui.components.toggle.ToggleDefaults
+import io.github.hellocuriosity.ui.theme.ColorScheme
+import io.github.hellocuriosity.ui.theme.Theme
+import io.github.hellocuriosity.ui.theme.Type
 
 object AppTheme : Theme {
     override val typography: Type = Type(

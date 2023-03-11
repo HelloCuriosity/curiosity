@@ -21,13 +21,13 @@ import com.hello.curiosity.compose.settings.ItemDropDown
 import com.hello.curiosity.compose.settings.ItemInfo
 import com.hello.curiosity.compose.settings.ItemSection
 import com.hello.curiosity.compose.settings.ItemToggle
-import com.hello.curiosity.compose.ui.Exclude
 import com.hello.curiosity.ui.theme.AppTheme.lightCyan
 import com.hello.curiosity.ui.theme.AppTheme.metallicSeaweed
 import com.hello.curiosity.ui.theme.dropDownMenuColors
 import com.hello.curiosity.ui.theme.toggleColors
 import com.hello.curiosity.utils.ExternalIntentUtils.createGitHubIntent
 import com.hello.curiosity.utils.ExternalIntentUtils.createPrivacyPolicyIntent
+import io.github.hellocuriosity.ui.Exclude
 
 @Composable
 @Suppress("LongMethod")
