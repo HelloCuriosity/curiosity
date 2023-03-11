@@ -123,7 +123,6 @@ dependencies {
 
     // Testing
     testImplementation(Dependencies.Test.junit)
-    testImplementation("androidx.test.ext:junit-ktx:1.1.3")
 
     // Curiosity testing utils
     testImplementation(project(":test-compose-utils"))
