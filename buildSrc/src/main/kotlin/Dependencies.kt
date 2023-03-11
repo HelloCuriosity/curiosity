@@ -4,7 +4,7 @@ object Dependencies {
     object Versions {
         const val agp = "7.4.1"
         const val compose = "1.3.3"
-        const val composeCompiler = "1.4.0"
+        const val composeCompiler = "1.4.3"
         const val jvmTarget = "11"
         const val kotlin = "1.8.10"
         const val navigation = "2.5.3"
