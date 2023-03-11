@@ -19,8 +19,8 @@ sourceSets {
 java {
     // Since this is a Gradle plugin, we need to use the Java version that Gradle is using, which will differ from the
     // Java version we're using in our application.
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
 
 dependencies {

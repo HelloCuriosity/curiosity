@@ -34,7 +34,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
           persist-credentials: false
           fetch-depth: 0
-      - name: Setup JDK
+      - name: Set up JDK
         uses: actions/setup-java@v3.10.0
         with:
           distribution: 'temurin'
@@ -56,7 +56,7 @@ jobs:
         uses: actions/setup-java@v3.10.0
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '11'
           cache: 'gradle'
       - name: Lint
         run: make lint
@@ -80,7 +80,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup JDK
+      - name: Set up JDK
         uses: actions/setup-java@v3.10.0
         with:
           distribution: 'temurin'
@@ -105,7 +105,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup JDK
+      - name: Set up JDK
         uses: actions/setup-java@v3.10.0
         with:
           distribution: 'temurin'
