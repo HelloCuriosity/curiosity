@@ -1,4 +1,4 @@
-package com.hello.curiosity.compose.navigation
+package io.github.hellocuriosity.navigation
 
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationDefaults

@@ -13,7 +13,7 @@ plugins {
 }
 
 android {
-    namespace = "com.hello.curiosity.compose.navigation"
+    namespace = "io.github.hellocuriosity.compose.navigation"
     compileSdk = Dependencies.Versions.compileSdk
     buildToolsVersion = Dependencies.Versions.buildToolsVersion
 
@@ -129,7 +129,7 @@ afterEvaluate {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
-                groupId = "com.hello.curiosity.compose"
+                groupId = "io.github.hellocuriosity.compose"
                 artifactId = "navigation"
                 version = System.getenv("VERSION") ?: "local"
 
