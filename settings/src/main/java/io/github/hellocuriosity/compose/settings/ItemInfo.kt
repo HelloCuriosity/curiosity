@@ -1,5 +1,6 @@
-package com.hello.curiosity.compose.settings
+package io.github.hellocuriosity.compose.settings
 
+import android.R
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -49,7 +50,7 @@ fun ItemInfo(
 @Composable
 internal fun ItemInfoPreview() {
     ItemInfo(
-        title = android.R.string.copy,
-        content = android.R.string.copy,
+        title = R.string.copy,
+        content = R.string.copy,
     )
 }

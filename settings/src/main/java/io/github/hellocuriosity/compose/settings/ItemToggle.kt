@@ -1,5 +1,6 @@
-package com.hello.curiosity.compose.settings
+package io.github.hellocuriosity.compose.settings
 
+import android.R
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -54,8 +55,8 @@ const val ITEM_TOGGLE_TEST_TAG = "ITEM_TOGGLE_TEST_TAG"
 @Composable
 internal fun ItemTogglePreview() {
     ItemToggle(
-        title = android.R.string.copy,
-        content = android.R.string.fingerprint_icon_content_description,
+        title = R.string.copy,
+        content = R.string.fingerprint_icon_content_description,
         onToggleChange = { }
     )
 }

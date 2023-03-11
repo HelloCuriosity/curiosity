@@ -1,5 +1,6 @@
-package com.hello.curiosity.compose.settings
+package io.github.hellocuriosity.compose.settings
 
+import android.R
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.foundation.clickable
@@ -55,9 +56,9 @@ fun ItemAction(
 @Composable
 internal fun ItemActionPreview() {
     ItemAction(
-        title = android.R.string.copy,
-        icon = android.R.drawable.ic_delete,
-        contentDescription = android.R.string.copy,
+        title = R.string.copy,
+        icon = R.drawable.ic_delete,
+        contentDescription = R.string.copy,
         tint = Color.Unspecified
     ) {
     }

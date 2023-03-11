@@ -11,7 +11,7 @@ plugins {
 }
 
 android {
-    namespace = "com.hello.curiosity.compose.settings"
+    namespace = "io.github.hellocuriosity.compose.settings"
     compileSdk = Dependencies.Versions.compileSdk
     buildToolsVersion = Dependencies.Versions.buildToolsVersion
 

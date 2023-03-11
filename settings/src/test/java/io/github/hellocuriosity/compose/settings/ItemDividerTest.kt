@@ -1,4 +1,4 @@
-package com.hello.curiosity.compose.settings
+package io.github.hellocuriosity.compose.settings
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.test.assertIsDisplayed
