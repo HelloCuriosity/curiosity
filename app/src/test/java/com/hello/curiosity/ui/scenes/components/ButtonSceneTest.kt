@@ -8,7 +8,7 @@ import androidx.compose.ui.test.onChildAt
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollToIndex
-import com.hello.curiosity.test.compose.ComposeTest
+import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Test
 
 class ButtonSceneTest : ComposeTest() {

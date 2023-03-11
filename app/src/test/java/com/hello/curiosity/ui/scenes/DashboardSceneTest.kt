@@ -2,7 +2,7 @@ package com.hello.curiosity.ui.scenes
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onNodeWithTag
-import com.hello.curiosity.test.compose.ComposeTest
+import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Test
 
 class DashboardSceneTest : ComposeTest() {

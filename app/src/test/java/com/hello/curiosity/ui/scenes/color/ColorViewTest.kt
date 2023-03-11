@@ -3,7 +3,7 @@ package com.hello.curiosity.ui.scenes.color
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onNodeWithText
-import com.hello.curiosity.test.compose.ComposeTest
+import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Test
 
 class ColorViewTest : ComposeTest() {

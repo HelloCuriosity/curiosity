@@ -1,9 +1,9 @@
 package com.hello.curiosity.ui.theme
 
 import androidx.compose.ui.graphics.Color
-import com.hello.curiosity.test.compose.ComposeTest
 import com.hello.curiosity.ui.theme.AppTheme.lightCyan
 import com.hello.curiosity.ui.theme.AppTheme.metallicSeaweed
+import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
