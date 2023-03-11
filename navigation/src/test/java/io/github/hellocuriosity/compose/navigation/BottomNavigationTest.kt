@@ -1,4 +1,4 @@
-package io.github.hellocuriosity.navigation
+package io.github.hellocuriosity.compose.navigation
 
 import android.content.Context
 import androidx.compose.material.Text
