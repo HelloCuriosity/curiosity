@@ -14,8 +14,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.hello.curiosity.compose.ui.components.text.ContentMedium
-import com.hello.curiosity.compose.ui.components.text.LabelMedium
+import io.github.hellocuriosity.compose.ui.components.text.ContentMedium
+import io.github.hellocuriosity.compose.ui.components.text.LabelMedium
 
 @Composable
 fun ItemInfo(

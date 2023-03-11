@@ -9,13 +9,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.hello.curiosity.compose.ui.Exclude
-import com.hello.curiosity.compose.ui.components.text.ContentLarge
-import com.hello.curiosity.compose.ui.components.text.ContentMedium
-import com.hello.curiosity.compose.ui.components.text.LabelLarge
-import com.hello.curiosity.compose.ui.components.text.LabelMedium
-import com.hello.curiosity.compose.ui.components.text.LabelSmall
-import com.hello.curiosity.compose.ui.components.text.LabelTiny
+import io.github.hellocuriosity.compose.ui.Exclude
+import io.github.hellocuriosity.compose.ui.components.text.ContentLarge
+import io.github.hellocuriosity.compose.ui.components.text.ContentMedium
+import io.github.hellocuriosity.compose.ui.components.text.LabelLarge
+import io.github.hellocuriosity.compose.ui.components.text.LabelMedium
+import io.github.hellocuriosity.compose.ui.components.text.LabelSmall
+import io.github.hellocuriosity.compose.ui.components.text.LabelTiny
 
 @Composable
 fun TextScene() {
