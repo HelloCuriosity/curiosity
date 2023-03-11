@@ -1,5 +1,6 @@
-package com.hello.curiosity.compose.settings
+package io.github.hellocuriosity.compose.settings
 
+import android.R
 import android.content.Context
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.test.assertContentDescriptionEquals
@@ -24,7 +25,7 @@ class ItemActionTest : ComposeTest() {
         composeTestRule.setContent {
             ItemAction(
                 title = titleRes,
-                icon = android.R.drawable.ic_delete,
+                icon = R.drawable.ic_delete,
                 contentDescription = contentDescriptionRes,
                 onClick = { }
             )
@@ -56,7 +57,7 @@ class ItemActionTest : ComposeTest() {
         composeTestRule.setContent {
             ItemAction(
                 title = titleRes,
-                icon = android.R.drawable.ic_delete,
+                icon = R.drawable.ic_delete,
                 contentDescription = contentDescriptionRes,
                 textColor = Color.Black,
                 tint = Color.Blue,

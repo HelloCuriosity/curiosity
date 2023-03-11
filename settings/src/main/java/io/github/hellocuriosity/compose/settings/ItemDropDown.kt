@@ -1,5 +1,6 @@
-package com.hello.curiosity.compose.settings
+package io.github.hellocuriosity.compose.settings
 
+import android.R
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -56,9 +57,9 @@ const val ITEM_DROP_DOWN_CONTAINER_TEST_TAG = "ITEM_DROP_DOWN_CONTAINER_TEST_TAG
 @Composable
 internal fun ItemDropDownPreview() {
     ItemDropDown(
-        title = android.R.string.copy,
-        items = listOf(android.R.string.copy),
+        title = R.string.copy,
+        items = listOf(R.string.copy),
         onItemSelected = { },
-        contentDescription = android.R.string.copy,
+        contentDescription = R.string.copy,
     )
 }

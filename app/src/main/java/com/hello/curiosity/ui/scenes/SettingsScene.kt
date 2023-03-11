@@ -15,18 +15,18 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import com.hello.curiosity.R
-import com.hello.curiosity.compose.settings.ItemAction
-import com.hello.curiosity.compose.settings.ItemDivider
-import com.hello.curiosity.compose.settings.ItemDropDown
-import com.hello.curiosity.compose.settings.ItemInfo
-import com.hello.curiosity.compose.settings.ItemSection
-import com.hello.curiosity.compose.settings.ItemToggle
 import com.hello.curiosity.ui.theme.AppTheme.lightCyan
 import com.hello.curiosity.ui.theme.AppTheme.metallicSeaweed
 import com.hello.curiosity.ui.theme.dropDownMenuColors
 import com.hello.curiosity.ui.theme.toggleColors
 import com.hello.curiosity.utils.ExternalIntentUtils.createGitHubIntent
 import com.hello.curiosity.utils.ExternalIntentUtils.createPrivacyPolicyIntent
+import io.github.hellocuriosity.compose.settings.ItemAction
+import io.github.hellocuriosity.compose.settings.ItemDivider
+import io.github.hellocuriosity.compose.settings.ItemDropDown
+import io.github.hellocuriosity.compose.settings.ItemInfo
+import io.github.hellocuriosity.compose.settings.ItemSection
+import io.github.hellocuriosity.compose.settings.ItemToggle
 import io.github.hellocuriosity.compose.ui.Exclude
 
 @Composable

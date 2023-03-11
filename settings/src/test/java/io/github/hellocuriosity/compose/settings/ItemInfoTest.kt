@@ -1,4 +1,4 @@
-package com.hello.curiosity.compose.settings
+package io.github.hellocuriosity.compose.settings
 
 import android.content.Context
 import androidx.compose.foundation.layout.padding

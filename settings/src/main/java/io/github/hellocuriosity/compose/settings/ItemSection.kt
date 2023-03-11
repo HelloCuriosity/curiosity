@@ -1,5 +1,6 @@
-package com.hello.curiosity.compose.settings
+package io.github.hellocuriosity.compose.settings
 
+import android.R
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
@@ -32,5 +33,5 @@ fun ItemSection(
 @Preview
 @Composable
 internal fun ItemSectionPreview() {
-    ItemSection(text = android.R.string.copy)
+    ItemSection(text = R.string.copy)
 }

@@ -1,4 +1,4 @@
-package com.hello.curiosity.compose.settings
+package io.github.hellocuriosity.compose.settings
 
 @Suppress("EmptyDefaultConstructor")
 annotation class Exclude()
