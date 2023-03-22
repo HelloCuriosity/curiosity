@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 Your feature request may already be reported! Please have a quick look in the
-[issues](https://github.com/hopeman15/curiosity/issues) before creating
+[issues](https://github.com/HelloCuriosity/curiosity/issues) before creating
 a new one.
 
 **Description**
