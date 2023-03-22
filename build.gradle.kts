@@ -19,6 +19,8 @@ plugins {
 }
 
 allprojects {
+    version = System.getenv("VERSION") ?: "local"
+
     apply(plugin = Dependencies.Gradle.detekt)
     apply(plugin = Dependencies.Gradle.kotlinter)
     apply(plugin = Dependencies.Gradle.kover)

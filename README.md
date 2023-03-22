@@ -38,29 +38,14 @@ Test-Utils is a collection of test utilities to help test compose UIs.
 
 Curiosity is currently published to github packages. You will need to generate a PAT.
 
-Add repository to project:
-
-```kotlin
-repositories {
-    maven {
-        name = "GitHubPackages"
-        url = uri("https://maven.pkg.github.com/hopeman15/curiosity")
-        credentials {
-            username = System.getenv("GPR_USER") // GitHub user
-            password = System.getenv("GPR_TOKEN") // Generated PAT
-        }
-    }
-}
-```
-
 Add dependency:
 
 ```kotlin
 dependencies {
-    implementation("com.hello.curiosity.compose:curiosity:0.11.0") // component library
-    implementation("com.hello.curiosity.compose:navigation:0.11.0") // navigation library
-    implementation("com.hello.curiosity.compose:settings:0.11.0") // settings library
-    testImplementation("com.hello.curiosity.compose:test-utils:0.11.0") // testing library
+    implementation("io.github.hellocuriosity:curiosity:0.11.1") // component library
+    implementation("io.github.hellocuriosity:navigation:0.11.1") // navigation library
+    implementation("io.github.hellocuriosity:settings:0.11.1") // settings library
+    testImplementation("io.github.hellocuriosity:test-utils:0.11.1") // testing library
 }
 ```
 
