@@ -129,7 +129,7 @@ afterEvaluate {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
-                groupId = "com.hello.curiosity"
+                groupId = "io.github.hellocuriosity"
                 artifactId = "settings"
 
                 pom {
