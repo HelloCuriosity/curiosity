@@ -87,6 +87,10 @@ dependencies {
     }
 }
 
+tasks.withType<Sign>().configureEach {
+    onlyIf { System.getenv("CI") == "true" }
+}
+
 afterEvaluate {
     publishing {
         publications {

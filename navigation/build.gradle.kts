@@ -125,6 +125,10 @@ dependencies {
     androidTestImplementation(Dependencies.Test.Compose.uiTestJunit)
 }
 
+tasks.withType<Sign>().configureEach {
+    onlyIf { System.getenv("CI") == "true" }
+}
+
 afterEvaluate {
     publishing {
         publications {
