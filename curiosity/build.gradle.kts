@@ -157,13 +157,7 @@ afterEvaluate {
         repositories {
             maven {
                 name = "MavenCentral"
-                val releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2"
-                val snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots"
-
-                url = uri(
-                    if (System.getenv("IS_RELEASE") == "true") releasesRepoUrl
-                    else snapshotsRepoUrl
-                )
+                url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2")
 
                 credentials {
                     username = System.getenv("SONATYPE_USER")
