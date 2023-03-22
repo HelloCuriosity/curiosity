@@ -146,6 +146,12 @@ afterEvaluate {
                             url.set("https://github.com/HelloCuriosity/curiosity/blob/main/LICENSE")
                         }
                     }
+                    developers {
+                        developer {
+                            id.set("hopeman15")
+                            name.set("Kyle Roe")
+                        }
+                    }
                     scm {
                         connection.set("scm:git:https://github.com/HelloCuriosity/curiosity.git")
                         developerConnection.set("scm:git:https://github.com/HelloCuriosity/curiosity.git")
