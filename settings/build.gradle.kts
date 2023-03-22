@@ -135,17 +135,17 @@ afterEvaluate {
                 pom {
                     name.set("Curiosity")
                     description.set("Curiosity is a simple design system just for fun.")
-                    url.set("https://github.com/hopeman15/curiosity")
+                    url.set("https://github.com/HelloCuriosity/curiosity")
                     licenses {
                         license {
                             name.set("MIT Licence")
-                            url.set("https://github.com/hopeman15/curiosity/blob/main/LICENSE")
+                            url.set("https://github.com/HelloCuriosity/curiosity/blob/main/LICENSE")
                         }
                     }
                     scm {
-                        connection.set("scm:git:https://github.com/hopeman15/curiosity.git")
-                        developerConnection.set("scm:git:https://github.com/hopeman15/curiosity.git")
-                        url.set("https://github.com/hopeman15/curiosity")
+                        connection.set("scm:git:https://github.com/HelloCuriosity/curiosity.git")
+                        developerConnection.set("scm:git:https://github.com/HelloCuriosity/curiosity.git")
+                        url.set("https://github.com/HelloCuriosity/curiosity")
                     }
                 }
             }

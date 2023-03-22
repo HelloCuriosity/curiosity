@@ -5,7 +5,7 @@ import android.net.Uri
 
 object ExternalIntentUtils {
     const val URL_PRIVACY_POLICY = "https://sites.google.com/view/curiosity-privacy/privacy"
-    const val URL_GITHUB = "https://github.com/hopeman15/curiosity"
+    const val URL_GITHUB = "https://github.com/HelloCuriosity/curiosity"
 
     fun createGitHubIntent(): Intent =
         urlIntent(URL_GITHUB)
