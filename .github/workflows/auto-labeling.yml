@@ -1,4 +1,4 @@
-name: Labeling
+name: Labeling 🏷️
 
 on:
   pull_request:
