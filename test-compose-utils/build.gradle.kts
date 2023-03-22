@@ -8,6 +8,7 @@ plugins {
 
     // Publishing
     id("maven-publish")
+    signing
 }
 
 android {
@@ -91,13 +92,12 @@ afterEvaluate {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
-                groupId = "io.github.hellocuriosity.compose"
+                groupId = "io.github.hellocuriosity"
                 artifactId = "test-utils"
-                version = System.getenv("VERSION") ?: "local"
 
                 pom {
-                    name.set("Curiosity")
-                    description.set("Curiosity is a simple design system just for fun.")
+                    name.set("Test-Utils")
+                    description.set("Test-Utils is a collection of test utilities to help test compose UIs.")
                     url.set("https://github.com/HelloCuriosity/curiosity")
                     licenses {
                         license {
@@ -113,15 +113,30 @@ afterEvaluate {
                 }
             }
         }
+
         repositories {
             maven {
-                name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/hopeman15/curiosity")
+                name = "MavenCentral"
+                val releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2"
+                val snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots"
+
+                url = uri(
+                    if (System.getenv("IS_RELEASE") == "true") releasesRepoUrl
+                    else snapshotsRepoUrl
+                )
+
                 credentials {
-                    username = System.getenv("GPR_USER")
-                    password = System.getenv("GPR_TOKEN")
+                    username = System.getenv("SONATYPE_USER")
+                    password = System.getenv("SONATYPE_PWD")
                 }
             }
+        }
+
+        signing {
+            val signingKey: String? = System.getenv("SIGNING_KEY")
+            val signingPwd: String? = System.getenv("SIGNING_PWD")
+            useInMemoryPgpKeys(signingKey, signingPwd)
+            sign(publishing.publications["release"])
         }
     }
 }
