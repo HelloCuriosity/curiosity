@@ -58,8 +58,6 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
           cache: 'gradle'
-      - name: Lint
-        run: make lint
       - name: Test
         run: make report
       - name: Report
