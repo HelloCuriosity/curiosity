@@ -4,6 +4,7 @@
 [![codecov](https://codecov.io/gh/HelloCuriosity/curiosity/branch/main/graph/badge.svg?token=C2EVH32Q26)](https://codecov.io/gh/HelloCuriosity/curiosity)
 [![License](https://img.shields.io/dub/l/vibe-d.svg)](LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.hellocuriosity/curiosity?color=blue)](https://central.sonatype.com/search?q=io.github.hellocuriosity)
 
 Curiosity is a design system library _just for fun_, my rendition of building a _compose-able_ design system. You can
 check out the demo app [Curiosity](https://play.google.com/store/apps/details?id=com.hello.curiosity.design) on Google
