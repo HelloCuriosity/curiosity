@@ -12,7 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import io.github.hellocuriosity.tools.Exclude
+import com.hello.curiosity.Exclude
 
 @Composable
 internal fun ColorView(

@@ -14,6 +14,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
+import com.hello.curiosity.Exclude
 import com.hello.curiosity.R
 import com.hello.curiosity.ui.theme.AppTheme.lightCyan
 import com.hello.curiosity.ui.theme.AppTheme.metallicSeaweed
@@ -27,7 +28,6 @@ import io.github.hellocuriosity.compose.settings.ItemDropDown
 import io.github.hellocuriosity.compose.settings.ItemInfo
 import io.github.hellocuriosity.compose.settings.ItemSection
 import io.github.hellocuriosity.compose.settings.ItemToggle
-import io.github.hellocuriosity.tools.Exclude
 
 @Composable
 @Suppress("LongMethod")
