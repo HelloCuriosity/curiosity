@@ -12,8 +12,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.hello.curiosity.R
 import com.hello.curiosity.ui.theme.inputTextFieldColors
-import io.github.hellocuriosity.compose.ui.Exclude
 import io.github.hellocuriosity.compose.ui.components.input.InputTextField
+import io.github.hellocuriosity.tools.Exclude
 
 @Composable
 fun InputScene() {

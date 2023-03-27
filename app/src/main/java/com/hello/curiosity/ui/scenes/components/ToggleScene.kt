@@ -18,10 +18,10 @@ import com.hello.curiosity.R
 import com.hello.curiosity.ui.theme.checkColors
 import com.hello.curiosity.ui.theme.dropDownMenuColors
 import com.hello.curiosity.ui.theme.toggleColors
-import io.github.hellocuriosity.compose.ui.Exclude
 import io.github.hellocuriosity.compose.ui.components.selector.DropDownMenu
 import io.github.hellocuriosity.compose.ui.components.toggle.CheckBox
 import io.github.hellocuriosity.compose.ui.components.toggle.Toggle
+import io.github.hellocuriosity.tools.Exclude
 
 private val verticalPadding = 16.dp
 

@@ -27,7 +27,7 @@ import io.github.hellocuriosity.compose.settings.ItemDropDown
 import io.github.hellocuriosity.compose.settings.ItemInfo
 import io.github.hellocuriosity.compose.settings.ItemSection
 import io.github.hellocuriosity.compose.settings.ItemToggle
-import io.github.hellocuriosity.compose.ui.Exclude
+import io.github.hellocuriosity.tools.Exclude
 
 @Composable
 @Suppress("LongMethod")
