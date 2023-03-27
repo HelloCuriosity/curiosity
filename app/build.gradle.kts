@@ -117,7 +117,6 @@ dependencies {
     implementation(project(":curiosity"))
     implementation(project(":navigation"))
     implementation(project(":settings"))
-    implementation(project(":tools"))
 
     // Leak
     debugImplementation(Dependencies.leakCanary)

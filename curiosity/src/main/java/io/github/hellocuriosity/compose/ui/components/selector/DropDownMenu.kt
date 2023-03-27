@@ -27,8 +27,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.github.hellocuriosity.compose.R
+import io.github.hellocuriosity.compose.ui.Exclude
 import io.github.hellocuriosity.compose.ui.components.text.LabelSmall
-import io.github.hellocuriosity.tools.Exclude
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable

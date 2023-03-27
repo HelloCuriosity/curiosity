@@ -26,9 +26,9 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import io.github.hellocuriosity.compose.ui.Exclude
 import io.github.hellocuriosity.compose.ui.components.text.LabelSmall
 import io.github.hellocuriosity.compose.ui.components.text.LabelTiny
-import io.github.hellocuriosity.tools.Exclude
 
 @Composable
 @Suppress("LongMethod")

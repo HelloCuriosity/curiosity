@@ -82,9 +82,6 @@ dependencies {
     implementation(Dependencies.Compose.toolingPreview)
     implementation(Dependencies.Compose.ui)
 
-    // Curiosity
-    implementation(project(":tools"))
-
     // It is a known bug: https://issuetracker.google.com/issues/227767363
     //
     // Google is currently working on a fix but there is already a workaround:
