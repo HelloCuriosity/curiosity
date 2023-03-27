@@ -27,7 +27,7 @@ jobs:
         run: gh pr edit $PR_NUMBER --add-label 'dependencies' -R $REPO
       - name: Documentation
         if: ${{ contains(github.event.pull_request.title, 'Documentation') }}
-        run: gh pr edit $PR_NUMBER --add-label 'documentation :book:' -R $REPO
+        run: gh pr edit $PR_NUMBER --add-label 'documentation :books:' -R $REPO
       - name: Enhancement
         if: ${{ contains(github.event.pull_request.title, 'Enhancement') }}
         run: gh pr edit $PR_NUMBER --add-label 'enhancement :sparkles:' -R $REPO
