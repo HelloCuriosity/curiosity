@@ -14,7 +14,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.github.hellocuriosity.compose.ui.components.text.LabelSmall
 
-
 @Composable
 fun ItemSection(
     @StringRes text: Int,

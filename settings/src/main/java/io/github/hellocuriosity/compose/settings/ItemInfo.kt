@@ -18,7 +18,6 @@ import androidx.compose.ui.unit.dp
 import io.github.hellocuriosity.compose.ui.components.text.ContentMedium
 import io.github.hellocuriosity.compose.ui.components.text.LabelMedium
 
-
 @Composable
 fun ItemInfo(
     modifier: Modifier = Modifier,

@@ -18,7 +18,6 @@ import io.github.hellocuriosity.compose.ui.components.selector.DropDownMenuColor
 import io.github.hellocuriosity.compose.ui.components.selector.DropDownMenuDefaults
 import io.github.hellocuriosity.compose.ui.components.text.LabelMedium
 
-
 @Composable
 fun ItemDropDown(
     modifier: Modifier = Modifier,

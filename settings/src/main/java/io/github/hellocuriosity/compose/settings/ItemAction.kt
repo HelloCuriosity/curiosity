@@ -20,7 +20,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.github.hellocuriosity.compose.ui.components.text.LabelMedium
 
-
 @Composable
 fun ItemAction(
     @StringRes title: Int,

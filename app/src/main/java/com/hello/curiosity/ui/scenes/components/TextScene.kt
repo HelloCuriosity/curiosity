@@ -17,7 +17,6 @@ import io.github.hellocuriosity.compose.ui.components.text.LabelMedium
 import io.github.hellocuriosity.compose.ui.components.text.LabelSmall
 import io.github.hellocuriosity.compose.ui.components.text.LabelTiny
 
-
 @Composable
 fun TextScene() {
     LazyColumn(

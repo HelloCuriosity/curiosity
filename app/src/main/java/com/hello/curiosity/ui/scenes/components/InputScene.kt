@@ -15,7 +15,6 @@ import com.hello.curiosity.R
 import com.hello.curiosity.ui.theme.inputTextFieldColors
 import io.github.hellocuriosity.compose.ui.components.input.InputTextField
 
-
 @Composable
 fun InputScene() {
     LazyColumn(

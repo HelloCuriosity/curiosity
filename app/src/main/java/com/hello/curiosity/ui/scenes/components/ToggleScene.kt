@@ -23,7 +23,6 @@ import io.github.hellocuriosity.compose.ui.components.selector.DropDownMenu
 import io.github.hellocuriosity.compose.ui.components.toggle.CheckBox
 import io.github.hellocuriosity.compose.ui.components.toggle.Toggle
 
-
 private val verticalPadding = 16.dp
 
 @Composable

@@ -83,7 +83,6 @@ dependencies {
 
     // Curiosity
     implementation(project(":curiosity"))
-    implementation(project(":tools"))
 
     // It is a known bug: https://issuetracker.google.com/issues/227767363
     //

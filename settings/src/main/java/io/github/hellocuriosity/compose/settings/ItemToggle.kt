@@ -16,7 +16,6 @@ import io.github.hellocuriosity.compose.ui.components.toggle.Toggle
 import io.github.hellocuriosity.compose.ui.components.toggle.ToggleColors
 import io.github.hellocuriosity.compose.ui.components.toggle.ToggleDefaults
 
-
 @Composable
 fun ItemToggle(
     @StringRes title: Int,
