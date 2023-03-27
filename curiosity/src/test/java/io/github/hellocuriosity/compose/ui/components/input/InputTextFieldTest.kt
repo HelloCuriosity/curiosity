@@ -73,6 +73,7 @@ class InputTextFieldTest : ComposeTest() {
                 singleLine = false,
                 maxLines = 5,
                 maxLength = 10,
+                minHeight = 15.dp,
                 hasCounter = false,
                 boarderWidth = 10.dp,
                 colors = InputTextFieldDefaults.colors(

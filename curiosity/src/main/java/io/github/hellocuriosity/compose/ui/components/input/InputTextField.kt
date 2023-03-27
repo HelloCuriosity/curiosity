@@ -1,6 +1,5 @@
 package io.github.hellocuriosity.compose.ui.components.input
 
-import android.R
 import androidx.annotation.StringRes
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -46,6 +45,7 @@ fun InputTextField(
     singleLine: Boolean = false,
     maxLines: Int = Int.MAX_VALUE,
     maxLength: Int? = null,
+    minHeight: Dp = 0.dp,
     hasCounter: Boolean = false,
     boarderWidth: Dp = 0.dp,
     colors: InputTextFieldColors = InputTextFieldDefaults.colors(),
@@ -70,6 +70,7 @@ fun InputTextField(
     TextField(
         modifier = Modifier
             .fillMaxWidth()
+            .defaultMinSize(minHeight = minHeight)
             .testTag(INPUT_TEXT_FIELD_VALUE_TEST_TAG),
         value = text,
         onValueChange = {
@@ -123,9 +124,9 @@ const val INPUT_TEXT_FIELD_COUNTER_TEST_TAG = "INPUT_TEXT_FIELD_COUNTER_TEST_TAG
 fun InputTextFieldPreview() {
     InputTextField(
         modifier = Modifier.defaultMinSize(minHeight = 100.dp),
-        placeholder = R.string.copy,
+        placeholder = android.R.string.copy,
         hasCounter = true,
         maxLength = 30,
-        value = { }
+        value = { },
     )
 }
