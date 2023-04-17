@@ -55,22 +55,22 @@ fun DashboardScene() {
                         }
                     }
                 },
-                elevation = 0.dp
+                elevation = 0.dp,
             )
         },
         bottomBar = {
             if (currentRoute(navController).showBottomNavigation()) {
                 BottomNavigation(navController = navController, scenes = scenes)
             }
-        }
+        },
     ) { padding ->
         Box(
             modifier = Modifier
                 .padding(padding)
-                .testTag(DASHBOARD_SCENE_NAVIGATION_TEST_TAG)
+                .testTag(DASHBOARD_SCENE_NAVIGATION_TEST_TAG),
         ) {
             CuriosityNavHost(
-                navController = navController
+                navController = navController,
             )
         }
     }

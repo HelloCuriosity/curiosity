@@ -38,7 +38,7 @@ class ToggleTest : ComposeTest() {
                 colors = ToggleDefaults.colors(
                     toggleColor = Color.Blue,
                 ),
-                onToggleChange = {}
+                onToggleChange = {},
             )
         }
 

@@ -4,5 +4,5 @@ import androidx.compose.ui.text.TextStyle
 
 data class TypographyPresentation(
     val title: String,
-    val style: TextStyle
+    val style: TextStyle,
 )

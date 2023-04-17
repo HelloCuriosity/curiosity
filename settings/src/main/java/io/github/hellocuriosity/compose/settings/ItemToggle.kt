@@ -57,6 +57,6 @@ internal fun ItemTogglePreview() {
     ItemToggle(
         title = R.string.copy,
         content = R.string.fingerprint_icon_content_description,
-        onToggleChange = { }
+        onToggleChange = { },
     )
 }

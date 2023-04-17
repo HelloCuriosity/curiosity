@@ -4,5 +4,5 @@ import androidx.compose.ui.graphics.Color
 
 data class ColorPresentation(
     val title: String,
-    val color: Color
+    val color: Color,
 )

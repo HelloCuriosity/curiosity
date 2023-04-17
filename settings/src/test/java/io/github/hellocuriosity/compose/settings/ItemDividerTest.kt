@@ -26,7 +26,7 @@ class ItemDividerTest : ComposeTest() {
         composeTestRule.setContent {
             ItemDivider(
                 color = Color.Blue,
-                thickness = 15.dp
+                thickness = 15.dp,
             )
         }
 

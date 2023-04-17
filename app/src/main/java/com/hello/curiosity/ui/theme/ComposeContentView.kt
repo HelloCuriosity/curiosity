@@ -9,7 +9,7 @@ import io.github.hellocuriosity.compose.ui.theme.CuriosityTheme
 fun ComponentActivity.ComposeContentView(content: @Composable () -> Unit) =
     setContent {
         CuriosityTheme(
-            theme = AppTheme
+            theme = AppTheme,
         ) {
             content()
         }

@@ -30,7 +30,7 @@ fun ButtonScene() {
             .fillMaxSize()
             .testTag("button-scene-test-tag"),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(verticalPadding)
+        verticalArrangement = Arrangement.spacedBy(verticalPadding),
     ) {
         item {
             TextButton(
@@ -74,7 +74,7 @@ fun ButtonScene() {
                     Toast.makeText(ctx, "Icon Button", Toast.LENGTH_SHORT).show()
                 },
                 contentDescription = R.string.btn_enabled,
-                icon = android.R.drawable.ic_delete
+                icon = android.R.drawable.ic_delete,
             )
         }
         item {
@@ -82,7 +82,7 @@ fun ButtonScene() {
                 enabled = false,
                 onClick = { /* no action available */ },
                 contentDescription = R.string.btn_disabled,
-                icon = android.R.drawable.ic_delete
+                icon = android.R.drawable.ic_delete,
             )
         }
     }

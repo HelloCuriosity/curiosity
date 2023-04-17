@@ -27,7 +27,7 @@ class ItemActionTest : ComposeTest() {
                 title = titleRes,
                 icon = R.drawable.ic_delete,
                 contentDescription = contentDescriptionRes,
-                onClick = { }
+                onClick = { },
             )
         }
 
@@ -61,7 +61,7 @@ class ItemActionTest : ComposeTest() {
                 contentDescription = contentDescriptionRes,
                 textColor = Color.Black,
                 tint = Color.Blue,
-                onClick = { }
+                onClick = { },
             )
         }
 

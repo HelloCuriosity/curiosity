@@ -17,7 +17,7 @@ class ToggleDefaultsTest : ComposeTest() {
             assertEquals(Color.White, colors.toggleColor)
             assertEquals(
                 MaterialTheme.colors.onSurface.copy(alpha = ContentAlpha.disabled),
-                colors.disabledColor
+                colors.disabledColor,
             )
             assertEquals(MaterialTheme.colors.onSurface.copy(alpha = 0.2f), colors.boarderColor)
         }
@@ -36,7 +36,7 @@ class ToggleDefaultsTest : ComposeTest() {
                 uncheckedColor = uncheckedColor,
                 toggleColor = toggleColor,
                 disabledColor = disabledColor,
-                boarderColor = boarderColor
+                boarderColor = boarderColor,
             )
             assertEquals(checkedColor, colors.checkedColor)
             assertEquals(uncheckedColor, colors.uncheckedColor)

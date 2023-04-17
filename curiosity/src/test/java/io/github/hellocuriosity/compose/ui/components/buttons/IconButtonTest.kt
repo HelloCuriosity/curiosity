@@ -50,7 +50,7 @@ class IconButtonTest : ComposeTest() {
                 color = Color.Blue,
                 disabledColor = Color.Black,
                 tint = Color.White,
-                disabledTint = Color.Yellow
+                disabledTint = Color.Yellow,
             ) {
                 // no action
             }

@@ -39,7 +39,7 @@ fun BottomNavigation(
             icon = {
                 Icon(
                     painter = painterResource(id = scene.icon),
-                    contentDescription = stringResource(id = scene.contentDescription)
+                    contentDescription = stringResource(id = scene.contentDescription),
                 )
             },
             label = { Text(stringResource(id = scene.title)) },
@@ -53,7 +53,7 @@ fun BottomNavigation(
                         launchSingleTop = true
                     }
                 }
-            }
+            },
         )
     }
 }

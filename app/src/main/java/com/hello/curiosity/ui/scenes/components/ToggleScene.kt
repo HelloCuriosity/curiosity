@@ -33,20 +33,20 @@ fun ToggleScene() {
             .fillMaxSize()
             .testTag("toggle-scene-test-tag"),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(verticalPadding)
+        verticalArrangement = Arrangement.spacedBy(verticalPadding),
     ) {
         item {
             Toggle(
                 modifier = Modifier.padding(top = verticalPadding),
                 checked = isToggleChecked,
                 colors = toggleColors(),
-                onToggleChange = { isToggleChecked = !isToggleChecked }
+                onToggleChange = { isToggleChecked = !isToggleChecked },
             )
         }
         item {
             CheckBox(
                 colors = checkColors(),
-                onCheckedChange = {}
+                onCheckedChange = {},
             )
         }
         item {
@@ -54,7 +54,7 @@ fun ToggleScene() {
                 modifier = Modifier.padding(16.dp),
                 items = listOf(
                     R.string.drop_down_item_one,
-                    R.string.drop_down_item_two
+                    R.string.drop_down_item_two,
                 ),
                 onItemSelected = {
                 },

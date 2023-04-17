@@ -18,12 +18,12 @@ object ButtonDefaults {
         disabledBackgroundColor: Color = MaterialTheme.colors.onSurface.copy(alpha = 0.12f)
             .compositeOver(MaterialTheme.colors.surface),
         disabledContentColor: Color = MaterialTheme.colors.onSurface
-            .copy(alpha = ContentAlpha.disabled)
+            .copy(alpha = ContentAlpha.disabled),
     ): ButtonColors = ButtonDefaults.buttonColors(
         backgroundColor = backgroundColor,
         contentColor = contentColor,
         disabledBackgroundColor = disabledBackgroundColor,
-        disabledContentColor = disabledContentColor
+        disabledContentColor = disabledContentColor,
     )
 }
 
