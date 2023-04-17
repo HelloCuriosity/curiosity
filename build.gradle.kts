@@ -65,14 +65,6 @@ allprojects {
             reportDir.set(layout.buildDirectory.dir("$buildDir/reports/kover/html-result"))
         }
     }
-
-//    kotlinter {
-//        disabledRules = arrayOf(
-//            "trailing-comma",
-//            "trailing-comma-on-call-site",
-//            "trailing-comma-on-declaration-site"
-//        )
-//    }
 }
 
 tasks.register<Delete>("clean") {
