@@ -13,8 +13,7 @@
     },
     {
       "matchPackagePatterns": [
-        "composeOptions",
-        "androidx.compose.compiler:compiler.*",
+        "androidx.compose.compiler.*",
         "org.jetbrains.kotlin:kotlin.*"
       ],
       "groupName": "Kotlin & Compose Compiler"
