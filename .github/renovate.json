@@ -17,6 +17,13 @@
         "org.jetbrains.kotlin.*"
       ],
       "groupName": "Kotlin & Compose Compiler"
+    },
+    {
+      "matchPackagePatterns": [
+        "com.android.library",
+        "com.android.application"
+      ],
+      "groupName": "Android Gradle Plugin"
     }
   ]
 }
