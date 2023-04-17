@@ -38,7 +38,7 @@ jobs:
         uses: actions/setup-java@v3.11.0
         with:
           distribution: 'temurin'
-          java-version: '11'
+          java-version: '17'
           cache: 'gradle'
       - name: "Set Version"
         run: echo "VERSION=$(git tag --sort=committerdate | tail -1)" >> $GITHUB_ENV
