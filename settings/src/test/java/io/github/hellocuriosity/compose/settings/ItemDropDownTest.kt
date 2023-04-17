@@ -31,7 +31,7 @@ class ItemDropDownTest : ComposeTest() {
                 title = titleRes,
                 items = items,
                 onItemSelected = {},
-                contentDescription = contentDescriptionRes
+                contentDescription = contentDescriptionRes,
             )
         }
 

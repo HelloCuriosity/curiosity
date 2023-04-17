@@ -22,7 +22,7 @@ fun InputScene() {
             .fillMaxWidth()
             .testTag(INPUT_SCENE_VIEW_TEST_TAG),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+        verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         item {
             InputTextField(
@@ -33,7 +33,7 @@ fun InputScene() {
                         top = 16.dp,
                     ),
                 colors = inputTextFieldColors(),
-                value = { }
+                value = { },
             )
         }
         item {
@@ -46,7 +46,7 @@ fun InputScene() {
                     ),
                 placeholder = R.string.input_text_field_placeholder,
                 colors = inputTextFieldColors(),
-                value = { }
+                value = { },
             )
         }
         item {
@@ -61,7 +61,7 @@ fun InputScene() {
                 maxLength = 30,
                 hasCounter = true,
                 colors = inputTextFieldColors(),
-                value = { }
+                value = { },
             )
         }
     }

@@ -38,14 +38,14 @@ fun Toggle(
         shape = RoundedCornerShape(24.dp),
         color = if (checked) colors.checkedColor else colors.uncheckedColor,
         border = if (checked) null else BorderStroke(1.dp, color = colors.boarderColor),
-        onClick = { onToggleChange(!checked) }
+        onClick = { onToggleChange(!checked) },
     ) {
         Column(
             modifier =
             Modifier
                 .fillMaxWidth()
                 .wrapContentSize(
-                    if (checked) Alignment.CenterEnd else Alignment.CenterStart
+                    if (checked) Alignment.CenterEnd else Alignment.CenterStart,
                 )
                 .testTag(TOGGLE_BTN_TEST_TAG),
         ) {
@@ -54,7 +54,7 @@ fun Toggle(
                     .padding(2.dp)
                     .size(32.dp)
                     .clip(CircleShape)
-                    .background(colors.toggleColor)
+                    .background(colors.toggleColor),
             )
         }
     }
@@ -69,6 +69,6 @@ const val TOGGLE_BTN_TEST_TAG = "TOGGLE_BTN_TEST_TAG"
 fun TogglePreview() {
     Toggle(
         checked = true,
-        onToggleChange = { }
+        onToggleChange = { },
     )
 }

@@ -19,7 +19,7 @@ class ItemSectionTest : ComposeTest() {
     fun `validate item section defaults`() {
         composeTestRule.setContent {
             ItemSection(
-                text = textRes
+                text = textRes,
             )
         }
 

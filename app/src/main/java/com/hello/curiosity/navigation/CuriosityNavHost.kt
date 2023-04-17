@@ -16,7 +16,7 @@ import com.hello.curiosity.ui.scenes.type.TypographyScene
 
 @Composable
 fun CuriosityNavHost(
-    navController: NavHostController
+    navController: NavHostController,
 ) {
     NavHost(navController, startDestination = Scenes.Components.route) {
         composable(route = Scenes.Buttons.route) {

@@ -51,7 +51,7 @@ fun DropDownMenu(
         shape = RoundedCornerShape(8.dp),
         color = colors.backgroundColor,
         border = BorderStroke(1.dp, color = colors.boarderColor),
-        onClick = { expanded = !expanded }
+        onClick = { expanded = !expanded },
     ) {
         Row(
             modifier = Modifier.padding(
@@ -65,7 +65,7 @@ fun DropDownMenu(
             Icon(
                 modifier = Modifier
                     .rotate(
-                        if (expanded) DropDownMenuDefaults.ONE_EIGHTY_DEGREES else DropDownMenuDefaults.ZERO_DEGREES
+                        if (expanded) DropDownMenuDefaults.ONE_EIGHTY_DEGREES else DropDownMenuDefaults.ZERO_DEGREES,
                     )
                     .testTag(DROP_DOWN_MENU_ICN_TEST_TAG),
                 imageVector = Icons.Filled.ArrowDropDown,

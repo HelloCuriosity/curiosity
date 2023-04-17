@@ -30,7 +30,7 @@ class CheckBoxTest : ComposeTest() {
         composeTestRule
             .onNodeWithTag(
                 testTag = "checkbox-toggle-icon-test-tag",
-                useUnmergedTree = true
+                useUnmergedTree = true,
             )
             .assertDoesNotExist()
 
@@ -45,7 +45,7 @@ class CheckBoxTest : ComposeTest() {
         composeTestRule
             .onNodeWithTag(
                 testTag = "checkbox-toggle-icon-test-tag",
-                useUnmergedTree = true
+                useUnmergedTree = true,
             )
             .assertExists()
             .assertIsDisplayed()
@@ -64,7 +64,7 @@ class CheckBoxTest : ComposeTest() {
                 colors = CheckBoxDefaults.colors(
                     checkedColor = Color.White,
                 ),
-                onCheckedChange = {}
+                onCheckedChange = {},
             )
         }
 
@@ -78,7 +78,7 @@ class CheckBoxTest : ComposeTest() {
         composeTestRule
             .onNodeWithTag(
                 testTag = "checkbox-toggle-icon-test-tag",
-                useUnmergedTree = true
+                useUnmergedTree = true,
             )
             .assertExists()
             .assertIsDisplayed()

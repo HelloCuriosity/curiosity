@@ -34,7 +34,7 @@ class CheckBoxDefaultsTest : ComposeTest() {
                 uncheckedColor = uncheckedColor,
                 checkmarkColor = checkmarkColor,
                 disabledColor = disabledColor,
-                boarderColor = boarderColor
+                boarderColor = boarderColor,
             )
             assertEquals(checkedColor, colors.checkedColor)
             assertEquals(uncheckedColor, colors.uncheckedColor)

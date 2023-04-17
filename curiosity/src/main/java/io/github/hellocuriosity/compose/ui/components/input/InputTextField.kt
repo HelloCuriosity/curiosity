@@ -63,7 +63,7 @@ fun InputTextField(
             ),
             shape = RoundedCornerShape(10.dp),
         )
-        .testTag(INPUT_TEXT_FIELD_CONTAINER_TEST_TAG)
+        .testTag(INPUT_TEXT_FIELD_CONTAINER_TEST_TAG),
 ) {
     var text by remember { mutableStateOf("") }
 

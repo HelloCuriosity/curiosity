@@ -16,17 +16,17 @@ import com.hello.curiosity.Exclude
 
 @Composable
 internal fun ColorView(
-    presentation: ColorPresentation
+    presentation: ColorPresentation,
 ) = Column(
-    modifier = Modifier.padding(8.dp)
+    modifier = Modifier.padding(8.dp),
 ) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .height(120.dp)
             .background(
-                color = presentation.color
-            )
+                color = presentation.color,
+            ),
     )
 
     Text(text = presentation.title)
@@ -39,7 +39,7 @@ internal fun ColorViewPreview() {
     ColorView(
         presentation = ColorPresentation(
             title = "Primary",
-            color = MaterialTheme.colors.primary
-        )
+            color = MaterialTheme.colors.primary,
+        ),
     )
 }

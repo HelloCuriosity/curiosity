@@ -25,7 +25,7 @@ object AppTheme : Theme {
             Font(R.font.rubik_medium, FontWeight.Medium),
             Font(R.font.rubik_semi_bold, FontWeight.SemiBold),
             Font(R.font.rubik_extra_bold, FontWeight.ExtraBold),
-        )
+        ),
     )
 
     val lightCyan = Color(0xFFD0F4EA)
@@ -66,7 +66,7 @@ fun dropDownMenuColors(isDarkMode: Boolean = isSystemInDarkTheme()) = DropDownMe
 fun inputTextFieldColors() = InputTextFieldDefaults.colors(
     textColor = Color.Black,
     cursorColor = Color.Black,
-    backgroundColor = Color.White
+    backgroundColor = Color.White,
 )
 
 @Composable

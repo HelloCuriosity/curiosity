@@ -12,7 +12,7 @@ plugins {
     id("org.jetbrains.kotlin.android") version "1.8.10" apply false
 
     id("io.gitlab.arturbosch.detekt") version "1.22.0"
-    id("org.jmailen.kotlinter") version "3.13.0"
+    id("org.jmailen.kotlinter") version "3.14.0"
     id("org.jetbrains.kotlinx.kover") version "0.6.1"
 }
 
@@ -64,14 +64,6 @@ allprojects {
             onCheck.set(false)
             reportDir.set(layout.buildDirectory.dir("$buildDir/reports/kover/html-result"))
         }
-    }
-
-    kotlinter {
-        disabledRules = arrayOf(
-            "trailing-comma",
-            "trailing-comma-on-call-site",
-            "trailing-comma-on-declaration-site"
-        )
     }
 }
 

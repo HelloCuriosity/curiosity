@@ -59,7 +59,7 @@ internal fun ItemActionPreview() {
         title = R.string.copy,
         icon = R.drawable.ic_delete,
         contentDescription = R.string.copy,
-        tint = Color.Unspecified
+        tint = Color.Unspecified,
     ) {
     }
 }

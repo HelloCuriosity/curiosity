@@ -26,7 +26,7 @@ class ItemToggleTest : ComposeTest() {
             ItemToggle(
                 title = titleRes,
                 content = contentRes,
-                onToggleChange = {}
+                onToggleChange = {},
             )
         }
 
@@ -69,7 +69,7 @@ class ItemToggleTest : ComposeTest() {
                 toggleColors = ToggleDefaults.colors(
                     toggleColor = Color.Blue,
                 ),
-                onToggleChange = {}
+                onToggleChange = {},
             )
         }
 

@@ -28,7 +28,7 @@ class InputTextFieldTest : ComposeTest() {
         composeTestRule.setContent {
             InputTextField(
                 value = {
-                }
+                },
             )
         }
 
@@ -84,7 +84,7 @@ class InputTextFieldTest : ComposeTest() {
                     focusedIndicatorColor = Color.Yellow,
                     backgroundColor = Color.Magenta,
                     boarderColor = Color.Cyan,
-                )
+                ),
             )
         }
 
@@ -132,7 +132,7 @@ class InputTextFieldTest : ComposeTest() {
                 value = { },
                 singleLine = true,
                 hasCounter = true,
-                maxLength = 2
+                maxLength = 2,
             )
         }
 

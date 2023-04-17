@@ -39,7 +39,7 @@ fun SettingsScene() {
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .testTag("settings-scene-test-tag")
+            .testTag("settings-scene-test-tag"),
     ) {
         item { ItemSection(text = R.string.settings_about) }
         item {
@@ -54,7 +54,7 @@ fun SettingsScene() {
                 title = R.string.settings_privacy_policy,
                 icon = R.drawable.ic_arrow_forward,
                 tint = tint,
-                contentDescription = R.string.content_description_arrow_forward
+                contentDescription = R.string.content_description_arrow_forward,
             ) {
                 ctx.startActivity(createPrivacyPolicyIntent())
             }
@@ -65,7 +65,7 @@ fun SettingsScene() {
                 title = R.string.settings_github,
                 icon = R.drawable.ic_arrow_forward,
                 tint = tint,
-                contentDescription = R.string.content_description_arrow_forward
+                contentDescription = R.string.content_description_arrow_forward,
             ) {
                 ctx.startActivity(createGitHubIntent())
             }
@@ -78,7 +78,7 @@ fun SettingsScene() {
                 content = R.string.settings_toggle_content,
                 checked = isToggleChecked,
                 toggleColors = toggleColors(),
-                onToggleChange = { isToggleChecked = !isToggleChecked }
+                onToggleChange = { isToggleChecked = !isToggleChecked },
             )
         }
         item { ItemDivider(color = divider) }

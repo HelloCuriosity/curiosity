@@ -38,7 +38,7 @@ class BottomNavigationTest : ComposeTest() {
             override val icon: Int = android.R.drawable.ic_delete
             override val contentDescription: Int = scene2Resource
             override val route: String = "ROUTE_2"
-        }
+        },
     )
 
     @Test
@@ -101,7 +101,7 @@ class BottomNavigationTest : ComposeTest() {
                 override val icon: Int = android.R.drawable.ic_delete
                 override val contentDescription: Int = scene1Resource
                 override val route: String = "ROUTE"
-            }
+            },
         )
 
         composeTestRule.setContent {

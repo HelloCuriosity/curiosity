@@ -50,7 +50,7 @@ fun CheckBox(
         onClick = {
             isChecked = !isChecked
             onCheckedChange(isChecked)
-        }
+        },
     ) {
         if (isChecked) {
             Icon(
@@ -71,6 +71,6 @@ fun CheckboxPreview() {
     CheckBox(
         checked = false,
         onCheckedChange = {
-        }
+        },
     )
 }

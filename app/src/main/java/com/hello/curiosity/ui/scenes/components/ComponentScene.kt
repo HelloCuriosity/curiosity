@@ -18,7 +18,7 @@ import io.github.hellocuriosity.compose.ui.components.buttons.TextIconButton
 
 @Composable
 fun ComponentScene(
-    navController: NavHostController
+    navController: NavHostController,
 ) {
     val components = listOf(
         Scenes.Buttons,
@@ -32,7 +32,7 @@ fun ComponentScene(
         modifier = Modifier
             .fillMaxHeight()
             .padding(vertical = 8.dp, horizontal = 4.dp)
-            .testTag("component-scene-test-tag")
+            .testTag("component-scene-test-tag"),
     ) {
         items(components) { component ->
             TextIconButton(
@@ -56,6 +56,6 @@ fun ComponentScene(
 @Composable
 fun ComponentScenePreview() {
     ComponentScene(
-        navController = rememberNavController()
+        navController = rememberNavController(),
     )
 }

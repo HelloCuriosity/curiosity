@@ -21,47 +21,47 @@ import io.github.hellocuriosity.compose.ui.components.text.LabelTiny
 fun TextScene() {
     LazyColumn(
         modifier = Modifier.testTag("text-scene-test-tag"),
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         item {
             LabelLarge(
                 text = "Label Large",
-                modifier = Modifier.padding(8.dp)
+                modifier = Modifier.padding(8.dp),
             )
             Divider()
         }
         item {
             LabelMedium(
                 text = "Label Medium",
-                modifier = Modifier.padding(8.dp)
+                modifier = Modifier.padding(8.dp),
             )
             Divider()
         }
         item {
             LabelSmall(
                 text = "Label Small",
-                modifier = Modifier.padding(8.dp)
+                modifier = Modifier.padding(8.dp),
             )
             Divider()
         }
         item {
             LabelTiny(
                 text = "Label Tiny",
-                modifier = Modifier.padding(8.dp)
+                modifier = Modifier.padding(8.dp),
             )
             Divider()
         }
         item {
             ContentLarge(
                 text = "Content Large",
-                modifier = Modifier.padding(8.dp)
+                modifier = Modifier.padding(8.dp),
             )
             Divider()
         }
         item {
             ContentMedium(
                 text = "Content Medium",
-                modifier = Modifier.padding(8.dp)
+                modifier = Modifier.padding(8.dp),
             )
             Divider()
         }

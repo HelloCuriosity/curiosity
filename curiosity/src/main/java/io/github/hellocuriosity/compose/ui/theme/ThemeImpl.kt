@@ -13,7 +13,7 @@ object ThemeImpl : Theme {
 fun CuriosityTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     theme: Theme = ThemeImpl,
-    content: @Composable () -> Unit
+    content: @Composable () -> Unit,
 ) {
     MaterialTheme(
         content = content,
