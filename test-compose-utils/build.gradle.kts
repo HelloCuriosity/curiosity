@@ -2,10 +2,6 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
 
-    // Quality Gates
-    id(Dependencies.Gradle.kotlinter)
-    id(Dependencies.Gradle.detekt)
-
     // Publishing
     id("maven-publish")
     signing
@@ -13,12 +9,12 @@ plugins {
 
 android {
     namespace = "io.github.hellocuriosity.test.compose"
-    compileSdk = Dependencies.Versions.compileSdk
-    buildToolsVersion = Dependencies.Versions.buildToolsVersion
+    compileSdk = 33
+    buildToolsVersion = "33.0.1"
 
     defaultConfig {
-        minSdk = Dependencies.Versions.minSdk
-        targetSdk = Dependencies.Versions.targetSdk
+        minSdk = 23
+        targetSdk = 33
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -35,7 +31,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = Dependencies.Versions.jvmTarget
+        jvmTarget = "11"
     }
 
     buildFeatures {
@@ -43,7 +39,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = Dependencies.Versions.composeCompiler
+        kotlinCompilerExtensionVersion = "1.4.3"
     }
 
     publishing {
@@ -56,18 +52,18 @@ android {
 
 dependencies {
     // Android
-    implementation(Dependencies.Androidx.core)
+    implementation("androidx.core:core-ktx:1.9.0")
 
     // Compose
-    implementation(Dependencies.Compose.navigation)
-    implementation(Dependencies.Test.Compose.navigationTest)
-    implementation(Dependencies.Test.Compose.uiTestJunit)
+    implementation("androidx.navigation:navigation-compose:2.5.3")
+    implementation("androidx.navigation:navigation-testing:2.5.3")
+    implementation("androidx.compose.ui:ui-test-junit4:1.3.3")
 
     // jUnit
-    implementation(Dependencies.Test.junit)
+    implementation("junit:junit:4.13.2")
 
     // Robolectric
-    implementation(Dependencies.Test.robolectric) {
+    implementation("org.robolectric:robolectric:4.9.2") {
         exclude(module = "classworlds")
         exclude(module = "commons-logging")
         exclude(module = "httpclient")

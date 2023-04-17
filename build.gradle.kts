@@ -1,4 +1,3 @@
-import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 import io.gitlab.arturbosch.detekt.Detekt
 import kotlinx.kover.api.KoverProjectConfig
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
@@ -8,22 +7,21 @@ buildscript {
 }// Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 plugins {
-    id("com.android.application") version Dependencies.Versions.agp apply false
-    id("com.android.library") version Dependencies.Versions.agp apply false
-    id("org.jetbrains.kotlin.android") version Dependencies.Versions.kotlin apply false
+    id("com.android.application") version "7.4.2" apply false
+    id("com.android.library") version "7.4.2" apply false
+    id("org.jetbrains.kotlin.android") version "1.8.10" apply false
 
-    id(Dependencies.Gradle.detekt) version Dependencies.Versions.detekt
-    id(Dependencies.Gradle.kotlinter) version Dependencies.Versions.kotlinter
-    id(Dependencies.Gradle.kover) version Dependencies.Versions.kover
-    id(Dependencies.Gradle.versions) version Dependencies.Versions.gradleVersions
+    id("io.gitlab.arturbosch.detekt") version "1.22.0"
+    id("org.jmailen.kotlinter") version "3.13.0"
+    id("org.jetbrains.kotlinx.kover") version "0.6.1"
 }
 
 allprojects {
     version = System.getenv("VERSION") ?: "local"
 
-    apply(plugin = Dependencies.Gradle.detekt)
-    apply(plugin = Dependencies.Gradle.kotlinter)
-    apply(plugin = Dependencies.Gradle.kover)
+    apply(plugin = "io.gitlab.arturbosch.detekt")
+    apply(plugin = "org.jmailen.kotlinter")
+    apply(plugin = "org.jetbrains.kotlinx.kover")
 
     detekt {
         buildUponDefaultConfig = false
@@ -31,7 +29,7 @@ allprojects {
         config = files("$rootDir/detekt/default-detekt-config.yml")
     }
     tasks.withType<Detekt>().configureEach {
-        jvmTarget = Dependencies.Versions.jvmTarget
+        jvmTarget = "11"
         reports {
             xml.required.set(false)
             html.required.set(false)
@@ -83,15 +81,8 @@ tasks.register<Delete>("clean") {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {
-        jvmTarget = Dependencies.Versions.jvmTarget
+        jvmTarget = "11"
     }
-}
-
-tasks.withType<DependencyUpdatesTask> {
-    rejectVersionIf {
-        isNonStable(candidate.version)
-    }
-    outputFormatter = "html"
 }
 
 koverMerged {

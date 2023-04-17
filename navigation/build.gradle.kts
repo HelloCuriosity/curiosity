@@ -4,10 +4,6 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
 
-    // Quality Gates
-    id(Dependencies.Gradle.kotlinter)
-    id(Dependencies.Gradle.detekt)
-
     // Publishing
     id("maven-publish")
     signing
@@ -15,12 +11,12 @@ plugins {
 
 android {
     namespace = "io.github.hellocuriosity.compose.navigation"
-    compileSdk = Dependencies.Versions.compileSdk
-    buildToolsVersion = Dependencies.Versions.buildToolsVersion
+    compileSdk = 33
+    buildToolsVersion = "33.0.1"
 
     defaultConfig {
-        minSdk = Dependencies.Versions.minSdk
-        targetSdk = Dependencies.Versions.targetSdk
+        minSdk = 23
+        targetSdk = 33
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -37,7 +33,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = Dependencies.Versions.jvmTarget
+        jvmTarget = "11"
     }
 
     buildFeatures {
@@ -45,7 +41,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = Dependencies.Versions.composeCompiler
+        kotlinCompilerExtensionVersion = "1.4.3"
     }
 
     publishing {
@@ -72,15 +68,15 @@ android {
 
 dependencies {
     // Android
-    implementation(Dependencies.Androidx.core)
+    implementation("androidx.core:core-ktx:1.9.0")
 
     // Compose
-    implementation(Dependencies.Compose.activity)
-    implementation(Dependencies.Compose.material)
-    implementation(Dependencies.Compose.navigation)
-    debugImplementation(Dependencies.Compose.tooling)
-    implementation(Dependencies.Compose.toolingPreview)
-    implementation(Dependencies.Compose.ui)
+    implementation("androidx.activity:activity-compose:1.6.1")
+    implementation("androidx.compose.material:material:1.3.1")
+    implementation("androidx.navigation:navigation-compose:2.5.3")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.3.3")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.3.3")
+    implementation("androidx.compose.ui:ui:1.3.3")
 
     // It is a known bug: https://issuetracker.google.com/issues/227767363
     //
@@ -90,17 +86,17 @@ dependencies {
     debugApi("androidx.customview:customview-poolingcontainer:1.0.0")
 
     // Testing
-    testImplementation(Dependencies.Test.junit)
+    testImplementation("junit:junit:4.13.2")
 
     // Curiosity testing utils
     testImplementation(project(":test-compose-utils"))
 
     // Compose
-    debugImplementation(Dependencies.Test.Compose.uiTestManifest)
-    testImplementation(Dependencies.Test.Compose.uiTestJunit)
-    testImplementation(Dependencies.Test.Compose.navigationTest)
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.3.3")
+    testImplementation("androidx.compose.ui:ui-test-junit4:1.3.3")
+    testImplementation("androidx.navigation:navigation-testing:2.5.3")
 
-    testImplementation(Dependencies.Test.robolectric) {
+    testImplementation("org.robolectric:robolectric:4.9.2") {
         exclude(module = "classworlds")
         exclude(module = "commons-logging")
         exclude(module = "httpclient")
@@ -120,9 +116,9 @@ dependencies {
     }
 
     // Android Testing
-    androidTestImplementation(Dependencies.Test.Androidx.espresso)
-    androidTestImplementation(Dependencies.Test.Androidx.junit)
-    androidTestImplementation(Dependencies.Test.Compose.uiTestJunit)
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.3.3")
 }
 
 tasks.withType<Sign>().configureEach {
