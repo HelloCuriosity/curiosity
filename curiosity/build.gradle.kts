@@ -69,7 +69,7 @@ android {
 
 dependencies {
     // Android
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.core:core-ktx:1.10.0")
 
     // Compose
     implementation("androidx.activity:activity-compose:1.6.1")
