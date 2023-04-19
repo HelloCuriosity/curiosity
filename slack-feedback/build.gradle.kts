@@ -25,6 +25,9 @@ dependencies {
     // Model forge
     testImplementation("io.github.hellocuriosity:model-forge:1.3.0")
 
+    // Mockk
+    testImplementation("io.mockk:mockk:1.13.5")
+
     // Ktor
     testImplementation("io.ktor:ktor-client-mock:2.2.4")
     testImplementation("org.slf4j:slf4j-simple:2.0.7")
