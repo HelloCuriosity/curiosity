@@ -29,7 +29,7 @@ allprojects {
         config = files("$rootDir/detekt/default-detekt-config.yml")
     }
     tasks.withType<Detekt>().configureEach {
-        jvmTarget = "11"
+        jvmTarget = "17"
         reports {
             xml.required.set(false)
             html.required.set(false)
@@ -73,7 +73,7 @@ tasks.register<Delete>("clean") {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 }
 
