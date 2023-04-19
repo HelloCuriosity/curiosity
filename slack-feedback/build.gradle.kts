@@ -21,5 +21,11 @@ dependencies {
 
     // Testing
     testImplementation("junit:junit:4.13.2")
+
+    // Model forge
     testImplementation("io.github.hellocuriosity:model-forge:1.3.0")
+
+    // Ktor
+    testImplementation("io.ktor:ktor-client-mock:2.2.4")
+    testImplementation("org.slf4j:slf4j-simple:2.0.7")
 }
