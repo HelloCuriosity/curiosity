@@ -33,7 +33,7 @@ class SlackCloudTest {
 
         assertEquals(feedback, cloud.post(feedback))
 
-        coVerify { service.post(eq(apiSlackMessage)) }
+        coVerify { service.post(apiSlackMessage) }
     }
 
     @Test
@@ -42,6 +42,6 @@ class SlackCloudTest {
 
         assertNull(cloud.post(feedback))
 
-        coVerify { service.post(eq(apiSlackMessage)) }
+        coVerify { service.post(apiSlackMessage) }
     }
 }
