@@ -16,7 +16,7 @@ class SlackFeedbackProvider(
     private val bearerToken: String,
     private val contentType: String = "application/x-www-form-urlencoded",
     private val language: String = "en-US",
-    private val interceptors: List<Interceptor> = emptyList()
+    private val interceptors: List<Interceptor> = emptyList(),
 ) {
 
     val slackRepository: SlackRepository by lazy {
