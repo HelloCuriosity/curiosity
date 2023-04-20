@@ -5,7 +5,8 @@ import io.github.hellocuriosity.slack.feedback.repository.SlackRepository
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.okhttp.OkHttp
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
-import io.ktor.client.utils.buildHeaders
+import io.ktor.client.plugins.defaultRequest
+import io.ktor.client.request.header
 import io.ktor.http.HttpHeaders
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
@@ -34,10 +35,10 @@ class SlackFeedbackProvider(
             install(ContentNegotiation) {
                 json(json = Json { ignoreUnknownKeys = true })
             }
-            buildHeaders {
-                append(HttpHeaders.AcceptLanguage, language)
-                append(HttpHeaders.Authorization, bearerToken)
-                append(HttpHeaders.ContentType, contentType)
+            defaultRequest {
+                header(HttpHeaders.AcceptLanguage, language)
+                header(HttpHeaders.Authorization, bearerToken)
+                header(HttpHeaders.ContentType, contentType)
             }
         }
     }
