@@ -63,7 +63,7 @@ dependencies {
     implementation("junit:junit:4.13.2")
 
     // Robolectric
-    implementation("org.robolectric:robolectric:4.10") {
+    implementation("org.robolectric:robolectric:4.10.2") {
         exclude(module = "classworlds")
         exclude(module = "commons-logging")
         exclude(module = "httpclient")
