@@ -16,5 +16,6 @@ rootProject.name = "Curiosity"
 include(":app")
 include(":curiosity")
 include(":navigation")
+include(":slack-feedback")
 include(":settings")
 include(":test-compose-utils")
