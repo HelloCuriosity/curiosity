@@ -23,13 +23,13 @@ Curiosity holds the UI components, which are split into different categories:
 
 Navigation holds navigation components. BottomNavigation and scenes that make it easier to create uniformed scenes.
 
-### Slack Feedback
-
-Slack feedback is a tool that makes it easy to use send feedback to a specified slack channel.
-
 ### Settings
 
 Settings is a collection of setting specific UI components to speed up building settings screens.
+
+### Slack Feedback
+
+Slack feedback is a tool that makes it easy to use send feedback to a specified slack channel.
 
 ### Test-Utils
 
@@ -47,8 +47,8 @@ Add dependency:
 dependencies {
     implementation("io.github.hellocuriosity:curiosity:0.12.0") // component library
     implementation("io.github.hellocuriosity:navigation:0.12.0") // navigation library
-    implementation("io.github.hellocuriosity:slack-feedback:0.12.0") // slack feedback library
     implementation("io.github.hellocuriosity:settings:0.12.0") // settings library
+    implementation("io.github.hellocuriosity:slack-feedback:0.12.0") // slack feedback library
     testImplementation("io.github.hellocuriosity:test-utils:0.12.0") // testing library
 }
 ```
