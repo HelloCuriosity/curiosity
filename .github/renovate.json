@@ -25,5 +25,11 @@
       ],
       "groupName": "Kotlin & Compose Compiler"
     },
+    {
+      "matchPackagePatterns": [
+        "io.ktor:*"
+      ],
+      "groupName": "Ktor"
+    }
   ]
 }
