@@ -7,6 +7,13 @@
   "packageRules": [
     {
       "matchPackagePatterns": [
+        "com.android.library",
+        "com.android.application"
+      ],
+      "groupName": "Android Gradle Plugin"
+    },
+    {
+      "matchPackagePatterns": [
         "androidx.compose.*"
       ],
       "groupName": "compose"
@@ -18,12 +25,5 @@
       ],
       "groupName": "Kotlin & Compose Compiler"
     },
-    {
-      "matchPackagePatterns": [
-        "com.android.library",
-        "com.android.application"
-      ],
-      "groupName": "Android Gradle Plugin"
-    }
   ]
 }
