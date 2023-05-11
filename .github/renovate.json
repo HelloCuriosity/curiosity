@@ -7,6 +7,13 @@
   "packageRules": [
     {
       "matchPackagePatterns": [
+        "com.android.library",
+        "com.android.application"
+      ],
+      "groupName": "Android Gradle Plugin"
+    },
+    {
+      "matchPackagePatterns": [
         "androidx.compose.*"
       ],
       "groupName": "compose"
@@ -20,10 +27,9 @@
     },
     {
       "matchPackagePatterns": [
-        "com.android.library",
-        "com.android.application"
+        "io.ktor:*"
       ],
-      "groupName": "Android Gradle Plugin"
+      "groupName": "Ktor"
     }
   ]
 }
