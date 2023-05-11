@@ -33,7 +33,7 @@ dependencies {
     testImplementation("io.mockk:mockk:1.13.5")
 
     // Ktor
-    testImplementation("io.ktor:ktor-client-mock:2.2.4")
+    testImplementation("io.ktor:ktor-client-mock:2.3.0")
     testImplementation("org.slf4j:slf4j-simple:2.0.7")
 }
 
