@@ -15,7 +15,7 @@ java {
 
 dependencies {
     // Ktor
-    implementation("io.ktor:ktor-client-content-negotiation:2.2.4")
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.0")
     implementation("io.ktor:ktor-client-core:2.2.4")
     implementation("io.ktor:ktor-client-okhttp:2.2.4")
     implementation("io.ktor:ktor-serialization-kotlinx-json:2.2.4")
