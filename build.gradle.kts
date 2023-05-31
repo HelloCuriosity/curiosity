@@ -26,7 +26,7 @@ allprojects {
     detekt {
         buildUponDefaultConfig = false
         allRules = false
-        config = files("$rootDir/detekt/default-detekt-config.yml")
+        config.setFrom("$rootDir/detekt/default-detekt-config.yml")
     }
     tasks.withType<Detekt>().configureEach {
         jvmTarget = "17"
