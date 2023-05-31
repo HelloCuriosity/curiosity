@@ -3,7 +3,9 @@
   "extends": [
     "config:base"
   ],
-  "labels": ["dependencies"],
+  "labels": [
+    "dependencies"
+  ],
   "packageRules": [
     {
       "matchPackagePatterns": [
@@ -21,7 +23,8 @@
     {
       "matchPackagePatterns": [
         "composeOptions",
-        "org.jetbrains.kotlin.*"
+        "org.jetbrains.kotlin.android",
+        "org.jetbrains.kotlin:kotlin-stdlib*"
       ],
       "groupName": "Kotlin & Compose Compiler"
     },
