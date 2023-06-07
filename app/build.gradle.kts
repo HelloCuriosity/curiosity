@@ -126,7 +126,7 @@ dependencies {
     // Compose
     debugImplementation("androidx.compose.ui:ui-test-manifest:1.4.3")
     testImplementation("androidx.compose.ui:ui-test-junit4:1.4.3")
-    testImplementation("androidx.navigation:navigation-testing:2.5.3")
+    testImplementation("androidx.navigation:navigation-testing:2.6.0")
 
     // Robolectric
     testImplementation("org.robolectric:robolectric:4.10.3") {
