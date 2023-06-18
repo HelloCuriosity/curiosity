@@ -18,13 +18,14 @@
       "matchPackagePatterns": [
         "androidx.compose.*"
       ],
-      "groupName": "compose"
+      "groupName": "Compose"
     },
     {
       "matchPackagePatterns": [
         "composeOptions",
         "org.jetbrains.kotlin.android",
-        "org.jetbrains.kotlin:kotlin-stdlib*"
+        "org.jetbrains.kotlin:kotlin-stdlib*",
+        "org.jetbrains.kotlin.plugin.*"
       ],
       "groupName": "Kotlin & Compose Compiler"
     },
@@ -33,6 +34,12 @@
         "io.ktor:*"
       ],
       "groupName": "Ktor"
+    },
+    {
+      "matchPackagePatterns": [
+        "androidx.navigation.*"
+      ],
+      "groupName": "Navigation"
     }
   ]
 }
