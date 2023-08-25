@@ -13,7 +13,7 @@ plugins {
 
     id("io.gitlab.arturbosch.detekt") version "1.23.1"
     id("org.jmailen.kotlinter") version "3.16.0"
-    id("org.jetbrains.kotlinx.kover") version "0.6.1"
+    id("org.jetbrains.kotlinx.kover") version "0.7.3"
 }
 
 allprojects {
