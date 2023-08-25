@@ -1,5 +1,4 @@
 import io.gitlab.arturbosch.detekt.Detekt
-import kotlinx.kover.api.KoverProjectConfig
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
@@ -39,32 +38,6 @@ allprojects {
         exclude("**/resources/**")
         exclude("**/build/**")
     }
-
-    extensions.configure<KoverProjectConfig> {
-        isDisabled.set(false)
-        engine.set(kotlinx.kover.api.IntellijEngine("1.0.683"))
-    }
-
-    koverMerged {
-        filters {
-            classes {
-                excludes += listOf(
-                    "*BuildConfig",
-                )
-            }
-            annotations {
-                excludes += listOf("*Preview", "*Exclude")
-            }
-        }
-        xmlReport {
-            onCheck.set(false)
-            reportFile.set(layout.buildDirectory.file("$buildDir/reports/kover/result.xml"))
-        }
-        htmlReport {
-            onCheck.set(false)
-            reportDir.set(layout.buildDirectory.dir("$buildDir/reports/kover/html-result"))
-        }
-    }
 }
 
 tasks.register<Delete>("clean") {
@@ -77,6 +50,28 @@ tasks.withType<KotlinCompile> {
     }
 }
 
-koverMerged {
-    enable()
+// Kover
+dependencies {
+    kover(project(":app"))
+    kover(project(":slack-feedback"))
+}
+
+koverReport {
+    filters {
+        excludes {
+            classes("*BuildConfig")
+            annotatedBy("*Preview")
+        }
+    }
+
+    defaults {
+        xml {
+            onCheck = false
+            setReportFile(layout.buildDirectory.file("$buildDir/reports/kover/result.xml"))
+        }
+        html {
+            onCheck = false
+            setReportDir(layout.buildDirectory.dir("$buildDir/reports/kover/html-result"))
+        }
+    }
 }

@@ -54,13 +54,6 @@ android {
         unitTests {
             isIncludeAndroidResources = true
             isReturnDefaultValues = true
-            all {
-                if (it.name == "testReleaseUnitTest") {
-                    it.extensions.configure(kotlinx.kover.api.KoverTaskExtension::class) {
-                        isDisabled.set(true)
-                    }
-                }
-            }
         }
     }
 }

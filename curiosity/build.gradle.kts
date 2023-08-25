@@ -1,5 +1,3 @@
-import kotlinx.kover.api.KoverTaskExtension
-
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -56,13 +54,6 @@ android {
         unitTests {
             isIncludeAndroidResources = true
             isReturnDefaultValues = true
-            all {
-                if (it.name == "testReleaseUnitTest") {
-                    it.extensions.configure(KoverTaskExtension::class) {
-                        isDisabled.set(true)
-                    }
-                }
-            }
         }
     }
 }

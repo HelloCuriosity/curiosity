@@ -44,7 +44,10 @@ android {
             isDebuggable = false
             isShrinkResources = true
             signingConfig = signingConfigs.getByName("release")
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 
@@ -86,13 +89,6 @@ android {
         unitTests {
             isIncludeAndroidResources = true
             isReturnDefaultValues = true
-            all {
-                if (it.name == "testReleaseUnitTest") {
-                    it.extensions.configure(kotlinx.kover.api.KoverTaskExtension::class) {
-                        isDisabled.set(true)
-                    }
-                }
-            }
         }
     }
 }
@@ -152,4 +148,17 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.4.3")
+}
+
+// Kover
+dependencies {
+    kover(project(":curiosity"))
+    kover(project(":navigation"))
+    kover(project(":settings"))
+}
+
+koverReport {
+    defaults {
+        mergeWith("debug")
+    }
 }
