@@ -9,13 +9,13 @@ plugins {
 
 android {
     namespace = "com.hello.curiosity"
-    compileSdk = 33
-    buildToolsVersion = "33.0.1"
+    compileSdk = 34
+    buildToolsVersion = "34.0.0"
 
     defaultConfig {
         applicationId = "com.hello.curiosity.design"
         minSdk = 23
-        targetSdk = 33
+        targetSdk = 34
 
         versionCode = System.getenv("GITHUB_RUN_NUMBER")?.toInt() ?: 1
         versionName = System.getenv("VERSION") ?: "local"

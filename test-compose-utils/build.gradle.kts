@@ -9,12 +9,12 @@ plugins {
 
 android {
     namespace = "io.github.hellocuriosity.test.compose"
-    compileSdk = 33
-    buildToolsVersion = "33.0.1"
+    compileSdk = 34
+    buildToolsVersion = "34.0.0"
 
     defaultConfig {
         minSdk = 23
-        targetSdk = 33
+        targetSdk = 34
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
