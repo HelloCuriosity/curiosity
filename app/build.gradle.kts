@@ -99,11 +99,11 @@ dependencies {
 
     // Compose
     implementation("androidx.activity:activity-compose:1.8.0")
-    implementation("androidx.compose.material:material:1.5.3")
+    implementation("androidx.compose.material:material:1.5.4")
     implementation("androidx.navigation:navigation-compose:2.7.4")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.5.3")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.5.3")
-    implementation("androidx.compose.ui:ui:1.5.3")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.5.4")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.5.4")
+    implementation("androidx.compose.ui:ui:1.5.4")
 
     // Curiosity
     implementation(project(":curiosity"))
@@ -120,8 +120,8 @@ dependencies {
     testImplementation(project(":test-compose-utils"))
 
     // Compose
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.5.3")
-    testImplementation("androidx.compose.ui:ui-test-junit4:1.5.3")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.5.4")
+    testImplementation("androidx.compose.ui:ui-test-junit4:1.5.4")
     testImplementation("androidx.navigation:navigation-testing:2.7.4")
 
     // Robolectric
@@ -147,7 +147,7 @@ dependencies {
     // Android Testing
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.5.3")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.5.4")
 }
 
 // Kover
