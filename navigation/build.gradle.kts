@@ -64,7 +64,7 @@ dependencies {
     // Compose
     implementation("androidx.activity:activity-compose:1.8.0")
     implementation("androidx.compose.material:material:1.5.4")
-    implementation("androidx.navigation:navigation-compose:2.7.4")
+    implementation("androidx.navigation:navigation-compose:2.7.5")
     debugImplementation("androidx.compose.ui:ui-tooling:1.5.4")
     implementation("androidx.compose.ui:ui-tooling-preview:1.5.4")
     implementation("androidx.compose.ui:ui:1.5.4")
@@ -85,7 +85,7 @@ dependencies {
     // Compose
     debugImplementation("androidx.compose.ui:ui-test-manifest:1.5.4")
     testImplementation("androidx.compose.ui:ui-test-junit4:1.5.4")
-    testImplementation("androidx.navigation:navigation-testing:2.7.4")
+    testImplementation("androidx.navigation:navigation-testing:2.7.5")
 
     testImplementation("org.robolectric:robolectric:4.11.1") {
         exclude(module = "classworlds")
