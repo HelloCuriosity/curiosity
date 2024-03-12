@@ -4,7 +4,7 @@ import com.github.triplet.gradle.androidpublisher.ResolutionStrategy
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("com.github.triplet.play") version "3.8.6"
+    id("com.github.triplet.play") version "3.9.1"
 }
 
 android {
