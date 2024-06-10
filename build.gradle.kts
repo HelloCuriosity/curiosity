@@ -10,7 +10,7 @@ plugins {
     id("com.android.library") version "8.2.2" apply false
     id("org.jetbrains.kotlin.android") version "1.9.23" apply false
 
-    id("io.gitlab.arturbosch.detekt") version "1.23.5"
+    id("io.gitlab.arturbosch.detekt") version "1.23.6"
     id("org.jmailen.kotlinter") version "3.16.0"
     id("org.jetbrains.kotlinx.kover") version "0.7.6"
 }
