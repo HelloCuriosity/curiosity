@@ -111,7 +111,7 @@ dependencies {
     implementation(project(":settings"))
 
     // Leak
-    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.13")
+    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.14")
 
     // Testing
     testImplementation("junit:junit:4.13.2")
