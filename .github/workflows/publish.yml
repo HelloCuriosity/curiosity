@@ -33,7 +33,7 @@ jobs:
       PLAY_PUBLISH_PASSWORD: ${{ secrets.PLAY_PUBLISH_PASSWORD }}
     steps:
       - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
       - name: Set up JDK
         uses: actions/setup-java@v4.2.1
         with:
