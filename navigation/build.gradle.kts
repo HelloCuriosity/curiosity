@@ -87,7 +87,7 @@ dependencies {
     testImplementation("androidx.compose.ui:ui-test-junit4:1.6.5")
     testImplementation("androidx.navigation:navigation-testing:2.7.7")
 
-    testImplementation("org.robolectric:robolectric:4.12.2") {
+    testImplementation("org.robolectric:robolectric:4.13") {
         exclude(module = "classworlds")
         exclude(module = "commons-logging")
         exclude(module = "httpclient")
