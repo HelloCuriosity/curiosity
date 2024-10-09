@@ -40,7 +40,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.11"
+        kotlinCompilerExtensionVersion = "1.5.15"
     }
 
     publishing {
@@ -64,11 +64,11 @@ dependencies {
 
     // Compose
     implementation("androidx.activity:activity-compose:1.9.2")
-    implementation("androidx.compose.material:material:1.6.5")
+    implementation("androidx.compose.material:material:1.7.3")
     implementation("androidx.navigation:navigation-compose:2.8.2")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.6.5")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.6.5")
-    implementation("androidx.compose.ui:ui:1.6.5")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.7.3")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.7.3")
+    implementation("androidx.compose.ui:ui:1.7.3")
 
     // It is a known bug: https://issuetracker.google.com/issues/227767363
     //
@@ -83,8 +83,8 @@ dependencies {
     // Curiosity testing utils
     testImplementation(project(":test-compose-utils"))
 
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.6.5")
-    testImplementation("androidx.compose.ui:ui-test-junit4:1.6.5")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.7.3")
+    testImplementation("androidx.compose.ui:ui-test-junit4:1.7.3")
     testImplementation("org.robolectric:robolectric:4.13") {
         exclude(module = "classworlds")
         exclude(module = "commons-logging")
@@ -107,7 +107,7 @@ dependencies {
     // Android Testing
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.6.5")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.7.3")
 }
 
 tasks.withType<Sign>().configureEach {

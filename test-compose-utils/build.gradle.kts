@@ -39,7 +39,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.11"
+        kotlinCompilerExtensionVersion = "1.5.15"
     }
 
     publishing {
@@ -57,7 +57,7 @@ dependencies {
     // Compose
     implementation("androidx.navigation:navigation-compose:2.8.2")
     implementation("androidx.navigation:navigation-testing:2.8.2")
-    implementation("androidx.compose.ui:ui-test-junit4:1.6.5")
+    implementation("androidx.compose.ui:ui-test-junit4:1.7.3")
 
     // jUnit
     implementation("junit:junit:4.13.2")
