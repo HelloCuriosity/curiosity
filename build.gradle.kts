@@ -11,7 +11,7 @@ plugins {
     id("org.jetbrains.kotlin.android") version "1.9.23" apply false
 
     id("io.gitlab.arturbosch.detekt") version "1.23.7"
-    id("org.jmailen.kotlinter") version "3.16.0"
+    id("org.jmailen.kotlinter") version "4.4.1"
     id("org.jetbrains.kotlinx.kover") version "0.7.6"
 }
 
