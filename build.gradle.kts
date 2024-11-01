@@ -8,7 +8,7 @@ buildscript {
 plugins {
     id("com.android.application") version "8.7.2" apply false
     id("com.android.library") version "8.7.2" apply false
-    id("org.jetbrains.kotlin.android") version "1.9.23" apply false
+    id("org.jetbrains.kotlin.android") version "1.9.25" apply false
 
     id("io.gitlab.arturbosch.detekt") version "1.23.7"
     id("org.jmailen.kotlinter") version "3.16.0"
