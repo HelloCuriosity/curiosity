@@ -10,12 +10,10 @@ plugins {
 
 android {
     namespace = "io.github.hellocuriosity.test.compose"
-    compileSdk = 34
-    buildToolsVersion = "34.0.0"
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 23
-        targetSdk = 34
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -49,7 +47,7 @@ android {
 
 dependencies {
     // Android
-    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.core:core-ktx:1.15.0")
 
     // Compose
     implementation("androidx.navigation:navigation-compose:2.8.3")

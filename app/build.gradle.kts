@@ -10,13 +10,12 @@ plugins {
 
 android {
     namespace = "com.hello.curiosity"
-    compileSdk = 34
-    buildToolsVersion = "34.0.0"
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.hello.curiosity.design"
         minSdk = 23
-        targetSdk = 34
+        targetSdk = 35
 
         versionCode = System.getenv("GITHUB_RUN_NUMBER")?.toInt() ?: 1
         versionName = System.getenv("VERSION") ?: "local"
@@ -92,7 +91,7 @@ android {
 
 dependencies {
     // Android
-    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.core:core-ktx:1.15.0")
 
     // Compose
     implementation("androidx.activity:activity-compose:1.9.3")

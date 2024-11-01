@@ -10,7 +10,7 @@ plugins {
 
 android {
     namespace = "io.github.hellocuriosity.compose.navigation"
-    compileSdk = 34
+    compileSdk = 35
     buildToolsVersion = "34.0.0"
 
     defaultConfig {
@@ -56,7 +56,7 @@ android {
 
 dependencies {
     // Android
-    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.core:core-ktx:1.15.0")
 
     // Compose
     implementation("androidx.activity:activity-compose:1.9.3")

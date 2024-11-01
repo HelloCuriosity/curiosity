@@ -10,12 +10,10 @@ plugins {
 
 android {
     namespace = "io.github.hellocuriosity.compose.settings"
-    compileSdk = 34
-    buildToolsVersion = "34.0.0"
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 23
-        targetSdk = 34
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -57,7 +55,7 @@ android {
 
 dependencies {
     // Android
-    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.core:core-ktx:1.15.0")
 
     // Compose
     implementation("androidx.activity:activity-compose:1.9.3")
