@@ -1,45 +1,45 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:recommended"
   ],
   "labels": [
     "dependencies"
   ],
   "packageRules": [
     {
-      "matchPackagePatterns": [
-        "com.android.library",
-        "com.android.application"
-      ],
-      "groupName": "Android Gradle Plugin"
+      "groupName": "Android Gradle Plugin",
+      "matchPackageNames": [
+        "/com.android.library/",
+        "/com.android.application/"
+      ]
     },
     {
-      "matchPackagePatterns": [
-        "androidx.compose.*"
-      ],
-      "groupName": "Compose"
+      "groupName": "Compose",
+      "matchPackageNames": [
+        "/androidx.compose.*/"
+      ]
     },
     {
-      "matchPackagePatterns": [
-        "composeOptions",
-        "org.jetbrains.kotlin.android",
-        "org.jetbrains.kotlin:kotlin-stdlib*",
-        "org.jetbrains.kotlin.plugin.*"
-      ],
-      "groupName": "Kotlin & Compose Compiler"
+      "groupName": "Kotlin & Compose Compiler",
+      "matchPackageNames": [
+        "/composeOptions/",
+        "/org.jetbrains.kotlin.android/",
+        "/org.jetbrains.kotlin:kotlin-stdlib*/",
+        "/org.jetbrains.kotlin.plugin.*/"
+      ]
     },
     {
-      "matchPackagePatterns": [
-        "io.ktor:*"
-      ],
-      "groupName": "Ktor"
+      "groupName": "Ktor",
+      "matchPackageNames": [
+        "/io.ktor:*/"
+      ]
     },
     {
-      "matchPackagePatterns": [
-        "androidx.navigation.*"
-      ],
-      "groupName": "Navigation"
+      "groupName": "Navigation",
+      "matchPackageNames": [
+        "/androidx.navigation.*/"
+      ]
     }
   ]
 }
