@@ -153,9 +153,3 @@ dependencies {
     kover(project(":navigation"))
     kover(project(":settings"))
 }
-
-koverReport {
-    defaults {
-        mergeWith("debug")
-    }
-}

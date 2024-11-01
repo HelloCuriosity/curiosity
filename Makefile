@@ -40,7 +40,7 @@ release:
 	./scripts/release.sh ${BUMP}
 
 report:
-	./gradlew koverHtmlReport koverXmlReport ${GRADLE_ARGS}
+	./gradlew koverHtmlReport${BUILD_TYPE} koverXmlReport${BUILD_TYPE} ${GRADLE_ARGS}
 
 signing:
 	./scripts/signing.sh
