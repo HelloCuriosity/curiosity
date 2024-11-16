@@ -5,7 +5,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
-    id("com.github.triplet.play") version "3.11.0"
+    id("com.github.triplet.play") version "3.12.1"
 }
 
 android {
