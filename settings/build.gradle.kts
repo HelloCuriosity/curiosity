@@ -83,7 +83,7 @@ dependencies {
 
     debugImplementation("androidx.compose.ui:ui-test-manifest:1.7.5")
     testImplementation("androidx.compose.ui:ui-test-junit4:1.7.5")
-    testImplementation("org.robolectric:robolectric:4.14") {
+    testImplementation("org.robolectric:robolectric:4.14.1") {
         exclude(module = "classworlds")
         exclude(module = "commons-logging")
         exclude(module = "httpclient")
