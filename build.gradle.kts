@@ -56,23 +56,3 @@ dependencies {
     kover(project(":app"))
     kover(project(":slack-feedback"))
 }
-
-koverReport {
-    filters {
-        excludes {
-            classes("*BuildConfig")
-            annotatedBy("*Preview")
-        }
-    }
-
-    defaults {
-        xml {
-            onCheck = false
-            setReportFile(layout.buildDirectory.file("$buildDir/reports/kover/result.xml"))
-        }
-        html {
-            onCheck = false
-            setReportDir(layout.buildDirectory.dir("$buildDir/reports/kover/html-result"))
-        }
-    }
-}
