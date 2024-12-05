@@ -27,7 +27,7 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
 
     // Model forge
-    testImplementation("io.github.hellocuriosity:model-forge:1.4.0")
+    testImplementation("io.github.hellocuriosity:model-forge:1.5.1")
 
     // Mockk
     testImplementation("io.mockk:mockk:1.13.13")
