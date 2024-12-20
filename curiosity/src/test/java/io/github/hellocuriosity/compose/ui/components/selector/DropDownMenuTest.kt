@@ -17,7 +17,6 @@ import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Test
 
 class DropDownMenuTest : ComposeTest() {
-
     private val ctx: Context = ApplicationProvider.getApplicationContext()
     private val items: List<Int> = listOf(android.R.string.copy, android.R.string.paste)
     private val contentDescriptionRes: Int = android.R.string.fingerprint_icon_content_description
@@ -77,10 +76,11 @@ class DropDownMenuTest : ComposeTest() {
                 onItemSelected = {},
                 selected = 1,
                 contentDescription = contentDescriptionRes,
-                colors = DropDownMenuDefaults.colors(
-                    backgroundColor = Color.Black,
-                    boarderColor = Color.Green,
-                ),
+                colors =
+                    DropDownMenuDefaults.colors(
+                        backgroundColor = Color.Black,
+                        boarderColor = Color.Green,
+                    ),
                 enabled = false,
             )
         }

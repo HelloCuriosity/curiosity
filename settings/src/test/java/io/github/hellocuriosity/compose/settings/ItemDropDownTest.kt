@@ -71,10 +71,11 @@ class ItemDropDownTest : ComposeTest() {
                 onItemSelected = {},
                 selected = 1,
                 contentDescription = contentDescriptionRes,
-                colors = DropDownMenuDefaults.colors(
-                    backgroundColor = Color.Black,
-                    boarderColor = Color.Green,
-                ),
+                colors =
+                    DropDownMenuDefaults.colors(
+                        backgroundColor = Color.Black,
+                        boarderColor = Color.Green,
+                    ),
                 enabled = false,
             )
         }

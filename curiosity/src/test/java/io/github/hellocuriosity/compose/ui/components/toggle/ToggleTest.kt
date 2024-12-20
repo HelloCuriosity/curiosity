@@ -35,9 +35,10 @@ class ToggleTest : ComposeTest() {
                 modifier = Modifier,
                 checked = true,
                 enabled = false,
-                colors = ToggleDefaults.colors(
-                    toggleColor = Color.Blue,
-                ),
+                colors =
+                    ToggleDefaults.colors(
+                        toggleColor = Color.Blue,
+                    ),
                 onToggleChange = {},
             )
         }

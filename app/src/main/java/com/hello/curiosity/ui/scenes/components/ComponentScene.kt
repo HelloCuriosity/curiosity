@@ -17,28 +17,29 @@ import com.hello.curiosity.ui.scenes.Scenes
 import io.github.hellocuriosity.compose.ui.components.buttons.TextIconButton
 
 @Composable
-fun ComponentScene(
-    navController: NavHostController,
-) {
-    val components = listOf(
-        Scenes.Buttons,
-        Scenes.Input,
-        Scenes.Text,
-        Scenes.Toggle,
-    )
+fun ComponentScene(navController: NavHostController) {
+    val components =
+        listOf(
+            Scenes.Buttons,
+            Scenes.Input,
+            Scenes.Text,
+            Scenes.Toggle,
+        )
 
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
-        modifier = Modifier
-            .fillMaxHeight()
-            .padding(vertical = 8.dp, horizontal = 4.dp)
-            .testTag("component-scene-test-tag"),
+        modifier =
+            Modifier
+                .fillMaxHeight()
+                .padding(vertical = 8.dp, horizontal = 4.dp)
+                .testTag("component-scene-test-tag"),
     ) {
         items(components) { component ->
             TextIconButton(
-                modifier = Modifier
-                    .padding(top = 8.dp)
-                    .padding(horizontal = 4.dp),
+                modifier =
+                    Modifier
+                        .padding(top = 8.dp)
+                        .padding(horizontal = 4.dp),
                 text = component.title,
                 enabled = true,
                 onClick = {

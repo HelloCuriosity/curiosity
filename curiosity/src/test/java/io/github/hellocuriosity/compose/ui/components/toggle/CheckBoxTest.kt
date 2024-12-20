@@ -13,7 +13,6 @@ import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Test
 
 class CheckBoxTest : ComposeTest() {
-
     @Test
     fun `validate checkbox defaults`() {
         composeTestRule.setContent {
@@ -31,8 +30,7 @@ class CheckBoxTest : ComposeTest() {
             .onNodeWithTag(
                 testTag = "checkbox-toggle-icon-test-tag",
                 useUnmergedTree = true,
-            )
-            .assertDoesNotExist()
+            ).assertDoesNotExist()
 
         // perform action on checkbox
         composeTestRule
@@ -46,8 +44,7 @@ class CheckBoxTest : ComposeTest() {
             .onNodeWithTag(
                 testTag = "checkbox-toggle-icon-test-tag",
                 useUnmergedTree = true,
-            )
-            .assertExists()
+            ).assertExists()
             .assertIsDisplayed()
     }
 
@@ -61,9 +58,10 @@ class CheckBoxTest : ComposeTest() {
                 vectorImage = Icons.Filled.Home,
                 contentDescription = R.string.copy,
                 shape = CircleShape,
-                colors = CheckBoxDefaults.colors(
-                    checkedColor = Color.White,
-                ),
+                colors =
+                    CheckBoxDefaults.colors(
+                        checkedColor = Color.White,
+                    ),
                 onCheckedChange = {},
             )
         }
@@ -79,8 +77,7 @@ class CheckBoxTest : ComposeTest() {
             .onNodeWithTag(
                 testTag = "checkbox-toggle-icon-test-tag",
                 useUnmergedTree = true,
-            )
-            .assertExists()
+            ).assertExists()
             .assertIsDisplayed()
     }
 }

@@ -26,10 +26,11 @@ fun ItemInfo(
     titleColor: Color = Color.Unspecified,
     contentColor: Color = Color.Unspecified,
 ) = Row(
-    modifier = modifier
-        .fillMaxWidth()
-        .padding(24.dp)
-        .testTag("item-info-test-tag"),
+    modifier =
+        modifier
+            .fillMaxWidth()
+            .padding(24.dp)
+            .testTag("item-info-test-tag"),
     horizontalArrangement = Arrangement.SpaceBetween,
 ) {
     Column {

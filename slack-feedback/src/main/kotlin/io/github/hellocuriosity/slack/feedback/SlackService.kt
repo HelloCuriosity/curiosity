@@ -13,10 +13,11 @@ class SlackService(
     private val client: HttpClient,
 ) {
     suspend fun post(apiSlackMessage: ApiSlackMessage): ApiResponse =
-        client.post(URL) {
-            contentType(ContentType.Application.Json)
-            setBody(apiSlackMessage)
-        }.body()
+        client
+            .post(URL) {
+                contentType(ContentType.Application.Json)
+                setBody(apiSlackMessage)
+            }.body()
 
     companion object {
         private const val URL: String = "https://slack.com/api/chat.postMessage"

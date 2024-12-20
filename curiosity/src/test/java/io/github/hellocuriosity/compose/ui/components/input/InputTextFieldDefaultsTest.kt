@@ -9,7 +9,6 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class InputTextFieldDefaultsTest : ComposeTest() {
-
     @Test
     fun testDefaultColors() {
         composeTestRule.setContent {
@@ -34,15 +33,16 @@ class InputTextFieldDefaultsTest : ComposeTest() {
             val focusedIndicatorColor = Color.Red
             val backgroundColor = Color.DarkGray
             val boarderColor = Color.LightGray
-            val colors = InputTextFieldDefaults.colors(
-                textColor = textColor,
-                placeholderColor = placeholderColor,
-                cursorColor = cursorColor,
-                unfocusedIndicatorColor = unfocusedIndicatorColor,
-                focusedIndicatorColor = focusedIndicatorColor,
-                backgroundColor = backgroundColor,
-                boarderColor = boarderColor,
-            )
+            val colors =
+                InputTextFieldDefaults.colors(
+                    textColor = textColor,
+                    placeholderColor = placeholderColor,
+                    cursorColor = cursorColor,
+                    unfocusedIndicatorColor = unfocusedIndicatorColor,
+                    focusedIndicatorColor = focusedIndicatorColor,
+                    backgroundColor = backgroundColor,
+                    boarderColor = boarderColor,
+                )
             assertEquals(textColor, colors.textColor)
             assertEquals(placeholderColor, colors.placeholderColor)
             assertEquals(cursorColor, colors.cursorColor)

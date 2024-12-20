@@ -7,11 +7,11 @@ import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Test
 
 class ColorViewTest : ComposeTest() {
-
-    private val presentation = ColorPresentation(
-        title = "cool color",
-        color = Color.Blue,
-    )
+    private val presentation =
+        ColorPresentation(
+            title = "cool color",
+            color = Color.Blue,
+        )
 
     @Test
     fun testColorView() {

@@ -13,13 +13,14 @@ object CheckBoxDefaults {
         checkmarkColor: Color = MaterialTheme.colors.surface,
         disabledColor: Color = MaterialTheme.colors.onSurface.copy(alpha = ContentAlpha.disabled),
         boarderColor: Color = MaterialTheme.colors.onSurface.copy(alpha = 0.2f),
-    ): CheckBoxColors = CheckBoxColors(
-        checkedColor = checkedColor,
-        uncheckedColor = uncheckedColor,
-        checkmarkColor = checkmarkColor,
-        disabledColor = disabledColor,
-        boarderColor = boarderColor,
-    )
+    ): CheckBoxColors =
+        CheckBoxColors(
+            checkedColor = checkedColor,
+            uncheckedColor = uncheckedColor,
+            checkmarkColor = checkmarkColor,
+            disabledColor = disabledColor,
+            boarderColor = boarderColor,
+        )
 }
 
 data class CheckBoxColors(

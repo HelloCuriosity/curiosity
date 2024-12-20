@@ -66,9 +66,10 @@ class ItemToggleTest : ComposeTest() {
                 contentColor = Color.Blue,
                 checked = true,
                 enabled = false,
-                toggleColors = ToggleDefaults.colors(
-                    toggleColor = Color.Blue,
-                ),
+                toggleColors =
+                    ToggleDefaults.colors(
+                        toggleColor = Color.Blue,
+                    ),
                 onToggleChange = {},
             )
         }

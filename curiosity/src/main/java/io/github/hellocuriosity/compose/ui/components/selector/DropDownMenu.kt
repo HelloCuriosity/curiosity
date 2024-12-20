@@ -44,9 +44,10 @@ fun DropDownMenu(
     var expanded by remember { mutableStateOf(false) }
 
     Surface(
-        modifier = modifier
-            .fillMaxWidth()
-            .testTag(DROP_DOWN_MENU_CONTAINER_TEST_TAG),
+        modifier =
+            modifier
+                .fillMaxWidth()
+                .testTag(DROP_DOWN_MENU_CONTAINER_TEST_TAG),
         enabled = enabled,
         shape = RoundedCornerShape(8.dp),
         color = colors.backgroundColor,
@@ -54,27 +55,33 @@ fun DropDownMenu(
         onClick = { expanded = !expanded },
     ) {
         Row(
-            modifier = Modifier.padding(
-                vertical = 16.dp,
-                horizontal = 16.dp,
-            ),
+            modifier =
+                Modifier.padding(
+                    vertical = 16.dp,
+                    horizontal = 16.dp,
+                ),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
         ) {
             LabelSmall(text = items[selected])
             Icon(
-                modifier = Modifier
-                    .rotate(
-                        if (expanded) DropDownMenuDefaults.ONE_EIGHTY_DEGREES else DropDownMenuDefaults.ZERO_DEGREES,
-                    )
-                    .testTag(DROP_DOWN_MENU_ICN_TEST_TAG),
+                modifier =
+                    Modifier
+                        .rotate(
+                            if (expanded) {
+                                DropDownMenuDefaults.ONE_EIGHTY_DEGREES
+                            } else {
+                                DropDownMenuDefaults.ZERO_DEGREES
+                            },
+                        ).testTag(DROP_DOWN_MENU_ICN_TEST_TAG),
                 imageVector = Icons.Filled.ArrowDropDown,
                 contentDescription = stringResource(id = contentDescription),
             )
         }
         DropdownMenu(
-            modifier = Modifier
-                .testTag(DROP_DOWN_MENU_LIST_TEST_TAG),
+            modifier =
+                Modifier
+                    .testTag(DROP_DOWN_MENU_LIST_TEST_TAG),
             expanded = expanded,
             onDismissRequest = { expanded = false },
         ) {

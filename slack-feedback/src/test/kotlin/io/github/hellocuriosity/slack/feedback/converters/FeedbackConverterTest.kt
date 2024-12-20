@@ -8,27 +8,28 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class FeedbackConverterTest {
-
     private val converter = FeedbackConverter()
 
     @Test
     fun testFrom() {
         val feedback by forgery<Feedback>()
-        val expected = ApiSlackMessage(
-            channel = feedback.channel,
-            attachments = listOf(
-                ApiAttachment(
-                    fallback = feedback.title,
-                    color = feedback.color,
-                    pretext = feedback.pretext,
-                    title = feedback.title,
-                    text = feedback.message,
-                    footer = feedback.footer,
-                    icon = feedback.icon,
-                    createdOn = feedback.created?.toEpochMilli(),
-                ),
-            ),
-        )
+        val expected =
+            ApiSlackMessage(
+                channel = feedback.channel,
+                attachments =
+                    listOf(
+                        ApiAttachment(
+                            fallback = feedback.title,
+                            color = feedback.color,
+                            pretext = feedback.pretext,
+                            title = feedback.title,
+                            text = feedback.message,
+                            footer = feedback.footer,
+                            icon = feedback.icon,
+                            createdOn = feedback.created?.toEpochMilli(),
+                        ),
+                    ),
+            )
         assertEquals(expected, converter.from(feedback))
     }
 

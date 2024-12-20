@@ -10,7 +10,6 @@ import org.robolectric.annotation.Config
 
 @Config(qualifiers = "h1024dp")
 class SettingsSceneTest : ComposeTest() {
-
     @Test
     @Suppress("LongMethod")
     fun testSettingsScene() {

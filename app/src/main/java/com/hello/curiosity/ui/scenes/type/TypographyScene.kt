@@ -16,60 +16,61 @@ import com.hello.curiosity.Exclude
 @Composable
 @Suppress("LongMethod")
 fun TypographyScene() {
-    val types = listOf(
-        TypographyPresentation(
-            title = "H1",
-            style = MaterialTheme.typography.h1,
-        ),
-        TypographyPresentation(
-            title = "H2",
-            style = MaterialTheme.typography.h2,
-        ),
-        TypographyPresentation(
-            title = "H3",
-            style = MaterialTheme.typography.h3,
-        ),
-        TypographyPresentation(
-            title = "H4",
-            style = MaterialTheme.typography.h4,
-        ),
-        TypographyPresentation(
-            title = "H5",
-            style = MaterialTheme.typography.h5,
-        ),
-        TypographyPresentation(
-            title = "H6",
-            style = MaterialTheme.typography.h6,
-        ),
-        TypographyPresentation(
-            title = "Subtitle1",
-            style = MaterialTheme.typography.subtitle1,
-        ),
-        TypographyPresentation(
-            title = "Subtitle2",
-            style = MaterialTheme.typography.subtitle2,
-        ),
-        TypographyPresentation(
-            title = "Body1",
-            style = MaterialTheme.typography.body1,
-        ),
-        TypographyPresentation(
-            title = "Body2",
-            style = MaterialTheme.typography.body2,
-        ),
-        TypographyPresentation(
-            title = "Button",
-            style = MaterialTheme.typography.button,
-        ),
-        TypographyPresentation(
-            title = "Caption",
-            style = MaterialTheme.typography.caption,
-        ),
-        TypographyPresentation(
-            title = "Overline",
-            style = MaterialTheme.typography.overline,
-        ),
-    )
+    val types =
+        listOf(
+            TypographyPresentation(
+                title = "H1",
+                style = MaterialTheme.typography.h1,
+            ),
+            TypographyPresentation(
+                title = "H2",
+                style = MaterialTheme.typography.h2,
+            ),
+            TypographyPresentation(
+                title = "H3",
+                style = MaterialTheme.typography.h3,
+            ),
+            TypographyPresentation(
+                title = "H4",
+                style = MaterialTheme.typography.h4,
+            ),
+            TypographyPresentation(
+                title = "H5",
+                style = MaterialTheme.typography.h5,
+            ),
+            TypographyPresentation(
+                title = "H6",
+                style = MaterialTheme.typography.h6,
+            ),
+            TypographyPresentation(
+                title = "Subtitle1",
+                style = MaterialTheme.typography.subtitle1,
+            ),
+            TypographyPresentation(
+                title = "Subtitle2",
+                style = MaterialTheme.typography.subtitle2,
+            ),
+            TypographyPresentation(
+                title = "Body1",
+                style = MaterialTheme.typography.body1,
+            ),
+            TypographyPresentation(
+                title = "Body2",
+                style = MaterialTheme.typography.body2,
+            ),
+            TypographyPresentation(
+                title = "Button",
+                style = MaterialTheme.typography.button,
+            ),
+            TypographyPresentation(
+                title = "Caption",
+                style = MaterialTheme.typography.caption,
+            ),
+            TypographyPresentation(
+                title = "Overline",
+                style = MaterialTheme.typography.overline,
+            ),
+        )
 
     LazyColumn(
         modifier = Modifier.testTag("type-scene-test-tag"),

@@ -37,9 +37,10 @@ fun SettingsScene() {
     val divider = if (isSystemInDarkTheme()) lightCyan else metallicSeaweed
     var isToggleChecked by remember { mutableStateOf(false) }
     LazyColumn(
-        modifier = Modifier
-            .fillMaxSize()
-            .testTag("settings-scene-test-tag"),
+        modifier =
+            Modifier
+                .fillMaxSize()
+                .testTag("settings-scene-test-tag"),
     ) {
         item { ItemSection(text = R.string.settings_about) }
         item {

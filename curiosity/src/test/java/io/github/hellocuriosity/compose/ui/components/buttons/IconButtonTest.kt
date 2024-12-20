@@ -12,7 +12,6 @@ import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Test
 
 class IconButtonTest : ComposeTest() {
-
     @Test
     fun `validate IconButton defaults`() {
         composeTestRule.setContent {

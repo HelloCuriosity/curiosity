@@ -24,15 +24,16 @@ class SlackRepositoryTest {
     }
 
     @Test
-    fun testUpload() = runBlocking {
-        val feedback by forgery<Feedback>()
+    fun testUpload() =
+        runBlocking {
+            val feedback by forgery<Feedback>()
 
-        every { instantProvider.now() } returns feedback.created!!
-        coEvery { cloud.post(any()) } returnsArgument 0
+            every { instantProvider.now() } returns feedback.created!!
+            coEvery { cloud.post(any()) } returnsArgument 0
 
-        assertEquals(feedback, repository.upload(feedback))
+            assertEquals(feedback, repository.upload(feedback))
 
-        coVerify { cloud.post(feedback) }
-        verify { instantProvider.now() }
-    }
+            coVerify { cloud.post(feedback) }
+            verify { instantProvider.now() }
+        }
 }

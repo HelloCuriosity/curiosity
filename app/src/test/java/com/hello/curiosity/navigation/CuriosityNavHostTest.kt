@@ -10,7 +10,6 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class CuriosityNavHostTest : NavigationTest() {
-
     override val navHost: @Composable () -> Unit = {
         CuriosityNavHost(navController = navController)
     }

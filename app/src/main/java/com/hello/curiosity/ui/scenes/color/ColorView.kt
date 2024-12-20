@@ -15,31 +15,32 @@ import androidx.compose.ui.unit.dp
 import com.hello.curiosity.Exclude
 
 @Composable
-internal fun ColorView(
-    presentation: ColorPresentation,
-) = Column(
-    modifier = Modifier.padding(8.dp),
-) {
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(120.dp)
-            .background(
-                color = presentation.color,
-            ),
-    )
+internal fun ColorView(presentation: ColorPresentation) =
+    Column(
+        modifier = Modifier.padding(8.dp),
+    ) {
+        Box(
+            modifier =
+                Modifier
+                    .fillMaxWidth()
+                    .height(120.dp)
+                    .background(
+                        color = presentation.color,
+                    ),
+        )
 
-    Text(text = presentation.title)
-}
+        Text(text = presentation.title)
+    }
 
 @Exclude
 @Preview
 @Composable
 internal fun ColorViewPreview() {
     ColorView(
-        presentation = ColorPresentation(
-            title = "Primary",
-            color = MaterialTheme.colors.primary,
-        ),
+        presentation =
+            ColorPresentation(
+                title = "Primary",
+                color = MaterialTheme.colors.primary,
+            ),
     )
 }

@@ -19,7 +19,6 @@ import io.github.hellocuriosity.compose.ui.theme.ThemeImpl
 import org.junit.Test
 
 class ButtonTest : ComposeTest() {
-
     private val context: Context = ApplicationProvider.getApplicationContext()
     private val res = android.R.string.ok
     private val text = context.getString(res)
@@ -51,12 +50,13 @@ class ButtonTest : ComposeTest() {
                 enabled = false,
                 shape = RectangleShape,
                 style = ThemeImpl.typography.h1,
-                buttonColors = ButtonDefaults.buttonColors(
-                    backgroundColor = Color.Blue,
-                    contentColor = Color.Cyan,
-                    disabledBackgroundColor = Color.Magenta,
-                    disabledContentColor = Color.Yellow,
-                ),
+                buttonColors =
+                    ButtonDefaults.buttonColors(
+                        backgroundColor = Color.Blue,
+                        contentColor = Color.Cyan,
+                        disabledBackgroundColor = Color.Magenta,
+                        disabledContentColor = Color.Yellow,
+                    ),
                 textModifier = Modifier.padding(12.dp),
             )
         }
@@ -100,12 +100,13 @@ class ButtonTest : ComposeTest() {
                 enabled = false,
                 shape = RectangleShape,
                 style = ThemeImpl.typography.h1,
-                buttonColors = ButtonDefaults.buttonColors(
-                    backgroundColor = Color.Blue,
-                    contentColor = Color.Cyan,
-                    disabledBackgroundColor = Color.Magenta,
-                    disabledContentColor = Color.Yellow,
-                ),
+                buttonColors =
+                    ButtonDefaults.buttonColors(
+                        backgroundColor = Color.Blue,
+                        contentColor = Color.Cyan,
+                        disabledBackgroundColor = Color.Magenta,
+                        disabledContentColor = Color.Yellow,
+                    ),
                 textModifier = Modifier.padding(12.dp),
             )
         }

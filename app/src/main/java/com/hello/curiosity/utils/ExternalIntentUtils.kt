@@ -7,11 +7,9 @@ object ExternalIntentUtils {
     const val URL_PRIVACY_POLICY = "https://sites.google.com/view/curiosity-privacy/privacy"
     const val URL_GITHUB = "https://github.com/HelloCuriosity/curiosity"
 
-    fun createGitHubIntent(): Intent =
-        urlIntent(URL_GITHUB)
+    fun createGitHubIntent(): Intent = urlIntent(URL_GITHUB)
 
-    fun createPrivacyPolicyIntent(): Intent =
-        urlIntent(URL_PRIVACY_POLICY)
+    fun createPrivacyPolicyIntent(): Intent = urlIntent(URL_PRIVACY_POLICY)
 
     private fun urlIntent(url: String): Intent {
         val intent = Intent(Intent.ACTION_VIEW)

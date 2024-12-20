@@ -13,56 +13,57 @@ import com.hello.curiosity.Exclude
 @Composable
 @Suppress("MagicNumber", "LongMethod")
 internal fun ColorScene() {
-    val colors = listOf(
-        ColorPresentation(
-            title = "Primary",
-            color = MaterialTheme.colors.primary,
-        ),
-        ColorPresentation(
-            title = "Primary Variant",
-            color = MaterialTheme.colors.primaryVariant,
-        ),
-        ColorPresentation(
-            title = "Secondary",
-            color = MaterialTheme.colors.secondary,
-        ),
-        ColorPresentation(
-            title = "Secondary Variant",
-            color = MaterialTheme.colors.secondaryVariant,
-        ),
-        ColorPresentation(
-            title = "Background",
-            color = MaterialTheme.colors.background,
-        ),
-        ColorPresentation(
-            title = "Surface",
-            color = MaterialTheme.colors.surface,
-        ),
-        ColorPresentation(
-            title = "Error",
-            color = MaterialTheme.colors.error,
-        ),
-        ColorPresentation(
-            title = "On Primary",
-            color = MaterialTheme.colors.onPrimary,
-        ),
-        ColorPresentation(
-            title = "On Secondary",
-            color = MaterialTheme.colors.onSecondary,
-        ),
-        ColorPresentation(
-            title = "On Background",
-            color = MaterialTheme.colors.onBackground,
-        ),
-        ColorPresentation(
-            title = "On Surface",
-            color = MaterialTheme.colors.onSurface,
-        ),
-        ColorPresentation(
-            title = "On Error",
-            color = MaterialTheme.colors.onError,
-        ),
-    )
+    val colors =
+        listOf(
+            ColorPresentation(
+                title = "Primary",
+                color = MaterialTheme.colors.primary,
+            ),
+            ColorPresentation(
+                title = "Primary Variant",
+                color = MaterialTheme.colors.primaryVariant,
+            ),
+            ColorPresentation(
+                title = "Secondary",
+                color = MaterialTheme.colors.secondary,
+            ),
+            ColorPresentation(
+                title = "Secondary Variant",
+                color = MaterialTheme.colors.secondaryVariant,
+            ),
+            ColorPresentation(
+                title = "Background",
+                color = MaterialTheme.colors.background,
+            ),
+            ColorPresentation(
+                title = "Surface",
+                color = MaterialTheme.colors.surface,
+            ),
+            ColorPresentation(
+                title = "Error",
+                color = MaterialTheme.colors.error,
+            ),
+            ColorPresentation(
+                title = "On Primary",
+                color = MaterialTheme.colors.onPrimary,
+            ),
+            ColorPresentation(
+                title = "On Secondary",
+                color = MaterialTheme.colors.onSecondary,
+            ),
+            ColorPresentation(
+                title = "On Background",
+                color = MaterialTheme.colors.onBackground,
+            ),
+            ColorPresentation(
+                title = "On Surface",
+                color = MaterialTheme.colors.onSurface,
+            ),
+            ColorPresentation(
+                title = "On Error",
+                color = MaterialTheme.colors.onError,
+            ),
+        )
 
     LazyVerticalGrid(
         columns = GridCells.Fixed(3),

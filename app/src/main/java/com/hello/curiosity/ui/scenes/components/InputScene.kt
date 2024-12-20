@@ -18,32 +18,35 @@ import io.github.hellocuriosity.compose.ui.components.input.InputTextField
 @Composable
 fun InputScene() {
     LazyColumn(
-        modifier = Modifier
-            .fillMaxWidth()
-            .testTag(INPUT_SCENE_VIEW_TEST_TAG),
+        modifier =
+            Modifier
+                .fillMaxWidth()
+                .testTag(INPUT_SCENE_VIEW_TEST_TAG),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         item {
             InputTextField(
-                modifier = Modifier
-                    .padding(
-                        start = 16.dp,
-                        end = 16.dp,
-                        top = 16.dp,
-                    ),
+                modifier =
+                    Modifier
+                        .padding(
+                            start = 16.dp,
+                            end = 16.dp,
+                            top = 16.dp,
+                        ),
                 colors = inputTextFieldColors(),
                 value = { },
             )
         }
         item {
             InputTextField(
-                modifier = Modifier
-                    .padding(
-                        start = 16.dp,
-                        end = 16.dp,
-                        top = 16.dp,
-                    ),
+                modifier =
+                    Modifier
+                        .padding(
+                            start = 16.dp,
+                            end = 16.dp,
+                            top = 16.dp,
+                        ),
                 placeholder = R.string.input_text_field_placeholder,
                 colors = inputTextFieldColors(),
                 value = { },
@@ -51,12 +54,13 @@ fun InputScene() {
         }
         item {
             InputTextField(
-                modifier = Modifier
-                    .padding(
-                        start = 16.dp,
-                        end = 16.dp,
-                        top = 16.dp,
-                    ),
+                modifier =
+                    Modifier
+                        .padding(
+                            start = 16.dp,
+                            end = 16.dp,
+                            top = 16.dp,
+                        ),
                 placeholder = R.string.input_text_field_placeholder,
                 maxLength = 30,
                 hasCounter = true,

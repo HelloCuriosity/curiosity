@@ -10,7 +10,6 @@ import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Test
 
 abstract class ComposeTextTest : ComposeTest() {
-
     private val context: Context = ApplicationProvider.getApplicationContext()
 
     @StringRes

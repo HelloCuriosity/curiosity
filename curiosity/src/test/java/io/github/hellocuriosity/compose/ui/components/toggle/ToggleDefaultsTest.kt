@@ -31,13 +31,14 @@ class ToggleDefaultsTest : ComposeTest() {
             val toggleColor = Color.Cyan
             val disabledColor = Color.Magenta
             val boarderColor = Color.Red
-            val colors = ToggleDefaults.colors(
-                checkedColor = checkedColor,
-                uncheckedColor = uncheckedColor,
-                toggleColor = toggleColor,
-                disabledColor = disabledColor,
-                boarderColor = boarderColor,
-            )
+            val colors =
+                ToggleDefaults.colors(
+                    checkedColor = checkedColor,
+                    uncheckedColor = uncheckedColor,
+                    toggleColor = toggleColor,
+                    disabledColor = disabledColor,
+                    boarderColor = boarderColor,
+                )
             assertEquals(checkedColor, colors.checkedColor)
             assertEquals(uncheckedColor, colors.uncheckedColor)
             assertEquals(toggleColor, colors.toggleColor)

@@ -12,7 +12,6 @@ import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Test
 
 class ButtonSceneTest : ComposeTest() {
-
     @Test
     fun testButtonScene() {
         composeTestRule.setContent {

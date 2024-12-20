@@ -31,9 +31,10 @@ fun Toggle(
     onToggleChange: ((Boolean) -> Unit),
 ) {
     Surface(
-        modifier = modifier
-            .size(width = 63.dp, height = 36.dp)
-            .testTag(TOGGLE_CONTAINER_TEST_TAG),
+        modifier =
+            modifier
+                .size(width = 63.dp, height = 36.dp)
+                .testTag(TOGGLE_CONTAINER_TEST_TAG),
         enabled = enabled,
         shape = RoundedCornerShape(24.dp),
         color = if (checked) colors.checkedColor else colors.uncheckedColor,
@@ -42,19 +43,19 @@ fun Toggle(
     ) {
         Column(
             modifier =
-            Modifier
-                .fillMaxWidth()
-                .wrapContentSize(
-                    if (checked) Alignment.CenterEnd else Alignment.CenterStart,
-                )
-                .testTag(TOGGLE_BTN_TEST_TAG),
+                Modifier
+                    .fillMaxWidth()
+                    .wrapContentSize(
+                        if (checked) Alignment.CenterEnd else Alignment.CenterStart,
+                    ).testTag(TOGGLE_BTN_TEST_TAG),
         ) {
             Box(
-                modifier = Modifier
-                    .padding(2.dp)
-                    .size(32.dp)
-                    .clip(CircleShape)
-                    .background(colors.toggleColor),
+                modifier =
+                    Modifier
+                        .padding(2.dp)
+                        .size(32.dp)
+                        .clip(CircleShape)
+                        .background(colors.toggleColor),
             )
         }
     }

@@ -13,13 +13,14 @@ object ToggleDefaults {
         toggleColor: Color = Color.White,
         disabledColor: Color = MaterialTheme.colors.onSurface.copy(alpha = ContentAlpha.disabled),
         boarderColor: Color = MaterialTheme.colors.onSurface.copy(alpha = 0.2f),
-    ): ToggleColors = ToggleColors(
-        checkedColor = checkedColor,
-        uncheckedColor = uncheckedColor,
-        toggleColor = toggleColor,
-        disabledColor = disabledColor,
-        boarderColor = boarderColor,
-    )
+    ): ToggleColors =
+        ToggleColors(
+            checkedColor = checkedColor,
+            uncheckedColor = uncheckedColor,
+            toggleColor = toggleColor,
+            disabledColor = disabledColor,
+            boarderColor = boarderColor,
+        )
 }
 
 data class ToggleColors(

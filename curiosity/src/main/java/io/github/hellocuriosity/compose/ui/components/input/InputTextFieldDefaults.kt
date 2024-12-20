@@ -18,15 +18,16 @@ object InputTextFieldDefaults {
         focusedIndicatorColor: Color = Color.Unspecified,
         backgroundColor: Color = Color.Unspecified,
         boarderColor: Color = Color.Transparent,
-    ): InputTextFieldColors = InputTextFieldColors(
-        textColor = textColor,
-        placeholderColor = placeholderColor,
-        cursorColor = cursorColor,
-        unfocusedIndicatorColor = unfocusedIndicatorColor,
-        focusedIndicatorColor = focusedIndicatorColor,
-        backgroundColor = backgroundColor,
-        boarderColor = boarderColor,
-    )
+    ): InputTextFieldColors =
+        InputTextFieldColors(
+            textColor = textColor,
+            placeholderColor = placeholderColor,
+            cursorColor = cursorColor,
+            unfocusedIndicatorColor = unfocusedIndicatorColor,
+            focusedIndicatorColor = focusedIndicatorColor,
+            backgroundColor = backgroundColor,
+            boarderColor = boarderColor,
+        )
 }
 
 data class InputTextFieldColors(

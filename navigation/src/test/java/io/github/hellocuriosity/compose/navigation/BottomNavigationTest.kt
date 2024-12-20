@@ -26,20 +26,21 @@ class BottomNavigationTest : ComposeTest() {
     private val scene2Resource = android.R.string.cancel
     private val scene1Text = context.getText(scene1Resource).toString()
     private val scene2Text = context.getText(scene2Resource).toString()
-    private val scenes = listOf(
-        object : Scene {
-            override val title: Int = scene1Resource
-            override val icon: Int = android.R.drawable.ic_delete
-            override val contentDescription: Int = scene1Resource
-            override val route: String = "ROUTE_1"
-        },
-        object : Scene {
-            override val title: Int = scene2Resource
-            override val icon: Int = android.R.drawable.ic_delete
-            override val contentDescription: Int = scene2Resource
-            override val route: String = "ROUTE_2"
-        },
-    )
+    private val scenes =
+        listOf(
+            object : Scene {
+                override val title: Int = scene1Resource
+                override val icon: Int = android.R.drawable.ic_delete
+                override val contentDescription: Int = scene1Resource
+                override val route: String = "ROUTE_1"
+            },
+            object : Scene {
+                override val title: Int = scene2Resource
+                override val icon: Int = android.R.drawable.ic_delete
+                override val contentDescription: Int = scene2Resource
+                override val route: String = "ROUTE_2"
+            },
+        )
 
     @Test
     fun `validate default BottomNavigation`() {
@@ -95,14 +96,15 @@ class BottomNavigationTest : ComposeTest() {
 
     @Test
     fun `validate custom BottomNavigation`() {
-        val scenes = listOf(
-            object : Scene {
-                override val title: Int = scene1Resource
-                override val icon: Int = android.R.drawable.ic_delete
-                override val contentDescription: Int = scene1Resource
-                override val route: String = "ROUTE"
-            },
-        )
+        val scenes =
+            listOf(
+                object : Scene {
+                    override val title: Int = scene1Resource
+                    override val icon: Int = android.R.drawable.ic_delete
+                    override val contentDescription: Int = scene1Resource
+                    override val route: String = "ROUTE"
+                },
+            )
 
         composeTestRule.setContent {
             val navController = rememberNavController()

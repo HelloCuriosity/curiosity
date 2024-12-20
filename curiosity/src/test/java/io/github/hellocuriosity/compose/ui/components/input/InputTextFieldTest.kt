@@ -76,15 +76,16 @@ class InputTextFieldTest : ComposeTest() {
                 minHeight = 15.dp,
                 hasCounter = false,
                 boarderWidth = 10.dp,
-                colors = InputTextFieldDefaults.colors(
-                    textColor = Color.Blue,
-                    placeholderColor = Color.Black,
-                    cursorColor = Color.Red,
-                    unfocusedIndicatorColor = Color.Green,
-                    focusedIndicatorColor = Color.Yellow,
-                    backgroundColor = Color.Magenta,
-                    boarderColor = Color.Cyan,
-                ),
+                colors =
+                    InputTextFieldDefaults.colors(
+                        textColor = Color.Blue,
+                        placeholderColor = Color.Black,
+                        cursorColor = Color.Red,
+                        unfocusedIndicatorColor = Color.Green,
+                        focusedIndicatorColor = Color.Yellow,
+                        backgroundColor = Color.Magenta,
+                        boarderColor = Color.Cyan,
+                    ),
             )
         }
 

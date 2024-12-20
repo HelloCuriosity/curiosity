@@ -34,25 +34,30 @@ fun IconButton(
     size: Dp = 50.dp,
     shape: Shape = CircleShape,
     color: Color = MaterialTheme.colors.primarySurface,
-    disabledColor: Color = MaterialTheme.colors.onSurface.copy(alpha = 0.12f)
-        .compositeOver(MaterialTheme.colors.surface),
+    disabledColor: Color =
+        MaterialTheme.colors.onSurface
+            .copy(alpha = 0.12f)
+            .compositeOver(MaterialTheme.colors.surface),
     tint: Color = contentColorFor(color),
-    disabledTint: Color = MaterialTheme.colors.onSurface
-        .copy(alpha = ContentAlpha.disabled),
+    disabledTint: Color =
+        MaterialTheme.colors.onSurface
+            .copy(alpha = ContentAlpha.disabled),
     onClick: () -> Unit,
 ) = Surface(
-    modifier = modifier
-        .size(size)
-        .testTag("icon-button-container-test-tag"),
+    modifier =
+        modifier
+            .size(size)
+            .testTag("icon-button-container-test-tag"),
     enabled = enabled,
     shape = shape,
     color = if (enabled) color else disabledColor,
     onClick = onClick,
 ) {
     Icon(
-        modifier = Modifier
-            .padding(8.dp)
-            .testTag("icon-button-test-tag"),
+        modifier =
+            Modifier
+                .padding(8.dp)
+                .testTag("icon-button-test-tag"),
         painter = painterResource(id = icon),
         contentDescription = stringResource(id = contentDescription),
         tint = if (enabled) tint else disabledTint,
