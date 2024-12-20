@@ -16,9 +16,10 @@ fun ItemDivider(
     color: Color = MaterialTheme.colors.onSurface.copy(alpha = 0.12f),
     thickness: Dp = 1.dp,
 ) = Divider(
-    modifier = Modifier
-        .padding(horizontal = 24.dp)
-        .testTag("item-divider-test-tag"),
+    modifier =
+        Modifier
+            .padding(horizontal = 24.dp)
+            .testTag("item-divider-test-tag"),
     color = color,
     thickness = thickness,
 )

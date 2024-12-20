@@ -29,9 +29,10 @@ private val verticalPadding = 16.dp
 fun ToggleScene() {
     var isToggleChecked by remember { mutableStateOf(false) }
     LazyColumn(
-        modifier = Modifier
-            .fillMaxSize()
-            .testTag("toggle-scene-test-tag"),
+        modifier =
+            Modifier
+                .fillMaxSize()
+                .testTag("toggle-scene-test-tag"),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(verticalPadding),
     ) {
@@ -52,10 +53,11 @@ fun ToggleScene() {
         item {
             DropDownMenu(
                 modifier = Modifier.padding(16.dp),
-                items = listOf(
-                    R.string.drop_down_item_one,
-                    R.string.drop_down_item_two,
-                ),
+                items =
+                    listOf(
+                        R.string.drop_down_item_one,
+                        R.string.drop_down_item_two,
+                    ),
                 onItemSelected = {
                 },
                 contentDescription = R.string.content_description_drop_down,

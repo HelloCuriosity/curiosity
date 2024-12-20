@@ -15,21 +15,26 @@ object ButtonDefaults {
     fun buttonColors(
         backgroundColor: Color = MaterialTheme.colors.primarySurface,
         contentColor: Color = contentColorFor(backgroundColor),
-        disabledBackgroundColor: Color = MaterialTheme.colors.onSurface.copy(alpha = 0.12f)
-            .compositeOver(MaterialTheme.colors.surface),
-        disabledContentColor: Color = MaterialTheme.colors.onSurface
-            .copy(alpha = ContentAlpha.disabled),
-    ): ButtonColors = ButtonDefaults.buttonColors(
-        backgroundColor = backgroundColor,
-        contentColor = contentColor,
-        disabledBackgroundColor = disabledBackgroundColor,
-        disabledContentColor = disabledContentColor,
-    )
+        disabledBackgroundColor: Color =
+            MaterialTheme.colors.onSurface
+                .copy(alpha = 0.12f)
+                .compositeOver(MaterialTheme.colors.surface),
+        disabledContentColor: Color =
+            MaterialTheme.colors.onSurface
+                .copy(alpha = ContentAlpha.disabled),
+    ): ButtonColors =
+        ButtonDefaults.buttonColors(
+            backgroundColor = backgroundColor,
+            contentColor = contentColor,
+            disabledBackgroundColor = disabledBackgroundColor,
+            disabledContentColor = disabledContentColor,
+        )
 }
 
 @Composable
-internal fun ButtonColors.tintColor(enabled: Boolean) = if (enabled) {
-    contentColor(enabled = true).value
-} else {
-    MaterialTheme.colors.onSurface.copy(alpha = ContentAlpha.disabled)
-}
+internal fun ButtonColors.tintColor(enabled: Boolean) =
+    if (enabled) {
+        contentColor(enabled = true).value
+    } else {
+        MaterialTheme.colors.onSurface.copy(alpha = ContentAlpha.disabled)
+    }

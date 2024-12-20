@@ -24,12 +24,13 @@ import io.github.hellocuriosity.compose.ui.components.text.LabelMedium
 fun DashboardScene() {
     val navController = rememberNavController()
 
-    val scenes = listOf(
-        Scenes.Components,
-        Scenes.Color,
-        Scenes.Typography,
-        Scenes.Settings,
-    )
+    val scenes =
+        listOf(
+            Scenes.Components,
+            Scenes.Color,
+            Scenes.Typography,
+            Scenes.Settings,
+        )
 
     Scaffold(
         modifier = Modifier.testTag(DASHBOARD_SCENE_VIEW_TEST_TAG),
@@ -65,9 +66,10 @@ fun DashboardScene() {
         },
     ) { padding ->
         Box(
-            modifier = Modifier
-                .padding(padding)
-                .testTag(DASHBOARD_SCENE_NAVIGATION_TEST_TAG),
+            modifier =
+                Modifier
+                    .padding(padding)
+                    .testTag(DASHBOARD_SCENE_NAVIGATION_TEST_TAG),
         ) {
             CuriosityNavHost(
                 navController = navController,

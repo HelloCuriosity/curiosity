@@ -11,7 +11,6 @@ sealed class Scenes(
     @StringRes override val contentDescription: Int,
     override val route: String,
 ) : Scene {
-
     object Buttons : Scenes(
         title = R.string.button_scene_title,
         icon = R.drawable.ic_button,
@@ -70,30 +69,33 @@ sealed class Scenes(
 }
 
 @StringRes
-fun String?.title(): Int? = when (this) {
-    Scenes.Buttons.route -> Scenes.Buttons.title
-    Scenes.Color.route -> Scenes.Color.title
-    Scenes.Components.route -> Scenes.Components.title
-    Scenes.Input.route -> Scenes.Input.title
-    Scenes.Settings.route -> Scenes.Settings.title
-    Scenes.Text.route -> Scenes.Text.title
-    Scenes.Toggle.route -> Scenes.Toggle.title
-    Scenes.Typography.route -> Scenes.Typography.title
-    else -> null
-}
+fun String?.title(): Int? =
+    when (this) {
+        Scenes.Buttons.route -> Scenes.Buttons.title
+        Scenes.Color.route -> Scenes.Color.title
+        Scenes.Components.route -> Scenes.Components.title
+        Scenes.Input.route -> Scenes.Input.title
+        Scenes.Settings.route -> Scenes.Settings.title
+        Scenes.Text.route -> Scenes.Text.title
+        Scenes.Toggle.route -> Scenes.Toggle.title
+        Scenes.Typography.route -> Scenes.Typography.title
+        else -> null
+    }
 
-fun String?.showBottomNavigation(): Boolean = when (this) {
-    Scenes.Color.route -> true
-    Scenes.Components.route -> true
-    Scenes.Typography.route -> true
-    Scenes.Settings.route -> true
-    else -> false
-}
+fun String?.showBottomNavigation(): Boolean =
+    when (this) {
+        Scenes.Color.route -> true
+        Scenes.Components.route -> true
+        Scenes.Typography.route -> true
+        Scenes.Settings.route -> true
+        else -> false
+    }
 
-fun String?.showTopAppBar(): Boolean = when (this) {
-    Scenes.Color.route -> false
-    Scenes.Components.route -> false
-    Scenes.Typography.route -> false
-    Scenes.Settings.route -> false
-    else -> true
-}
+fun String?.showTopAppBar(): Boolean =
+    when (this) {
+        Scenes.Color.route -> false
+        Scenes.Components.route -> false
+        Scenes.Typography.route -> false
+        Scenes.Settings.route -> false
+        else -> true
+    }

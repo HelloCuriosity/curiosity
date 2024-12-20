@@ -9,10 +9,11 @@ object DropDownMenuDefaults {
     fun colors(
         backgroundColor: Color = MaterialTheme.colors.onSurface.copy(alpha = 0.1f),
         boarderColor: Color = MaterialTheme.colors.onSurface.copy(alpha = 0.2f),
-    ): DropDownMenuColors = DropDownMenuColors(
-        backgroundColor = backgroundColor,
-        boarderColor = boarderColor,
-    )
+    ): DropDownMenuColors =
+        DropDownMenuColors(
+            backgroundColor = backgroundColor,
+            boarderColor = boarderColor,
+        )
 
     internal const val ONE_EIGHTY_DEGREES = 180f
     internal const val ZERO_DEGREES = 0f

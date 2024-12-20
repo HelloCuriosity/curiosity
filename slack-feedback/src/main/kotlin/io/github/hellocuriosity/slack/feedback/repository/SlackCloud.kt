@@ -11,9 +11,9 @@ class SlackCloud(
     private val service: SlackService,
     private val feedbackConverter: Converter<Feedback, ApiSlackMessage> = FeedbackConverter(),
 ) {
-
     suspend fun post(value: Feedback): Feedback? =
-        service.post(feedbackConverter.from(value))
+        service
+            .post(feedbackConverter.from(value))
             .toValue(value)
 
     private fun <T : Any> ApiResponse.toValue(value: T): T? =

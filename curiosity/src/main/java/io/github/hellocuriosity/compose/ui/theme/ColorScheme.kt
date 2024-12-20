@@ -18,7 +18,6 @@ data class ColorScheme(
     val onBackground: Color = Color.Black,
     val onSurface: Color = Color.Black,
     val onError: Color = Color.White,
-
     val primaryDark: Color = Color(0xFFBB86FC),
     val primaryVariantDark: Color = Color(0xFF3700B3),
     val secondaryDark: Color = Color(0xFF03DAC6),
@@ -32,37 +31,37 @@ data class ColorScheme(
     val onSurfaceDark: Color = Color.White,
     val onErrorDark: Color = Color.Black,
 ) {
+    fun toMaterialColors(isDark: Boolean) = if (isDark) darkColorPalette else lightColorPalette
 
-    fun toMaterialColors(isDark: Boolean) =
-        if (isDark) darkColorPalette else lightColorPalette
+    private val lightColorPalette =
+        lightColors(
+            primary = primary,
+            primaryVariant = primaryVariant,
+            secondary = secondary,
+            secondaryVariant = secondaryVariant,
+            background = background,
+            surface = surface,
+            error = error,
+            onPrimary = onPrimary,
+            onSecondary = onSecondary,
+            onBackground = onBackground,
+            onSurface = onSurface,
+            onError = onError,
+        )
 
-    private val lightColorPalette = lightColors(
-        primary = primary,
-        primaryVariant = primaryVariant,
-        secondary = secondary,
-        secondaryVariant = secondaryVariant,
-        background = background,
-        surface = surface,
-        error = error,
-        onPrimary = onPrimary,
-        onSecondary = onSecondary,
-        onBackground = onBackground,
-        onSurface = onSurface,
-        onError = onError,
-    )
-
-    private val darkColorPalette = darkColors(
-        primary = primaryDark,
-        primaryVariant = primaryVariantDark,
-        secondary = secondaryDark,
-        secondaryVariant = secondaryVariantDark,
-        background = backgroundDark,
-        surface = surfaceDark,
-        error = errorDark,
-        onPrimary = onPrimaryDark,
-        onSecondary = onSecondaryDark,
-        onBackground = onBackgroundDark,
-        onSurface = onSurfaceDark,
-        onError = onErrorDark,
-    )
+    private val darkColorPalette =
+        darkColors(
+            primary = primaryDark,
+            primaryVariant = primaryVariantDark,
+            secondary = secondaryDark,
+            secondaryVariant = secondaryVariantDark,
+            background = backgroundDark,
+            surface = surfaceDark,
+            error = errorDark,
+            onPrimary = onPrimaryDark,
+            onSecondary = onSecondaryDark,
+            onBackground = onBackgroundDark,
+            onSurface = onSurfaceDark,
+            onError = onErrorDark,
+        )
 }

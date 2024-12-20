@@ -8,7 +8,6 @@ import org.junit.Assert.assertEquals
 import org.junit.Before
 
 abstract class NavigationTest : ComposeTest() {
-
     protected lateinit var navController: TestNavHostController
 
     protected abstract val navHost: @Composable () -> Unit

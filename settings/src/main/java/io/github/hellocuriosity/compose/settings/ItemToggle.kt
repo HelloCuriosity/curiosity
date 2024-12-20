@@ -27,9 +27,10 @@ fun ItemToggle(
     toggleColors: ToggleColors = ToggleDefaults.colors(),
     onToggleChange: ((Boolean) -> Unit),
 ) = Row(
-    modifier = Modifier
-        .fillMaxWidth()
-        .testTag(ITEM_TOGGLE_TEST_TAG),
+    modifier =
+        Modifier
+            .fillMaxWidth()
+            .testTag(ITEM_TOGGLE_TEST_TAG),
     horizontalArrangement = Arrangement.SpaceBetween,
 ) {
     ItemInfo(

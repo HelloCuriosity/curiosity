@@ -18,7 +18,6 @@ class SlackFeedbackProvider(
     private val language: String = "en-US",
     private val interceptors: List<Interceptor> = emptyList(),
 ) {
-
     val slackRepository: SlackRepository by lazy {
         SlackRepository(cloud = SlackCloud(service = service))
     }

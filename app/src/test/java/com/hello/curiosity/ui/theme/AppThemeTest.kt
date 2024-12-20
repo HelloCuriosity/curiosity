@@ -8,7 +8,6 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class AppThemeTest : ComposeTest() {
-
     @Test
     fun `validate check box colors in light mode`() {
         composeTestRule.setContent {

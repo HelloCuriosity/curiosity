@@ -10,7 +10,6 @@ import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Test
 
 class ToggleSceneTest : ComposeTest() {
-
     @Test
     fun testToggleScene() {
         composeTestRule.setContent {

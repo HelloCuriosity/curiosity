@@ -15,47 +15,52 @@ import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
 open class NetworkTest {
-
-    val apiSlackMessage = ApiSlackMessage(
-        channel = "test-channel-id",
-        attachments = listOf(
-            ApiAttachment(
-                fallback = "fallback",
-                color = "#B562F2",
-                pretext = "pretext",
-                title = "title",
-                text = "text",
-            ),
-        ),
-    )
-
-    val apiResponse = ApiResponse(
-        isSuccessful = true,
-        channel = "test-channel-id",
-        timestamp = "1564436784",
-        message = ApiMessage(
-            type = "message",
-            subtype = "bot_message",
-            text = "",
-            timestamp = "1564436784",
-            username = "name",
-            botId = "botid",
-            attachments = listOf(
-                ApiAttachment(
-                    fallback = "Required plain-text summary of the attachment.",
-                    color = "FCD229",
-                    pretext = "Optional text that appears above the attachment block",
-                    title = "title",
-                    text = "text",
-                    footer = "Slack API",
-                    icon = "https://platform.slack-edge.com/img/default_application_icon.png",
-                    createdOn = 123456789,
+    val apiSlackMessage =
+        ApiSlackMessage(
+            channel = "test-channel-id",
+            attachments =
+                listOf(
+                    ApiAttachment(
+                        fallback = "fallback",
+                        color = "#B562F2",
+                        pretext = "pretext",
+                        title = "title",
+                        text = "text",
+                    ),
                 ),
-            ),
-        ),
-    )
+        )
 
-    private val responseBody = """
+    val apiResponse =
+        ApiResponse(
+            isSuccessful = true,
+            channel = "test-channel-id",
+            timestamp = "1564436784",
+            message =
+                ApiMessage(
+                    type = "message",
+                    subtype = "bot_message",
+                    text = "",
+                    timestamp = "1564436784",
+                    username = "name",
+                    botId = "botid",
+                    attachments =
+                        listOf(
+                            ApiAttachment(
+                                fallback = "Required plain-text summary of the attachment.",
+                                color = "FCD229",
+                                pretext = "Optional text that appears above the attachment block",
+                                title = "title",
+                                text = "text",
+                                footer = "Slack API",
+                                icon = "https://platform.slack-edge.com/img/default_application_icon.png",
+                                createdOn = 123456789,
+                            ),
+                        ),
+                ),
+        )
+
+    private val responseBody =
+        """
         {
   "ok": true,
   "channel": "test-channel-id",
@@ -88,22 +93,25 @@ open class NetworkTest {
     ]
   }
 }
-    """.trimIndent()
+        """.trimIndent()
 
-    private val engine: MockEngine = MockEngine {
-        respond(
-            content = responseBody,
-            status = HttpStatusCode.OK,
-            headers = headersOf(
-                HttpHeaders.ContentType,
-                "application/json",
-            ),
-        )
-    }
-
-    val client = HttpClient(engine) {
-        install(ContentNegotiation) {
-            json(json = Json { ignoreUnknownKeys = true })
+    private val engine: MockEngine =
+        MockEngine {
+            respond(
+                content = responseBody,
+                status = HttpStatusCode.OK,
+                headers =
+                    headersOf(
+                        HttpHeaders.ContentType,
+                        "application/json",
+                    ),
+            )
         }
-    }
+
+    val client =
+        HttpClient(engine) {
+            install(ContentNegotiation) {
+                json(json = Json { ignoreUnknownKeys = true })
+            }
+        }
 }

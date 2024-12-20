@@ -50,28 +50,29 @@ fun InputTextField(
     boarderWidth: Dp = 0.dp,
     colors: InputTextFieldColors = InputTextFieldDefaults.colors(),
 ) = Box(
-    modifier = modifier
-        .fillMaxWidth()
-        .background(
-            shape = RoundedCornerShape(10.dp),
-            color = colors.backgroundColor,
-        )
-        .border(
-            border = BorderStroke(
-                width = boarderWidth,
-                color = colors.boarderColor,
-            ),
-            shape = RoundedCornerShape(10.dp),
-        )
-        .testTag(INPUT_TEXT_FIELD_CONTAINER_TEST_TAG),
+    modifier =
+        modifier
+            .fillMaxWidth()
+            .background(
+                shape = RoundedCornerShape(10.dp),
+                color = colors.backgroundColor,
+            ).border(
+                border =
+                    BorderStroke(
+                        width = boarderWidth,
+                        color = colors.boarderColor,
+                    ),
+                shape = RoundedCornerShape(10.dp),
+            ).testTag(INPUT_TEXT_FIELD_CONTAINER_TEST_TAG),
 ) {
     var text by remember { mutableStateOf("") }
 
     TextField(
-        modifier = Modifier
-            .fillMaxWidth()
-            .defaultMinSize(minHeight = minHeight)
-            .testTag(INPUT_TEXT_FIELD_VALUE_TEST_TAG),
+        modifier =
+            Modifier
+                .fillMaxWidth()
+                .defaultMinSize(minHeight = minHeight)
+                .testTag(INPUT_TEXT_FIELD_VALUE_TEST_TAG),
         value = text,
         onValueChange = {
             text = if (maxLength != null) it.take(maxLength) else it
@@ -80,13 +81,14 @@ fun InputTextField(
         enabled = enabled,
         readOnly = readOnly,
         textStyle = textStyle,
-        colors = TextFieldDefaults.textFieldColors(
-            textColor = colors.textColor,
-            cursorColor = colors.cursorColor,
-            unfocusedIndicatorColor = colors.unfocusedIndicatorColor,
-            focusedIndicatorColor = colors.focusedIndicatorColor,
-            backgroundColor = colors.backgroundColor,
-        ),
+        colors =
+            TextFieldDefaults.textFieldColors(
+                textColor = colors.textColor,
+                cursorColor = colors.cursorColor,
+                unfocusedIndicatorColor = colors.unfocusedIndicatorColor,
+                focusedIndicatorColor = colors.focusedIndicatorColor,
+                backgroundColor = colors.backgroundColor,
+            ),
         placeholder = {
             placeholder?.let { res ->
                 LabelSmall(
@@ -103,12 +105,14 @@ fun InputTextField(
     )
     if (hasCounter) {
         LabelTiny(
-            modifier = Modifier
-                .padding(bottom = 4.dp, end = 8.dp)
-                .align(BottomEnd)
-                .testTag(INPUT_TEXT_FIELD_COUNTER_TEST_TAG),
-            text = maxLength?.let { "${text.length}/$it" }
-                ?: error("Counter configured without setting a length"),
+            modifier =
+                Modifier
+                    .padding(bottom = 4.dp, end = 8.dp)
+                    .align(BottomEnd)
+                    .testTag(INPUT_TEXT_FIELD_COUNTER_TEST_TAG),
+            text =
+                maxLength?.let { "${text.length}/$it" }
+                    ?: error("Counter configured without setting a length"),
             color = colors.textColor,
         )
     }

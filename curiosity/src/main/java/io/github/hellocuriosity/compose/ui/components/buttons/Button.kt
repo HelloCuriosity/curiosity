@@ -39,10 +39,11 @@ fun TextButton(
     shape: Shape = btnShape,
     buttonColors: ButtonColors = buttonColors(),
     style: TextStyle = btnStyle,
-    textModifier: Modifier = Modifier.padding(
-        vertical = verticalPadding,
-        horizontal = horizontalPadding,
-    ),
+    textModifier: Modifier =
+        Modifier.padding(
+            vertical = verticalPadding,
+            horizontal = horizontalPadding,
+        ),
 ) = Button(
     modifier = modifier,
     shape = shape,
@@ -69,12 +70,13 @@ fun TextIconButton(
     buttonColors: ButtonColors = buttonColors(),
     style: TextStyle = btnStyle,
     tint: Color = buttonColors().tintColor(enabled = enabled),
-    textModifier: Modifier = Modifier.padding(
-        top = verticalPadding,
-        bottom = verticalPadding,
-        end = horizontalPadding,
-        start = 12.dp,
-    ),
+    textModifier: Modifier =
+        Modifier.padding(
+            top = verticalPadding,
+            bottom = verticalPadding,
+            end = horizontalPadding,
+            start = 12.dp,
+        ),
 ) = Button(
     modifier = modifier,
     shape = shape,

@@ -26,9 +26,10 @@ fun ButtonScene() {
     val ctx = LocalContext.current
 
     LazyColumn(
-        modifier = Modifier
-            .fillMaxSize()
-            .testTag("button-scene-test-tag"),
+        modifier =
+            Modifier
+                .fillMaxSize()
+                .testTag("button-scene-test-tag"),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(verticalPadding),
     ) {

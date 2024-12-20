@@ -29,11 +29,12 @@ fun ItemAction(
     tint: Color = Color.Unspecified,
     onClick: () -> Unit,
 ) = Row(
-    modifier = Modifier
-        .fillMaxWidth()
-        .padding(24.dp)
-        .clickable(onClick = onClick)
-        .testTag("icon-action-test-tag"),
+    modifier =
+        Modifier
+            .fillMaxWidth()
+            .padding(24.dp)
+            .clickable(onClick = onClick)
+            .testTag("icon-action-test-tag"),
     horizontalArrangement = Arrangement.SpaceBetween,
     verticalAlignment = Alignment.CenterVertically,
 ) {
@@ -42,9 +43,10 @@ fun ItemAction(
         color = textColor,
     )
     Icon(
-        modifier = Modifier
-            .padding(start = 24.dp)
-            .testTag("icon-test-tag"),
+        modifier =
+            Modifier
+                .padding(start = 24.dp)
+                .testTag("icon-test-tag"),
         painter = painterResource(id = icon),
         contentDescription = stringResource(id = contentDescription),
         tint = tint,

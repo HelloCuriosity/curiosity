@@ -21,8 +21,9 @@ fun ItemSection(
     textAlign: TextAlign? = null,
     style: TextStyle = MaterialTheme.typography.h6,
 ) = LabelSmall(
-    modifier = Modifier
-        .padding(start = 24.dp, top = 24.dp, end = 24.dp),
+    modifier =
+        Modifier
+            .padding(start = 24.dp, top = 24.dp, end = 24.dp),
     text = stringResource(id = text).uppercase(),
     color = color,
     textAlign = textAlign,

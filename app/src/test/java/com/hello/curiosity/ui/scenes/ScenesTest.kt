@@ -7,7 +7,6 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class ScenesTest {
-
     @Test
     fun testButton() {
         val scene = Scenes.Buttons

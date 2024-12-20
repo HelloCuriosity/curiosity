@@ -8,7 +8,6 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class CheckBoxDefaultsTest : ComposeTest() {
-
     @Test
     fun `validate CheckBoxDefaults colors() returns default values`() {
         composeTestRule.setContent {
@@ -29,13 +28,14 @@ class CheckBoxDefaultsTest : ComposeTest() {
             val checkmarkColor = Color.Cyan
             val disabledColor = Color.Magenta
             val boarderColor = Color.Red
-            val colors = CheckBoxDefaults.colors(
-                checkedColor = checkedColor,
-                uncheckedColor = uncheckedColor,
-                checkmarkColor = checkmarkColor,
-                disabledColor = disabledColor,
-                boarderColor = boarderColor,
-            )
+            val colors =
+                CheckBoxDefaults.colors(
+                    checkedColor = checkedColor,
+                    uncheckedColor = uncheckedColor,
+                    checkmarkColor = checkmarkColor,
+                    disabledColor = disabledColor,
+                    boarderColor = boarderColor,
+                )
             assertEquals(checkedColor, colors.checkedColor)
             assertEquals(uncheckedColor, colors.uncheckedColor)
             assertEquals(checkmarkColor, colors.checkmarkColor)

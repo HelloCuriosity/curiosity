@@ -6,7 +6,6 @@ import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Test
 
 class ColorSceneTest : ComposeTest() {
-
     @Test
     fun testColorScene() {
         composeTestRule.setContent {

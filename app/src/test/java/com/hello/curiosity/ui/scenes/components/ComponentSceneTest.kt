@@ -8,7 +8,6 @@ import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Test
 
 class ComponentSceneTest : ComposeTest() {
-
     @Test
     fun testComponentScene() {
         composeTestRule.setContent {

@@ -13,7 +13,6 @@ import org.robolectric.annotation.Config
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [33])
 class ExternalIntentUtilsTest {
-
     @Test
     fun `validate GitHub intent`() {
         val intent = createGitHubIntent()

@@ -8,7 +8,6 @@ import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Test
 
 class ItemDividerTest : ComposeTest() {
-
     @Test
     fun `validate item divider defaults`() {
         composeTestRule.setContent {

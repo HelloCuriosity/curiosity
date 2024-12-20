@@ -7,7 +7,6 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class DropDownMenuDefaultsTest : ComposeTest() {
-
     @Test
     fun `validate DropDownMenuDefaults colors() return default values`() {
         composeTestRule.setContent {
@@ -22,10 +21,11 @@ class DropDownMenuDefaultsTest : ComposeTest() {
         composeTestRule.setContent {
             val backgroundColor = Color.Blue
             val boarderColor = Color.Cyan
-            val colors = DropDownMenuDefaults.colors(
-                backgroundColor = backgroundColor,
-                boarderColor = boarderColor,
-            )
+            val colors =
+                DropDownMenuDefaults.colors(
+                    backgroundColor = backgroundColor,
+                    boarderColor = boarderColor,
+                )
             assertEquals(backgroundColor, colors.backgroundColor)
             assertEquals(boarderColor, colors.boarderColor)
         }

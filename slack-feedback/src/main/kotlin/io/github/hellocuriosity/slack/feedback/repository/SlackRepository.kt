@@ -12,6 +12,5 @@ class SlackRepository(
         fun now(): Instant
     }
 
-    suspend fun upload(value: Feedback): Feedback? =
-        cloud.post(value.copy(created = instantProvider.now()))
+    suspend fun upload(value: Feedback): Feedback? = cloud.post(value.copy(created = instantProvider.now()))
 }

@@ -30,10 +30,11 @@ fun ItemDropDown(
     enabled: Boolean = true,
     colors: DropDownMenuColors = DropDownMenuDefaults.colors(),
 ) = Column(
-    modifier = modifier
-        .fillMaxWidth()
-        .padding(24.dp)
-        .testTag(ITEM_DROP_DOWN_CONTAINER_TEST_TAG),
+    modifier =
+        modifier
+            .fillMaxWidth()
+            .padding(24.dp)
+            .testTag(ITEM_DROP_DOWN_CONTAINER_TEST_TAG),
 ) {
     LabelMedium(
         text = title,

@@ -28,20 +28,22 @@ class SlackCloudTest {
     }
 
     @Test
-    fun testPostSuccess() = runBlocking {
-        coEvery { service.post(any()) } returns apiResponse.copy(isSuccessful = true)
+    fun testPostSuccess() =
+        runBlocking {
+            coEvery { service.post(any()) } returns apiResponse.copy(isSuccessful = true)
 
-        assertEquals(feedback, cloud.post(feedback))
+            assertEquals(feedback, cloud.post(feedback))
 
-        coVerify { service.post(apiSlackMessage) }
-    }
+            coVerify { service.post(apiSlackMessage) }
+        }
 
     @Test
-    fun testPostFailure() = runBlocking {
-        coEvery { service.post(any()) } returns apiResponse.copy(isSuccessful = false)
+    fun testPostFailure() =
+        runBlocking {
+            coEvery { service.post(any()) } returns apiResponse.copy(isSuccessful = false)
 
-        assertNull(cloud.post(feedback))
+            assertNull(cloud.post(feedback))
 
-        coVerify { service.post(apiSlackMessage) }
-    }
+            coVerify { service.post(apiSlackMessage) }
+        }
 }

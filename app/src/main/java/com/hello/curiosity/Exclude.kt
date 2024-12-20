@@ -1,4 +1,4 @@
 package com.hello.curiosity
 
 @Suppress("EmptyDefaultConstructor")
-internal annotation class Exclude()
+internal annotation class Exclude

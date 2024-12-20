@@ -40,9 +40,10 @@ fun CheckBox(
 ) {
     var isChecked by remember { mutableStateOf(checked) }
     Surface(
-        modifier = modifier
-            .size(size)
-            .testTag("checkbox-surface-test-tag"),
+        modifier =
+            modifier
+                .size(size)
+                .testTag("checkbox-surface-test-tag"),
         enabled = enabled,
         shape = shape,
         color = if (isChecked) colors.checkedColor else colors.uncheckedColor,
@@ -54,8 +55,9 @@ fun CheckBox(
     ) {
         if (isChecked) {
             Icon(
-                modifier = Modifier
-                    .testTag("checkbox-toggle-icon-test-tag"),
+                modifier =
+                    Modifier
+                        .testTag("checkbox-toggle-icon-test-tag"),
                 imageVector = vectorImage,
                 contentDescription = stringResource(id = contentDescription),
                 tint = colors.checkmarkColor,
