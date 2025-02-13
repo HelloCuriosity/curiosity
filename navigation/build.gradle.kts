@@ -60,11 +60,11 @@ dependencies {
 
     // Compose
     implementation("androidx.activity:activity-compose:1.10.0")
-    implementation("androidx.compose.material:material:1.7.7")
+    implementation("androidx.compose.material:material:1.7.8")
     implementation("androidx.navigation:navigation-compose:2.8.7")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.7.7")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.7.7")
-    implementation("androidx.compose.ui:ui:1.7.7")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.7.8")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.7.8")
+    implementation("androidx.compose.ui:ui:1.7.8")
 
     // It is a known bug: https://issuetracker.google.com/issues/227767363
     //
@@ -80,8 +80,8 @@ dependencies {
     testImplementation(project(":test-compose-utils"))
 
     // Compose
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.7.7")
-    testImplementation("androidx.compose.ui:ui-test-junit4:1.7.7")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.7.8")
+    testImplementation("androidx.compose.ui:ui-test-junit4:1.7.8")
     testImplementation("androidx.navigation:navigation-testing:2.8.7")
 
     testImplementation("org.robolectric:robolectric:4.14.1") {
@@ -106,7 +106,7 @@ dependencies {
     // Android Testing
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.7.7")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.7.8")
 }
 
 tasks.withType<Sign>().configureEach {
