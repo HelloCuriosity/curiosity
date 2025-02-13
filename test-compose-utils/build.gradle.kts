@@ -52,7 +52,7 @@ dependencies {
     // Compose
     implementation("androidx.navigation:navigation-compose:2.8.7")
     implementation("androidx.navigation:navigation-testing:2.8.7")
-    implementation("androidx.compose.ui:ui-test-junit4:1.7.7")
+    implementation("androidx.compose.ui:ui-test-junit4:1.7.8")
 
     // jUnit
     implementation("junit:junit:4.13.2")
