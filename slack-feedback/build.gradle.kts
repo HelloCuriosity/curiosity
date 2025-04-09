@@ -34,7 +34,7 @@ dependencies {
 
     // Ktor
     testImplementation("io.ktor:ktor-client-mock:3.1.2")
-    testImplementation("org.slf4j:slf4j-simple:2.0.16")
+    testImplementation("org.slf4j:slf4j-simple:2.0.17")
 }
 
 java {
