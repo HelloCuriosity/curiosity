@@ -12,7 +12,7 @@ plugins {
     id("org.jetbrains.kotlin.plugin.compose") version "2.1.20" apply false
 
     id("io.gitlab.arturbosch.detekt") version "1.23.8"
-    id("org.jmailen.kotlinter") version "5.0.1"
+    id("org.jmailen.kotlinter") version "5.1.1"
     id("org.jetbrains.kotlinx.kover") version "0.7.6"
 }
 
