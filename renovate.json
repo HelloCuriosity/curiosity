@@ -8,6 +8,10 @@
   ],
   "packageRules": [
     {
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
       "groupName": "Android Gradle Plugin",
       "matchPackageNames": [
         "/com.android.library/",
