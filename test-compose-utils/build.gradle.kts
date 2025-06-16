@@ -50,8 +50,8 @@ dependencies {
     implementation("androidx.core:core-ktx:1.15.0")
 
     // Compose
-    implementation("androidx.navigation:navigation-compose:2.8.9")
-    implementation("androidx.navigation:navigation-testing:2.8.9")
+    implementation("androidx.navigation:navigation-compose:2.9.0")
+    implementation("androidx.navigation:navigation-testing:2.9.0")
     implementation("androidx.compose.ui:ui-test-junit4:1.7.8")
 
     // jUnit
