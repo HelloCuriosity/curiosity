@@ -21,7 +21,7 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json:3.2.0")
 
     // Serialization
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
 
     // Testing
     testImplementation("junit:junit:4.13.2")
