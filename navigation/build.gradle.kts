@@ -63,7 +63,7 @@ dependencies {
     implementation("androidx.compose.material:material:1.8.3")
     implementation("androidx.navigation:navigation-compose:2.9.1")
     debugImplementation("androidx.compose.ui:ui-tooling:1.8.3")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.8.2")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.8.3")
     implementation("androidx.compose.ui:ui:1.8.3")
 
     // It is a known bug: https://issuetracker.google.com/issues/227767363
@@ -80,7 +80,7 @@ dependencies {
     testImplementation(project(":test-compose-utils"))
 
     // Compose
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.8.2")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.8.3")
     testImplementation("androidx.compose.ui:ui-test-junit4:1.8.3")
     testImplementation("androidx.navigation:navigation-testing:2.9.1")
 
