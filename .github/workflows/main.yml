@@ -8,25 +8,17 @@ on:
     branches:
       - main
 
-jobs:
-  cancel-previous:
-    name: Cancel Previous
-    permissions:
-      contents: read
-      actions: write
-    runs-on: ubuntu-latest
-    steps:
-      - name: Cancel Previous Build
-        uses: styfle/cancel-workflow-action@0.12.1
-        with:
-          access_token: ${{ secrets.GITHUB_TOKEN }}
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
+permissions:
+  contents: read
+
+jobs:
   lint:
     name: Lint
-    permissions:
-      contents: read
     runs-on: ubuntu-latest
-    needs: cancel-previous
     steps:
       - name: Checkout
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
@@ -46,7 +38,6 @@ jobs:
   test:
     name: "Test & Report"
     runs-on: ubuntu-latest
-    needs: cancel-previous
     steps:
       - name: Checkout
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
@@ -67,10 +58,7 @@ jobs:
 
   assemble:
     name: "Assemble"
-    permissions:
-      contents: read
     runs-on: ubuntu-latest
-    needs: cancel-previous
     env:
       KEYSTORE_ENC_PW: ${{ secrets.KEYSTORE_ENC_PW }}
       KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
@@ -92,10 +80,7 @@ jobs:
 
   bundle:
     name: Bundle
-    permissions:
-      contents: read
     runs-on: ubuntu-latest
-    needs: cancel-previous
     env:
       KEYSTORE_ENC_PW: ${{ secrets.KEYSTORE_ENC_PW }}
       KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
@@ -114,4 +99,3 @@ jobs:
           ./scripts/decrypt.sh keystore/curiosity.keystore.aes-256-cbc-enc.b64 keystore/curiosity.keystore ${KEYSTORE_ENC_PW}
       - name: Bundle
         run: make clean bundle
-
