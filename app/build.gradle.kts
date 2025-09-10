@@ -97,7 +97,7 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.10.1")
     implementation("androidx.compose.material:material:1.9.0")
     implementation("androidx.compose.material:material-icons-extended:1.7.8")
-    implementation("androidx.navigation:navigation-compose:2.9.3")
+    implementation("androidx.navigation:navigation-compose:2.9.4")
     debugImplementation("androidx.compose.ui:ui-tooling:1.9.0")
     implementation("androidx.compose.ui:ui-tooling-preview:1.9.0")
     implementation("androidx.compose.ui:ui:1.9.0")
@@ -119,7 +119,7 @@ dependencies {
     // Compose
     debugImplementation("androidx.compose.ui:ui-test-manifest:1.9.0")
     testImplementation("androidx.compose.ui:ui-test-junit4:1.9.0")
-    testImplementation("androidx.navigation:navigation-testing:2.9.3")
+    testImplementation("androidx.navigation:navigation-testing:2.9.4")
 
     // Robolectric
     testImplementation("org.robolectric:robolectric:4.16") {
