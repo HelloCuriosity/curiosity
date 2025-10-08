@@ -64,9 +64,9 @@ dependencies {
     implementation("androidx.compose.material:material:1.9.2")
     implementation("androidx.compose.material:material-icons-extended:1.7.8")
     implementation("androidx.navigation:navigation-compose:2.9.5")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.9.2")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.9.2")
-    implementation("androidx.compose.ui:ui:1.9.2")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.9.3")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.9.3")
+    implementation("androidx.compose.ui:ui:1.9.3")
 
     // It is a known bug: https://issuetracker.google.com/issues/227767363
     //
@@ -81,7 +81,7 @@ dependencies {
     // Curiosity testing utils
     testImplementation(project(":test-compose-utils"))
 
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.9.2")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.9.3")
     testImplementation("androidx.compose.ui:ui-test-junit4:1.9.2")
     testImplementation("org.robolectric:robolectric:4.16") {
         exclude(module = "classworlds")
