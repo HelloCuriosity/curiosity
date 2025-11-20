@@ -16,8 +16,8 @@ java {
 dependencies {
     // Ktor
     implementation("io.ktor:ktor-client-content-negotiation:3.3.2")
-    implementation("io.ktor:ktor-client-core:3.3.1")
-    implementation("io.ktor:ktor-client-okhttp:3.3.1")
+    implementation("io.ktor:ktor-client-core:3.3.2")
+    implementation("io.ktor:ktor-client-okhttp:3.3.2")
     implementation("io.ktor:ktor-serialization-kotlinx-json:3.3.2")
 
     // Serialization
