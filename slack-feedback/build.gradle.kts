@@ -15,10 +15,10 @@ java {
 
 dependencies {
     // Ktor
-    implementation("io.ktor:ktor-client-content-negotiation:3.3.2")
-    implementation("io.ktor:ktor-client-core:3.3.1")
-    implementation("io.ktor:ktor-client-okhttp:3.3.1")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:3.3.2")
+    implementation("io.ktor:ktor-client-content-negotiation:3.3.3")
+    implementation("io.ktor:ktor-client-core:3.3.3")
+    implementation("io.ktor:ktor-client-okhttp:3.3.3")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:3.3.3")
 
     // Serialization
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
@@ -33,7 +33,7 @@ dependencies {
     testImplementation("io.mockk:mockk:1.14.6")
 
     // Ktor
-    testImplementation("io.ktor:ktor-client-mock:3.3.2")
+    testImplementation("io.ktor:ktor-client-mock:3.3.3")
     testImplementation("org.slf4j:slf4j-simple:2.0.17")
 }
 
