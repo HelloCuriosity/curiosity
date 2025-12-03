@@ -59,11 +59,11 @@ dependencies {
 
     // Compose
     implementation("androidx.activity:activity-compose:1.10.1")
-    implementation("androidx.compose.material:material:1.9.5")
+    implementation("androidx.compose.material:material:1.10.0")
     implementation("androidx.navigation:navigation-compose:2.9.6")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.9.5")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.9.5")
-    implementation("androidx.compose.ui:ui:1.9.5")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.10.0")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.10.0")
+    implementation("androidx.compose.ui:ui:1.10.0")
 
     // Curiosity
     implementation(project(":curiosity"))
@@ -81,8 +81,8 @@ dependencies {
     // Curiosity testing utils
     testImplementation(project(":test-compose-utils"))
 
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.9.5")
-    testImplementation("androidx.compose.ui:ui-test-junit4:1.9.5")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.10.0")
+    testImplementation("androidx.compose.ui:ui-test-junit4:1.10.0")
     testImplementation("org.robolectric:robolectric:4.16") {
         exclude(module = "classworlds")
         exclude(module = "commons-logging")
@@ -105,7 +105,7 @@ dependencies {
     // Android Testing
     androidTestImplementation("androidx.test.espresso:espresso-core:3.7.0")
     androidTestImplementation("androidx.test.ext:junit:1.3.0")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.9.5")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.10.0")
 }
 
 tasks.withType<Sign>().configureEach {
