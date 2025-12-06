@@ -30,7 +30,7 @@ dependencies {
     testImplementation("io.github.hellocuriosity:model-forge:1.5.1")
 
     // Mockk
-    testImplementation("io.mockk:mockk:1.14.6")
+    testImplementation("io.mockk:mockk:1.14.7")
 
     // Ktor
     testImplementation("io.ktor:ktor-client-mock:3.3.3")
