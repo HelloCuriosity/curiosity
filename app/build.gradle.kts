@@ -122,7 +122,7 @@ dependencies {
     testImplementation("androidx.navigation:navigation-testing:2.9.6")
 
     // Robolectric
-    testImplementation("org.robolectric:robolectric:4.16") {
+    testImplementation("org.robolectric:robolectric:4.16.1") {
         exclude(module = "classworlds")
         exclude(module = "commons-logging")
         exclude(module = "httpclient")
