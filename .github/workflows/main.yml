@@ -52,7 +52,7 @@ jobs:
       - name: Test
         run: make report
       - name: Report
-        uses: codecov/codecov-action@v5.5.3
+        uses: codecov/codecov-action@v5.5.4
         with:
           files: ./build/reports/kover/result.xml
 
