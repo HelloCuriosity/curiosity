@@ -7,13 +7,12 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.DropdownMenu
-import androidx.compose.material.DropdownMenuItem
-import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.Icon
-import androidx.compose.material.Surface
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.Icon
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -29,7 +28,6 @@ import androidx.compose.ui.unit.dp
 import io.github.hellocuriosity.compose.R
 import io.github.hellocuriosity.compose.ui.components.text.LabelSmall
 
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun DropDownMenu(
     modifier: Modifier = Modifier,
@@ -87,14 +85,13 @@ fun DropDownMenu(
             items.forEachIndexed { idx, _ ->
                 val item = items[idx]
                 DropdownMenuItem(
+                    text = { LabelSmall(text = item) },
                     onClick = {
                         onItemSelected(idx)
                         expanded = !expanded
                     },
                     enabled = enabled,
-                ) {
-                    LabelSmall(text = item)
-                }
+                )
             }
         }
     }

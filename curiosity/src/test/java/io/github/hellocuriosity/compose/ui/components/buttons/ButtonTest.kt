@@ -49,12 +49,12 @@ class ButtonTest : ComposeTest() {
                 onClick = { },
                 enabled = false,
                 shape = RectangleShape,
-                style = ThemeImpl.typography.h1,
+                style = ThemeImpl.typography.displayLarge,
                 buttonColors =
                     ButtonDefaults.buttonColors(
-                        backgroundColor = Color.Blue,
+                        containerColor = Color.Blue,
                         contentColor = Color.Cyan,
-                        disabledBackgroundColor = Color.Magenta,
+                        disabledContainerColor = Color.Magenta,
                         disabledContentColor = Color.Yellow,
                     ),
                 textModifier = Modifier.padding(12.dp),
@@ -99,12 +99,12 @@ class ButtonTest : ComposeTest() {
                 onClick = { },
                 enabled = false,
                 shape = RectangleShape,
-                style = ThemeImpl.typography.h1,
+                style = ThemeImpl.typography.displayLarge,
                 buttonColors =
                     ButtonDefaults.buttonColors(
-                        backgroundColor = Color.Blue,
+                        containerColor = Color.Blue,
                         contentColor = Color.Cyan,
-                        disabledBackgroundColor = Color.Magenta,
+                        disabledContainerColor = Color.Magenta,
                         disabledContentColor = Color.Yellow,
                     ),
                 textModifier = Modifier.padding(12.dp),

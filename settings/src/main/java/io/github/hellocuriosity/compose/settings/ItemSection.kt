@@ -3,7 +3,7 @@ package io.github.hellocuriosity.compose.settings
 import android.R
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -19,7 +19,7 @@ fun ItemSection(
     @StringRes text: Int,
     color: Color = Color.Unspecified,
     textAlign: TextAlign? = null,
-    style: TextStyle = MaterialTheme.typography.h6,
+    style: TextStyle = MaterialTheme.typography.headlineSmall,
 ) = LabelSmall(
     modifier =
         Modifier

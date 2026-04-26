@@ -1,8 +1,8 @@
 package io.github.hellocuriosity.compose.ui.components.text
 
 import androidx.annotation.StringRes
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -18,7 +18,7 @@ fun ContentMedium(
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
     textAlign: TextAlign? = null,
-    style: TextStyle = MaterialTheme.typography.body2,
+    style: TextStyle = MaterialTheme.typography.bodyMedium,
     overflow: TextOverflow = TextOverflow.Clip,
     maxLines: Int = Int.MAX_VALUE,
 ) = Text(
@@ -37,7 +37,7 @@ fun ContentMedium(
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
     textAlign: TextAlign? = null,
-    style: TextStyle = MaterialTheme.typography.body2,
+    style: TextStyle = MaterialTheme.typography.bodyMedium,
     overflow: TextOverflow = TextOverflow.Clip,
     maxLines: Int = Int.MAX_VALUE,
 ) = Text(

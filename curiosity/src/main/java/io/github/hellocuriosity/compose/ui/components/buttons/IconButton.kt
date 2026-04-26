@@ -5,13 +5,10 @@ import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.ContentAlpha
-import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.contentColorFor
-import androidx.compose.material.primarySurface
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -24,7 +21,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import io.github.hellocuriosity.compose.R
 
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun IconButton(
     modifier: Modifier = Modifier,
@@ -33,15 +29,15 @@ fun IconButton(
     @StringRes contentDescription: Int = R.string.checkbox,
     size: Dp = 50.dp,
     shape: Shape = CircleShape,
-    color: Color = MaterialTheme.colors.primarySurface,
+    color: Color = MaterialTheme.colorScheme.primary,
     disabledColor: Color =
-        MaterialTheme.colors.onSurface
+        MaterialTheme.colorScheme.onSurface
             .copy(alpha = 0.12f)
-            .compositeOver(MaterialTheme.colors.surface),
+            .compositeOver(MaterialTheme.colorScheme.surface),
     tint: Color = contentColorFor(color),
     disabledTint: Color =
-        MaterialTheme.colors.onSurface
-            .copy(alpha = ContentAlpha.disabled),
+        MaterialTheme.colorScheme.onSurface
+            .copy(alpha = 0.38f),
     onClick: () -> Unit,
 ) = Surface(
     modifier =

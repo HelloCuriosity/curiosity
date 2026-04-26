@@ -1,7 +1,7 @@
 package io.github.hellocuriosity.compose.navigation
 
 import android.content.Context
-import androidx.compose.material.Text
+import androidx.compose.material3.Text
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.assertIsDisplayed

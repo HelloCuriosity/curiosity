@@ -6,10 +6,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonColors
-import androidx.compose.material.Icon
-import androidx.compose.material.Text
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.Icon
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -25,7 +25,7 @@ import io.github.hellocuriosity.compose.ui.theme.ThemeImpl
 
 typealias action = () -> Unit
 
-private val btnStyle = ThemeImpl.typography.h5.copy(fontSize = 18.sp)
+private val btnStyle = ThemeImpl.typography.headlineMedium.copy(fontSize = 18.sp)
 private val btnShape = CircleShape
 private val horizontalPadding = 25.dp
 private val verticalPadding = 16.dp

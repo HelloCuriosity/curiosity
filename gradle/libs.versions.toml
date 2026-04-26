@@ -10,7 +10,7 @@ playPublisher = "4.0.0"
 # AndroidX
 coreKtx = "1.18.0"
 activityCompose = "1.13.0"
-composeMaterial = "1.11.0"
+composeMaterial3 = "1.4.0"
 composeMaterialIconsExtended = "1.7.8"
 composeUi = "1.11.0"
 customview = "1.2.0"
@@ -43,7 +43,7 @@ androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx"
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
 
 # Compose
-androidx-compose-material = { module = "androidx.compose.material:material", version.ref = "composeMaterial" }
+androidx-compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "composeMaterial3" }
 androidx-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "composeMaterialIconsExtended" }
 androidx-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "composeUi" }
 androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "composeUi" }

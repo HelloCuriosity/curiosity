@@ -1,8 +1,7 @@
 package io.github.hellocuriosity.compose.ui.components.input
 
-import androidx.compose.material.LocalContentAlpha
-import androidx.compose.material.LocalContentColor
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.LocalContentColor
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.graphics.Color
 import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Assert.assertEquals
@@ -13,9 +12,9 @@ class InputTextFieldDefaultsTest : ComposeTest() {
     fun testDefaultColors() {
         composeTestRule.setContent {
             val colors = InputTextFieldDefaults.colors()
-            assertEquals(LocalContentColor.current.copy(LocalContentAlpha.current), colors.textColor)
-            assertEquals(LocalContentColor.current.copy(LocalContentAlpha.current), colors.placeholderColor)
-            assertEquals(MaterialTheme.colors.primary, colors.cursorColor)
+            assertEquals(LocalContentColor.current, colors.textColor)
+            assertEquals(LocalContentColor.current, colors.placeholderColor)
+            assertEquals(MaterialTheme.colorScheme.primary, colors.cursorColor)
             assertEquals(Color.Unspecified, colors.unfocusedIndicatorColor)
             assertEquals(Color.Unspecified, colors.focusedIndicatorColor)
             assertEquals(Color.Unspecified, colors.backgroundColor)

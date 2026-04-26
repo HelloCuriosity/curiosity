@@ -11,8 +11,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.TextField
-import androidx.compose.material.TextFieldDefaults
+import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -81,12 +81,14 @@ fun InputTextField(
         readOnly = readOnly,
         textStyle = textStyle,
         colors =
-            TextFieldDefaults.textFieldColors(
-                textColor = colors.textColor,
+            TextFieldDefaults.colors(
+                focusedTextColor = colors.textColor,
+                unfocusedTextColor = colors.textColor,
                 cursorColor = colors.cursorColor,
                 unfocusedIndicatorColor = colors.unfocusedIndicatorColor,
                 focusedIndicatorColor = colors.focusedIndicatorColor,
-                backgroundColor = colors.backgroundColor,
+                focusedContainerColor = colors.backgroundColor,
+                unfocusedContainerColor = colors.backgroundColor,
             ),
         placeholder = {
             placeholder?.let { res ->

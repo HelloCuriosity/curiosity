@@ -1,13 +1,13 @@
 package io.github.hellocuriosity.compose.navigation
 
-import androidx.compose.material.BottomNavigation
-import androidx.compose.material.BottomNavigationDefaults
-import androidx.compose.material.BottomNavigationItem
-import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
-import androidx.compose.material.contentColorFor
-import androidx.compose.material.primarySurface
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarDefaults
+import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
+import androidx.compose.material3.Text
+import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.graphics.Color
@@ -24,18 +24,25 @@ fun BottomNavigation(
     scenes: List<Scene>,
     alwaysShowLabel: Boolean = true,
     shouldBeSelected: Boolean = true,
-    backgroundColor: Color = MaterialTheme.colors.primarySurface,
+    backgroundColor: Color = MaterialTheme.colorScheme.primary,
     contentColor: Color = contentColorFor(backgroundColor),
-    selectedContentColor: Color = MaterialTheme.colors.onPrimary,
-    elevation: Dp = BottomNavigationDefaults.Elevation,
-) = BottomNavigation(
-    backgroundColor = backgroundColor,
+    selectedContentColor: Color = MaterialTheme.colorScheme.onPrimary,
+    elevation: Dp = NavigationBarDefaults.Elevation,
+) = NavigationBar(
+    containerColor = backgroundColor,
     contentColor = contentColor,
-    elevation = elevation,
+    tonalElevation = elevation,
 ) {
     val currentRoute = currentRoute(navController)
+    val itemColors =
+        NavigationBarItemDefaults.colors(
+            selectedIconColor = selectedContentColor,
+            selectedTextColor = selectedContentColor,
+            unselectedIconColor = contentColor,
+            unselectedTextColor = contentColor,
+        )
     scenes.forEach { scene ->
-        BottomNavigationItem(
+        NavigationBarItem(
             icon = {
                 Icon(
                     painter = painterResource(id = scene.icon),
@@ -43,7 +50,7 @@ fun BottomNavigation(
                 )
             },
             label = { Text(stringResource(id = scene.title)) },
-            selectedContentColor = selectedContentColor,
+            colors = itemColors,
             selected = if (shouldBeSelected) currentRoute == scene.route else false,
             alwaysShowLabel = alwaysShowLabel,
             onClick = {
