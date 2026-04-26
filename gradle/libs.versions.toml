@@ -18,13 +18,10 @@ customviewPoolingContainer = "1.1.0"
 navigationCompose = "2.9.8"
 
 # Android
-compileSdk = "35"
+compileSdk = "37"
 minSdk = "23"
-targetSdk = "35"
+targetSdk = "37"
 buildTools = "34.0.0"
-
-# Library targetSdk (curiosity, navigation)
-libraryTargetSdk = "34"
 
 # Other libs
 leakcanary = "2.14"
