@@ -8,7 +8,7 @@ ifeq ($(CI), true)
 endif
 
 .PHONY: all assemble bundle clean dependencies format lint local publish \
-release report signing test
+report signing test
 
 all: clean format lint test report assemble
 
@@ -35,9 +35,6 @@ local:
 
 publish:
 	./scripts/publish.sh ${BUILD_TYPE} ${PLAY_PUBLISH_PASSWORD}
-
-release:
-	./scripts/release.sh ${BUMP}
 
 report:
 	./gradlew koverHtmlReportDebug koverXmlReportDebug ${GRADLE_ARGS}
