@@ -45,9 +45,9 @@ allprojects {
 }
 
 fun CommonExtension<*, *, *, *, *, *>.configureAndroidCommon() {
-    compileSdk = 35
+    compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
-        minSdk = 23
+        minSdk = libs.versions.minSdk.get().toInt()
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     compileOptions {
@@ -76,7 +76,7 @@ subprojects {
         extensions.configure<LibraryExtension>("android") {
             configureAndroidCommon()
             defaultConfig {
-                targetSdk = 35
+                targetSdk = libs.versions.libraryTargetSdk.get().toInt()
             }
             buildTypes {
                 release {

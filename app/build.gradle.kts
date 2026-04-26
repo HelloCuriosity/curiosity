@@ -13,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId = "com.hello.curiosity.design"
-        targetSdk = 35
+        targetSdk = libs.versions.targetSdk.get().toInt()
 
         versionCode = System.getenv("GITHUB_RUN_NUMBER")?.toInt() ?: 1
         versionName = System.getenv("VERSION") ?: "local"
