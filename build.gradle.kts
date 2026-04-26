@@ -13,7 +13,7 @@ plugins {
 
     id("io.gitlab.arturbosch.detekt") version "1.23.8"
     id("org.jmailen.kotlinter") version "5.4.2"
-    id("org.jetbrains.kotlinx.kover") version "0.7.6"
+    id("org.jetbrains.kotlinx.kover") version "0.8.3"
 }
 
 allprojects {
@@ -57,22 +57,13 @@ dependencies {
     kover(project(":slack-feedback"))
 }
 
-koverReport {
-    filters {
-        excludes {
-            classes("*BuildConfig")
-            annotatedBy("*Preview")
-        }
-    }
-
-    defaults {
-        xml {
-            onCheck = false
-            setReportFile(layout.buildDirectory.file("$buildDir/reports/kover/result.xml"))
-        }
-        html {
-            onCheck = false
-            setReportDir(layout.buildDirectory.dir("$buildDir/reports/kover/html-result"))
+kover {
+    reports {
+        filters {
+            excludes {
+                classes("*BuildConfig")
+                annotatedBy("*Preview")
+            }
         }
     }
 }
