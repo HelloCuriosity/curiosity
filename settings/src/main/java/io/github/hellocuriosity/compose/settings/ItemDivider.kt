@@ -24,7 +24,6 @@ fun ItemDivider(
     thickness = thickness,
 )
 
-@Exclude
 @Preview
 @Composable
 internal fun ItemDividerPreview() {

@@ -19,7 +19,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import io.github.hellocuriosity.compose.ui.Exclude
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
@@ -64,7 +63,6 @@ fun Toggle(
 const val TOGGLE_CONTAINER_TEST_TAG = "TOGGLE_CONTAINER_TEST_TAG"
 const val TOGGLE_BTN_TEST_TAG = "TOGGLE_BTN_TEST_TAG"
 
-@Exclude
 @Preview
 @Composable
 fun TogglePreview() {

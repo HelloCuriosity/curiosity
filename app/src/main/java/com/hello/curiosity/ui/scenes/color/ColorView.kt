@@ -12,7 +12,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.hello.curiosity.Exclude
 
 @Composable
 internal fun ColorView(presentation: ColorPresentation) =
@@ -32,7 +31,6 @@ internal fun ColorView(presentation: ColorPresentation) =
         Text(text = presentation.title)
     }
 
-@Exclude
 @Preview
 @Composable
 internal fun ColorViewPreview() {

@@ -46,7 +46,6 @@ fun ItemInfo(
     }
 }
 
-@Exclude
 @Preview
 @Composable
 internal fun ItemInfoPreview() {
