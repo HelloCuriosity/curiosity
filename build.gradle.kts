@@ -1,20 +1,22 @@
+import com.android.build.api.dsl.ApplicationExtension
+import com.android.build.api.dsl.CommonExtension
+import com.android.build.api.dsl.LibraryExtension
 import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
+import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-buildscript {
-
-}// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 plugins {
-    id("com.android.application") version "8.13.2" apply false
-    id("com.android.library") version "8.13.2" apply false
-    id("org.jetbrains.kotlin.android") version "2.3.21" apply false
-    id("org.jetbrains.kotlin.plugin.compose") version "2.3.21" apply false
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.compose) apply false
+    alias(libs.plugins.kotlin.serialization) apply false
 
-    id("io.gitlab.arturbosch.detekt") version "1.23.8"
-    id("org.jmailen.kotlinter") version "5.4.2"
-    id("org.jetbrains.kotlinx.kover") version "0.9.8"
+    alias(libs.plugins.detekt)
+    alias(libs.plugins.kotlinter)
+    alias(libs.plugins.kover)
 }
 
 allprojects {
@@ -42,6 +44,71 @@ allprojects {
     }
 }
 
+fun CommonExtension<*, *, *, *, *, *>.configureAndroidCommon() {
+    compileSdk = 35
+    defaultConfig {
+        minSdk = 23
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        compose = true
+    }
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+            isReturnDefaultValues = true
+        }
+    }
+}
+
+subprojects {
+    plugins.withId("com.android.application") {
+        extensions.configure<ApplicationExtension>("android") {
+            configureAndroidCommon()
+        }
+    }
+
+    plugins.withId("com.android.library") {
+        extensions.configure<LibraryExtension>("android") {
+            configureAndroidCommon()
+            defaultConfig {
+                targetSdk = 35
+            }
+            buildTypes {
+                release {
+                    isMinifyEnabled = false
+                }
+            }
+            publishing {
+                singleVariant("release") {
+                    withSourcesJar()
+                    withJavadocJar()
+                }
+            }
+        }
+    }
+
+    plugins.withId("org.jetbrains.kotlin.android") {
+        extensions.configure<KotlinAndroidProjectExtension>("kotlin") {
+            compilerOptions {
+                jvmTarget.set(JvmTarget.JVM_17)
+            }
+        }
+    }
+
+    plugins.withId("org.jetbrains.kotlin.jvm") {
+        extensions.configure<KotlinJvmProjectExtension>("kotlin") {
+            compilerOptions {
+                jvmTarget.set(JvmTarget.JVM_17)
+            }
+        }
+    }
+}
+
 tasks.register<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
 }
@@ -52,7 +119,6 @@ tasks.withType<KotlinCompile> {
     }
 }
 
-// Kover
 dependencies {
     kover(project(":app"))
     kover(project(":slack-feedback"))
