@@ -3,7 +3,6 @@ import com.github.triplet.gradle.androidpublisher.ResolutionStrategy
 
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.play.publisher)
 }
