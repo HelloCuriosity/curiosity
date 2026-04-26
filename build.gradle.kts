@@ -56,3 +56,14 @@ dependencies {
     kover(project(":app"))
     kover(project(":slack-feedback"))
 }
+
+kover {
+    reports {
+        filters {
+            excludes {
+                classes("*BuildConfig")
+                annotatedBy("*Preview")
+            }
+        }
+    }
+}
