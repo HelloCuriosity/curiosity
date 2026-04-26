@@ -76,7 +76,7 @@ subprojects {
         extensions.configure<LibraryExtension>("android") {
             configureAndroidCommon()
             defaultConfig {
-                targetSdk = libs.versions.libraryTargetSdk.get().toInt()
+                targetSdk = libs.versions.targetSdk.get().toInt()
             }
             buildTypes {
                 release {

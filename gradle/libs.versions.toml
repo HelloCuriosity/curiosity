@@ -23,9 +23,6 @@ minSdk = "23"
 targetSdk = "37"
 buildTools = "34.0.0"
 
-# Library targetSdk (curiosity, navigation)
-libraryTargetSdk = "37"
-
 # Other libs
 leakcanary = "2.14"
 ktor = "3.4.3"
