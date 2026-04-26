@@ -3,14 +3,12 @@ import com.android.build.api.dsl.CommonExtension
 import com.android.build.api.dsl.LibraryExtension
 import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.android.library) apply false
-    alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.compose) apply false
     alias(libs.plugins.kotlin.serialization) apply false
 
@@ -44,21 +42,21 @@ allprojects {
     }
 }
 
-fun CommonExtension<*, *, *, *, *, *>.configureAndroidCommon() {
+fun CommonExtension.configureAndroidCommon() {
     compileSdk = libs.versions.compileSdk.get().toInt()
-    defaultConfig {
+    defaultConfig.apply {
         minSdk = libs.versions.minSdk.get().toInt()
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-    compileOptions {
+    compileOptions.apply {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    buildFeatures {
+    buildFeatures.apply {
         compose = true
     }
-    testOptions {
-        unitTests {
+    testOptions.apply {
+        unitTests.apply {
             isIncludeAndroidResources = true
             isReturnDefaultValues = true
         }
@@ -75,7 +73,7 @@ subprojects {
     plugins.withId("com.android.library") {
         extensions.configure<LibraryExtension>("android") {
             configureAndroidCommon()
-            defaultConfig {
+            testOptions {
                 targetSdk = libs.versions.targetSdk.get().toInt()
             }
             buildTypes {
@@ -88,14 +86,6 @@ subprojects {
                     withSourcesJar()
                     withJavadocJar()
                 }
-            }
-        }
-    }
-
-    plugins.withId("org.jetbrains.kotlin.android") {
-        extensions.configure<KotlinAndroidProjectExtension>("kotlin") {
-            compilerOptions {
-                jvmTarget.set(JvmTarget.JVM_17)
             }
         }
     }

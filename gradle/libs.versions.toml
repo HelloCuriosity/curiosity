@@ -1,11 +1,11 @@
 [versions]
 # Plugins
-agp = "8.13.2"
+agp = "9.2.0"
 kotlin = "2.3.21"
 detekt = "1.23.8"
 kotlinter = "5.4.2"
 kover = "0.9.8"
-playPublisher = "3.13.0"
+playPublisher = "4.0.0"
 
 # AndroidX
 coreKtx = "1.18.0"
