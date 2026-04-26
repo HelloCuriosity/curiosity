@@ -1,11 +1,9 @@
 package io.github.hellocuriosity.compose.ui.components.buttons
 
-import androidx.compose.material.ButtonColors
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.ContentAlpha
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.contentColorFor
-import androidx.compose.material.primarySurface
+import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.compositeOver
@@ -13,28 +11,22 @@ import androidx.compose.ui.graphics.compositeOver
 object ButtonDefaults {
     @Composable
     fun buttonColors(
-        backgroundColor: Color = MaterialTheme.colors.primarySurface,
-        contentColor: Color = contentColorFor(backgroundColor),
-        disabledBackgroundColor: Color =
-            MaterialTheme.colors.onSurface
+        containerColor: Color = MaterialTheme.colorScheme.primary,
+        contentColor: Color = contentColorFor(containerColor),
+        disabledContainerColor: Color =
+            MaterialTheme.colorScheme.onSurface
                 .copy(alpha = 0.12f)
-                .compositeOver(MaterialTheme.colors.surface),
+                .compositeOver(MaterialTheme.colorScheme.surface),
         disabledContentColor: Color =
-            MaterialTheme.colors.onSurface
-                .copy(alpha = ContentAlpha.disabled),
+            MaterialTheme.colorScheme.onSurface
+                .copy(alpha = 0.38f),
     ): ButtonColors =
         ButtonDefaults.buttonColors(
-            backgroundColor = backgroundColor,
+            containerColor = containerColor,
             contentColor = contentColor,
-            disabledBackgroundColor = disabledBackgroundColor,
+            disabledContainerColor = disabledContainerColor,
             disabledContentColor = disabledContentColor,
         )
 }
 
-@Composable
-internal fun ButtonColors.tintColor(enabled: Boolean) =
-    if (enabled) {
-        contentColor(enabled = true).value
-    } else {
-        MaterialTheme.colors.onSurface.copy(alpha = ContentAlpha.disabled)
-    }
+internal fun ButtonColors.tintColor(enabled: Boolean) = if (enabled) contentColor else disabledContentColor

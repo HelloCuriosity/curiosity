@@ -1,7 +1,7 @@
 package io.github.hellocuriosity.compose.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 
 object ThemeImpl : Theme {
@@ -18,6 +18,6 @@ fun CuriosityTheme(
     MaterialTheme(
         content = content,
         typography = theme.typography.toMaterialTypography(),
-        colors = theme.colors.toMaterialColors(darkTheme),
+        colorScheme = theme.colors.toMaterialColorScheme(darkTheme),
     )
 }

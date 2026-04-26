@@ -1,6 +1,6 @@
 package io.github.hellocuriosity.compose.ui.components.selector
 
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.graphics.Color
 import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Assert.assertEquals
@@ -11,8 +11,8 @@ class DropDownMenuDefaultsTest : ComposeTest() {
     fun `validate DropDownMenuDefaults colors() return default values`() {
         composeTestRule.setContent {
             val colors = DropDownMenuDefaults.colors()
-            assertEquals(MaterialTheme.colors.onSurface.copy(alpha = 0.1f), colors.backgroundColor)
-            assertEquals(MaterialTheme.colors.onSurface.copy(alpha = 0.2f), colors.boarderColor)
+            assertEquals(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f), colors.backgroundColor)
+            assertEquals(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.2f), colors.boarderColor)
         }
     }
 

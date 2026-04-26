@@ -1,8 +1,7 @@
 package io.github.hellocuriosity.compose.ui.components.input
 
-import androidx.compose.material.LocalContentAlpha
-import androidx.compose.material.LocalContentColor
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.LocalContentColor
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.sp
@@ -11,9 +10,9 @@ import io.github.hellocuriosity.compose.ui.theme.ThemeImpl
 object InputTextFieldDefaults {
     @Composable
     fun colors(
-        textColor: Color = LocalContentColor.current.copy(LocalContentAlpha.current),
+        textColor: Color = LocalContentColor.current,
         placeholderColor: Color = textColor,
-        cursorColor: Color = MaterialTheme.colors.primary,
+        cursorColor: Color = MaterialTheme.colorScheme.primary,
         unfocusedIndicatorColor: Color = Color.Unspecified,
         focusedIndicatorColor: Color = Color.Unspecified,
         backgroundColor: Color = Color.Unspecified,
@@ -40,4 +39,4 @@ data class InputTextFieldColors(
     val boarderColor: Color,
 )
 
-internal val txtStyle = ThemeImpl.typography.h5.copy(fontSize = 18.sp)
+internal val txtStyle = ThemeImpl.typography.headlineMedium.copy(fontSize = 18.sp)

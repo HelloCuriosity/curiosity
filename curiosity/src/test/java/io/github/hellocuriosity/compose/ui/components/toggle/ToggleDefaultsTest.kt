@@ -1,7 +1,6 @@
 package io.github.hellocuriosity.compose.ui.components.toggle
 
-import androidx.compose.material.ContentAlpha
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.graphics.Color
 import io.github.hellocuriosity.compose.test.ComposeTest
 import org.junit.Assert.assertEquals
@@ -12,14 +11,14 @@ class ToggleDefaultsTest : ComposeTest() {
     fun `validate ToggleDefaults colors() returns default values`() {
         composeTestRule.setContent {
             val colors = ToggleDefaults.colors()
-            assertEquals(MaterialTheme.colors.secondary, colors.checkedColor)
-            assertEquals(MaterialTheme.colors.onSurface.copy(alpha = 0.1f), colors.uncheckedColor)
+            assertEquals(MaterialTheme.colorScheme.secondary, colors.checkedColor)
+            assertEquals(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f), colors.uncheckedColor)
             assertEquals(Color.White, colors.toggleColor)
             assertEquals(
-                MaterialTheme.colors.onSurface.copy(alpha = ContentAlpha.disabled),
+                MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f),
                 colors.disabledColor,
             )
-            assertEquals(MaterialTheme.colors.onSurface.copy(alpha = 0.2f), colors.boarderColor)
+            assertEquals(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.2f), colors.boarderColor)
         }
     }
 

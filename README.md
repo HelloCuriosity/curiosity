@@ -45,13 +45,16 @@ Add dependency:
 
 ```kotlin
 dependencies {
-    implementation("io.github.hellocuriosity:curiosity:0.12.0") // component library
-    implementation("io.github.hellocuriosity:navigation:0.12.0") // navigation library
-    implementation("io.github.hellocuriosity:settings:0.12.0") // settings library
-    implementation("io.github.hellocuriosity:slack-feedback:0.12.0") // slack feedback library
-    testImplementation("io.github.hellocuriosity:test-utils:0.12.0") // testing library
+    implementation("io.github.hellocuriosity:curiosity:1.0.0") // component library
+    implementation("io.github.hellocuriosity:navigation:1.0.0") // navigation library
+    implementation("io.github.hellocuriosity:settings:1.0.0") // settings library
+    implementation("io.github.hellocuriosity:slack-feedback:1.0.0") // slack feedback library
+    testImplementation("io.github.hellocuriosity:test-utils:1.0.0") // testing library
 }
 ```
+
+> Upgrading from `0.x`? See [MIGRATION.md](MIGRATION.md) — 1.0.0 swaps Material 2
+> for Material 3 and is a breaking release.
 
 ## Apps Using Curiosity
 

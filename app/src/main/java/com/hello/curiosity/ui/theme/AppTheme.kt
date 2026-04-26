@@ -40,12 +40,12 @@ object AppTheme : Theme {
             primary = metallicSeaweed,
             surface = metallicSeaweed,
             onSurface = lightCyan,
-            primaryVariant = redCrayola,
+            primaryContainer = redCrayola,
             background = lightCyan,
             primaryDark = lightCyan,
             surfaceDark = lightCyan,
             onSurfaceDark = metallicSeaweed,
-            primaryVariantDark = redCrayola,
+            primaryContainerDark = redCrayola,
             backgroundDark = onyx,
         )
 }

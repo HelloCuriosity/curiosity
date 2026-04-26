@@ -1,7 +1,7 @@
 package io.github.hellocuriosity.compose.settings
 
 import android.content.Context
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onNodeWithText
@@ -36,7 +36,7 @@ class ItemSectionTest : ComposeTest() {
                 text = textRes,
                 color = Color.White,
                 textAlign = null,
-                style = MaterialTheme.typography.h1,
+                style = MaterialTheme.typography.displayLarge,
             )
         }
 

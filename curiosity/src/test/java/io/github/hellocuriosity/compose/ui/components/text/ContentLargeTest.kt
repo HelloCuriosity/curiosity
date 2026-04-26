@@ -1,6 +1,6 @@
 package io.github.hellocuriosity.compose.ui.components.text
 
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -14,7 +14,7 @@ class ContentLargeTest : ComposeTextTest() {
             modifier = Modifier,
             color = Color.White,
             textAlign = null,
-            style = MaterialTheme.typography.h1,
+            style = MaterialTheme.typography.displayLarge,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis,
         )
@@ -26,7 +26,7 @@ class ContentLargeTest : ComposeTextTest() {
             modifier = Modifier,
             color = Color.White,
             textAlign = null,
-            style = MaterialTheme.typography.h1,
+            style = MaterialTheme.typography.displayLarge,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis,
         )

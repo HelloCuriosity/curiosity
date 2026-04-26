@@ -2,7 +2,7 @@ package com.hello.curiosity.ui.scenes.components
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -27,42 +27,42 @@ fun TextScene() {
                 text = "Label Large",
                 modifier = Modifier.padding(8.dp),
             )
-            Divider()
+            HorizontalDivider()
         }
         item {
             LabelMedium(
                 text = "Label Medium",
                 modifier = Modifier.padding(8.dp),
             )
-            Divider()
+            HorizontalDivider()
         }
         item {
             LabelSmall(
                 text = "Label Small",
                 modifier = Modifier.padding(8.dp),
             )
-            Divider()
+            HorizontalDivider()
         }
         item {
             LabelTiny(
                 text = "Label Tiny",
                 modifier = Modifier.padding(8.dp),
             )
-            Divider()
+            HorizontalDivider()
         }
         item {
             ContentLarge(
                 text = "Content Large",
                 modifier = Modifier.padding(8.dp),
             )
-            Divider()
+            HorizontalDivider()
         }
         item {
             ContentMedium(
                 text = "Content Medium",
                 modifier = Modifier.padding(8.dp),
             )
-            Divider()
+            HorizontalDivider()
         }
     }
 }

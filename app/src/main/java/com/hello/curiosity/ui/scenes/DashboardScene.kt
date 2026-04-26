@@ -2,17 +2,18 @@ package com.hello.curiosity.ui.scenes
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.Scaffold
-import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
 import com.hello.curiosity.R
 import com.hello.curiosity.navigation.CuriosityNavHost
@@ -20,6 +21,7 @@ import io.github.hellocuriosity.compose.navigation.BottomNavigation
 import io.github.hellocuriosity.compose.navigation.currentRoute
 import io.github.hellocuriosity.compose.ui.components.text.LabelMedium
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DashboardScene() {
     val navController = rememberNavController()
@@ -56,7 +58,7 @@ fun DashboardScene() {
                         }
                     }
                 },
-                elevation = 0.dp,
+                colors = TopAppBarDefaults.topAppBarColors(),
             )
         },
         bottomBar = {
