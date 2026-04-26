@@ -11,7 +11,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
-import io.github.hellocuriosity.compose.ui.Exclude
 
 @Composable
 fun ContentMedium(
@@ -51,7 +50,6 @@ fun ContentMedium(
     maxLines = maxLines,
 )
 
-@Exclude
 @Preview
 @Composable
 internal fun ContentMediumPreview() {

@@ -53,7 +53,6 @@ fun ItemAction(
     )
 }
 
-@Exclude
 @Preview
 @Composable
 internal fun ItemActionPreview() {

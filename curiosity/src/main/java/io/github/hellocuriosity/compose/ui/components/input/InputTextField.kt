@@ -26,7 +26,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import io.github.hellocuriosity.compose.ui.Exclude
 import io.github.hellocuriosity.compose.ui.components.text.LabelSmall
 import io.github.hellocuriosity.compose.ui.components.text.LabelTiny
 
@@ -122,7 +121,6 @@ const val INPUT_TEXT_FIELD_CONTAINER_TEST_TAG = "INPUT_TEXT_FIELD_CONTAINER_TEST
 const val INPUT_TEXT_FIELD_VALUE_TEST_TAG = "INPUT_TEXT_FIELD_VALUE_TEST_TAG"
 const val INPUT_TEXT_FIELD_COUNTER_TEST_TAG = "INPUT_TEXT_FIELD_COUNTER_TEST_TAG"
 
-@Exclude
 @Preview
 @Composable
 fun InputTextFieldPreview() {

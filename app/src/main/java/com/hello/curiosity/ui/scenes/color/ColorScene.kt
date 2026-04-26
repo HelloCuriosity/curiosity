@@ -8,7 +8,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
-import com.hello.curiosity.Exclude
 
 @Composable
 @Suppress("MagicNumber", "LongMethod")
@@ -75,7 +74,6 @@ internal fun ColorScene() {
     }
 }
 
-@Exclude
 @Preview
 @Composable
 internal fun ColorScenePreview() {

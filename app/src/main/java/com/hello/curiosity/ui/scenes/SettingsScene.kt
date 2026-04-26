@@ -14,7 +14,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
-import com.hello.curiosity.Exclude
 import com.hello.curiosity.R
 import com.hello.curiosity.ui.theme.AppTheme.lightCyan
 import com.hello.curiosity.ui.theme.AppTheme.metallicSeaweed
@@ -95,7 +94,6 @@ fun SettingsScene() {
     }
 }
 
-@Exclude
 @Preview
 @Composable
 internal fun SettingsScenePreview() {

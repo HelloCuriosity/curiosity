@@ -53,7 +53,6 @@ fun ItemDropDown(
 
 const val ITEM_DROP_DOWN_CONTAINER_TEST_TAG = "ITEM_DROP_DOWN_CONTAINER_TEST_TAG"
 
-@Exclude
 @Preview
 @Composable
 internal fun ItemDropDownPreview() {

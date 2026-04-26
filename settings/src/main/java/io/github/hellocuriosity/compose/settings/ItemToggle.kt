@@ -51,7 +51,6 @@ fun ItemToggle(
 
 const val ITEM_TOGGLE_TEST_TAG = "ITEM_TOGGLE_TEST_TAG"
 
-@Exclude
 @Preview
 @Composable
 internal fun ItemTogglePreview() {

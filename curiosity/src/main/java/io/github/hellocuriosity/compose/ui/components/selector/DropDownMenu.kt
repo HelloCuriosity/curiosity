@@ -27,7 +27,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.github.hellocuriosity.compose.R
-import io.github.hellocuriosity.compose.ui.Exclude
 import io.github.hellocuriosity.compose.ui.components.text.LabelSmall
 
 @OptIn(ExperimentalMaterialApi::class)
@@ -105,7 +104,6 @@ const val DROP_DOWN_MENU_CONTAINER_TEST_TAG = "DROP_DOWN_MENU_CONTAINER_TEST_TAG
 const val DROP_DOWN_MENU_ICN_TEST_TAG = "DROP_DOWN_MENU_ICN_TEST_TAG"
 const val DROP_DOWN_MENU_LIST_TEST_TAG = "DROP_DOWN_MENU_LIST_TEST_TAG"
 
-@Exclude
 @Preview
 @Composable
 fun DropDownMenuPreview() {

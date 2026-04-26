@@ -12,7 +12,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.hello.curiosity.Exclude
 import com.hello.curiosity.ui.scenes.Scenes
 import io.github.hellocuriosity.compose.ui.components.buttons.TextIconButton
 
@@ -52,7 +51,6 @@ fun ComponentScene(navController: NavHostController) {
     }
 }
 
-@Exclude
 @Preview
 @Composable
 fun ComponentScenePreview() {
