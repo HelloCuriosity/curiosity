@@ -29,7 +29,7 @@ ktor = "3.4.3"
 kotlinxSerialization = "1.11.0"
 modelForge = "1.5.1"
 mockk = "1.14.9"
-slf4j = "2.0.17"
+slf4j = "2.0.18"
 
 # Testing
 junit = "4.13.2"
