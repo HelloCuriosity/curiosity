@@ -3,7 +3,7 @@
 agp = "9.2.1"
 kotlin = "2.3.21"
 detekt = "1.23.8"
-kotlinter = "5.4.2"
+kotlinter = "5.5.0"
 kover = "0.9.8"
 playPublisher = "4.0.0"
 
