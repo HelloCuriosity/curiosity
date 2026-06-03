@@ -8,7 +8,7 @@ kover = "0.9.8"
 playPublisher = "4.0.0"
 
 # AndroidX
-coreKtx = "1.18.0"
+coreKtx = "1.19.0"
 activityCompose = "1.13.0"
 composeMaterial3 = "1.4.0"
 composeMaterialIconsExtended = "1.7.8"
