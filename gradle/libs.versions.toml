@@ -4,7 +4,7 @@ agp = "9.3.0"
 kotlin = "2.4.10"
 detekt = "1.23.8"
 kotlinter = "5.6.0"
-kover = "0.9.8"
+kover = "0.9.9"
 playPublisher = "4.0.0"
 
 # AndroidX
