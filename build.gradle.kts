@@ -30,7 +30,7 @@ allprojects {
         config.setFrom("$rootDir/detekt/default-detekt-config.yml")
     }
     tasks.withType<Detekt>().configureEach {
-        jvmTarget = "17"
+        jvmTarget = "21"
         reports {
             xml.required.set(false)
             html.required.set(false)
@@ -49,8 +49,8 @@ fun CommonExtension.configureAndroidCommon() {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     compileOptions.apply {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
     buildFeatures.apply {
         compose = true
@@ -93,7 +93,7 @@ subprojects {
     plugins.withId("org.jetbrains.kotlin.jvm") {
         extensions.configure<KotlinJvmProjectExtension>("kotlin") {
             compilerOptions {
-                jvmTarget.set(JvmTarget.JVM_17)
+                jvmTarget.set(JvmTarget.JVM_21)
             }
         }
     }
@@ -105,7 +105,7 @@ tasks.register<Delete>("clean") {
 
 tasks.withType<KotlinCompile> {
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_17)
+        jvmTarget.set(JvmTarget.JVM_21)
     }
 }
 
