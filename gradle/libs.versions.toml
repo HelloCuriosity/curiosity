@@ -15,7 +15,7 @@ composeMaterialIconsExtended = "1.7.8"
 composeUi = "1.12.0"
 customview = "1.2.0"
 customviewPoolingContainer = "1.1.0"
-navigationCompose = "2.9.8"
+navigationCompose = "2.10.0"
 
 # Android
 compileSdk = "37"
