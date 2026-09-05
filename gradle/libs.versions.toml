@@ -24,6 +24,7 @@ targetSdk = "37"
 buildTools = "34.0.0"
 
 # Other libs
+material = "1.14.0"
 leakcanary = "2.14"
 ktor = "3.5.2"
 kotlinxSerialization = "1.11.0"
@@ -58,6 +59,9 @@ androidx-customview-poolingcontainer = { module = "androidx.customview:customvie
 # Navigation
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 androidx-navigation-testing = { module = "androidx.navigation:navigation-testing", version.ref = "navigationCompose" }
+
+# Material Components (XML theme only)
+material = { module = "com.google.android.material:material", version.ref = "material" }
 
 # Leak detection
 leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakcanary" }
