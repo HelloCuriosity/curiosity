@@ -30,7 +30,7 @@ jobs:
         uses: actions/setup-java@v6.0.0
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
           cache: 'gradle'
       - name: Linting
         run: make clean lint
@@ -47,7 +47,7 @@ jobs:
         uses: actions/setup-java@v6.0.0
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
           cache: 'gradle'
       - name: Test
         run: make report
@@ -70,7 +70,7 @@ jobs:
         uses: actions/setup-java@v6.0.0
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
           cache: 'gradle'
       - name: "Create Keystore"
         run: |
@@ -92,7 +92,7 @@ jobs:
         uses: actions/setup-java@v6.0.0
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
           cache: 'gradle'
       - name: "Create Keystore"
         run: |
