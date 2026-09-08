@@ -1,9 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.compose)
-
-    `maven-publish`
-    signing
+    alias(libs.plugins.vanniktech.maven.publish)
 }
 
 android {
@@ -38,7 +36,11 @@ dependencies {
 extra["robolectricConfiguration"] = "testImplementation"
 apply(from = "$rootDir/gradle/robolectric.gradle.kts")
 
-extra["publishingArtifactId"] = "navigation"
-extra["publishingName"] = "Navigation"
-extra["publishingDescription"] = "Compose navigation components"
-apply(from = "$rootDir/gradle/publishing.gradle.kts")
+mavenPublishing {
+    coordinates(artifactId = "navigation")
+
+    pom {
+        name.set("Navigation")
+        description.set("Compose navigation components")
+    }
+}

@@ -5,6 +5,7 @@ kotlin = "2.4.20"
 detekt = "1.23.8"
 kotlinter = "5.7.0"
 kover = "0.9.9"
+vanniktechMavenPublish = "0.37.0"
 playPublisher = "4.1.1"
 
 # AndroidX
@@ -95,4 +96,5 @@ kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", versi
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 kotlinter = { id = "org.jmailen.kotlinter", version.ref = "kotlinter" }
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
+vanniktech-maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktechMavenPublish" }
 play-publisher = { id = "com.github.triplet.play", version.ref = "playPublisher" }

@@ -1,9 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.compose)
-
-    `maven-publish`
-    signing
+    alias(libs.plugins.vanniktech.maven.publish)
 }
 
 android {
@@ -38,7 +36,11 @@ dependencies {
 extra["robolectricConfiguration"] = "testImplementation"
 apply(from = "$rootDir/gradle/robolectric.gradle.kts")
 
-extra["publishingArtifactId"] = "curiosity"
-extra["publishingName"] = "Curiosity"
-extra["publishingDescription"] = "Curiosity is a simple design system just for fun."
-apply(from = "$rootDir/gradle/publishing.gradle.kts")
+mavenPublishing {
+    coordinates(artifactId = "curiosity")
+
+    pom {
+        name.set("Curiosity")
+        description.set("Curiosity is a simple design system just for fun.")
+    }
+}
