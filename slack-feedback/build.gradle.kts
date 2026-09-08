@@ -2,16 +2,12 @@ plugins {
     `java-library`
     id("org.jetbrains.kotlin.jvm")
     id("org.jetbrains.kotlin.plugin.serialization")
-
-    `maven-publish`
-    signing
+    alias(libs.plugins.vanniktech.maven.publish)
 }
 
 java {
     sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21
-    withSourcesJar()
-    withJavadocJar()
 }
 
 dependencies {
@@ -29,7 +25,13 @@ dependencies {
     testImplementation(libs.slf4j.simple)
 }
 
-extra["publishingArtifactId"] = "slack-feedback"
-extra["publishingName"] = "Slack Feedback"
-extra["publishingDescription"] = "Slack Feedback is an easy way to collect feedback, and have it posted to a slack channel."
-apply(from = "$rootDir/gradle/publishing.gradle.kts")
+mavenPublishing {
+    coordinates(artifactId = "slack-feedback")
+
+    pom {
+        name.set("Slack Feedback")
+        description.set(
+            "Slack Feedback is an easy way to collect feedback, and have it posted to a slack channel.",
+        )
+    }
+}

@@ -17,10 +17,10 @@ jobs:
     name: Publish
     runs-on: ubuntu-latest
     env:
-      SONATYPE_USER: ${{ secrets.SONATYPE_USER }}
-      SONATYPE_PWD: ${{ secrets.SONATYPE_PWD }}
-      SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
-      SIGNING_PWD: ${{ secrets.SIGNING_PWD }}
+      ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.SONATYPE_USER }}
+      ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.SONATYPE_PWD }}
+      ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.SIGNING_KEY }}
+      ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.SIGNING_PWD }}
       KEYSTORE_ENC_PW: ${{ secrets.KEYSTORE_ENC_PW }}
       KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
       KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}

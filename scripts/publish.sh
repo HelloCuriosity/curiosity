@@ -9,7 +9,7 @@ REPO_DIR="$(cd "$(dirname "$0")/../" && pwd)"
 
 echo "Publishing Library Version: $VERSION"
 # Publish Libraries
-"${REPO_DIR}"/gradlew assemble"${BUILD_TYPE}" publish
+"${REPO_DIR}"/gradlew assemble"${BUILD_TYPE}" publishToMavenCentral
 
 # Verify decrypting password
 if [[ -z "${PLAY_PUBLISH_PASSWORD}" ]]; then

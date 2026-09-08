@@ -1,9 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.compose)
-
-    `maven-publish`
-    signing
+    alias(libs.plugins.vanniktech.maven.publish)
 }
 
 android {
@@ -39,8 +37,13 @@ dependencies {
 extra["robolectricConfiguration"] = "testImplementation"
 apply(from = "$rootDir/gradle/robolectric.gradle.kts")
 
-extra["publishingArtifactId"] = "settings"
-extra["publishingName"] = "Settings"
-extra["publishingDescription"] =
-    "Settings is a collection of setting specific UI components to speed up building settings screens."
-apply(from = "$rootDir/gradle/publishing.gradle.kts")
+mavenPublishing {
+    coordinates(artifactId = "settings")
+
+    pom {
+        name.set("Settings")
+        description.set(
+            "Settings is a collection of setting specific UI components to speed up building settings screens.",
+        )
+    }
+}
