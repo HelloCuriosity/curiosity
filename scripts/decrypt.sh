@@ -7,6 +7,6 @@ OUT=$2
 PASSWORD=$3
 
 # Start decrypting
-echo "Decrypting ${IN} to ${OUT} ${PASSWORD}"
+echo "Decrypting ${IN} to ${OUT}"
 
 gpg --batch --yes --passphrase "${PASSWORD}" -o "${OUT}" -d "${IN}"

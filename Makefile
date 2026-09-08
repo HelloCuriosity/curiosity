@@ -8,7 +8,7 @@ ifeq ($(CI), true)
 endif
 
 .PHONY: all assemble bundle clean dependencies format lint local publish \
-report signing test
+publish-app publish-library report signing test
 
 all: clean format lint test report assemble
 
@@ -33,8 +33,13 @@ lint:
 local:
 	./gradlew publishToMavenLocal ${GRADLE_ARGS}
 
-publish:
-	./scripts/publish.sh ${BUILD_TYPE} ${PLAY_PUBLISH_PASSWORD}
+publish: publish-library publish-app
+
+publish-app:
+	./scripts/publish-app.sh ${BUILD_TYPE} ${PLAY_PUBLISH_PASSWORD}
+
+publish-library:
+	./scripts/publish-library.sh ${BUILD_TYPE}
 
 report:
 	./gradlew koverHtmlReportDebug koverXmlReportDebug ${GRADLE_ARGS}
