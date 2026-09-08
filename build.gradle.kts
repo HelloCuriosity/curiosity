@@ -89,7 +89,7 @@ subprojects {
 
     plugins.withId("com.vanniktech.maven.publish") {
         extensions.configure<MavenPublishBaseExtension>("mavenPublishing") {
-            // Uploads to the Central Portal, leaving the deployment to be released manually.
+            // Registers the Central Portal tasks; scripts/publish.sh releases the deployment.
             publishToMavenCentral()
             signAllPublications()
 
