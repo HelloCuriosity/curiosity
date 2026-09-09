@@ -18,6 +18,8 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 
+private const val UNSELECTED_CONTENT_ALPHA = 0.74f
+
 @Composable
 fun BottomNavigation(
     navController: NavHostController,
@@ -27,6 +29,8 @@ fun BottomNavigation(
     backgroundColor: Color = MaterialTheme.colorScheme.primary,
     contentColor: Color = contentColorFor(backgroundColor),
     selectedContentColor: Color = MaterialTheme.colorScheme.onPrimary,
+    unselectedContentColor: Color = contentColor.copy(alpha = UNSELECTED_CONTENT_ALPHA),
+    indicatorColor: Color = MaterialTheme.colorScheme.secondaryContainer,
     elevation: Dp = NavigationBarDefaults.Elevation,
 ) = NavigationBar(
     containerColor = backgroundColor,
@@ -38,8 +42,9 @@ fun BottomNavigation(
         NavigationBarItemDefaults.colors(
             selectedIconColor = selectedContentColor,
             selectedTextColor = selectedContentColor,
-            unselectedIconColor = contentColor,
-            unselectedTextColor = contentColor,
+            unselectedIconColor = unselectedContentColor,
+            unselectedTextColor = unselectedContentColor,
+            indicatorColor = indicatorColor,
         )
     scenes.forEach { scene ->
         NavigationBarItem(

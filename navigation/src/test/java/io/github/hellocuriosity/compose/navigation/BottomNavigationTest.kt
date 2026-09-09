@@ -115,6 +115,8 @@ class BottomNavigationTest : ComposeTest() {
                 shouldBeSelected = false,
                 backgroundColor = Color.Blue,
                 contentColor = Color.White,
+                unselectedContentColor = Color.LightGray,
+                indicatorColor = Color.Cyan,
                 elevation = 15.dp,
             )
         }

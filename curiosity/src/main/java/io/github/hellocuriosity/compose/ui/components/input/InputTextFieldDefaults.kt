@@ -4,8 +4,8 @@ import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.sp
-import io.github.hellocuriosity.compose.ui.theme.ThemeImpl
 
 object InputTextFieldDefaults {
     @Composable
@@ -27,6 +27,11 @@ object InputTextFieldDefaults {
             backgroundColor = backgroundColor,
             boarderColor = boarderColor,
         )
+
+    @Composable
+    fun textStyle(): TextStyle = MaterialTheme.typography.headlineMedium.copy(fontSize = textSize)
+
+    private val textSize = 18.sp
 }
 
 data class InputTextFieldColors(
@@ -38,5 +43,3 @@ data class InputTextFieldColors(
     val backgroundColor: Color,
     val boarderColor: Color,
 )
-
-internal val txtStyle = ThemeImpl.typography.headlineMedium.copy(fontSize = 18.sp)

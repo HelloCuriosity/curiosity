@@ -19,13 +19,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import io.github.hellocuriosity.compose.ui.components.buttons.ButtonDefaults.buttonColors
-import io.github.hellocuriosity.compose.ui.theme.ThemeImpl
+import io.github.hellocuriosity.compose.ui.components.buttons.ButtonDefaults.textStyle
 
 typealias action = () -> Unit
 
-private val btnStyle = ThemeImpl.typography.headlineMedium.copy(fontSize = 18.sp)
 private val btnShape = CircleShape
 private val horizontalPadding = 25.dp
 private val verticalPadding = 16.dp
@@ -38,7 +36,7 @@ fun TextButton(
     enabled: Boolean = true,
     shape: Shape = btnShape,
     buttonColors: ButtonColors = buttonColors(),
-    style: TextStyle = btnStyle,
+    style: TextStyle = textStyle(),
     textModifier: Modifier =
         Modifier.padding(
             vertical = verticalPadding,
@@ -68,7 +66,7 @@ fun TextIconButton(
     enabled: Boolean = true,
     shape: Shape = btnShape,
     buttonColors: ButtonColors = buttonColors(),
-    style: TextStyle = btnStyle,
+    style: TextStyle = textStyle(),
     tint: Color = buttonColors().tintColor(enabled = enabled),
     textModifier: Modifier =
         Modifier.padding(
