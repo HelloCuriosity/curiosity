@@ -20,7 +20,7 @@ navigationCompose = "2.10.0"
 
 # Android
 compileSdk = "37"
-minSdk = "23"
+minSdk = "24"
 targetSdk = "37"
 buildTools = "34.0.0"
 
