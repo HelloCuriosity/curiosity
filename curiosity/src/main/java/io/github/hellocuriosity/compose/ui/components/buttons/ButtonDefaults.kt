@@ -7,6 +7,8 @@ import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.compositeOver
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.unit.sp
 
 object ButtonDefaults {
     @Composable
@@ -27,6 +29,11 @@ object ButtonDefaults {
             disabledContainerColor = disabledContainerColor,
             disabledContentColor = disabledContentColor,
         )
+
+    @Composable
+    fun textStyle(): TextStyle = MaterialTheme.typography.headlineMedium.copy(fontSize = textSize)
+
+    private val textSize = 18.sp
 }
 
 internal fun ButtonColors.tintColor(enabled: Boolean) = if (enabled) contentColor else disabledContentColor

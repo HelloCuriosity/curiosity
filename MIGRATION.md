@@ -156,6 +156,25 @@ MaterialTheme.colorScheme.primary
 MaterialTheme.colorScheme.onSurface
 ```
 
+## Component text styles
+
+`Button`, `TextButton`, `TextIconButton` and `InputTextField` used to take their
+default text style from the library's own `ThemeImpl`, so a consumer's
+`Theme`/`MaterialTheme` never reached them. Since 1.1.3 the defaults read
+`MaterialTheme.typography.headlineMedium` from the calling composition, exposed as
+`ButtonDefaults.textStyle()` and `InputTextFieldDefaults.textStyle()`.
+
+If you were passing `style` explicitly to work around this, you can drop it. If
+you relied on the old behaviour, pass the library baseline yourself:
+
+```kotlin
+TextButton(
+    text = R.string.submit,
+    onClick = { },
+    style = ThemeImpl.typography.headlineMedium.copy(fontSize = 18.sp),
+)
+```
+
 ## `ButtonDefaults.buttonColors`
 
 Parameter names have been aligned with Material 3:
@@ -185,14 +204,21 @@ ButtonDefaults.buttonColors(
 
 The `:navigation` `BottomNavigation` wrapper now wraps Material 3's
 `NavigationBar`/`NavigationBarItem` instead of the removed
-`androidx.compose.material.BottomNavigation`. The wrapper's public API is
-preserved, including the `backgroundColor`, `contentColor`, `selectedContentColor`,
-`alwaysShowLabel`, `shouldBeSelected`, and `elevation` parameters. You should
-not need to change call sites.
+`androidx.compose.material.BottomNavigation`. The `backgroundColor`, `contentColor`,
+`selectedContentColor`, `alwaysShowLabel`, `shouldBeSelected` and `elevation`
+parameters are all still there, and two more were added in 1.1.3:
 
-The visual treatment will differ slightly (Material 3 defaults to
-`tonalElevation` rather than a shadow, and the active item now has its own
-pill-shaped indicator).
+- `unselectedContentColor`, defaulting to `contentColor` at 74% alpha. Material 2
+  dimmed unselected items for you through `ContentAlpha.medium`; Material 3 has no
+  equivalent, so the wrapper applies that alpha itself. Without it, a caller
+  passing the same color for `contentColor` and `selectedContentColor` gets a bar
+  where every item looks selected.
+- `indicatorColor`, defaulting to `MaterialTheme.colorScheme.secondaryContainer`,
+  for the Material 3 pill behind the active item. Set it to your bar's background
+  to hide the pill.
+
+The visual treatment will still differ slightly, since Material 3 defaults to
+`tonalElevation` rather than a shadow.
 
 ## Removed Material 2 APIs
 
