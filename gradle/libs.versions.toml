@@ -30,7 +30,7 @@ leakcanary = "2.14"
 ktor = "3.6.0"
 kotlinxSerialization = "1.11.0"
 modelForge = "1.5.1"
-mockk = "1.14.11"
+mockk = "1.14.12"
 slf4j = "2.0.20"
 
 # Testing
